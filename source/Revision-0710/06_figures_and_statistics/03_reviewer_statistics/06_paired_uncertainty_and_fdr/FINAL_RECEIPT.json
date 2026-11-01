@@ -1,0 +1,126 @@
+{
+  "schema_version": "revision0710.reviewer_statistics.paired_uncertainty_final_receipt.v1",
+  "status": "AGE_AND_ALL_SIX_RISK_FORMAL_COMPLETE",
+  "age_final_receipt": {
+    "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/01_age/AGE_FINAL_RECEIPT.json",
+    "sha256": "d52df7302b1343adaa2212f7692f9012acb9b4e9104874c25c9ca824b687d151",
+    "bytes": 4003
+  },
+  "contract": {
+    "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/analysis_contract.json",
+    "sha256": "3f6d69b7900494d7c944d9bc3395a507b5034110e66ba1f9a5931e8dfde270cf",
+    "bytes": 3723
+  },
+  "base_input_manifest": {
+    "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/00_input_lock/INPUT_MANIFEST.json",
+    "sha256": "9ce668bf7d9dacb38ce4f4685c91234dc0eaf8e2f023c6753cfcf88c2b346e51",
+    "bytes": 44262
+  },
+  "risk_input_manifest": {
+    "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/02_risk_score_cache/00_risk_input_lock/RISK_INPUT_MANIFEST.json",
+    "sha256": "a54d7ded9d5a0af796b582e4e4fea36ea5f6b72fe1ab519192d2bcabb161b42a",
+    "bytes": 74802
+  },
+  "risk_reference_manifest": {
+    "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/02_risk_score_cache/01_reference/REFERENCE_SCORE_MANIFEST.json",
+    "sha256": "33a370306481d1dd7113f0de8515df8a8eac3182d009a65fb50e49a7652c4106",
+    "bytes": 1373
+  },
+  "baseline_score_manifests": [
+    {
+      "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/02_risk_score_cache/02_baselines/retain/BASELINE_SCORE_MANIFEST.json",
+      "sha256": "c0826290b1ea728299b5c41f8e33bc4a415368138a60c2265aedc9ddb3ff09fc",
+      "bytes": 11518
+    },
+    {
+      "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/02_risk_score_cache/02_baselines/behrt_style/BASELINE_SCORE_MANIFEST.json",
+      "sha256": "fd01ede42ca59f950be0181a07fed66ef71c2eca9376b484f01b715325970768",
+      "bytes": 11708
+    },
+    {
+      "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/02_risk_score_cache/02_baselines/medbert_style/BASELINE_SCORE_MANIFEST.json",
+      "sha256": "1bbf629ddd7061d1f0d5e0efe253c73c87064b1db6f869b5a5d4e27679fc1ca6",
+      "bytes": 11785
+    },
+    {
+      "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/02_risk_score_cache/02_baselines/retain_organquery/BASELINE_SCORE_MANIFEST.json",
+      "sha256": "689abac00d6a0f305df75ab36a004f8156de03277d6049c802c7252b18397854",
+      "bytes": 11936
+    },
+    {
+      "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/02_risk_score_cache/02_baselines/behrt_style_organquery/BASELINE_SCORE_MANIFEST.json",
+      "sha256": "18baf7dae0b07e8f63d0a4b224b55e2b174382faaecf52a90a13ccf14ac369ec",
+      "bytes": 12126
+    },
+    {
+      "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/02_risk_score_cache/02_baselines/medbert_style_organquery/BASELINE_SCORE_MANIFEST.json",
+      "sha256": "dec026e3b1595e63d75748778c4816898bcad68444bb2728300d0d91c98ed9df",
+      "bytes": 12202
+    }
+  ],
+  "formal_risk_method_receipts": [
+    {
+      "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/03_risk_bootstrap/02_formal_results/retain/FORMAL_COMPLETE.json",
+      "sha256": "d5102690a2d019de029da992b7f6c4af966ee3a01a8b449df5e887c24664d031",
+      "bytes": 3434
+    },
+    {
+      "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/03_risk_bootstrap/02_formal_results/behrt_style/FORMAL_COMPLETE.json",
+      "sha256": "712aaa8b48f0b5a0d1bf04b0bda8359239327d5bdbcf0f679e18f61573d53901",
+      "bytes": 3459
+    },
+    {
+      "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/03_risk_bootstrap/02_formal_results/medbert_style/FORMAL_COMPLETE.json",
+      "sha256": "d53fc36226a235593250a0b0e75ed6f8ac1e3873b464251f64d15ae3bf50bbce",
+      "bytes": 3469
+    },
+    {
+      "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/03_risk_bootstrap/02_formal_results/retain_organquery/FORMAL_COMPLETE.json",
+      "sha256": "b3aaf69c831da8fb3e2bab6e8644137308fc8076e3a4d360d598cb843641e625",
+      "bytes": 3489
+    },
+    {
+      "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/03_risk_bootstrap/02_formal_results/behrt_style_organquery/FORMAL_COMPLETE.json",
+      "sha256": "c63a3d8a7bd36c333ea8156104b5deb8b049f3d20800fc7cde585657a690fb2d",
+      "bytes": 3514
+    },
+    {
+      "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/03_risk_bootstrap/02_formal_results/medbert_style_organquery/FORMAL_COMPLETE.json",
+      "sha256": "c7fbcb4c1c7fdb2732be2fe64c1916fa7945633c528f9e92c716b94a429193f8",
+      "bytes": 3524
+    }
+  ],
+  "fdr_receipt": {
+    "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/03_risk_bootstrap/03_all_six_fdr/FDR_COMPLETE.json",
+    "sha256": "40c908979e750f15250ac6afa80e3cc7e353d9c7dd6326ac656b238571838615",
+    "bytes": 1398
+  },
+  "fdr_table": {
+    "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/03_risk_bootstrap/03_all_six_fdr/risk_paired_summary_with_bh_fdr.csv",
+    "sha256": "2daea5696c2ee455b9018acb2699000462a218b818457dc012f7f76b1cd79719",
+    "bytes": 11586
+  },
+  "final_statistical_engine": {
+    "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/paired_uncertainty.py",
+    "sha256": "0cd9309279fb678c09026491206da806ac0b6481632af0f2b7377a32963347ba",
+    "bytes": 43626
+  },
+  "final_execution_entrypoint": {
+    "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/run_paired_uncertainty.py",
+    "sha256": "d5b2dc8e8be037e6b9aa899641160a20e82fb761b9faaafc3a5802f772d0438b",
+    "bytes": 59873
+  },
+  "receipt_verifier": {
+    "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/verify_final_receipts.py",
+    "sha256": "a2a025877fa9dc2cd1fc6f6fa6796a06719817f13d0a9ab423358e2c8318408f",
+    "bytes": 8850
+  },
+  "formal_settings": {
+    "age_resamples": 1000,
+    "risk_resamples_per_method": 1000,
+    "seed": 7100710,
+    "risk_macro_fdr_family_size": 6,
+    "risk_organ_fdr_family_size": 42
+  },
+  "risk_inference_conditioning": "test-participant bootstrap conditional on sealed/frozen calibration nuisance; nuisance-refit uncertainty is not included"
+}

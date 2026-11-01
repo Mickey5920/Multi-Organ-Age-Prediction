@@ -1,0 +1,306 @@
+{
+  "schema_version": "revision0710_corrected_baseline_manifest_v2",
+  "python_executable": "C:\\Users\\Mickey\\.conda\\envs\\ICD-Prediction\\python.exe",
+  "files": [
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\01_data_rebuild\\07_corrected_primary_v1\\02_outcomes_60m\\participant_followup_and_evaluation_masks.parquet",
+      "bytes": 6740257,
+      "sha256": "2f7a1822f9a346dd866c850e88cd8f9572734c88f019a8867f475a8cff6539b4"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\01_data_rebuild\\07_corrected_primary_v1\\02_outcomes_60m\\organ_outcomes_60m.parquet",
+      "bytes": 19573552,
+      "sha256": "2ec40e5c360a17bcf308199a75a7c092e5b69d6884c4f3539604edc9ab1a5220"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\01_data_rebuild\\07_corrected_primary_v1\\03_folds\\outer_fold_roles.parquet",
+      "bytes": 8115127,
+      "sha256": "b8c8d25bcd9228e2e4dafef5c4bec92ec9efac17d0f4125fe87b00b92c3a5249"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\01_prediction_registries\\tier_a\\retain.json",
+      "bytes": 4362,
+      "sha256": "d475f12f3e1993d0a238b202a9e6d4b65969e4415a8cf0a934ad1d7a38d938f7"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\01_prediction_registries\\tier_a\\behrt_style.json",
+      "bytes": 4442,
+      "sha256": "2f563c576c5a5162c49d15bfd471788622ac3d1a1aedc7e9ab50054ba475136a"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\01_prediction_registries\\tier_a\\medbert_style.json",
+      "bytes": 4474,
+      "sha256": "62259c5fe62c594b276f9002a324e16802f3db9c17b61ef7d4031fe2f642ec23"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\01_prediction_registries\\tier_b\\retain_organquery.json",
+      "bytes": 4613,
+      "sha256": "24611820a70724016845e1ff4c73e77cf6c5e0b01696735fcfe7d8016a64f569"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\01_prediction_registries\\tier_b\\behrt_style_organquery.json",
+      "bytes": 4693,
+      "sha256": "8c5d01dc02057f84347b2316e932ce2996bd304f7cf83a830409431ea20784c0"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\01_prediction_registries\\tier_b\\medbert_style_organquery.json",
+      "bytes": 4725,
+      "sha256": "7a20680f7cd0721f0ff3263353befdc4cf19db67ede13fd1b700a3a1e85badd2"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\02_baseline_summary\\baseline_evaluation_registry.json",
+      "bytes": 1776,
+      "sha256": "e314267756a80f54434694a1baaf2abbdb0c09184198e23bf731b63f9e149b50"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\retain\\raw_age_metrics.csv",
+      "bytes": 242,
+      "sha256": "55c0b05ac7a8a9a52c070bc22c56c1803b05baf754547df375c4a15e31f5712c"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\retain\\linear_correction_parameters.csv",
+      "bytes": 2359,
+      "sha256": "0f476b8c2970d1a8134b58d78407ea7d41b0be117a7cbc30215ed756d200fa07"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\retain\\cox_fold_organ_cells.csv",
+      "bytes": 3612,
+      "sha256": "bc82fe970ce275da71ac3fa5acd33012b9f12250a3e2cfbbcd7ec78792297e5b"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\retain\\cox_organ_summary.csv",
+      "bytes": 570,
+      "sha256": "97c8b51b92df44609c73f15dfcd9427739cc645577ea635ced6364df12d85e5f"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\retain\\cox_summary.json",
+      "bytes": 1637,
+      "sha256": "802cc01669e1145de687b8f52f36981fcfb2c94bb8a12b6d336dcc6b93854c77"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\retain\\evaluation_summary.json",
+      "bytes": 2265,
+      "sha256": "94a4ef564f764b76ac74cd3e726efc2c70d752e13de5a4d44fe90a134cb4f914"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\retain\\evaluation_manifest.json",
+      "bytes": 3062,
+      "sha256": "0701174a3c47a70d7650a3b5980a684b2bec7dde0f6442c1c8472272bc0e3de0"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\behrt_style\\raw_age_metrics.csv",
+      "bytes": 253,
+      "sha256": "ad97e76ec4a7802790a2738e4ad2b9b7f7aeb1205c24ea0c865278047ae9a189"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\behrt_style\\linear_correction_parameters.csv",
+      "bytes": 2534,
+      "sha256": "07a0d78182ff8503ef38383398d4a223ffd4581758d5bd23bcc316490dfc00b1"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\behrt_style\\cox_fold_organ_cells.csv",
+      "bytes": 3793,
+      "sha256": "be2da8cc50cc68bf8624418bb068f162504f117b474edc6476a8960155797422"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\behrt_style\\cox_organ_summary.csv",
+      "bytes": 572,
+      "sha256": "aca0df992defba44472830048993608a410f342d3cde263fade55701891817f5"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\behrt_style\\cox_summary.json",
+      "bytes": 1638,
+      "sha256": "a66e0856fe707f109b0a07bc64fc9e37f8f0e5638b1f904652d700655ae22b5f"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\behrt_style\\evaluation_summary.json",
+      "bytes": 2272,
+      "sha256": "7bf33932f9163f34da988b44aceb057038c6b685d3112ddd85cad6ba13d08358"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\behrt_style\\evaluation_manifest.json",
+      "bytes": 3122,
+      "sha256": "52879a55f2b0bc107dabd0b77af56c5e7eb10df557ef53dcd6b6f50f660cf952"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\medbert_style\\raw_age_metrics.csv",
+      "bytes": 258,
+      "sha256": "8797df96937f9c6312137d0ed4984c233e34e9eb851e87db06a9b0fe986f895d"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\medbert_style\\linear_correction_parameters.csv",
+      "bytes": 2590,
+      "sha256": "0676260ec7b4ca8d50c2c0b06ee992c3dace5258acb4e8ef57cd3844ed180265"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\medbert_style\\cox_fold_organ_cells.csv",
+      "bytes": 3864,
+      "sha256": "948ca6e0fa5403d2feb527a457c656944f807412b8b3435227e787b87e31d3c9"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\medbert_style\\cox_organ_summary.csv",
+      "bytes": 572,
+      "sha256": "943fa8495f4fc76de6c7eef9e78f270db02d6353195747931b9a8ff6e47d8e61"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\medbert_style\\cox_summary.json",
+      "bytes": 1639,
+      "sha256": "38dc6b77787562c0106644c366950d5f60796fd7dd68b9988f38d9062522a472"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\medbert_style\\evaluation_summary.json",
+      "bytes": 2276,
+      "sha256": "aaea3ceb0fe1b4925e00c01479e65e9947041bf781d1f925fa01394be79ad571"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\medbert_style\\evaluation_manifest.json",
+      "bytes": 3146,
+      "sha256": "714579b5cf2fbb31cc68621b971810f81a4cace773007dd3340de7417078ffd7"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\retain_organquery\\raw_age_metrics.csv",
+      "bytes": 264,
+      "sha256": "1b93c1b23bdea4b8ff8cc42d62d573e11f57174d26deee68746fd9764aab4dbc"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\retain_organquery\\linear_correction_parameters.csv",
+      "bytes": 2743,
+      "sha256": "cfff3fba7c86801874fd49d85b6be0559ff835fc0e7802a65475774702a26027"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\retain_organquery\\cox_fold_organ_cells.csv",
+      "bytes": 3998,
+      "sha256": "23387ebf066927248a5f317d6eddbe784c19485ece3e3da2b9f74f5f211c6316"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\retain_organquery\\cox_organ_summary.csv",
+      "bytes": 572,
+      "sha256": "75bafb112abd2f3e74ea7f20a3619f67bf452bc598277d655d5250920120eb83"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\retain_organquery\\cox_summary.json",
+      "bytes": 1637,
+      "sha256": "40d12a1bb7606b9905b6ee40e72617a9d700eaf798aa19c3b9e412ad472438bd"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\retain_organquery\\evaluation_summary.json",
+      "bytes": 2276,
+      "sha256": "95ff58e37a1ccd7e284fb360756a7740254194374cbc28d61b8d9d12ac21d50b"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\retain_organquery\\evaluation_manifest.json",
+      "bytes": 3244,
+      "sha256": "85716aaf6c50d5ab340cfe316a776fe1f6104a0aa03dd62e9e242ac9793db547"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\behrt_style_organquery\\raw_age_metrics.csv",
+      "bytes": 276,
+      "sha256": "46c0509573df7228da89b85fd7c8464f15e9fd21f9f5ea6d38c01415125e373c"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\behrt_style_organquery\\linear_correction_parameters.csv",
+      "bytes": 2929,
+      "sha256": "b7412338804c31ace0be6e360ace2c0980ad18559f1e2bb76ee99671f1df9caf"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\behrt_style_organquery\\cox_fold_organ_cells.csv",
+      "bytes": 4172,
+      "sha256": "22caa271abe572eb86e50477cb4eb40c5ee4799863a2b7106a93f482d75eeb9e"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\behrt_style_organquery\\cox_organ_summary.csv",
+      "bytes": 573,
+      "sha256": "4ecea66183bbbaa26c4184600e849faff09e0d1373f8bfb21df3e8828fe1d979"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\behrt_style_organquery\\cox_summary.json",
+      "bytes": 1640,
+      "sha256": "789d4c7775fd26216086c2ba3bce85fd163e54dab57c1ff5d3f8d22579b4950d"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\behrt_style_organquery\\evaluation_summary.json",
+      "bytes": 2286,
+      "sha256": "064572602915323d30f30e73c6e6347779377f2e431c0bfa6dfcf45502569d74"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\behrt_style_organquery\\evaluation_manifest.json",
+      "bytes": 3304,
+      "sha256": "aea24c6e4603040dcf7f81378e3560d1eaab87e994b2be01b38b2dacfa659d0a"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\medbert_style_organquery\\raw_age_metrics.csv",
+      "bytes": 280,
+      "sha256": "97b5d28e712173ebec4f1f166670b76e60647cd979036a596c654f8aafff7293"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\medbert_style_organquery\\linear_correction_parameters.csv",
+      "bytes": 2992,
+      "sha256": "40ca4f1eda422e8a0adcc1db90d2b0779aa19e6c4e04e5391ffa7a37cb63a940"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\medbert_style_organquery\\cox_fold_organ_cells.csv",
+      "bytes": 4241,
+      "sha256": "29d2cf6e11c8302daf4e2c1ce3b4cd293ae4fc123e553d7f36c4489f46e9b14f"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\medbert_style_organquery\\cox_organ_summary.csv",
+      "bytes": 570,
+      "sha256": "0db44d4f4b1949c4b840fd29f3ac1ea12cda2269c088c63a24e416306057d146"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\medbert_style_organquery\\cox_summary.json",
+      "bytes": 1637,
+      "sha256": "41b6f6d4340316c9d6b05ddfb19b2279cc76ff2bb2192e32ec9d6c7d15970826"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\medbert_style_organquery\\evaluation_summary.json",
+      "bytes": 2285,
+      "sha256": "b36cafa85275a12a3b221dd8b9ed4f9cc68953c2e53b6dce733222a207b41c4f"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\01_baseline_evaluation\\medbert_style_organquery\\evaluation_manifest.json",
+      "bytes": 3328,
+      "sha256": "8c21c21821e0c312f0911a7e57a2e1021d6757b121c13908043db8e543ffac9d"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\02_baseline_summary\\baseline_method_table.csv",
+      "bytes": 1228,
+      "sha256": "38dff0a51f58faf98f15e16205b63ba07ac8d82c5c52f1a4a1288cbc306d2fc8"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\02_baseline_summary\\baseline_method_table.json",
+      "bytes": 4960,
+      "sha256": "c99b655a46ba6f4c1c4ac0275d594d396e8ae80e54d6122fe4f4ff52c4d8e297"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\02_baseline_summary\\baseline_metric_envelope.csv",
+      "bytes": 537,
+      "sha256": "d993ff25e573768af62f3c9ca6f5f51da96a3243732baf1de4aee3a97e85add1"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\02_baseline_summary\\baseline_metric_envelope.json",
+      "bytes": 3328,
+      "sha256": "837fa86478a212dfcc79f472cd710f0f6902db3e2aaa3843b51437a5758877ad"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\02_baseline_summary\\DECISION_RULE_STATUS.json",
+      "bytes": 1252,
+      "sha256": "e4d8bb0282cc1a2c9d078cd8e345b2c7cc59a6c51639766c1d90db3d81c71112"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\02_baseline_summary\\DECISION_RULE_STATUS.md",
+      "bytes": 583,
+      "sha256": "7bbffabb394ec50446f654e74a59f51a35beb0483f521bfc1b836532c55c23c7"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\03_audit\\baseline_outcome_change_audit.csv",
+      "bytes": 1012,
+      "sha256": "cfbe18408b9d5e2a747d0a73aad0a33b4b3b216dab9c531314bef4fe9640a611"
+    },
+    {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\10_corrected_primary_v1\\03_audit\\baseline_outcome_change_audit.json",
+      "bytes": 2535,
+      "sha256": "0a6b1b9f94df960699a397afaddb7ed60209565996cf5855407e867794f4d3aa"
+    }
+  ]
+}

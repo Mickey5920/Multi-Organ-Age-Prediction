@@ -1,0 +1,6 @@
+# Observed Figure 7 rendering versions on CPython 3.12.4 / Windows AMD64.
+# Tested in an existing environment, not a fresh-install transitive lock.
+numpy==1.26.4
+pandas==2.2.2
+matplotlib==3.8.4
+PyMuPDF==1.27.2.3

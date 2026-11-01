@@ -1,0 +1,427 @@
+{
+  "schema_version": "revision0710.fig04_fig05.ablation_variant_registry.v8",
+  "status": "FROZEN_PREFREEZE_PRODUCTION_WIRING_NOT_AUTHORIZED",
+  "created_date": "2026-07-11",
+  "reference_e55": {
+    "role": "historical_context_only_not_the_ablation_comparator",
+    "retrain": false,
+    "checkpoint_input": false,
+    "formal_comparator": false
+  },
+  "comparison_estimands": {
+    "formal_comparator": "fig04_01_canonical_control",
+    "canonical_control_policy": "fresh_same_executor_same_seed_same_folds_same_e1_e60_and_e55_capture",
+    "single_component_ablation_ids": [
+      "fig04_02_no_organ_queries",
+      "fig04_03_no_common_bidirectional_gru",
+      "fig04_04_no_survival_supervision",
+      "fig04_05_no_strict_offset_shrinkage",
+      "fig04_06_no_consistency_objective"
+    ],
+    "bundled_architecture_comparisons": {
+      "fig04_07_seven_independent_organ_age_heads": {
+        "changes": [
+          "seven_independent_age_heads",
+          "no_shared_scalar_base_age",
+          "no_private_scalar_age_tower",
+          "direct_organ_age_loss_route"
+        ],
+        "allowed_interpretation": "prespecified_multi_component_architecture_comparison",
+        "single_component_effect_claim_allowed": false
+      }
+    },
+    "input_source_removal_comparisons": [
+      "fig05_01_no_phenotypes_or_missingness",
+      "fig05_02_no_hospital_icd",
+      "fig05_03_no_gp_prescriptions",
+      "fig05_04_no_event_text",
+      "fig05_05_no_longitudinal_events"
+    ],
+    "delta_reference": "fresh_fig04_01_canonical_control_within_identical_outer_fold",
+    "causal_component_language_allowed": false
+  },
+  "variant_record_keys": [
+    "ordinal",
+    "variant_id",
+    "figure",
+    "model",
+    "input",
+    "loss",
+    "optimizer_exclusions",
+    "fresh_from_scratch_all_folds",
+    "folds",
+    "seed",
+    "train_epochs",
+    "capture_evaluate_epoch",
+    "performance_selection"
+  ],
+  "variants": [
+    {
+      "ordinal": 1,
+      "variant_id": "fig04_01_canonical_control",
+      "figure": "Fig04",
+      "model": {
+        "canonical_ehr_age_full_method": true,
+        "base_age_mode": "private_retain",
+        "fresh_same_run_control": true
+      },
+      "input": {
+        "identity": true
+      },
+      "loss": {
+        "route": "canonical_ehr_age_joint_loss",
+        "all_canonical_objectives_retained": true
+      },
+      "optimizer_exclusions": [],
+      "fresh_from_scratch_all_folds": true,
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seed": 7210,
+      "train_epochs": 60,
+      "capture_evaluate_epoch": 55,
+      "performance_selection": false
+    },
+    {
+      "ordinal": 2,
+      "variant_id": "fig04_02_no_organ_queries",
+      "figure": "Fig04",
+      "model": {
+        "organ_queries": "seven_identical_exact_zero_frozen",
+        "query_requires_grad": false
+      },
+      "input": {
+        "identity": true
+      },
+      "loss": {
+        "route": "canonical_ehr_age_joint_loss"
+      },
+      "optimizer_exclusions": [
+        "model.organ_queries"
+      ],
+      "fresh_from_scratch_all_folds": true,
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seed": 7210,
+      "train_epochs": 60,
+      "capture_evaluate_epoch": 55,
+      "performance_selection": false
+    },
+    {
+      "ordinal": 3,
+      "variant_id": "fig04_03_no_common_bidirectional_gru",
+      "figure": "Fig04",
+      "model": {
+        "shared_bidir_gru_present": false,
+        "shared_gru_output": "exact_zero_tensor",
+        "private_retain_alpha_beta_grus": true
+      },
+      "input": {
+        "identity": true
+      },
+      "loss": {
+        "route": "canonical_ehr_age_joint_loss"
+      },
+      "optimizer_exclusions": [
+        "removed shared GRU parameter set"
+      ],
+      "fresh_from_scratch_all_folds": true,
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seed": 7210,
+      "train_epochs": 60,
+      "capture_evaluate_epoch": 55,
+      "performance_selection": false
+    },
+    {
+      "ordinal": 4,
+      "variant_id": "fig04_04_no_survival_supervision",
+      "figure": "Fig04",
+      "model": {
+        "canonical_e55": true
+      },
+      "input": {
+        "identity": true
+      },
+      "loss": {
+        "route": "canonical_ehr_age_joint_loss",
+        "survival_weight": 0,
+        "evaluator_gap_cox_weight": 0.25
+      },
+      "optimizer_exclusions": [
+        "model.baseline_log_rate"
+      ],
+      "fresh_from_scratch_all_folds": true,
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seed": 7210,
+      "train_epochs": 60,
+      "capture_evaluate_epoch": 55,
+      "performance_selection": false
+    },
+    {
+      "ordinal": 5,
+      "variant_id": "fig04_05_no_strict_offset_shrinkage",
+      "figure": "Fig04",
+      "model": {
+        "canonical_e55": true
+      },
+      "input": {
+        "identity": true
+      },
+      "loss": {
+        "route": "canonical_ehr_age_joint_loss",
+        "strict_offset_weight": 0
+      },
+      "optimizer_exclusions": [],
+      "fresh_from_scratch_all_folds": true,
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seed": 7210,
+      "train_epochs": 60,
+      "capture_evaluate_epoch": 55,
+      "performance_selection": false
+    },
+    {
+      "ordinal": 6,
+      "variant_id": "fig04_06_no_consistency_objective",
+      "figure": "Fig04",
+      "model": {
+        "canonical_e55": true
+      },
+      "input": {
+        "identity": true
+      },
+      "loss": {
+        "route": "canonical_ehr_age_joint_loss",
+        "event_dropout_probability": 0.1,
+        "consistency_weight": 0
+      },
+      "optimizer_exclusions": [],
+      "fresh_from_scratch_all_folds": true,
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seed": 7210,
+      "train_epochs": 60,
+      "capture_evaluate_epoch": 55,
+      "performance_selection": false
+    },
+    {
+      "ordinal": 7,
+      "variant_id": "fig04_07_seven_independent_organ_age_heads",
+      "figure": "Fig04",
+      "model": {
+        "independent_age_heads": 7,
+        "shared_scalar_base_age": false,
+        "survival_risk_head": true,
+        "prediction_identity": "predicted_age[:,o] = age_anchor + independent_age_head[o](organ_context[:,o])"
+      },
+      "input": {
+        "identity": true
+      },
+      "loss": {
+        "route": "independent_heads_joint_loss",
+        "age_term": "direct seven-organ SmoothL1",
+        "strict_term": "direct strict gap SmoothL1",
+        "survival_term": "retained",
+        "evaluator_gap_cox_term": "direct predicted-age gap"
+      },
+      "optimizer_exclusions": [
+        "private scalar RETAIN age tower absent by construction"
+      ],
+      "fresh_from_scratch_all_folds": true,
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seed": 7210,
+      "train_epochs": 60,
+      "capture_evaluate_epoch": 55,
+      "performance_selection": false
+    },
+    {
+      "ordinal": 8,
+      "variant_id": "fig05_01_no_phenotypes_or_missingness",
+      "figure": "Fig05",
+      "model": {
+        "canonical_e55": true
+      },
+      "input": {
+        "phenotype": "exact_zero",
+        "phenotype_missing_mask": "exact_zero",
+        "sex": "retained"
+      },
+      "loss": {
+        "route": "canonical_ehr_age_joint_loss"
+      },
+      "optimizer_exclusions": [],
+      "fresh_from_scratch_all_folds": true,
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seed": 7210,
+      "train_epochs": 60,
+      "capture_evaluate_epoch": 55,
+      "performance_selection": false
+    },
+    {
+      "ordinal": 9,
+      "variant_id": "fig05_02_no_hospital_icd",
+      "figure": "Fig05",
+      "model": {
+        "canonical_e55": true
+      },
+      "input": {
+        "remove_event_type_id": 1,
+        "stable_left_compaction": true,
+        "original_order_preserved": true,
+        "mask_holes": false
+      },
+      "loss": {
+        "route": "canonical_ehr_age_joint_loss"
+      },
+      "optimizer_exclusions": [
+        "common and private code_projection weights structurally unused"
+      ],
+      "fresh_from_scratch_all_folds": true,
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seed": 7210,
+      "train_epochs": 60,
+      "capture_evaluate_epoch": 55,
+      "performance_selection": false
+    },
+    {
+      "ordinal": 10,
+      "variant_id": "fig05_03_no_gp_prescriptions",
+      "figure": "Fig05",
+      "model": {
+        "canonical_e55": true
+      },
+      "input": {
+        "remove_event_type_id": 2,
+        "stable_left_compaction": true,
+        "original_order_preserved": true,
+        "mask_holes": false
+      },
+      "loss": {
+        "route": "canonical_ehr_age_joint_loss"
+      },
+      "optimizer_exclusions": [],
+      "fresh_from_scratch_all_folds": true,
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seed": 7210,
+      "train_epochs": 60,
+      "capture_evaluate_epoch": 55,
+      "performance_selection": false
+    },
+    {
+      "ordinal": 11,
+      "variant_id": "fig05_04_no_event_text",
+      "figure": "Fig05",
+      "model": {
+        "canonical_e55": true
+      },
+      "input": {
+        "valid_event_text_id": 0,
+        "mask_unchanged": true
+      },
+      "loss": {
+        "route": "canonical_ehr_age_joint_loss"
+      },
+      "optimizer_exclusions": [
+        "common and private text_projection weights structurally unused"
+      ],
+      "fresh_from_scratch_all_folds": true,
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seed": 7210,
+      "train_epochs": 60,
+      "capture_evaluate_epoch": 55,
+      "performance_selection": false
+    },
+    {
+      "ordinal": 12,
+      "variant_id": "fig05_05_no_longitudinal_events",
+      "figure": "Fig05",
+      "model": {
+        "canonical_e55": true
+      },
+      "input": {
+        "all_event_arrays": "padding",
+        "event_valid_mask": "all_false",
+        "static_and_sex": "retained"
+      },
+      "loss": {
+        "route": "canonical_ehr_age_joint_loss"
+      },
+      "optimizer_exclusions": [
+        "common event encoder and private RETAIN event backbone structurally unused"
+      ],
+      "fresh_from_scratch_all_folds": true,
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "seed": 7210,
+      "train_epochs": 60,
+      "capture_evaluate_epoch": 55,
+      "performance_selection": false
+    }
+  ]
+}

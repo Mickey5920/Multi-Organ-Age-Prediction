@@ -1,0 +1,104 @@
+{
+  "schema_version": "revision0710_prediction_registry_v1",
+  "method": "medbert_style_organquery",
+  "selection": "five explicit completed run directories; no discovery or globbing",
+  "run_directories": [
+    {
+      "outer_fold": 0,
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold0/e6fa10b2ad67",
+      "run_config_sha256": "78f6ac072d365e8164a75a905096d58b7f1b237b946f3c0cc8b84e71b13ad01d"
+    },
+    {
+      "outer_fold": 1,
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold1/7d1423e1aebe",
+      "run_config_sha256": "ac424fab3ea4d5b0b1d732462bfd495fad1c0de2c2fdbc9e51dc2ee0debc54c5"
+    },
+    {
+      "outer_fold": 2,
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold2/d76cee880c7b",
+      "run_config_sha256": "443ae30a6b9e53ade4b9df239539e656aefdc8f3ace90d377df8d50f43ecc96f"
+    },
+    {
+      "outer_fold": 3,
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold3/952a3c8ab0d5",
+      "run_config_sha256": "66a6878343def3752c4560f553161e19efdf450280f7c5c62ef7e2e24c9dc8f9"
+    },
+    {
+      "outer_fold": 4,
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold4/64540b8a9057",
+      "run_config_sha256": "b88ae808a5b6d68cc6c111d7a0d8e0a4c1d617bd346f6636eb9293a6fdd15d4b"
+    }
+  ],
+  "prediction_files": [
+    {
+      "outer_fold": 0,
+      "split_role": "validation",
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold0/e6fa10b2ad67/validation_predictions_long.parquet",
+      "sha256": "8fefbb480e4d7fe1c9fff3735ca1fa8b96c2f0c5ffb38af4686a0c63736169db",
+      "rows": 639492
+    },
+    {
+      "outer_fold": 0,
+      "split_role": "test",
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold0/e6fa10b2ad67/test_predictions_long.parquet",
+      "sha256": "a448d6d03ff0b773c9cdbca4c35e9d125028cd2a04c3c73b01b92e6406fe5b6b",
+      "rows": 639485
+    },
+    {
+      "outer_fold": 1,
+      "split_role": "validation",
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold1/7d1423e1aebe/validation_predictions_long.parquet",
+      "sha256": "fa574ceef1dc4b1ad21eac46ef83f627762ebc1dd281a99c815583d0d6edc084",
+      "rows": 639471
+    },
+    {
+      "outer_fold": 1,
+      "split_role": "test",
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold1/7d1423e1aebe/test_predictions_long.parquet",
+      "sha256": "a42f17c1483fecc9cc70cd42b43592d71e53dc34eabebbc4dd162f31ae0efe09",
+      "rows": 639492
+    },
+    {
+      "outer_fold": 2,
+      "split_role": "validation",
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold2/d76cee880c7b/validation_predictions_long.parquet",
+      "sha256": "9701250121b0b9ceea5ba8e9392d671f671ef17e1c801d212de4b696edecb3d0",
+      "rows": 639471
+    },
+    {
+      "outer_fold": 2,
+      "split_role": "test",
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold2/d76cee880c7b/test_predictions_long.parquet",
+      "sha256": "17599e03ad9710029219436335bbc953a5cfb228a4f3a338847bfc25f1ba767b",
+      "rows": 639471
+    },
+    {
+      "outer_fold": 3,
+      "split_role": "validation",
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold3/952a3c8ab0d5/validation_predictions_long.parquet",
+      "sha256": "46bfbbef9457fffad753db4f68de5d61ea4f2f808f696cc846d762e19954580a",
+      "rows": 639492
+    },
+    {
+      "outer_fold": 3,
+      "split_role": "test",
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold3/952a3c8ab0d5/test_predictions_long.parquet",
+      "sha256": "09a6b8bb12785dce40c2b3499c76863ef34c23285d389af0998a66f03de4b5a3",
+      "rows": 639471
+    },
+    {
+      "outer_fold": 4,
+      "split_role": "validation",
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold4/64540b8a9057/validation_predictions_long.parquet",
+      "sha256": "6c78156d355eac7c22d6a7cd3e6fc67123dd4efce9968a8b269f0c24503012f3",
+      "rows": 639485
+    },
+    {
+      "outer_fold": 4,
+      "split_role": "test",
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold4/64540b8a9057/test_predictions_long.parquet",
+      "sha256": "ee83bcf4756103d1c6d1107b657871bdd7d36c003c19524183908774c6a8c563",
+      "rows": 639492
+    }
+  ]
+}

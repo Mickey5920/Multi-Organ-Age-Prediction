@@ -1,0 +1,104 @@
+{
+  "schema_version": "revision0710_prediction_registry_v1",
+  "method": "medbert_style_prospective",
+  "selection": "five explicit completed run directories; no discovery or globbing",
+  "run_directories": [
+    {
+      "outer_fold": 0,
+      "path": "../../01_objective_matched/medbert_style/fold0/4e9ade90102b",
+      "run_config_sha256": "a171e43566a933f6c4eaa0a577794722b046dce868b711704e63b61b2f733318"
+    },
+    {
+      "outer_fold": 1,
+      "path": "../../01_objective_matched/medbert_style/fold1/ed4299ac6060",
+      "run_config_sha256": "277ea6bcfb5aa619785b0b080f51a4c30cf6c0276333e29cffe80253bc486a67"
+    },
+    {
+      "outer_fold": 2,
+      "path": "../../01_objective_matched/medbert_style/fold2/473e2b82d03f",
+      "run_config_sha256": "55092ee5a9896fa6e2dc0832ff8bcb71939a5a85281885fdfaaefab1458ca5ef"
+    },
+    {
+      "outer_fold": 3,
+      "path": "../../01_objective_matched/medbert_style/fold3/29e62cb894c6",
+      "run_config_sha256": "3713cf1936338f1c7610c8671d5ec4ddba7313c26308b91b69e1fdbe6b40244d"
+    },
+    {
+      "outer_fold": 4,
+      "path": "../../01_objective_matched/medbert_style/fold4/c5459099760f",
+      "run_config_sha256": "4006df24f3ca35c4c099d7a01250f8d786b6d8ce30bfcb2277579f4964384ffb"
+    }
+  ],
+  "prediction_files": [
+    {
+      "outer_fold": 0,
+      "split_role": "validation",
+      "path": "../../01_objective_matched/medbert_style/fold0/4e9ade90102b/validation_predictions_long.parquet",
+      "sha256": "9ff08f991efb7a5e99c4bc7e11dcbfdcc59fc32a113dd2cf87a2e739db47b518",
+      "rows": 639492
+    },
+    {
+      "outer_fold": 0,
+      "split_role": "test",
+      "path": "../../01_objective_matched/medbert_style/fold0/4e9ade90102b/test_predictions_long.parquet",
+      "sha256": "6be0de534139f8d597497499793be541d70cfc155ef11cdb5728f9bf4f24601c",
+      "rows": 639485
+    },
+    {
+      "outer_fold": 1,
+      "split_role": "validation",
+      "path": "../../01_objective_matched/medbert_style/fold1/ed4299ac6060/validation_predictions_long.parquet",
+      "sha256": "2e971ef5efc641b07a8ac6b9f348a8e2fb41b5272ada58649c46672a46aa041f",
+      "rows": 639471
+    },
+    {
+      "outer_fold": 1,
+      "split_role": "test",
+      "path": "../../01_objective_matched/medbert_style/fold1/ed4299ac6060/test_predictions_long.parquet",
+      "sha256": "ecfe3f6fc6ba735eca5ea6b314954087ba357d1fd489d9d86b7e4a1a74ddb001",
+      "rows": 639492
+    },
+    {
+      "outer_fold": 2,
+      "split_role": "validation",
+      "path": "../../01_objective_matched/medbert_style/fold2/473e2b82d03f/validation_predictions_long.parquet",
+      "sha256": "c2133cdc37be783ae1d41ae537366d00860974360d5093521905d08130964d52",
+      "rows": 639471
+    },
+    {
+      "outer_fold": 2,
+      "split_role": "test",
+      "path": "../../01_objective_matched/medbert_style/fold2/473e2b82d03f/test_predictions_long.parquet",
+      "sha256": "3e417fcf18b7c0a8aaf777aa1ff1f09174027dc0f9a3849f882c1432a92ce568",
+      "rows": 639471
+    },
+    {
+      "outer_fold": 3,
+      "split_role": "validation",
+      "path": "../../01_objective_matched/medbert_style/fold3/29e62cb894c6/validation_predictions_long.parquet",
+      "sha256": "20eff3b01137bcf8de9b303c837038618902796c6251e03d2c9c291edc80a43e",
+      "rows": 639492
+    },
+    {
+      "outer_fold": 3,
+      "split_role": "test",
+      "path": "../../01_objective_matched/medbert_style/fold3/29e62cb894c6/test_predictions_long.parquet",
+      "sha256": "2470bcb219984b03fe7fe6ab4ec2d0817bf939b198f4a977e7ab3581bc2dd5b6",
+      "rows": 639471
+    },
+    {
+      "outer_fold": 4,
+      "split_role": "validation",
+      "path": "../../01_objective_matched/medbert_style/fold4/c5459099760f/validation_predictions_long.parquet",
+      "sha256": "2c46479adfada7caacc97a583d16b51f30f4a4b943906151357799e94a448f20",
+      "rows": 639485
+    },
+    {
+      "outer_fold": 4,
+      "split_role": "test",
+      "path": "../../01_objective_matched/medbert_style/fold4/c5459099760f/test_predictions_long.parquet",
+      "sha256": "eddb749f4dc8dca10ca8ce134ed610a7921cf1f0893d45f172aa7c7d237159bc",
+      "rows": 639492
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": "revision0710.primary_survival.contract.v1",
+  "status": "PRESPECIFIED_FOR_REVISION0710_DOWNSTREAM_ANALYSIS",
+  "estimand": "association of one non-target-fold SD higher corrected organ age gap with cause-specific target-organ hazard",
+  "population": "one row per participant within each organ, restricted to authoritative at_risk == 1",
+  "primary_exposure": "continuous corrected_age_gap",
+  "exposure_transform": "for outer fold f and organ o, mean/SD and Q1-Q4 cut points are learned from eligible OOF rows in the other four outer folds",
+  "primary_model": "unpenalized Breslow cause-specific Cox with chronological age per 10 years, binary sex, and continuous gap per crossfit SD; baseline hazard stratified by outer_fold",
+  "primary_inference": "pooled fold-stratified model-based CI; five fold-specific estimates and inverse-variance fixed-effect meta-analysis with Q/I2 are required robustness evidence",
+  "cluster_rationale": "within each organ there is exactly one record per participant, so there is no repeated within-organ participant cluster; fold-stratified baseline plus fold-specific meta-analysis address the five model/fold strata",
+  "ph_diagnostics": "scaled Schoenfeld rank_lifelines_cumsum_event and log-time tests for every covariate; the rank definition preserves (outer_fold, duration) order and applies lifelines 0.30.3 cumsum(event) before selecting event rows; BH family declared in output",
+  "time_window_sensitivity": "0-24 month administratively censored Cox and a 24-60 month event-free/alive landmark Cox use the same cross-fitted exposure scale",
+  "quartile_role": "visualization and sensitivity only; continuous gap remains primary",
+  "km": "target event with death censored; descriptive rather than competing-risk absolute incidence",
+  "competing_risk": "deterministic tied-time Aalen-Johansen target CIF with death as competing event",
+  "absolute_risk_horizons_months": [24, 60],
+  "multiple_testing": "Benjamini-Hochberg within prespecified seven-organ families",
+  "extended_covariates": "optional participant-level input; missing-value imputation and continuous scaling must use the other four outer folds",
+  "prediction_boundary": "all Cox/KM/CIF models in this directory are new downstream association analyses; apparent C-index values must not replace, relabel, or tune the sealed outer-fold EHR-AGE prediction metrics",
+  "publication_safety": "analysis tables, figure source tables, manifests, and logs are built inside one unique staging bundle and promoted by one directory rename; existing canonical bundles are never overwritten",
+  "prohibited_inputs": [
+    "Revision-0626 fitted corrections",
+    "Revision-0626 derived outcome tables",
+    "old Fig8-Fig10 numerical results"
+  ]
+}

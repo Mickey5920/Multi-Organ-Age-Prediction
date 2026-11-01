@@ -1,0 +1,77 @@
+{
+  "schema_version": "revision0710.external_validation.core_0716.basic_statistics.v1",
+  "status": "BASIC_EXTERNAL_STATISTICS_COMPLETE",
+  "created_at": "2026-07-16T04:48:26+08:00",
+  "prediction_seal_sha256": "f6514a2837da43bc889626deca528415e6a8982a8b10bd581f61814e1f1d9534",
+  "outcome_receipt_sha256": "64cff20b7a7136e4f15d3f20c80d8dbabf73f9e4fc3a1d95f7f0befbde9d4d7b",
+  "outputs": {
+    "Revision-0710\\06_figures_and_statistics\\04_external_validation\\core_0716\\shared\\06_statistics\\zero_shot_age_metrics.csv": {
+      "rows": 2268,
+      "sha256": "8f3471eea8a7f43e7fe015ec08590bb95dfa39a8f8af8d1cd6f2e526b2fe8b8f"
+    },
+    "Revision-0710\\06_figures_and_statistics\\04_external_validation\\core_0716\\shared\\06_statistics\\zero_shot_age_metrics_checkpoint_range.csv": {
+      "rows": 126,
+      "sha256": "402d8fbb63875a8aaee7665a5a044b0743cd4844e3815e28087fda0321cbb053"
+    },
+    "Revision-0710\\Final_Fig_0716\\Fig13\\Source_Data\\Fig13A_mimic_cohort_flow.csv": {
+      "rows": 36,
+      "sha256": "4984101446f7e4e821a18701926be219dbeae70af859547cbaa24ce2de289c29"
+    },
+    "Revision-0710\\Final_Fig_0716\\Fig13\\Source_Data\\Fig13B_raw_age_metrics_checkpoint_range.csv": {
+      "rows": 42,
+      "sha256": "1494c201ed8338fb4d8f8d95ec2c24f7d44a6d8be5e2a4ef8378b0d6844e8090"
+    },
+    "Revision-0710\\Final_Fig_0716\\Fig13\\Source_Data\\Fig13C_raw_age_calibration_bins.csv": {
+      "rows": 49,
+      "sha256": "618dbc7136d59a2e5a11091960729e197448ec671ee4282426f85105dadb03cc"
+    },
+    "Revision-0710\\Final_Fig_0716\\Fig13\\Source_Data\\Fig13E_cause_specific_hr.csv": {
+      "rows": 14,
+      "sha256": "50450606d66258d8084995caed2dfd7ee2add4af71ca1fd7cbd849f64a6d6f1c"
+    },
+    "Revision-0710\\Final_Fig_0716\\Fig13\\Source_Data\\MIMIC_incident_recurrent_event_counts.csv": {
+      "rows": 28,
+      "sha256": "eef49123e7e8754da2b946c8cb058710301e5075b21241d720acfd517baef26f"
+    },
+    "Revision-0710\\Final_Fig_0716\\Fig13\\Source_Data\\MIMIC_feature_coverage.csv": {
+      "rows": 234,
+      "sha256": "12610db0b3082ba995f3a934c447b5cee85548b8f9cf00dc40e2d37b00c85eca"
+    },
+    "Revision-0710\\Final_Fig_0716\\Fig14\\Source_Data\\Fig14A_release_cohort_flow.csv": {
+      "rows": 2,
+      "sha256": "3cfa9e1e21b67ad9fd34a93351e0ddf5b049bf9b33ee6d37ec499588afed5f21"
+    },
+    "Revision-0710\\Final_Fig_0716\\Fig14\\Source_Data\\Fig14B_release_slot_qc.csv": {
+      "rows": 156,
+      "sha256": "74c5a27e962dbd6fb7f02cd030b0852f9e16f8676a7ec0294566d0f2d153cb91"
+    },
+    "Revision-0710\\Final_Fig_0716\\Fig14\\Source_Data\\Fig14C_raw_age_metrics_checkpoint_range.csv": {
+      "rows": 84,
+      "sha256": "4961195e23c6a6a0966aa80dee1f117d45417f6a418376c48f8307459ddc1459"
+    },
+    "Revision-0710\\Final_Fig_0716\\Fig14\\Source_Data\\Fig14D_raw_age_calibration_bins.csv": {
+      "rows": 98,
+      "sha256": "b0bae3771ee8e975b1706609c2fb58263f7e28d6add73416b9a86e0c8275c08c"
+    },
+    "Revision-0710\\Final_Fig_0716\\Fig14\\Source_Data\\Fig14E_local_crossfit_recalibration.csv": {
+      "rows": 700,
+      "sha256": "7d8b978f2fe1f73eace1733a64afd814a75e6473cd54265b6dc8921c3325cbdb"
+    },
+    "Revision-0710\\Final_Fig_0716\\Fig14\\Source_Data\\Fig14F_questionnaire_or.csv": {
+      "rows": 14,
+      "sha256": "a8c1c06b970c99a9a6eae022a634627eeebaa9a6a89127053c4181e0645e2f22"
+    },
+    "Revision-0710\\Final_Fig_0716\\Fig14\\Source_Data\\NHANES_release_survey_age_metrics.csv": {
+      "rows": 98,
+      "sha256": "b5a02309a1fbc1c86d0258a03dc66adf2fe1d590de77c2cf13be6a376372506c"
+    },
+    "Revision-0710\\Final_Fig_0716\\Fig14\\Source_Data\\NHANES_questionnaire_prevalence.csv": {
+      "rows": 14,
+      "sha256": "2c8fb94492812fda9ba923cea8144d2b4e2b4756474c9fa8d90b10b8c592b9ea"
+    },
+    "Revision-0710\\Final_Fig_0716\\Fig14\\Source_Data\\NHANES_feature_coverage.csv": {
+      "rows": 156,
+      "sha256": "dd0f313f3ea6a2a10bc6ca804a8e745bdfb2656ad9a6c6a0277740e929badf01"
+    }
+  }
+}

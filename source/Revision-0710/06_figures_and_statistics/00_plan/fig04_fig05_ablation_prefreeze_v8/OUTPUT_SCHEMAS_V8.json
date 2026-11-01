@@ -1,0 +1,1043 @@
+{
+  "schema_version": "revision0710.fig04_fig05.executable_output_schemas.v8",
+  "status": "PREFREEZE_SCHEMA_ONLY_NO_FORMAL_OUTPUTS",
+  "created_date": "2026-07-11",
+  "dtype_policy": {
+    "string": "non-null UTF-8 string unless nullable",
+    "int64": "pandas signed integer dtype",
+    "float64": "pandas float64 finite",
+    "bool": "pandas bool dtype"
+  },
+  "formula_evaluation": "rowwise with declared tolerance",
+  "tables": {
+    "checkpoint_manifest": {
+      "kind": "json",
+      "exact_fields": true,
+      "fields": {
+        "schema_version": {
+          "dtype": "string",
+          "nullable": false,
+          "const": "revision0710.fig04_fig05.checkpoint_manifest.v8"
+        },
+        "status": {
+          "dtype": "string",
+          "nullable": false,
+          "const": "SEALED_E55_ONLY"
+        },
+        "run_id": {
+          "dtype": "string",
+          "nullable": false
+        },
+        "variant_id": {
+          "dtype": "string",
+          "nullable": false,
+          "enum": [
+            "fig04_01_canonical_control",
+            "fig04_02_no_organ_queries",
+            "fig04_03_no_common_bidirectional_gru",
+            "fig04_04_no_survival_supervision",
+            "fig04_05_no_strict_offset_shrinkage",
+            "fig04_06_no_consistency_objective",
+            "fig04_07_seven_independent_organ_age_heads",
+            "fig05_01_no_phenotypes_or_missingness",
+            "fig05_02_no_hospital_icd",
+            "fig05_03_no_gp_prescriptions",
+            "fig05_04_no_event_text",
+            "fig05_05_no_longitudinal_events"
+          ]
+        },
+        "outer_fold": {
+          "dtype": "int64",
+          "nullable": false,
+          "min": 0,
+          "max": 4
+        },
+        "evaluation_epoch": {
+          "dtype": "int64",
+          "nullable": false,
+          "const": 55
+        },
+        "checkpoint_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "initial_trainable_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "initial_full_model_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "initial_optimizer_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "capture_model_state_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "capture_trajectory_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "training_trajectory_attestation_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "optimizer_name_set_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "model_parameter_count": {
+          "dtype": "int64",
+          "nullable": false,
+          "min": 1
+        },
+        "trainable_parameter_count": {
+          "dtype": "int64",
+          "nullable": false,
+          "min": 1
+        },
+        "checkpoint_bytes": {
+          "dtype": "int64",
+          "nullable": false,
+          "min": 1
+        }
+      }
+    },
+    "prediction_rows": {
+      "kind": "table",
+      "format": "parquet_or_csv",
+      "exact_columns": true,
+      "column_order": [
+        "participant_id",
+        "run_id",
+        "variant_id",
+        "outer_fold",
+        "split_role",
+        "evaluation_epoch",
+        "organ_system",
+        "actual_age",
+        "predicted_age",
+        "raw_age_gap",
+        "corrected_age_gap",
+        "risk_score",
+        "sex",
+        "strict_healthy_reference_60m",
+        "duration_months",
+        "event",
+        "at_risk",
+        "checkpoint_sha256",
+        "age_correction_sha256",
+        "cox_nuisance_sha256"
+      ],
+      "columns": {
+        "participant_id": {
+          "dtype": "string",
+          "nullable": false
+        },
+        "run_id": {
+          "dtype": "string",
+          "nullable": false
+        },
+        "variant_id": {
+          "dtype": "string",
+          "nullable": false,
+          "enum": [
+            "fig04_01_canonical_control",
+            "fig04_02_no_organ_queries",
+            "fig04_03_no_common_bidirectional_gru",
+            "fig04_04_no_survival_supervision",
+            "fig04_05_no_strict_offset_shrinkage",
+            "fig04_06_no_consistency_objective",
+            "fig04_07_seven_independent_organ_age_heads",
+            "fig05_01_no_phenotypes_or_missingness",
+            "fig05_02_no_hospital_icd",
+            "fig05_03_no_gp_prescriptions",
+            "fig05_04_no_event_text",
+            "fig05_05_no_longitudinal_events"
+          ]
+        },
+        "outer_fold": {
+          "dtype": "int64",
+          "nullable": false,
+          "min": 0,
+          "max": 4
+        },
+        "split_role": {
+          "dtype": "string",
+          "nullable": false,
+          "enum": [
+            "validation",
+            "test"
+          ]
+        },
+        "evaluation_epoch": {
+          "dtype": "int64",
+          "nullable": false,
+          "const": 55
+        },
+        "organ_system": {
+          "dtype": "string",
+          "nullable": false,
+          "enum": [
+            "cardiovascular",
+            "hepatic",
+            "immune",
+            "metabolic",
+            "musculoskeletal",
+            "pulmonary",
+            "renal"
+          ]
+        },
+        "actual_age": {
+          "dtype": "float64",
+          "nullable": false
+        },
+        "predicted_age": {
+          "dtype": "float64",
+          "nullable": false
+        },
+        "raw_age_gap": {
+          "dtype": "float64",
+          "nullable": false
+        },
+        "corrected_age_gap": {
+          "dtype": "float64",
+          "nullable": false
+        },
+        "risk_score": {
+          "dtype": "float64",
+          "nullable": false
+        },
+        "sex": {
+          "dtype": "int64",
+          "nullable": false,
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "strict_healthy_reference_60m": {
+          "dtype": "int64",
+          "nullable": false,
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "duration_months": {
+          "dtype": "float64",
+          "nullable": false,
+          "min_exclusive": 0,
+          "max": 60
+        },
+        "event": {
+          "dtype": "int64",
+          "nullable": false,
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "at_risk": {
+          "dtype": "int64",
+          "nullable": false,
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "checkpoint_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "age_correction_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "cox_nuisance_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "primary_key": [
+        "run_id",
+        "split_role",
+        "participant_id",
+        "organ_system"
+      ],
+      "constraints": {
+        "evaluation_epoch": {
+          "const": 55
+        },
+        "split_role": {
+          "enum": [
+            "validation",
+            "test"
+          ]
+        },
+        "completed": {
+          "implicit": true
+        },
+        "performance_selected": {
+          "implicit": false
+        }
+      },
+      "formulas": [
+        {
+          "target": "raw_age_gap",
+          "op": "subtract",
+          "left": "predicted_age",
+          "right": "actual_age",
+          "tolerance": 1e-8
+        },
+        {
+          "target": "event",
+          "op": "implies",
+          "condition_column": "at_risk",
+          "condition_value": 1,
+          "tolerance": 0
+        }
+      ],
+      "cardinality": {
+        "minimum_rows": 7,
+        "group_by": [
+          "run_id",
+          "split_role",
+          "participant_id"
+        ],
+        "rows_per_participant": 7,
+        "organ_column": "organ_system",
+        "organ_values": [
+          "cardiovascular",
+          "hepatic",
+          "immune",
+          "metabolic",
+          "musculoskeletal",
+          "pulmonary",
+          "renal"
+        ]
+      }
+    },
+    "age_correction": {
+      "kind": "json",
+      "exact_fields": true,
+      "fields": {
+        "schema_version": {
+          "dtype": "string",
+          "nullable": false,
+          "const": "revision0710.fig04_fig05.age_correction.v8"
+        },
+        "run_id": {
+          "dtype": "string",
+          "nullable": false
+        },
+        "fit_role": {
+          "dtype": "string",
+          "nullable": false,
+          "const": "validation"
+        },
+        "evaluation_epoch": {
+          "dtype": "int64",
+          "nullable": false,
+          "const": 55
+        },
+        "checkpoint_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "participant_ids_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "parameters": {
+          "dtype": "string",
+          "nullable": false,
+          "logical_type": "array_7_organs"
+        },
+        "model_selection_used": {
+          "dtype": "bool",
+          "nullable": false,
+          "const": false
+        }
+      }
+    },
+    "cox_nuisance": {
+      "kind": "json",
+      "exact_fields": true,
+      "fields": {
+        "schema_version": {
+          "dtype": "string",
+          "nullable": false,
+          "const": "revision0710.fig04_fig05.cox_nuisance.v8"
+        },
+        "run_id": {
+          "dtype": "string",
+          "nullable": false
+        },
+        "fit_role": {
+          "dtype": "string",
+          "nullable": false,
+          "const": "validation"
+        },
+        "evaluation_epoch": {
+          "dtype": "int64",
+          "nullable": false,
+          "const": 55
+        },
+        "checkpoint_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "age_correction_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "penalizer": {
+          "dtype": "float64",
+          "nullable": false,
+          "const": 0.0001,
+          "min_exclusive": 0
+        },
+        "models": {
+          "dtype": "string",
+          "nullable": false,
+          "logical_type": "array_14_organ_model_cells"
+        },
+        "model_selection_used": {
+          "dtype": "bool",
+          "nullable": false,
+          "const": false
+        }
+      }
+    },
+    "outer_read_ledger": {
+      "kind": "json",
+      "exact_fields": true,
+      "fields": {
+        "schema_version": {
+          "dtype": "string",
+          "nullable": false,
+          "const": "revision0710.fig04_fig05.outer_read_ledger.v8"
+        },
+        "status": {
+          "dtype": "string",
+          "nullable": false,
+          "const": "COMMITTED_BEFORE_OUTER_OPEN"
+        },
+        "run_id": {
+          "dtype": "string",
+          "nullable": false
+        },
+        "checkpoint_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "training_complete_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "age_correction_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "cox_nuisance_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "outer_role_manifest_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "outer_opened_before_commit": {
+          "dtype": "bool",
+          "nullable": false,
+          "const": false
+        }
+      }
+    },
+    "fold_metrics": {
+      "kind": "table",
+      "format": "csv",
+      "exact_columns": true,
+      "column_order": [
+        "run_id",
+        "variant_id",
+        "outer_fold",
+        "evaluation_epoch",
+        "strict_n_participants",
+        "strict_n_participant_organ_rows",
+        "raw_strict_mae",
+        "raw_strict_pearson",
+        "raw_strict_r2",
+        "age_sex_harrell_macro_delta_c",
+        "completed",
+        "performance_selected",
+        "checkpoint_sha256",
+        "prediction_rows_sha256",
+        "age_correction_sha256",
+        "cox_nuisance_sha256",
+        "outer_read_ledger_sha256"
+      ],
+      "columns": {
+        "run_id": {
+          "dtype": "string",
+          "nullable": false
+        },
+        "variant_id": {
+          "dtype": "string",
+          "nullable": false,
+          "enum": [
+            "fig04_01_canonical_control",
+            "fig04_02_no_organ_queries",
+            "fig04_03_no_common_bidirectional_gru",
+            "fig04_04_no_survival_supervision",
+            "fig04_05_no_strict_offset_shrinkage",
+            "fig04_06_no_consistency_objective",
+            "fig04_07_seven_independent_organ_age_heads",
+            "fig05_01_no_phenotypes_or_missingness",
+            "fig05_02_no_hospital_icd",
+            "fig05_03_no_gp_prescriptions",
+            "fig05_04_no_event_text",
+            "fig05_05_no_longitudinal_events"
+          ]
+        },
+        "outer_fold": {
+          "dtype": "int64",
+          "nullable": false,
+          "min": 0,
+          "max": 4
+        },
+        "evaluation_epoch": {
+          "dtype": "int64",
+          "nullable": false,
+          "const": 55
+        },
+        "strict_n_participants": {
+          "dtype": "int64",
+          "nullable": false,
+          "min": 1
+        },
+        "strict_n_participant_organ_rows": {
+          "dtype": "int64",
+          "nullable": false,
+          "min": 7
+        },
+        "raw_strict_mae": {
+          "dtype": "float64",
+          "nullable": false,
+          "min": 0
+        },
+        "raw_strict_pearson": {
+          "dtype": "float64",
+          "nullable": false,
+          "min": -1,
+          "max": 1
+        },
+        "raw_strict_r2": {
+          "dtype": "float64",
+          "nullable": false
+        },
+        "age_sex_harrell_macro_delta_c": {
+          "dtype": "float64",
+          "nullable": false,
+          "min": -1,
+          "max": 1
+        },
+        "completed": {
+          "dtype": "bool",
+          "nullable": false,
+          "const": true
+        },
+        "performance_selected": {
+          "dtype": "bool",
+          "nullable": false,
+          "const": false
+        },
+        "checkpoint_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "prediction_rows_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "age_correction_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "cox_nuisance_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "outer_read_ledger_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "primary_key": [
+        "run_id"
+      ],
+      "constraints": {
+        "evaluation_epoch": {
+          "const": 55
+        },
+        "completed": {
+          "const": true
+        },
+        "performance_selected": {
+          "const": false
+        }
+      },
+      "formulas": [
+        {
+          "target": "strict_n_participant_organ_rows",
+          "op": "multiply_const",
+          "left": "strict_n_participants",
+          "constant": 7,
+          "tolerance": 0
+        }
+      ],
+      "cardinality": {
+        "minimum_rows": 1,
+        "rows_per_run": 1
+      }
+    },
+    "organ_metrics": {
+      "kind": "table",
+      "format": "csv",
+      "exact_columns": true,
+      "column_order": [
+        "run_id",
+        "variant_id",
+        "outer_fold",
+        "evaluation_epoch",
+        "organ_system",
+        "at_risk_n",
+        "event_n",
+        "age_sex_harrell_base_c",
+        "age_sex_gap_harrell_full_c",
+        "age_sex_harrell_delta_c",
+        "completed",
+        "performance_selected"
+      ],
+      "columns": {
+        "run_id": {
+          "dtype": "string",
+          "nullable": false
+        },
+        "variant_id": {
+          "dtype": "string",
+          "nullable": false,
+          "enum": [
+            "fig04_01_canonical_control",
+            "fig04_02_no_organ_queries",
+            "fig04_03_no_common_bidirectional_gru",
+            "fig04_04_no_survival_supervision",
+            "fig04_05_no_strict_offset_shrinkage",
+            "fig04_06_no_consistency_objective",
+            "fig04_07_seven_independent_organ_age_heads",
+            "fig05_01_no_phenotypes_or_missingness",
+            "fig05_02_no_hospital_icd",
+            "fig05_03_no_gp_prescriptions",
+            "fig05_04_no_event_text",
+            "fig05_05_no_longitudinal_events"
+          ]
+        },
+        "outer_fold": {
+          "dtype": "int64",
+          "nullable": false,
+          "min": 0,
+          "max": 4
+        },
+        "evaluation_epoch": {
+          "dtype": "int64",
+          "nullable": false,
+          "const": 55
+        },
+        "organ_system": {
+          "dtype": "string",
+          "nullable": false,
+          "enum": [
+            "cardiovascular",
+            "hepatic",
+            "immune",
+            "metabolic",
+            "musculoskeletal",
+            "pulmonary",
+            "renal"
+          ]
+        },
+        "at_risk_n": {
+          "dtype": "int64",
+          "nullable": false,
+          "min": 1
+        },
+        "event_n": {
+          "dtype": "int64",
+          "nullable": false,
+          "min": 1
+        },
+        "age_sex_harrell_base_c": {
+          "dtype": "float64",
+          "nullable": false,
+          "min": 0,
+          "max": 1
+        },
+        "age_sex_gap_harrell_full_c": {
+          "dtype": "float64",
+          "nullable": false,
+          "min": 0,
+          "max": 1
+        },
+        "age_sex_harrell_delta_c": {
+          "dtype": "float64",
+          "nullable": false,
+          "min": -1,
+          "max": 1
+        },
+        "completed": {
+          "dtype": "bool",
+          "nullable": false,
+          "const": true
+        },
+        "performance_selected": {
+          "dtype": "bool",
+          "nullable": false,
+          "const": false
+        }
+      },
+      "primary_key": [
+        "run_id",
+        "organ_system"
+      ],
+      "constraints": {
+        "evaluation_epoch": {
+          "const": 55
+        },
+        "completed": {
+          "const": true
+        },
+        "performance_selected": {
+          "const": false
+        }
+      },
+      "formulas": [
+        {
+          "target": "age_sex_harrell_delta_c",
+          "op": "subtract",
+          "left": "age_sex_gap_harrell_full_c",
+          "right": "age_sex_harrell_base_c",
+          "tolerance": 1e-10
+        }
+      ],
+      "cardinality": {
+        "minimum_rows": 7,
+        "group_by": [
+          "run_id"
+        ],
+        "rows_per_run": 7,
+        "organ_column": "organ_system",
+        "organ_values": [
+          "cardiovascular",
+          "hepatic",
+          "immune",
+          "metabolic",
+          "musculoskeletal",
+          "pulmonary",
+          "renal"
+        ]
+      }
+    },
+    "fold_receipt": {
+      "kind": "json",
+      "exact_fields": true,
+      "fields": {
+        "schema_version": {
+          "dtype": "string",
+          "nullable": false,
+          "const": "revision0710.fig04_fig05.fold_receipt.v8"
+        },
+        "status": {
+          "dtype": "string",
+          "nullable": false,
+          "const": "COMPLETE_E55_ONLY_NO_SELECTION"
+        },
+        "run_id": {
+          "dtype": "string",
+          "nullable": false
+        },
+        "variant_id": {
+          "dtype": "string",
+          "nullable": false,
+          "enum": [
+            "fig04_01_canonical_control",
+            "fig04_02_no_organ_queries",
+            "fig04_03_no_common_bidirectional_gru",
+            "fig04_04_no_survival_supervision",
+            "fig04_05_no_strict_offset_shrinkage",
+            "fig04_06_no_consistency_objective",
+            "fig04_07_seven_independent_organ_age_heads",
+            "fig05_01_no_phenotypes_or_missingness",
+            "fig05_02_no_hospital_icd",
+            "fig05_03_no_gp_prescriptions",
+            "fig05_04_no_event_text",
+            "fig05_05_no_longitudinal_events"
+          ]
+        },
+        "outer_fold": {
+          "dtype": "int64",
+          "nullable": false,
+          "min": 0,
+          "max": 4
+        },
+        "evaluation_epoch": {
+          "dtype": "int64",
+          "nullable": false,
+          "const": 55
+        },
+        "checkpoint_manifest_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "prediction_rows_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "age_correction_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "cox_nuisance_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "outer_read_ledger_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "fold_metrics_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "organ_metrics_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "task_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "claim_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "completed": {
+          "dtype": "bool",
+          "nullable": false,
+          "const": true
+        },
+        "performance_selected": {
+          "dtype": "bool",
+          "nullable": false,
+          "const": false
+        },
+        "opened_roles": {
+          "dtype": "string",
+          "nullable": false,
+          "logical_type": "outer_role_array"
+        },
+        "opened_paths": {
+          "dtype": "string",
+          "nullable": false,
+          "logical_type": "nonempty_path_array"
+        },
+        "outer_refit_calls": {
+          "dtype": "int64",
+          "nullable": false,
+          "const": 0
+        }
+      }
+    },
+    "attempt_receipt": {
+      "kind": "json",
+      "exact_fields": true,
+      "fields": {
+        "schema_version": {
+          "dtype": "string",
+          "nullable": false,
+          "const": "revision0710.fig04_fig05.attempt_receipt.v8"
+        },
+        "status": {
+          "dtype": "string",
+          "nullable": false,
+          "enum": [
+            "COMPLETE",
+            "FAILED"
+          ]
+        },
+        "run_id": {
+          "dtype": "string",
+          "nullable": false
+        },
+        "attempt_ordinal": {
+          "dtype": "int64",
+          "nullable": false,
+          "min": 1
+        },
+        "seed": {
+          "dtype": "int64",
+          "nullable": false,
+          "const": 7210
+        },
+        "restart_epoch": {
+          "dtype": "int64",
+          "nullable": false,
+          "const": 1
+        },
+        "training_resume_used": {
+          "dtype": "bool",
+          "nullable": false,
+          "const": false
+        },
+        "fold_receipt_sha256": {
+          "dtype": "string",
+          "nullable": true,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "failure_receipt_sha256": {
+          "dtype": "string",
+          "nullable": true,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "selection_uses_metrics": {
+          "dtype": "bool",
+          "nullable": false,
+          "const": false
+        }
+      }
+    },
+    "global_aggregate": {
+      "kind": "json",
+      "exact_fields": true,
+      "fields": {
+        "schema_version": {
+          "dtype": "string",
+          "nullable": false,
+          "const": "revision0710.fig04_fig05.global_aggregate.v8"
+        },
+        "status": {
+          "dtype": "string",
+          "nullable": false,
+          "const": "COMPLETE_60_OF_60"
+        },
+        "run_count": {
+          "dtype": "int64",
+          "nullable": false,
+          "const": 60
+        },
+        "run_ids_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "fold_receipt_set_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "artifact_index_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "independent_replay_index_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "worker_access_audit_index_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "artifact_set_sha256": {
+          "dtype": "string",
+          "nullable": false,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "artifacts_per_run": {
+          "dtype": "int64",
+          "nullable": false,
+          "const": 22
+        },
+        "artifact_count": {
+          "dtype": "int64",
+          "nullable": false,
+          "const": 1320
+        },
+        "all_completed": {
+          "dtype": "bool",
+          "nullable": false,
+          "const": true
+        },
+        "performance_selected": {
+          "dtype": "bool",
+          "nullable": false,
+          "const": false
+        },
+        "source_gate_open": {
+          "dtype": "bool",
+          "nullable": false,
+          "const": true
+        },
+        "independent_training_replays_complete": {
+          "dtype": "bool",
+          "nullable": false,
+          "const": true
+        },
+        "persistent_replay_receipts_complete": {
+          "dtype": "bool",
+          "nullable": false,
+          "const": true
+        }
+      }
+    }
+  }
+}

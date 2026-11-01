@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.pt
+*.npz
+*.parquet
+*.pkl
+/.storage-run.lock
+/storage-launch.json
+/checks/
+/outputs/
+/cache/
+/tmp/

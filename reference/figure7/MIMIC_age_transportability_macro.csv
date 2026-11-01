@@ -1,0 +1,9 @@
+stage,metric,mean5_estimate
+Direct transfer,calibration_slope,0.7336088488348598
+Direct transfer,mae,7.079438663984305
+Direct transfer,pearson,0.4114718698180451
+Direct transfer,r2,0.1344149843636509
+Support aligned,calibration_slope,0.8042846075451615
+Support aligned,mae,6.990333190041795
+Support aligned,pearson,0.4734943672829467
+Support aligned,r2,0.1176970487255948

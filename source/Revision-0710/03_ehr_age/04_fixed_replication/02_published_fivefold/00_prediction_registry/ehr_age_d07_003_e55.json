@@ -1,0 +1,76 @@
+{
+  "schema_version": "revision0710_prediction_registry_v1",
+  "method": "ehr_age_d07_003_e55",
+  "prediction_files": [
+    {
+      "outer_fold": 0,
+      "split_role": "validation",
+      "rows": 639492,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\01_runs\\outer_fold_0\\reuse_d07_003_e55\\validation_predictions_long.parquet",
+      "sha256": "fce693510241ebdcc298165a1ff8def54d00caa78ec8b13ad493c8fad713971e"
+    },
+    {
+      "outer_fold": 0,
+      "split_role": "test",
+      "rows": 639485,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\01_runs\\outer_fold_0\\reuse_d07_003_e55\\test_predictions_long.normalized.parquet",
+      "sha256": "fbf5d91ec3d9f398549ead2a898d8248f83fb305aeb53b42482f7903625488e4"
+    },
+    {
+      "outer_fold": 1,
+      "split_role": "validation",
+      "rows": 639471,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\01_runs\\outer_fold_1\\attempts\\primary_e55_v1\\evaluation\\validation_predictions_long.parquet",
+      "sha256": "ddf015f22d6d9acf8439600080b8efaca2344515ababe06c085662d392977f0d"
+    },
+    {
+      "outer_fold": 1,
+      "split_role": "test",
+      "rows": 639492,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\01_runs\\outer_fold_1\\attempts\\primary_e55_v1\\score\\test_predictions_long.parquet",
+      "sha256": "c26d89c3075f4d792ccd8c7974cb6153ebf35b7ac11cd3b8f16841b76d37905c"
+    },
+    {
+      "outer_fold": 2,
+      "split_role": "validation",
+      "rows": 639471,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\01_runs\\outer_fold_2\\attempts\\primary_e55_v1\\evaluation\\validation_predictions_long.parquet",
+      "sha256": "b0c987361e7bd1847131d04dc58ca4de02695c0f630f6fd2fd288143e3213ff8"
+    },
+    {
+      "outer_fold": 2,
+      "split_role": "test",
+      "rows": 639471,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\01_runs\\outer_fold_2\\attempts\\primary_e55_v1\\score\\test_predictions_long.parquet",
+      "sha256": "74526549f193a663c88e9bfb72a8b744ebdcd3e5da24839d934c89719273c5a6"
+    },
+    {
+      "outer_fold": 3,
+      "split_role": "validation",
+      "rows": 639492,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\01_runs\\outer_fold_3\\attempts\\primary_e55_v1\\evaluation\\validation_predictions_long.parquet",
+      "sha256": "00c1af89172d7231c14ed27142bd2a415550b66aa9454c1a139130d12112d1a4"
+    },
+    {
+      "outer_fold": 3,
+      "split_role": "test",
+      "rows": 639471,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\01_runs\\outer_fold_3\\attempts\\primary_e55_v1\\score\\test_predictions_long.parquet",
+      "sha256": "007d7f11483c3a523025d22851265c24342f06c7a9ee63e95ed9066a7de01a7e"
+    },
+    {
+      "outer_fold": 4,
+      "split_role": "validation",
+      "rows": 639485,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\01_runs\\outer_fold_4\\attempts\\primary_e55_v1\\evaluation\\validation_predictions_long.parquet",
+      "sha256": "2dd74d3762068dab077d731a76f12f874cf6d4c835765b682490b3bcbbfe055c"
+    },
+    {
+      "outer_fold": 4,
+      "split_role": "test",
+      "rows": 639492,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\01_runs\\outer_fold_4\\attempts\\primary_e55_v1\\score\\test_predictions_long.parquet",
+      "sha256": "691753b533a69b01d01626825bdb7c20fa1de985dfe451a85fdb9ffa4807f99e"
+    }
+  ]
+}

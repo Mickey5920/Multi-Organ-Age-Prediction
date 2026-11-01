@@ -1,0 +1,17 @@
+{
+  "profile": "neural",
+  "python": "3.9.25",
+  "dependencies": {
+    "numpy": "2.0.1",
+    "pandas": "2.3.3",
+    "scipy": "1.13.1",
+    "pyarrow": "21.0.0",
+    "lifelines": "0.30.0",
+    "scikit-survival": "0.23.1",
+    "scikit-learn": "1.5.2",
+    "matplotlib": "3.9.4",
+    "torch": "2.5.1"
+  },
+  "origin": "Observed existing environment used for round-two analysis or its bounded verification; no environment installed for this task.",
+  "cuda": "11.8"
+}

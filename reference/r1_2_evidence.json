@@ -1,0 +1,99 @@
+{
+  "status": "COMPLETE",
+  "new_fits": 0,
+  "scope": "aggregate evidence integration for round-two R1.2; no manuscript or response edits",
+  "operational_definition": "age-referenced, outcome-informed EHR-derived organ-state deviation with prognostic information",
+  "outcome_supervision": {
+    "main_delta_c": 0.04298020689456881,
+    "no_incident_delta_c": 0.01146965412647564,
+    "main_minus_no_incident_delta_c": 0.03151055276809317,
+    "main_minus_no_incident_mae_years": -0.002742612030727898,
+    "main_minus_no_incident_pearson": 0.0003715709339447981,
+    "main_minus_no_incident_r2": 0.0012133379072500894,
+    "estimand_note": "original matched ablation comparator; do not compare its delta-C magnitude directly with the new information-matched M baseline",
+    "supports": "prospective supervision is the main source of downstream discrimination, with little change in chronological-age fit",
+    "does_not_establish": "independent measurement of biological aging"
+  },
+  "recorded_burden": {
+    "heldout_explainability": {
+      "full_oof": {
+        "macro_mean_heldout_r2_G0": 0.024245304917341354,
+        "macro_mean_heldout_r2_G2D": 0.17483283828340146,
+        "macro_mean_heldout_r2_G3_detail": 0.18924581548170819,
+        "macro_mean_increment_G3_detail_vs_G2D": 0.014412977198306726
+      },
+      "target_at_risk": {
+        "macro_mean_heldout_r2_G0": 0.020881983588536657,
+        "macro_mean_heldout_r2_G2D": 0.15647371984883776,
+        "macro_mean_heldout_r2_G3_detail": 0.16732585933399344,
+        "macro_mean_increment_G3_detail_vs_G2D": 0.010852139485155676
+      }
+    },
+    "fully_adjusted_hr_range": [
+      1.0851983009042403,
+      1.4472011177027289
+    ],
+    "sparse_record_n": 113506,
+    "sparse_record_hr_range": [
+      1.060176247804627,
+      1.3656464749815544
+    ],
+    "supports": "association beyond the measured recorded-burden and healthcare-density covariates under the stated models",
+    "does_not_establish": "absence of unrecorded/subclinical disease or unmeasured healthcare-ascertainment effects; unexplained variation is not a percentage of biological aging"
+  },
+  "shared_output_structure": {
+    "pairwise_correlation_range": [
+      0.694,
+      0.997
+    ],
+    "first_eigenvalue_standardized_variance_percent": 91.2,
+    "source_section": "Shared and residual covariance patterns in the multi-organ OSAG profile",
+    "interpretation": "dominant common model-output dimension; not seven independent aging clocks or an independently validated biological factor"
+  },
+  "organ_alignment": {
+    "schema_version": "m11.maintext.organ_specificity.claims.v1",
+    "generated_at_utc": "2026-07-27T11:41:07.609385Z",
+    "neural_model_refit": false,
+    "survival_model_refit": false,
+    "panel_a": {
+      "matched_offset_strongest_outcomes": 6,
+      "matched_offset_above_offtarget_mean_outcomes": 7,
+      "total_outcomes": 7,
+      "interpretation": "organ-aligned prospective association, not complete organ independence"
+    },
+    "panel_b": {
+      "unique_first_event_participants": 52399,
+      "observed_top1": 0.3483272581537815,
+      "permutation_mean_top1": 0.1425391896791923,
+      "observed_top2": 0.5716521307658543,
+      "permutation_mean_top2": 0.2839975381209565,
+      "bootstrap_replicates": 1000,
+      "label_permutation_replicates": 1000
+    },
+    "panel_c": {
+      "mapping_permutations": 5040,
+      "identity_rank_descending": 2,
+      "identity_macro_delta_c": 0.013398902638885574,
+      "mapping_tail_fraction_at_or_above_identity": 0.0003968253968253968,
+      "interpretation": "post-hoc output-label mapping negative control, not neural-query masking"
+    },
+    "supports": "preferential organ-aligned prognostic information within a highly shared profile",
+    "limits": "the model was supervised by organ outcomes; this is not independent molecular/tissue aging validation, complete organ independence or neural-query masking"
+  },
+  "source_provenance": {
+    "burden": {
+      "path": "Revision-0710\\Final_Fig_0716\\Reviewer_Statistics\\12_e47_disease_burden_adjustment\\Source_Data\\reviewer_key_numbers.json",
+      "sha256": "2841ebaa54cad3e2f98899bf1a478d68b0d7747ce1c718b3cb03bae866da0ca5"
+    },
+    "alignment": {
+      "path": "Revision-0710\\Final_Figure_0728\\01_MAIN_FIGURES\\Fig11_Organ_Aligned_Specificity\\source_data\\figure_claim_summary.json",
+      "sha256": "f4dc33828c991c8e1ea4abed16b2db4683798e5fc0f5ba609514e9677e023b31"
+    },
+    "submitted_main": {
+      "path": "Revisions-0820\\02_Manuscript\\Source\\main.tex",
+      "sha256": "4996e71bda27f973b7b6ae7c2da99cd15fb2dbae911618a63b146eef2c76d680"
+    }
+  },
+  "inputs_unchanged": true,
+  "source_sha256": "017a116d41756ec9fad21538a3f2a8f8bd8973d6e8b376dfc58b16cd206ce074"
+}

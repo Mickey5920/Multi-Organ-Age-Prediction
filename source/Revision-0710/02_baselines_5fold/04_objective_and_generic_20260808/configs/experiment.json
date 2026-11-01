@@ -1,0 +1,88 @@
+{
+  "schema_version": "revision0710.baseline_extension.20260808.v1",
+  "cohort": {
+    "participants": 456773,
+    "fold_protocol": "test=f, validation=(f+1)%5, train=remaining three folds",
+    "maximum_retained_events": 32,
+    "phenotype_features": 78,
+    "organ_systems": 7
+  },
+  "objective_matched": {
+    "models": [
+      "retain",
+      "behrt_style",
+      "medbert_style",
+      "ehrformer_style"
+    ],
+    "fixed_epochs": 47,
+    "batch_size": 2048,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0001,
+    "warmup_epochs": 3,
+    "scheduler_horizon_epochs": 60,
+    "gradient_clip_norm": 1.0,
+    "event_dropout_probability": 0.1,
+    "hidden_dim": 128,
+    "num_heads": 4,
+    "num_layers": 2,
+    "dropout": 0.15,
+    "risk_offset_cap_years": 8.0,
+    "risk_temperature": 2.0,
+    "baseline_log_rate_init": -7.5,
+    "survival_interval_edges_months": [0.0, 12.0, 24.0, 36.0, 48.0, 60.0],
+    "loss": {
+      "huber_beta_years": 2.0,
+      "age_scale_years": 10.0,
+      "base_huber_weight": 1.0,
+      "base_view_huber_weight": 0.0,
+      "base_mse_weight": 0.0,
+      "base_correlation_weight": 0.0,
+      "final_all_huber_weight": 0.0,
+      "strict_final_huber_weight": 0.0,
+      "strict_offset_weight": 0.75,
+      "strict_center_weight": 0.0,
+      "strict_slope_weight": 0.0,
+      "survival_weight": 0.5,
+      "evaluator_gap_cox_weight": 0.25,
+      "evaluator_gap_cox_scale_years": 2.0,
+      "consistency_weight": 0.1,
+      "survival_ramp_start_fraction": 0.1,
+      "survival_ramp_epochs": 15
+    }
+  },
+  "generic_age_only": {
+    "models": [
+      "linear_svr",
+      "mlp",
+      "cnn",
+      "resnet",
+      "transformer"
+    ],
+    "batch_size": 4096,
+    "maximum_epochs": 100,
+    "early_stopping_patience": 12,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "smooth_l1_beta": 2.0,
+    "hidden_dim": 128,
+    "num_heads": 4,
+    "num_layers": 2,
+    "dropout": 0.15
+    ,
+    "linear_svr_epochs": 30,
+    "linear_svr_patience": 8,
+    "linear_svr_batch_size": 8192,
+    "linear_svr_alpha": 0.0001,
+    "linear_svr_eta0": 0.01,
+    "linear_svr_hash_bins_per_channel": 2048
+  },
+  "shared": {
+    "seed_base": 8080,
+    "deterministic": true,
+    "tf32": true,
+    "amp": true,
+    "warm_start": false,
+    "pretrained_checkpoint": false,
+    "test_used_for_selection": false
+  }
+}

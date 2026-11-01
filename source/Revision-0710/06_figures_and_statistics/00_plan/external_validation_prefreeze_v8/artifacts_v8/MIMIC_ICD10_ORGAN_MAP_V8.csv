@@ -1,0 +1,23 @@
+rule_order,organ_system,code_system,match_type,category_start,category_end,normalization,prevalent_window,incident_event_window,multi_organ_match_allowed,icd9_endpoint_authorized
+0,cardiovascular,ICD10,category3_inclusive_range,I00,I99,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+1,cardiovascular,ICD10,category3_inclusive_range,C38,C38,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+2,hepatic,ICD10,category3_inclusive_range,K70,K77,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+3,hepatic,ICD10,category3_inclusive_range,C22,C22,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+4,immune,ICD10,category3_inclusive_range,D80,D89,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+5,immune,ICD10,category3_inclusive_range,C81,C86,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+6,immune,ICD10,category3_inclusive_range,C88,C88,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+7,immune,ICD10,category3_inclusive_range,C96,C96,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+8,immune,ICD10,category3_inclusive_range,C37,C37,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+9,metabolic,ICD10,category3_inclusive_range,E08,E13,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+10,metabolic,ICD10,category3_inclusive_range,E65,E77,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+11,metabolic,ICD10,category3_inclusive_range,M80,M85,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+12,musculoskeletal,ICD10,category3_inclusive_range,M00,M94,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+13,musculoskeletal,ICD10,category3_inclusive_range,C40,C41,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+14,musculoskeletal,ICD10,category3_inclusive_range,C49,C49,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+15,pulmonary,ICD10,category3_inclusive_range,J09,J22,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+16,pulmonary,ICD10,category3_inclusive_range,J40,J47,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+17,pulmonary,ICD10,category3_inclusive_range,J60,J70,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+18,pulmonary,ICD10,category3_inclusive_range,J80,J99,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+19,pulmonary,ICD10,category3_inclusive_range,C30,C34,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+20,renal,ICD10,category3_inclusive_range,N00,N29,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False
+21,renal,ICD10,category3_inclusive_range,C64,C68,NFKC; trim; uppercase; remove decimal; category3=first 3 bytes,all observed history through index admission,strictly after discharge landmark,True,False

@@ -1,0 +1,117 @@
+{
+  "created_utc": "2026-07-13T10:45:52.240210+00:00",
+  "guards": {
+    "base_outputs_overwritten": false,
+    "compact_cache_rebuild_required": false,
+    "nonrenal_cohort_state_changes_recorded": true,
+    "nonrenal_survival_fields_changed": false,
+    "running_v0_training_labels_modified": false,
+    "strict_health_changed": false
+  },
+  "icd_participant_summary": {
+    "new_first_incident_renal_n": 54128,
+    "new_prevalent_renal_n": 9613,
+    "newly_first_incident_renal_n": 823,
+    "newly_prevalent_renal_n": 282,
+    "nonrenal_columns_compared": 38,
+    "nonrenal_columns_identical": true,
+    "old_first_incident_renal_n": 53305,
+    "old_prevalent_renal_n": 9331,
+    "participant_n": 456773,
+    "renal_changed_participants": 2276
+  },
+  "leakage_and_folds": {
+    "canonical_max_relative_days": -1,
+    "canonical_nonpreindex_rows": 0,
+    "canonical_preindex_rows": 1392753,
+    "fold_artifacts": {
+      "fold0_validation_calibration_screen.parquet": {
+        "content_identical": true,
+        "new": {
+          "bytes": 580670,
+          "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\01_data_rebuild\\07_corrected_primary_v1\\03_folds\\fold0_validation_calibration_screen.parquet",
+          "sha256": "70ce44ac75674c5c1b4b9ad2863ded0776e667458ba4807cb3c9660273404747"
+        },
+        "old": {
+          "bytes": 580670,
+          "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\01_data_rebuild\\03_folds\\fold0_validation_calibration_screen.parquet",
+          "sha256": "70ce44ac75674c5c1b4b9ad2863ded0776e667458ba4807cb3c9660273404747"
+        }
+      },
+      "fold_manifest_5fold.parquet": {
+        "content_identical": true,
+        "new": {
+          "bytes": 3558712,
+          "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\01_data_rebuild\\07_corrected_primary_v1\\03_folds\\fold_manifest_5fold.parquet",
+          "sha256": "298e52f8e9eba0ce895f87b4af341f0ad306880b1be416ac0511859a0918b450"
+        },
+        "old": {
+          "bytes": 3558712,
+          "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\01_data_rebuild\\03_folds\\fold_manifest_5fold.parquet",
+          "sha256": "298e52f8e9eba0ce895f87b4af341f0ad306880b1be416ac0511859a0918b450"
+        }
+      },
+      "outer_fold_roles.parquet": {
+        "content_identical": true,
+        "new": {
+          "bytes": 8115127,
+          "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\01_data_rebuild\\07_corrected_primary_v1\\03_folds\\outer_fold_roles.parquet",
+          "sha256": "b8c8d25bcd9228e2e4dafef5c4bec92ec9efac17d0f4125fe87b00b92c3a5249"
+        },
+        "old": {
+          "bytes": 8115127,
+          "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\01_data_rebuild\\03_folds\\outer_fold_roles.parquet",
+          "sha256": "b8c8d25bcd9228e2e4dafef5c4bec92ec9efac17d0f4125fe87b00b92c3a5249"
+        }
+      }
+    },
+    "icd_rebuild_status": "PASS",
+    "inherited_full_leakage_gate": {
+      "bytes": 5077,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\01_data_rebuild\\05_leakage_audit\\leakage_gate.json",
+      "sha256": "40ff1d55702c18668dfde249524eaf327b009a2b7ee05953514833c84bfe1185"
+    },
+    "inherited_full_leakage_gate_status": "PASS",
+    "outcome_rebuild_status": "PASS"
+  },
+  "mapping": {
+    "corrected_primary_rows": 1850,
+    "malformed_N299C64_present": false,
+    "pair_sets_identical": true,
+    "rebuilt_rows": 1850,
+    "renal_C64_present": true,
+    "renal_N299_present": true
+  },
+  "organ_outcomes": {
+    "new_renal_event_n": 10280,
+    "new_renal_prevalent_n": 9613,
+    "new_renal_risk_set_n": 432376,
+    "nonrenal_cohort_state_change_reason": "Adding renal C64 changes whether a participant has another included-organ baseline disease; event, duration, at-risk, censoring, and strict-health fields remain unchanged for all non-renal targets.",
+    "nonrenal_cohort_state_changed_rows": 643,
+    "nonrenal_survival_fields_identical": true,
+    "old_renal_event_n": 9996,
+    "old_renal_prevalent_n": 9331,
+    "old_renal_risk_set_n": 432652,
+    "organ_outcome_rows": 3197411,
+    "renal_any_field_changed_rows": 1487,
+    "renal_cohort_state_changed_rows": 598,
+    "renal_first_incident_date_changed_rows": 1205,
+    "renal_training_label_changed_by_fold": {
+      "0": 135,
+      "1": 131,
+      "2": 134,
+      "3": 114,
+      "4": 135
+    },
+    "renal_training_label_changed_rows": 649,
+    "renal_training_label_columns": [
+      "event",
+      "duration_months",
+      "at_risk"
+    ],
+    "strict_health_n": 102129,
+    "strict_health_unchanged": true
+  },
+  "schema_version": "revision0710.corrected_primary_rebuild.audit.v1",
+  "status": "PASS"
+}

@@ -1,0 +1,340 @@
+{
+  "schema_version": "revision0710_ehr_age_d07_002_baseline_native_objective_v1",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "executed": false,
+  "candidate_id": "002_baseline_native_objective",
+  "candidate_number": 2,
+  "candidate_role": "OPEN_FOLD0_DEVELOPMENT",
+  "single_intended_change": "Reduce the D04 composite direct age-estimation terms to all-population SmoothL1(beta=2) on the dedicated base_age branch; retain strict_offset and all D04 risk, augmentation, architecture, optimizer, and schedule settings.",
+  "plan": {
+    "path": "Revision-0710/03_ehr_age/00_contract/D07_001_OUTCOME_AND_D07_002_BASELINE_NATIVE_OBJECTIVE_PLAN.md",
+    "sha256": "3dbe7e060ac7cfbc66292b6f048119882094f5573b2a6b859a63ffd8ac736cfc"
+  },
+  "d07_protocol": {
+    "path": "Revision-0710/03_ehr_age/00_contract/D07_OPEN_FOLD0_DEVELOPMENT_PROTOCOL.md",
+    "sha256": "fef15b95f8987012c9f37ffffb0650efe9b44cd25846245a58b2860ac3abfcbe"
+  },
+  "parent_d04": {
+    "config_path": "Revision-0710/03_ehr_age/00_contract/ehr_age_d04_base_head_mlp_v1.json",
+    "config_sha256": "3b01b5858503299b778c26761c7ff462196549d8758c6066acc838cab8c8c88d",
+    "architecture_loaded_from_checkpoint": false
+  },
+  "d07_001_evidence": {
+    "candidate_id": "001_d04_epoch12",
+    "result": {
+      "epoch": 12,
+      "strict_mae": 3.798268485434261,
+      "strict_pearson": 0.7873205011163908,
+      "strict_r2": 0.6135446135328828,
+      "age_sex_harrell_macro_delta_c": 0.03311388329545612,
+      "positive_organs": 7,
+      "organs_beating_baseline": 6,
+      "age_gates_passed": false,
+      "risk_gates_passed": true,
+      "promotable": false
+    },
+    "gap_to_gate": {
+      "strict_mae_excess": 0.09313700887274612,
+      "strict_pearson_shortfall": 0.01098568787070453,
+      "strict_r2_shortfall": 0.019117384893711065,
+      "age_sex_harrell_macro_delta_c_surplus": 0.009155943856199736
+    },
+    "checkpoint_decomposition_audit_approximate": {
+      "strict_base_age": {
+        "mae": 3.79938,
+        "pearson": 0.78703,
+        "r2": 0.61311
+      },
+      "strict_final_age": {
+        "mae": 3.798268485434261,
+        "pearson": 0.7873205011163908,
+        "r2": 0.6135446135328828
+      },
+      "strict_risk_offset_mean_years": -0.028,
+      "strict_risk_offset_sd_years": 0.067,
+      "non_strict_risk_offset_mean_years": 1.192,
+      "interpretation": "Strict final age is already close to base_age, while all-population final Huber would directly suppress the larger non-strict offset carrying the passing risk signal."
+    },
+    "artifacts": {
+      "run_config": {
+        "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/candidates/001_d04_epoch12/run_config.json",
+        "sha256": "acb49f968b7344e2554dc60ef8ad7af555606c97919691b9a916121c47ef6ff5"
+      },
+      "training_history": {
+        "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/candidates/001_d04_epoch12/training_history_e01_e12.json",
+        "sha256": "44e4e2500f1220a57d6ef7bd0b9d822ff0b6db6e655ba9685e68cd52c279d5f4"
+      },
+      "trajectory_parity": {
+        "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/candidates/001_d04_epoch12/trajectory_parity_e01_e12.json",
+        "sha256": "ee45b7c14e662b36dfb448d0fae15ce50465442173cb62aa3d30491950be2d09"
+      },
+      "checkpoint_evidence_only_not_loadable": {
+        "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/candidates/001_d04_epoch12/candidate_checkpoint_epoch12.pt",
+        "sha256": "c36cde97ea4763753c386328df3cdb5cf6a89309b3190a330567c6a60f37df93"
+      },
+      "fold0_metrics": {
+        "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/candidates/001_d04_epoch12/fold0_open_development_metrics.json",
+        "sha256": "9135dca343568c30a90d8b95193d4ddb591d19b6bb17280b3abcc06d793947c4"
+      },
+      "candidate_summary": {
+        "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/candidates/001_d04_epoch12/candidate_summary.json",
+        "sha256": "3f832d0220fbdeaf4fc8c661238054264c004c8086f97d0d355d67f8b863b740"
+      },
+      "fold0_read_ledger_entry": {
+        "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/FOLD0_READ_LEDGER/000001__001_d04_epoch12.json",
+        "sha256": "e4864d257b114c48504b7a4681baf84a4e4481f00b784a57ba6812f7c6dcf75f"
+      }
+    }
+  },
+  "supporting_estimator_evidence": {
+    "interpretation": "D06-0 strict-targeted MedBERT underperformed the original all-population SmoothL1 estimator on all three calibration-strict metrics; this supports a bounded estimator test but is not a success guarantee.",
+    "d06_0_outcome_plan": {
+      "path": "Revision-0710/03_ehr_age/00_contract/D06_0_OUTCOME_AND_D06_1_SELECTION_PLAN.md",
+      "sha256": "b775f7575a3f92ee33bfdf5a4c8dbf6c539944e027c0556dc86076864ef70fb5"
+    },
+    "d06_1_stop_decision": {
+      "path": "Revision-0710/03_ehr_age/00_contract/D06_1_OUTCOME_AND_MODEL_DEVELOPMENT_STOP.md",
+      "sha256": "c85a49169986501794ff05e62797c99f7024882b0a6d5e6a066a91bb24b4bb3c"
+    }
+  },
+  "model": {
+    "hidden_dim": 192,
+    "num_heads": 6,
+    "num_transformer_layers": 3,
+    "num_gru_layers": 2,
+    "dropout": 0.15,
+    "freeze_event_embeddings": true,
+    "risk_offset_cap_years": 8.0,
+    "risk_temperature": 2.0,
+    "baseline_log_rate_init": -7.5,
+    "base_age_mode": "shared_fusion",
+    "base_age_head_mode": "mlp",
+    "base_age_pooling_mode": "global_fused",
+    "organ_axis_order": [
+      "cardiovascular",
+      "hepatic",
+      "immune",
+      "metabolic",
+      "musculoskeletal",
+      "pulmonary",
+      "renal"
+    ],
+    "survival_interval_edges_months": [0.0, 12.0, 24.0, 36.0, 48.0, 60.0],
+    "architecture_change_from_d04": false
+  },
+  "training": {
+    "outer_fold": 0,
+    "train_folds": [2, 3, 4],
+    "fold1_role": "CALIBRATION_NUISANCE_ONLY_NO_CANDIDATE_METRICS",
+    "fold0_role": "OPEN_DEVELOPMENT",
+    "batch_size": 2048,
+    "max_epochs": 60,
+    "full_budget_required": true,
+    "performance_early_stopping_enabled": false,
+    "original_d04_minimum_epochs_reference": 15,
+    "original_d04_patience_reference": 10,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 1.0,
+    "warmup_epochs": 3,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 60,
+    "event_dropout_probability": 0.1,
+    "seed": 7210,
+    "second_seed_allowed": false,
+    "deterministic": true,
+    "tf32": true,
+    "amp": true
+  },
+  "loss": {
+    "objective_name": "baseline_native_base_age_all_population_smooth_l1_plus_unchanged_d04_risk_and_bridge_constraints",
+    "age_estimator": {
+      "prediction_tensor": "output.base_age[B]",
+      "target_tensor": "chronological_age[B]",
+      "population": "all training participants",
+      "name": "SmoothL1Loss",
+      "huber_beta_years": 2.0,
+      "reduction": "mean_participant",
+      "uses_strict_label": false,
+      "baseline_native_equivalent": true,
+      "final_all_huber_rejected_reason": "It would directly suppress risk_age_offset for every participant and oppose the already successful evaluator-gap Cox risk signal."
+    },
+    "huber_beta_years": 2.0,
+    "age_scale_years": 10.0,
+    "base_huber_weight": 1.0,
+    "base_mse_weight": 0.0,
+    "base_correlation_weight": 0.0,
+    "final_all_huber_weight": 0.0,
+    "strict_final_huber_weight": 0.0,
+    "strict_offset_weight": 0.75,
+    "strict_center_weight": 0.0,
+    "strict_slope_weight": 0.0,
+    "survival_weight": 0.5,
+    "evaluator_gap_cox_weight": 0.25,
+    "evaluator_gap_cox_scale_years": 2.0,
+    "consistency_weight": 0.1,
+    "survival_ramp_start_fraction": 0.1,
+    "survival_ramp_epochs": 15,
+    "strict_offset_beta_years": 1.0,
+    "risk_terms_changed_from_d04": false,
+    "augmentation_terms_changed_from_d04": false
+  },
+  "evaluation": {
+    "fold0_role": "OPEN_DEVELOPMENT_REPEATED_ACCESS_ALLOWED_AND_LEDGERED",
+    "nuisance_fit": {
+      "fold": 1,
+      "inner_role": "calibration",
+      "age_correction_population": "strict_healthy_reference_60m=1",
+      "cox_population": "organ_specific_at_risk=1",
+      "fold0_fitted_parameters": false
+    },
+    "strict_age": {
+      "population": "Fold0 strict_healthy_reference_60m=1 participant-by-seven-organ rows",
+      "metrics": ["strict_mae", "strict_pearson", "strict_r2"],
+      "epoch_schedule": "every_epoch",
+      "start_epoch": 1,
+      "end_epoch": 60,
+      "uses_unrounded_values": true
+    },
+    "harrell_risk": {
+      "population": "Fold0 complete organ-specific at_risk=1 population",
+      "metric": "Fold1 calibration-fit age+sex Harrell macro incremental C-index",
+      "fixed_epochs": [],
+      "add_age_gate_eligible_epochs": true,
+      "add_new_age_pareto_epochs": true,
+      "new_age_pareto_definition": {
+        "scope": "global_nondominated_frontier_after_all_60_strict_age_rows_are_available",
+        "objectives": {
+          "strict_mae": "minimize",
+          "strict_pearson": "maximize",
+          "strict_r2": "maximize"
+        },
+        "values": "unrounded",
+        "dominance": "weakly_no_worse_in_all_three_and_strictly_better_in_at_least_one"
+      },
+      "include_final_epoch": true,
+      "deduplicate_epoch_union": true,
+      "evaluation_order": "ascending_epoch",
+      "retain_every_evaluator_call": true
+    },
+    "fold1_candidate_metrics_computed": false,
+    "fold2_to_4_heldout_ehr_metrics_computed": false
+  },
+  "selection": {
+    "allowed_checkpoint_epochs": [
+      1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+      11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+      21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+      31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+      41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
+      51, 52, 53, 54, 55, 56, 57, 58, 59, 60
+    ],
+    "selection_pool": "risk_evaluated_epochs_only",
+    "all_same_epoch_gates_required": true,
+    "ranking_if_multiple_promotable": [
+      "age_sex_harrell_macro_delta_c_descending",
+      "strict_mae_ascending",
+      "strict_pearson_descending",
+      "strict_r2_descending",
+      "epoch_ascending"
+    ],
+    "comparisons_use_unrounded_values": true,
+    "candidate_count_to_freeze": 1,
+    "no_promotable_epoch_status": "NON_PROMOTABLE",
+    "diagnostic_pareto_row_may_be_reported": true,
+    "diagnostic_pareto_row_can_authorize_fold1_to_4": false,
+    "fallback_checkpoint_allowed": false,
+    "checkpoint_averaging_allowed": false
+  },
+  "baseline_envelope": {
+    "path": "Revision-0710/05_downstream/08_d07_fold0_baseline/fold0_baseline_envelope.json",
+    "sha256": "204156220a7d65927519575c2a47dafe8159935ec76ca8571ce2dc7d8fa5fd69",
+    "schema_version": "revision0710_d07_open_fold0_baseline_envelope_v1",
+    "artifact_manifest_path": "Revision-0710/05_downstream/08_d07_fold0_baseline/artifact_manifest.json",
+    "artifact_manifest_sha256": "5a570203a45fc833ed7aa4406070222d00485ca4b2edf4dfc59641d2eb3fc4b6",
+    "gates": {
+      "strict_mae": {
+        "baseline_value": 3.7151314765615147,
+        "baseline_method": "retain",
+        "margin": 0.01,
+        "operator": "<",
+        "threshold": 3.705131476561515
+      },
+      "strict_pearson": {
+        "baseline_value": 0.7973061889870954,
+        "baseline_method": "retain",
+        "margin": 0.001,
+        "operator": ">",
+        "threshold": 0.7983061889870954
+      },
+      "strict_r2": {
+        "baseline_value": 0.6306619984265939,
+        "baseline_method": "retain",
+        "margin": 0.002,
+        "operator": ">",
+        "threshold": 0.6326619984265939
+      },
+      "age_sex_harrell_macro_delta_c": {
+        "baseline_value": 0.013957939439256384,
+        "baseline_method": "retain",
+        "margin": 0.01,
+        "operator": ">",
+        "threshold": 0.023957939439256386
+      },
+      "positive_organs_required": 7,
+      "organs_beating_baseline_required": 5,
+      "organ_delta_c_envelope": {
+        "cardiovascular": 0.010556595894624543,
+        "hepatic": 0.005554034660632978,
+        "immune": 0.029106985385521145,
+        "metabolic": 0.01805170871172257,
+        "musculoskeletal": 0.003091945545797281,
+        "pulmonary": 0.016722843141314114,
+        "renal": 0.018328908200189065
+      }
+    }
+  },
+  "data_lineage": {
+    "cache_contract": "Revision-0710 compact L32 only",
+    "source_hashes": {
+      "cache_hard_gate": "573a76a01543a3752bd4448d84fdaa5e68e300b823a2a90f216018a2bc63e955",
+      "leakage_gate": "40ff1d55702c18668dfde249524eaf327b009a2b7ee05953514833c84bfe1185",
+      "batch_manifest": "f8eea9e59cb7532df7c86ffa752ac48ec23f89b400d4c5cb14566ea0b56468d8",
+      "embedding_tables": "d711b36404898e3d488316c7e6eb82668beb6ce60f8c23b1c5e2d85017788d31",
+      "development_joint_labels": "6ac56662037b30e6c4dcb63c6d82f049e44e745d5dabd2c78b10634388562ee5",
+      "development_age_targets": "afcb56fe74b1c2b58e6d1516eff1bfda36ab224ab3fef46c8c0cf3d7946ab8c0",
+      "development_label_manifest": "416bd0790b7594c5d1200261bb0b1d85b8090233753af3f95234531f6c94ff34",
+      "fold0_age_targets": "8305749e5f4033a74596d2791db9d00744f7916c4ffcc5081085b4606de08200",
+      "fold0_joint_labels": "391e27fe84ede8be9d9e834d83c3dcb3be4306aab33193b2cda93aa9b0aab6e7"
+    }
+  },
+  "preimplementation_code_lineage": {
+    "note": "The formal run must record and validate post-runner-implementation hashes before its first optimizer step; model and loss hashes must remain these values.",
+    "ehr_age_model": "9c282a7d534ac49d4ec3dd3e6c6167dc266fa691b1b1af34c1dab547245bd153",
+    "ehr_age_losses": "a33170eafddadf3a80027e90193e25609fdf3a0002e70c2794516f0293282f67",
+    "ehr_age_data": "43571991dcaf91cc45073b229edbc4b5ed0f2950f0228eb74e860de3c578b7c3",
+    "ehr_age_training": "9b3a89a10034a3d3a06ca4a9c27ddcb94c70609d1d4aecf37c31035b6ce91b3a",
+    "baseline_training_loss_reference": {
+      "path": "Revision-0710/02_baselines_5fold/scripts/baseline_training.py",
+      "sha256": "9a2a9aa3d2d76713a3c8d64a7cd4eac1fb255702690f37c8385531caf5bda5ce"
+    }
+  },
+  "protocol": {
+    "initialization": "random_except_frozen_cache_embedding_tables",
+    "warm_start": false,
+    "fine_tune": false,
+    "teacher": false,
+    "distillation": false,
+    "baseline_predictions_as_targets": false,
+    "baseline_checkpoint_input_allowed": false,
+    "d07_001_checkpoint_input_allowed": false,
+    "any_learned_checkpoint_input_allowed": false,
+    "ensemble": false,
+    "checkpoint_averaging": false,
+    "fold0_may_guide_d07_development": true,
+    "fold0_confirmatory_claim_allowed": false,
+    "fold1_to_4_launch_authorized_before_separate_freeze_decision": false,
+    "formal_run_started": false
+  }
+}

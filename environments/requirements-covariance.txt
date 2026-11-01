@@ -1,0 +1,13 @@
+# Pinned direct SEM and I/O dependencies; Python 3.11.11.
+# Use requirements-covariance.lock.txt for the complete tested dependency set.
+semopy==2.3.11
+numpy==2.2.3
+pandas==2.2.3
+scipy==1.15.2
+scikit-learn==1.6.1
+statsmodels==0.14.4
+numdifftools==0.9.41
+matplotlib==3.10.1
+polars==1.31.0
+pyarrow==21.0.0
+Pillow==11.1.0

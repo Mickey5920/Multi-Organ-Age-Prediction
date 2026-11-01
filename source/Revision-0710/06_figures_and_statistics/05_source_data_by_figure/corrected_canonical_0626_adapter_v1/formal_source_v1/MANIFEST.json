@@ -1,0 +1,167 @@
+{
+  "age_correction_gate": {
+    "fit_or_estimation_performed": false,
+    "source_column": "oof_predictions.corrected_age_gap",
+    "values_preserved_without_refit": true
+  },
+  "artifacts": [
+    {
+      "bytes": 63233290,
+      "relative_path": "01_fig02_fig03_fig06_fig07/canonical_age_records.parquet",
+      "role": "Fig2/Fig3/Fig6/Fig7 canonical records",
+      "rows": 3197411,
+      "sha256": "d147ce21b1e5ff57082d8829db4610a603cd9e4681ef3f4910882ca9bc2a5594"
+    },
+    {
+      "bytes": 83164355,
+      "relative_path": "02_fig08_fig09_fig10/corrected_incident_at_risk_records.parquet",
+      "role": "Fig8-Fig10 corrected complete incident risk-set records",
+      "rows": 2929064,
+      "sha256": "fa818eb3e9f070e368f3a955fb9f02f99d29db2ceff8768e70df75aeff71f697"
+    },
+    {
+      "bytes": 44211217,
+      "relative_path": "03_fig11_fig12/canonical_age_gap_wide.parquet",
+      "role": "Fig11/Fig12 seven-organ age-gap wide records",
+      "rows": 456773,
+      "sha256": "315ff9d0c1537ffe7544071c5b5492c9a31f946c0aa19ec090c0684749fc71c4"
+    },
+    {
+      "bytes": 3745129,
+      "relative_path": "03_fig11_fig12/corrected_display_group_membership.parquet",
+      "role": "Fig11/Fig12 corrected cross-sectional display memberships",
+      "rows": 1076528,
+      "sha256": "fd749897b2716f0361ff4ae9fa6a07e7b4474595953628b06d0faf5df5b3fc14"
+    },
+    {
+      "bytes": 2351,
+      "relative_path": "04_contract/LEGACY_0626_VISUAL_FUNCTION_BINDING.json",
+      "role": "0626 pure visual function binding",
+      "rows": 0,
+      "sha256": "af98d506251d81ceab1ea4f27aebde5407390ffb594c61619aa63e075031aaf2"
+    },
+    {
+      "bytes": 2221,
+      "relative_path": "04_contract/CORRECTED_GROUP_CONTRACT_SNAPSHOT.json",
+      "role": "corrected group contract snapshot",
+      "rows": 0,
+      "sha256": "d091beab33336d8578eb3354806f28072ecca5b404e9807d213d0f82144be204"
+    }
+  ],
+  "created_at": "2026-07-13T15:20:59.569424Z",
+  "downstream_dependencies": {
+    "Fig03": "Join corrected baseline evaluation summaries outside this adapter.",
+    "Fig08_Fig10": "Fit prespecified corrected incident-risk statistics outside this adapter, then pass only final tables to whitelisted 0626 visual functions.",
+    "Fig11_Fig12": "Fit prespecified association/network statistics outside this adapter, then pass only final tables to whitelisted 0626 visual functions."
+  },
+  "inputs": [
+    {
+      "bytes": 124269725,
+      "path": "Revision-0710/03_ehr_age/05_corrected_primary_v1/01_canonical_5fold/03_predictions/oof_predictions.parquet",
+      "role": "corrected canonical five-fold OOF predictions",
+      "sha256": "9206e396626e73466892905a9dbeb54c45a80ee54b62407f3764702a5a45bbd2"
+    },
+    {
+      "bytes": 1647891,
+      "path": "Revision-0710/06_figures_and_statistics/05_source_data_by_figure/manuscript_faithful_groups_v2_corrected_primary/participant_group_flags.parquet",
+      "role": "corrected v2 participant group flags",
+      "sha256": "5e62911c7919830ad29e4bb55e927a41b620cf5125e6108d4141e242b182caef"
+    },
+    {
+      "bytes": 3875294,
+      "path": "Revision-0710/06_figures_and_statistics/05_source_data_by_figure/manuscript_faithful_groups_v2_corrected_primary/manuscript_group_membership_long.csv.gz",
+      "role": "corrected v2 display group membership",
+      "sha256": "7cc632cc4988c0de2a5104bf2b219722df8835278ec9f9e27727e6d664165963"
+    },
+    {
+      "bytes": 2221,
+      "path": "Revision-0710/06_figures_and_statistics/05_source_data_by_figure/manuscript_faithful_groups_v2_corrected_primary/GROUP_CONTRACT.json",
+      "role": "corrected v2 group contract",
+      "sha256": "d091beab33336d8578eb3354806f28072ecca5b404e9807d213d0f82144be204"
+    },
+    {
+      "bytes": 6312,
+      "path": "Revision-0710/06_figures_and_statistics/05_source_data_by_figure/manuscript_faithful_groups_v2_corrected_primary/MANIFEST.json",
+      "role": "corrected v2 group manifest",
+      "sha256": "241eb651e1754f4b1c2ac095485ac0dd803dff9dcc622fc503ba6469adcbb979"
+    },
+    {
+      "bytes": 19573552,
+      "path": "Revision-0710/01_data_rebuild/07_corrected_primary_v1/02_outcomes_60m/organ_outcomes_60m.parquet",
+      "role": "corrected-primary organ outcomes and incident risk sets",
+      "sha256": "2ec40e5c360a17bcf308199a75a7c092e5b69d6884c4f3539604edc9ab1a5220"
+    },
+    {
+      "bytes": 41826,
+      "path": "Revision-0626/16_final_ehr_age_downstream_20260704/scripts/render_legacy_fig2_to_fig7.py",
+      "role": "0626 visual function reference for age figures",
+      "sha256": "a176d8891198a841b3121def266689815c8ed85df5b6decfdc1a5f6e36bddc6d"
+    },
+    {
+      "bytes": 62175,
+      "path": "Revision-0626/16_final_ehr_age_downstream_20260704/scripts/render_legacy_style_figures.py",
+      "role": "0626 visual function reference for downstream figures",
+      "sha256": "0d30249fe7d2e67c63a06424cfc4bc300c9f3680d414fab96940acedbd48a93c"
+    },
+    {
+      "bytes": 5105,
+      "path": "Revision-0710/03_ehr_age/05_corrected_primary_v1/01_canonical_5fold/MANIFEST.json",
+      "role": "canonical five-fold package manifest",
+      "sha256": "a2feaa1c91660f2482b166e7e1ebc7544132455c135d6823da4556dd126afe08"
+    },
+    {
+      "bytes": 374,
+      "path": "Revision-0710/03_ehr_age/05_corrected_primary_v1/01_canonical_5fold/RUN_STATUS.json",
+      "role": "canonical five-fold package status",
+      "sha256": "4b30963f577d2f760053db5d175f131a4c43334cdab82e518495b13dd36f0f44"
+    },
+    {
+      "bytes": 2953,
+      "path": "Revision-0710/03_ehr_age/05_corrected_primary_v1/01_canonical_5fold/04_audit/oof_coverage.json",
+      "role": "canonical five-fold OOF coverage audit",
+      "sha256": "da1569053779b07e35a8efae56acca466c593790b7ae7e8c3b4904038b2adc25"
+    }
+  ],
+  "policies": {
+    "age_correction_refit": false,
+    "external_validation_in_scope": false,
+    "fig04_fig05_in_scope": false,
+    "figures_rendered": false,
+    "group_rules_recomputed": false,
+    "network_model_fit": false,
+    "old_main_called": false,
+    "old_numeric_data_read": false,
+    "survival_model_fit": false
+  },
+  "row_counts": {
+    "corrected_group_membership_rows": 1076528,
+    "corrected_outcome_rows": 3197411,
+    "incident_at_risk_rows": 2929064,
+    "incident_events": 147590,
+    "oof_participants": 456773,
+    "oof_prediction_rows": 3197411,
+    "wide_participants": 456773
+  },
+  "schema_version": "revision0710.corrected_canonical_0626_adapter.v1",
+  "scope": "corrected canonical five-fold OOF to Fig2/Fig3/Fig6-Fig12 input tables",
+  "status": "COMPLETE_INPUT_ADAPTER_NO_FIGURES_RENDERED",
+  "survival_gate": {
+    "display_groups_are_only_post_filter_strata": true,
+    "filter": "at_risk == 1 and full_incident_risk_set_60m == 1",
+    "oof_outcome_reconciliation": {
+      "at_risk_duration_rows": 2929064,
+      "at_risk_mismatches": 0,
+      "duration_comparison": "at-risk rows only; corrected outcome is authoritative",
+      "duration_float32_tolerance_months": 2e-06,
+      "duration_max_abs_difference_months": 1.9034321070421356e-06,
+      "event_mismatches": 0,
+      "keys_reconciled": 3197411,
+      "nonrisk_corrected_outcome_duration": "missing by definition",
+      "nonrisk_oof_duration": "masked zero",
+      "not_at_risk_masked_duration_rows": 268347
+    },
+    "prevalent_target_rows": 0,
+    "source": "Revision-0710/01_data_rebuild/07_corrected_primary_v1/02_outcomes_60m/organ_outcomes_60m.parquet",
+    "strict_health_is_not_risk_set": true
+  }
+}

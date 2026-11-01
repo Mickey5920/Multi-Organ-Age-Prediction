@@ -1,0 +1,174 @@
+{
+  "schema_version": "revision0710_baseline_method_table_v1",
+  "source_registry_sha256": "70b5b3d111e0cafcf3373cb30a9e161bded498454a2a33485e9b49cc19332291",
+  "methods": [
+    {
+      "tier": "tier_a",
+      "method": "retain",
+      "strict_n_rows": 714903,
+      "strict_n_participants": 102129,
+      "strict_mae": 3.720129337160603,
+      "strict_pearson": 0.7941554245408285,
+      "strict_r2": 0.6251940714932764,
+      "full_risk_macro_delta_c": 0.011385099803546215,
+      "positive_organs": 7,
+      "organ_delta_c": {
+        "cardiovascular": 0.009299721178380248,
+        "hepatic": 0.006829053638935156,
+        "immune": 0.015408822735217865,
+        "metabolic": 0.010397478537200744,
+        "musculoskeletal": 0.0030178068386708555,
+        "pulmonary": 0.01693776327189922,
+        "renal": 0.017805052424519418
+      },
+      "summary_sha256": "6ddf5a90446682527166247e73bb589a08aaad0834aaed6b950ef981701c6594"
+    },
+    {
+      "tier": "tier_a",
+      "method": "behrt_style",
+      "strict_n_rows": 714903,
+      "strict_n_participants": 102129,
+      "strict_mae": 3.7262540121921433,
+      "strict_pearson": 0.7933706358900758,
+      "strict_r2": 0.6232191008673205,
+      "full_risk_macro_delta_c": 0.0117907033204124,
+      "positive_organs": 7,
+      "organ_delta_c": {
+        "cardiovascular": 0.009436939734807881,
+        "hepatic": 0.009018360260748292,
+        "immune": 0.01658023956296184,
+        "metabolic": 0.010252210351208602,
+        "musculoskeletal": 0.003023435551686693,
+        "pulmonary": 0.01670582483026999,
+        "renal": 0.017517912951203484
+      },
+      "summary_sha256": "a0cec0627e9f2a63973f431630d122a3554182d455c78b6533d941ca8acd1e5a"
+    },
+    {
+      "tier": "tier_a",
+      "method": "medbert_style",
+      "strict_n_rows": 714903,
+      "strict_n_participants": 102129,
+      "strict_mae": 3.7249680182221563,
+      "strict_pearson": 0.7933690885738015,
+      "strict_r2": 0.6239269836966834,
+      "full_risk_macro_delta_c": 0.011726227260004805,
+      "positive_organs": 7,
+      "organ_delta_c": {
+        "cardiovascular": 0.009326426917064267,
+        "hepatic": 0.00877243087720001,
+        "immune": 0.015340058731205785,
+        "metabolic": 0.010622023353127319,
+        "musculoskeletal": 0.0031392595999782057,
+        "pulmonary": 0.016919620753627074,
+        "renal": 0.01796377058783096
+      },
+      "summary_sha256": "5f2f441cdfb039c69e082d65576caf068306641d10fed035256726ad69090911"
+    },
+    {
+      "tier": "tier_a",
+      "method": "ehrformer_style",
+      "strict_n_rows": 714903,
+      "strict_n_participants": 102129,
+      "strict_mae": 3.726070060891637,
+      "strict_pearson": 0.7936514176055632,
+      "strict_r2": 0.6244325178800025,
+      "full_risk_macro_delta_c": 0.011921487693787316,
+      "positive_organs": 7,
+      "organ_delta_c": {
+        "cardiovascular": 0.008869598996800732,
+        "hepatic": 0.011858727225772903,
+        "immune": 0.015583408394720454,
+        "metabolic": 0.00963037103936768,
+        "musculoskeletal": 0.003214681063007685,
+        "pulmonary": 0.016924421612583986,
+        "renal": 0.017369205524257757
+      },
+      "summary_sha256": "4d814d38ae7ae17acfa1da50eb8599b6ac3c5bb5142c26606a9a67914118f897"
+    },
+    {
+      "tier": "tier_b",
+      "method": "retain_organquery",
+      "strict_n_rows": 714903,
+      "strict_n_participants": 102129,
+      "strict_mae": 3.78279576111594,
+      "strict_pearson": 0.7916409186397952,
+      "strict_r2": 0.6076294682248632,
+      "full_risk_macro_delta_c": 0.011954426818589926,
+      "positive_organs": 7,
+      "organ_delta_c": {
+        "cardiovascular": 0.009759988307111533,
+        "hepatic": 0.008596924866812006,
+        "immune": 0.015684242321209817,
+        "metabolic": 0.010699986807922612,
+        "musculoskeletal": 0.003057107883804511,
+        "pulmonary": 0.017368829279470765,
+        "renal": 0.01851390826379824
+      },
+      "summary_sha256": "ebc01113b03099cd989e2de05ea6c451c100dcd9fb9aa3a9bb4077cc4dc1d8ee"
+    },
+    {
+      "tier": "tier_b",
+      "method": "behrt_style_organquery",
+      "strict_n_rows": 714903,
+      "strict_n_participants": 102129,
+      "strict_mae": 3.7886679707679995,
+      "strict_pearson": 0.7918905491287591,
+      "strict_r2": 0.6046576661141829,
+      "full_risk_macro_delta_c": 0.010502626319521896,
+      "positive_organs": 7,
+      "organ_delta_c": {
+        "cardiovascular": 0.009156972944205055,
+        "hepatic": 0.005104428630888713,
+        "immune": 0.014478873779788714,
+        "metabolic": 0.009609505066729262,
+        "musculoskeletal": 0.0024736441707265966,
+        "pulmonary": 0.017090620847346583,
+        "renal": 0.015604338796968343
+      },
+      "summary_sha256": "d119f0b2fa5219937e1e3000a0f71417e9489a2e0ad68d8e50c54019cf2189b2"
+    },
+    {
+      "tier": "tier_b",
+      "method": "medbert_style_organquery",
+      "strict_n_rows": 714903,
+      "strict_n_participants": 102129,
+      "strict_mae": 3.7858624864593593,
+      "strict_pearson": 0.7918535858564084,
+      "strict_r2": 0.6049547659413874,
+      "full_risk_macro_delta_c": 0.010320087556937309,
+      "positive_organs": 7,
+      "organ_delta_c": {
+        "cardiovascular": 0.008853242089087577,
+        "hepatic": 0.006100384169147555,
+        "immune": 0.013685687093967048,
+        "metabolic": 0.0093736778922064,
+        "musculoskeletal": 0.002366199512993128,
+        "pulmonary": 0.016373089389665862,
+        "renal": 0.015488332751493594
+      },
+      "summary_sha256": "08748c5ca8eafba5adbb570944e62689c94a6bdad774d7e585b7308c339ecdc2"
+    },
+    {
+      "tier": "tier_b",
+      "method": "ehrformer_style_organquery",
+      "strict_n_rows": 714903,
+      "strict_n_participants": 102129,
+      "strict_mae": 3.792653268793568,
+      "strict_pearson": 0.7907187272830593,
+      "strict_r2": 0.6051341938155868,
+      "full_risk_macro_delta_c": 0.011322302593145718,
+      "positive_organs": 7,
+      "organ_delta_c": {
+        "cardiovascular": 0.008842655933500265,
+        "hepatic": 0.008415471427869825,
+        "immune": 0.014889650513525487,
+        "metabolic": 0.009483286504204269,
+        "musculoskeletal": 0.0028760050456904107,
+        "pulmonary": 0.01694893836466065,
+        "renal": 0.01780011036256912
+      },
+      "summary_sha256": "facc4dc60094597c12667a91aedd40ea5b1159ed25bdd489d8586d628769cb28"
+    }
+  ]
+}

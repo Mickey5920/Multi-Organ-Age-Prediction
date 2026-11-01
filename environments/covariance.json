@@ -1,0 +1,46 @@
+{
+  "profile": "covariance",
+  "python": "3.11.11",
+  "dependencies": {
+    "semopy": "2.3.11",
+    "numpy": "2.2.3",
+    "pandas": "2.2.3",
+    "scipy": "1.15.2",
+    "scikit-learn": "1.6.1",
+    "statsmodels": "0.14.4",
+    "numdifftools": "0.9.41",
+    "matplotlib": "3.10.1",
+    "polars": "1.31.0",
+    "pyarrow": "21.0.0",
+    "Pillow": "11.1.0"
+  },
+  "origin": "New isolated CPython 3.11.11 environment installed on 2026-11-01. Existing SEM numeric and overlapping transitive versions retained; Polars and Arrow added; original environment preserved.",
+  "study_semopy_version": "2.3.11",
+  "transitive_lock": "requirements-covariance.lock.txt",
+  "tested_platform": {
+    "system": "Windows",
+    "machine": "AMD64",
+    "python": "3.11.11"
+  },
+  "verification": {
+    "dependency_installation": "PASS",
+    "pip_check": "PASS",
+    "bounded_source_and_aggregate_check": "PASS",
+    "cohort_sem_refits": 0,
+    "cohort_fit_convergence_retested": false,
+    "packaged_sem_source_imports": 5,
+    "synthetic_rows": 24,
+    "full_cohort_residual_pairs_checked": 21,
+    "residual_max_abs_difference": 0.0,
+    "srmr_abs_difference": 0.0,
+    "baseline_free_health_zero_residual_boundary_preserved": true,
+    "verification_command": "python verify.py --scope covariance --project-root PROJECT --output PROJECT/checks/covariance",
+    "model_fit_disabled_during_check": true
+  },
+  "bootstrap_dependencies": {
+    "pip": "25.0",
+    "setuptools": "75.8.0",
+    "wheel": "0.45.1"
+  },
+  "installed_distribution_count": 29
+}

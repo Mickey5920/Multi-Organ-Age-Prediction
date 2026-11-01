@@ -1,0 +1,78 @@
+{
+  "schema_version": "revision0710_evaluation_summary_v1",
+  "method": "ehr_age_d07_003_e55",
+  "age_metrics": {
+    "all": {
+      "n_rows": 3197411,
+      "n_participants": 456773,
+      "mae": 4.36729820939557,
+      "pearson": 0.7716276731570777,
+      "r2": 0.52786161820522
+    },
+    "strict_healthy_reference_60m": {
+      "n_rows": 714903,
+      "n_participants": 102129,
+      "mae": 3.7139799886879925,
+      "pearson": 0.7948118363815155,
+      "r2": 0.6271946480510313
+    }
+  },
+  "cox": {
+    "n_cells": 35,
+    "organs": [
+      {
+        "organ_system": "cardiovascular",
+        "mean_c_base": 0.6663360466567496,
+        "mean_c_plus": 0.6900193294174513,
+        "mean_delta_c": 0.02368328276070153,
+        "positive_folds": 5
+      },
+      {
+        "organ_system": "hepatic",
+        "mean_c_base": 0.5850665224579605,
+        "mean_c_plus": 0.6551737028115158,
+        "mean_delta_c": 0.07010718035355537,
+        "positive_folds": 5
+      },
+      {
+        "organ_system": "immune",
+        "mean_c_base": 0.6219996835065303,
+        "mean_c_plus": 0.6434332423416101,
+        "mean_delta_c": 0.021433558835079802,
+        "positive_folds": 4
+      },
+      {
+        "organ_system": "metabolic",
+        "mean_c_base": 0.6149510361300055,
+        "mean_c_plus": 0.7133709120843633,
+        "mean_delta_c": 0.09841987595435794,
+        "positive_folds": 5
+      },
+      {
+        "organ_system": "musculoskeletal",
+        "mean_c_base": 0.6018905990564315,
+        "mean_c_plus": 0.6183392066035591,
+        "mean_delta_c": 0.016448607547127625,
+        "positive_folds": 5
+      },
+      {
+        "organ_system": "pulmonary",
+        "mean_c_base": 0.5978718594124339,
+        "mean_c_plus": 0.6371297063888609,
+        "mean_delta_c": 0.03925784697642694,
+        "positive_folds": 5
+      },
+      {
+        "organ_system": "renal",
+        "mean_c_base": 0.6592756029667222,
+        "mean_c_plus": 0.7026505705807896,
+        "mean_delta_c": 0.04337496761406736,
+        "positive_folds": 5
+      }
+    ],
+    "macro_c_base": 0.6210559071695476,
+    "macro_c_plus": 0.6657309528897358,
+    "macro_delta_c": 0.04467504572018808,
+    "positive_organs": 7
+  }
+}

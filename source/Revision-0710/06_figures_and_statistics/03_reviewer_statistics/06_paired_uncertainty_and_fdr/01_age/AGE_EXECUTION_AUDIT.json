@@ -1,0 +1,21 @@
+{
+  "schema_version": "revision0710.reviewer_statistics.age_execution_audit.v1",
+  "status": "FORMAL_FIRST_WRITE_VERIFIED",
+  "formal_execution": {
+    "command": "age --n-resamples 1000 --batch-size 25",
+    "was_first_write": true,
+    "overwrite_flag_used": false,
+    "n_resamples": 1000,
+    "seed": 7100710
+  },
+  "statistical_engine_at_execution": {
+    "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/paired_uncertainty.py",
+    "sha256": "ba84a64710a3799a553b690b43b5a6dbbb9a5f98cb32fbf524210380de46985b"
+  },
+  "analysis_contract_sha256": "3f6d69b7900494d7c944d9bc3395a507b5034110e66ba1f9a5931e8dfde270cf",
+  "input_manifest_sha256": "9ce668bf7d9dacb38ce4f4685c91234dc0eaf8e2f023c6753cfcf88c2b346e51",
+  "age_run_manifest_sha256": "8715b43dc534fa353c5556a6f5b43acc7cd613bb653a5134ff9a2b70181d6c28",
+  "point_parity_status": "PASS_AT_ABSOLUTE_TOLERANCE_1E_10",
+  "post_execution_hardening": "The CLI wrapper was subsequently changed to remove overwrite options. The age statistical engine and formal outputs were not changed before this audit was written.",
+  "immutability_rule": "Formal age outputs are create-once; reruns are rejected. Smoke analyses must use a separate directory."
+}

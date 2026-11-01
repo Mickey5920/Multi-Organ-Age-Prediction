@@ -1,0 +1,66 @@
+{
+  "schema_version": "revision0710_corrected_baseline_change_audit_v1",
+  "strict_metrics_identical_for_all_methods": true,
+  "methods": [
+    {
+      "method": "retain",
+      "strict_metrics_identical": true,
+      "strict_mae": 3.720129337160603,
+      "strict_pearson": 0.7941554245408285,
+      "strict_r2": 0.6251940714932764,
+      "old_full_risk_macro_delta_c": 0.012294560039684202,
+      "corrected_full_risk_macro_delta_c": 0.012229749602978443,
+      "macro_delta_c_change": -6.481043670575858e-05
+    },
+    {
+      "method": "behrt_style",
+      "strict_metrics_identical": true,
+      "strict_mae": 3.7262540121921433,
+      "strict_pearson": 0.7933706358900758,
+      "strict_r2": 0.6232191008673205,
+      "old_full_risk_macro_delta_c": 0.01253380291399041,
+      "corrected_full_risk_macro_delta_c": 0.01246078545188377,
+      "macro_delta_c_change": -7.301746210663929e-05
+    },
+    {
+      "method": "medbert_style",
+      "strict_metrics_identical": true,
+      "strict_mae": 3.7249680182221563,
+      "strict_pearson": 0.7933690885738015,
+      "strict_r2": 0.6239269836966834,
+      "old_full_risk_macro_delta_c": 0.012349423078455912,
+      "corrected_full_risk_macro_delta_c": 0.012269874061719008,
+      "macro_delta_c_change": -7.954901673690347e-05
+    },
+    {
+      "method": "retain_organquery",
+      "strict_metrics_identical": true,
+      "strict_mae": 3.78279576111594,
+      "strict_pearson": 0.7916409186397952,
+      "strict_r2": 0.6076294682248632,
+      "old_full_risk_macro_delta_c": 0.012938633497263529,
+      "corrected_full_risk_macro_delta_c": 0.0128582236931028,
+      "macro_delta_c_change": -8.040980416072936e-05
+    },
+    {
+      "method": "behrt_style_organquery",
+      "strict_metrics_identical": true,
+      "strict_mae": 3.7886679707679995,
+      "strict_pearson": 0.7918905491287591,
+      "strict_r2": 0.6046576661141829,
+      "old_full_risk_macro_delta_c": 0.011460108440791617,
+      "corrected_full_risk_macro_delta_c": 0.011395472927814785,
+      "macro_delta_c_change": -6.463551297683154e-05
+    },
+    {
+      "method": "medbert_style_organquery",
+      "strict_metrics_identical": true,
+      "strict_mae": 3.7858624864593593,
+      "strict_pearson": 0.7918535858564084,
+      "strict_r2": 0.6049547659413874,
+      "old_full_risk_macro_delta_c": 0.010916743133806152,
+      "corrected_full_risk_macro_delta_c": 0.010855523042796838,
+      "macro_delta_c_change": -6.122009100931365e-05
+    }
+  ]
+}

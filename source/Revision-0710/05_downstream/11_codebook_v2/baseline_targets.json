@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "definition": "metric-wise best of eight fixed five-fold baseline predictions on codebook-v2 outcomes",
+  "best": {
+    "strict_mae": {
+      "method": "retain",
+      "value": 3.720129337160603
+    },
+    "strict_pearson": {
+      "method": "retain",
+      "value": 0.7941554245408285
+    },
+    "strict_r2": {
+      "method": "retain",
+      "value": 0.6251940714932764
+    },
+    "full_risk_macro_delta_c": {
+      "method": "retain_organquery",
+      "value": 0.011954426818589926
+    }
+  }
+}

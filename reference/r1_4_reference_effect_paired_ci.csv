@@ -1,0 +1,15 @@
+contrast,metric,point_estimate,ci95_low,ci95_high,replicates
+training_reference_effect_at_baseline_calibration,delta_harrell_c,-0.00014262080099004565,-0.0003688971620034198,9.486390703736246e-05,1000
+training_reference_effect_at_baseline_calibration,delta_uno_c_60m,-0.0001453551427410552,-0.00037526051946307974,9.619901384983442e-05,1000
+training_reference_effect_at_baseline_calibration,delta_auc_60m,-0.00014969201028224726,-0.00038194966090694866,9.319525096307243e-05,1000
+training_reference_effect_at_baseline_calibration,brier_improvement_60m,-8.075253453315688e-06,-1.2906480835191394e-05,-3.3287703423373736e-06,1000
+training_reference_effect_at_baseline_calibration,ipcw_idi_60m,-0.0009107564038331379,-0.0011177159673767488,-0.0007193088947568317,1000
+training_reference_effect_at_baseline_calibration,ipcw_continuous_nri_60m,-0.021328851353821038,-0.026019404922953543,-0.016690936790926782,1000
+training_reference_effect_at_baseline_calibration,mean_delta_net_benefit,-2.079611349381444e-05,-2.9528725912055613e-05,-1.2287233835136663e-05,1000
+both_reference_roles_replaced_vs_original,delta_harrell_c,-0.00014427421680241186,-0.00037042361654683034,9.30532388411934e-05,1000
+both_reference_roles_replaced_vs_original,delta_uno_c_60m,-0.00014699852787718713,-0.00037760990175002984,9.478726394998009e-05,1000
+both_reference_roles_replaced_vs_original,delta_auc_60m,-0.00015137998484260177,-0.0003842473019663061,9.149293956050652e-05,1000
+both_reference_roles_replaced_vs_original,brier_improvement_60m,-8.073730590914727e-06,-1.290398543852684e-05,-3.3359642878005686e-06,1000
+both_reference_roles_replaced_vs_original,ipcw_idi_60m,-0.0009106078644168705,-0.0011177398797341277,-0.0007191275505492072,1000
+both_reference_roles_replaced_vs_original,ipcw_continuous_nri_60m,-0.021545252867975567,-0.02624025416422561,-0.016849585054181954,1000
+both_reference_roles_replaced_vs_original,mean_delta_net_benefit,-2.0623452650643946e-05,-2.9265492850469805e-05,-1.20789394117564e-05,1000

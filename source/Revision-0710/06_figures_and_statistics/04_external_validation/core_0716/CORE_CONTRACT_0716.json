@@ -1,0 +1,91 @@
+{
+  "schema_version": "revision0710.external_validation.core_0716.contract.v1",
+  "status": "FROZEN_BEFORE_EXTERNAL_MODEL_INFERENCE",
+  "created_at": "2026-07-16T02:56:07+08:00",
+  "model_policy": {
+    "checkpoint_selection": "fixed UKB five-fold EHR-AGE E55 checkpoints",
+    "external_fine_tuning": false,
+    "external_distillation": false,
+    "external_adapter_training": false,
+    "external_checkpoint_or_panel_selection": false,
+    "ensemble": "unweighted mean of five frozen checkpoints"
+  },
+  "mimic_primary": {
+    "release": "MIMIC-IV 3.1",
+    "landmark": "second valid adult survived-discharge admission",
+    "age_transfer_population": "integer age 40-73 inclusive",
+    "input_window": "strictly before landmark discharge",
+    "input_variant": "mimic_primary_hospital_icd_only_explicit_unit_phenotype",
+    "incident_horizons_months": [
+      6,
+      12
+    ],
+    "competing_event": "death",
+    "recurrent_analysis": "sensitivity only",
+    "external_gap_dichotomization": false
+  },
+  "nhanes_primary": {
+    "releases": [
+      "P_2017_MARCH2020_PREPANDEMIC",
+      "L_AUG2021_AUG2023"
+    ],
+    "release_pooling": false,
+    "age_population": "MEC examined age 40-73 inclusive",
+    "input_variant": "nhanes_primary_phenotype_only_label_blind",
+    "event_sequence": "32 inactive padding slots",
+    "raw_zero_shot": "primary",
+    "release_local_crossfit_recalibration": "sensitivity",
+    "survey_weighted_questionnaire_OR": "exploratory association"
+  },
+  "figures": {
+    "Fig13": "MIMIC transportability and incident clinical utility",
+    "Fig14": "NHANES release-specific phenotype transportability"
+  },
+  "source_registry_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\06_figures_and_statistics\\00_plan\\external_validation_prefreeze_v8\\artifacts_v8\\SOURCE_REGISTRY_V8.json",
+  "source_registry_sha256": "d8182600e80ed0d67d123dc09cbe328021a63768fc5b898546811cecc04fe268",
+  "external_source_count": 42,
+  "external_sources_verified_by_frozen_size_and_path": true,
+  "external_sources_sha256_from_frozen_registry": true,
+  "checkpoints": [
+    {
+      "outer_fold": 0,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\03_runs\\fold0\\open_development\\candidates\\003_private_retain\\epoch_checkpoints\\trainable_checkpoint_epoch_0055.pt",
+      "bytes": 13302174,
+      "sha256": "4900c9d332d1a7c56281a465ad9b02d37d69a3a4ed76400cbe98a24efa0a5c08",
+      "age_anchor": 57.03986740112305
+    },
+    {
+      "outer_fold": 1,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\01_runs\\outer_fold_1\\attempts\\primary_e55_v1\\fixed_e55_checkpoint.pt",
+      "bytes": 13300524,
+      "sha256": "c11c6205db0b2009ef0a5716339cf3686d3fa6884357a1054cf65ff4ba6fc110",
+      "age_anchor": 57.03695297241211
+    },
+    {
+      "outer_fold": 2,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\01_runs\\outer_fold_2\\attempts\\primary_e55_v1\\fixed_e55_checkpoint.pt",
+      "bytes": 13300524,
+      "sha256": "931fefec0d3077fec6de675f076e3ecc1ce5d5d2dd3fa63e6061d72be5513044",
+      "age_anchor": 57.03803253173828
+    },
+    {
+      "outer_fold": 3,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\01_runs\\outer_fold_3\\attempts\\primary_e55_v1\\fixed_e55_checkpoint.pt",
+      "bytes": 13300524,
+      "sha256": "461cea401137cf8824a2cf27bf115982c4aff582a17de14ee5928dc8db458b25",
+      "age_anchor": 57.04105758666992
+    },
+    {
+      "outer_fold": 4,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\01_runs\\outer_fold_4\\attempts\\primary_e55_v1\\fixed_e55_checkpoint.pt",
+      "bytes": 13300524,
+      "sha256": "643712e20d95597f4b9b49c97e0ae47a57396038b642195ae6ce5a04329de54c",
+      "age_anchor": 57.04116439819336
+    }
+  ],
+  "runtime": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+    "script": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\06_figures_and_statistics\\04_external_validation\\scripts\\run_external_core_0716.py"
+  }
+}

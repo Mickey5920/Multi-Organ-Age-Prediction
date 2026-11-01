@@ -1,0 +1,481 @@
+{
+  "schema_version": "r3_2.final_model_survival_validation.bundle.v1",
+  "status": "COMPLETE",
+  "created_utc": "2026-07-23T07:40:31.505337+00:00",
+  "analysis_role": "reviewer_R3_2_final_model_evidence_closure",
+  "inputs": [
+    {
+      "role": "sealed_survival_recalculation_receipt",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/SURVIVAL_RUN_RECEIPT.json",
+      "sha256": "d42e0947c2d2127896a02d78bf9506ba68ab4e6e834a7c67fba3d2bb29aecfb5",
+      "bytes": 13941
+    },
+    {
+      "role": "sealed_null_reference_receipt",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/NULL_REFERENCE_RECEIPT.json",
+      "sha256": "8f59335fe845fc5698ac73d7ed727b3dcfe79d221cecb777dda20b1522dd0799",
+      "bytes": 9740
+    },
+    {
+      "role": "final_model_heldout_macro_metrics",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/13_final_model_clinical_utility/01_point/macro_model_metrics.csv",
+      "sha256": "b3553ad73b09bae3c4d1fbfca6f246efd9104665d4dd173d6121a22c1f148656",
+      "bytes": 4011,
+      "rows": 3,
+      "columns": [
+        "tier",
+        "augmentation",
+        "model",
+        "fit_n",
+        "fit_events",
+        "fit_right_open_boundary_events_reclassified",
+        "test_n",
+        "test_events",
+        "test_right_open_boundary_events_reclassified",
+        "n_covariates",
+        "harrell_c",
+        "uno_c_60m",
+        "auc_12m",
+        "auc_24m",
+        "auc_60m",
+        "brier_12m",
+        "brier_24m",
+        "brier_60m",
+        "ibs",
+        "cal_12m_n_bins",
+        "cal_12m_mean_predicted_risk",
+        "cal_12m_km_observed_risk",
+        "cal_12m_observed_expected_ratio",
+        "cal_12m_calibration_in_the_large_risk_difference",
+        "cal_12m_ipcw_logistic_calibration_intercept",
+        "cal_12m_ipcw_logistic_calibration_slope",
+        "cal_12m_ici",
+        "cal_12m_e50",
+        "cal_12m_e90",
+        "cal_24m_n_bins",
+        "cal_24m_mean_predicted_risk",
+        "cal_24m_km_observed_risk",
+        "cal_24m_observed_expected_ratio",
+        "cal_24m_calibration_in_the_large_risk_difference",
+        "cal_24m_ipcw_logistic_calibration_intercept",
+        "cal_24m_ipcw_logistic_calibration_slope",
+        "cal_24m_ici",
+        "cal_24m_e50",
+        "cal_24m_e90",
+        "cal_60m_n_bins",
+        "cal_60m_mean_predicted_risk",
+        "cal_60m_km_observed_risk",
+        "cal_60m_observed_expected_ratio",
+        "cal_60m_calibration_in_the_large_risk_difference",
+        "cal_60m_ipcw_logistic_calibration_intercept",
+        "cal_60m_ipcw_logistic_calibration_slope",
+        "cal_60m_ici",
+        "cal_60m_e50",
+        "cal_60m_e90",
+        "ipcw_g_60m",
+        "ipcw_max_weight_60m",
+        "ipcw_effective_sample_size_60m"
+      ]
+    },
+    {
+      "role": "final_model_heldout_paired_bootstrap_ci",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/13_final_model_clinical_utility/04_bootstrap_1000/macro_paired_bootstrap_ci.csv",
+      "sha256": "5202e5db070e02d596a260289a0f2ea712f5ee057de02b0efed3594b30f187e3",
+      "bytes": 2110,
+      "rows": 14,
+      "columns": [
+        "augmentation",
+        "metric",
+        "point_estimate",
+        "bootstrap_mean",
+        "bootstrap_sd",
+        "ci95_low",
+        "ci95_high",
+        "probability_favorable",
+        "bootstrap_replicates"
+      ]
+    }
+  ],
+  "lineage": [
+    {
+      "role": "analysis_plan",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/ANALYSIS_PLAN.md",
+      "sha256": "5e6f3166dac570fccbc4ddb8ac19ecf132460b3b6e60b65f8fd2454a86dbe654",
+      "bytes": 4735
+    },
+    {
+      "role": "survival_runner",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/run_survival_recalculation.py",
+      "sha256": "9478da34b4c8ae2e73ffc023a439b957cb791d8dbd47e0b728d749c07a7a9494",
+      "bytes": 24762
+    },
+    {
+      "role": "null_reference_runner",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/run_null_reference.py",
+      "sha256": "239b456eaa987b85d4cc4c3a551a73d8592349ae35acfc54c504564ccd384254",
+      "bytes": 13167
+    },
+    {
+      "role": "bundle_finalizer",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/finalize_r3_2_bundle.py",
+      "sha256": "6dceffa483ae4a723706c9000f31c8ec61d4b3a17dd237a2aa0c171de1a58929",
+      "bytes": 20202
+    }
+  ],
+  "outputs": [
+    {
+      "role": "source_data:absolute_risk_24_60m.csv",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/Source_Data/absolute_risk_24_60m.csv",
+      "sha256": "a06420a3b0257b857f7797bf6cbe5e8875e176b9f784334d9a55e9512214cb8b",
+      "bytes": 10602,
+      "rows": 56,
+      "columns": [
+        "organ_system",
+        "gap_quartile_crossfit",
+        "requested_horizon_months",
+        "evaluated_horizon_months",
+        "at_risk_before_horizon",
+        "km_target_risk",
+        "km_target_risk_ci95_low",
+        "km_target_risk_ci95_high",
+        "aj_target_cif",
+        "aj_death_cif",
+        "bootstrap_replicates",
+        "bootstrap_ci95_low",
+        "bootstrap_ci95_high"
+      ]
+    },
+    {
+      "role": "source_data:crossfit_covariate_audit.csv",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/Source_Data/crossfit_covariate_audit.csv",
+      "sha256": "813f1dca172edd535d7f1340fa62a87a9d7bf07381957f8f1c34be0b34518c9c",
+      "bytes": 63720,
+      "rows": 700,
+      "columns": [
+        "organ_system",
+        "covariate",
+        "outer_fold",
+        "reference_folds",
+        "reference_nonmissing_n",
+        "imputation",
+        "imputation_value",
+        "reference_center",
+        "reference_sd_ddof0"
+      ]
+    },
+    {
+      "role": "source_data:crossfit_gap_reference.csv",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/Source_Data/crossfit_gap_reference.csv",
+      "sha256": "c12837c14a34e787013dcb82fffce844161bdf3ed80b2eb8c14ab2560971978b",
+      "bytes": 4651,
+      "rows": 35,
+      "columns": [
+        "organ_system",
+        "outer_fold",
+        "reference_folds",
+        "reference_n",
+        "reference_mean",
+        "reference_sd_ddof0",
+        "q25",
+        "q50",
+        "q75",
+        "reference_event_columns_read"
+      ]
+    },
+    {
+      "role": "source_data:full_adjusted_cox_coefficients.csv",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/Source_Data/full_adjusted_cox_coefficients.csv",
+      "sha256": "4a1c482fee881f96609861c2678502915e8d2d2b7196bc16dda514d0786c9667",
+      "bytes": 29056,
+      "rows": 189,
+      "columns": [
+        "organ_system",
+        "covariate",
+        "beta",
+        "se_model_based",
+        "hr",
+        "hr_ci95_low",
+        "hr_ci95_high",
+        "p_value"
+      ]
+    },
+    {
+      "role": "source_data:full_adjusted_cox_gap.csv",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/Source_Data/full_adjusted_cox_gap.csv",
+      "sha256": "a19e2c34c932b0071a24adaec9380f506af1cf6b3f4fac7adac22b2793efc97c",
+      "bytes": 2253,
+      "rows": 7,
+      "columns": [
+        "organ_system",
+        "n",
+        "events",
+        "competing_deaths",
+        "n_covariates",
+        "design_rank",
+        "gap_beta_per_crossfit_sd",
+        "gap_se_model_based",
+        "gap_hr_per_crossfit_sd",
+        "gap_hr_ci95_low",
+        "gap_hr_ci95_high",
+        "gap_p_value",
+        "log_partial_likelihood",
+        "aic_partial",
+        "converged",
+        "iterations",
+        "score_max_abs",
+        "ties",
+        "outer_fold_baseline_hazard",
+        "reference_beta_absolute_difference",
+        "gap_q_value_bh_7_organs"
+      ]
+    },
+    {
+      "role": "source_data:full_adjusted_ph_diagnostics.csv",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/Source_Data/full_adjusted_ph_diagnostics.csv",
+      "sha256": "36a75aede07ced6fba92f2d2795f20c5e533e415729012088bc4152ff5a273b4",
+      "bytes": 45024,
+      "rows": 378,
+      "columns": [
+        "organ_system",
+        "covariate",
+        "time_transform",
+        "n_events",
+        "chi_square",
+        "df",
+        "p_value",
+        "q_value_bh_all_covariate_tests",
+        "gap_q_value_bh_14_tests"
+      ]
+    },
+    {
+      "role": "source_data:full_adjusted_time_window_cox.csv",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/Source_Data/full_adjusted_time_window_cox.csv",
+      "sha256": "79ce79d55634cf888432aa0d11d0deef5cf533e32a52010b437c504cca9d0808",
+      "bytes": 4885,
+      "rows": 14,
+      "columns": [
+        "organ_system",
+        "time_window",
+        "window_definition",
+        "n_at_window_start",
+        "events_in_window",
+        "n_covariates",
+        "gap_beta_per_crossfit_sd",
+        "gap_se_model_based",
+        "gap_hr_per_crossfit_sd",
+        "gap_hr_ci95_low",
+        "gap_hr_ci95_high",
+        "gap_p_value",
+        "log_partial_likelihood",
+        "aic_partial",
+        "converged",
+        "iterations",
+        "ties",
+        "outer_fold_baseline_hazard",
+        "gap_q_value_bh_7_organs_within_window"
+      ]
+    },
+    {
+      "role": "source_data:input_join_audit.csv",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/Source_Data/input_join_audit.csv",
+      "sha256": "aa5469134ebb1ad5b098db7d2c656c75ef8d703f6550d271fbd601295807cbb5",
+      "bytes": 586,
+      "rows": 7,
+      "columns": [
+        "organ_system",
+        "joined_rows",
+        "unique_participants",
+        "at_risk_n",
+        "target_events",
+        "competing_deaths",
+        "key_mismatch_rows",
+        "field_mismatch_at_risk",
+        "field_mismatch_event",
+        "field_mismatch_duration_months_at_risk",
+        "status"
+      ]
+    },
+    {
+      "role": "source_data:km_aj_curves.parquet",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/Source_Data/km_aj_curves.parquet",
+      "sha256": "228ff10aa18ceb27fda6ddb31faf92e142b63e02ee6e620fb8ad637a9a7e3670",
+      "bytes": 2928181,
+      "rows": 49573,
+      "columns": [
+        "organ_system",
+        "gap_quartile_crossfit",
+        "time_months",
+        "at_risk_before",
+        "target_events",
+        "competing_deaths",
+        "other_censored",
+        "km_survival",
+        "km_target_risk",
+        "km_target_risk_ci95_low",
+        "km_target_risk_ci95_high",
+        "aj_event_free_survival",
+        "aj_target_cif",
+        "aj_death_cif"
+      ]
+    },
+    {
+      "role": "source_data:logrank_tests.csv",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/Source_Data/logrank_tests.csv",
+      "sha256": "d6537ab4315f74f2a89c94824e967fe7242d6e94adfdf1168d7cd6e1c300a754",
+      "bytes": 792,
+      "rows": 14,
+      "columns": [
+        "organ_system",
+        "contrast",
+        "n_groups",
+        "chi_square",
+        "df",
+        "p_value"
+      ]
+    },
+    {
+      "role": "source_data:null_reference_cell_metrics.csv",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/Source_Data/null_reference_cell_metrics.csv",
+      "sha256": "9a5f004ccd6dd3720d52b928358b968e9ebddb132eac04965e7f46c426a261f7",
+      "bytes": 17722,
+      "rows": 35,
+      "columns": [
+        "outer_fold",
+        "organ_system",
+        "fit_n",
+        "fit_events",
+        "fit_right_open_boundary_events_reclassified",
+        "test_n",
+        "test_events",
+        "test_right_open_boundary_events_reclassified",
+        "effective_horizon_months",
+        "null_definition",
+        "null_discrimination_derivation",
+        "null_predicted_risk_60m",
+        "test_km_observed_risk_60m",
+        "null_observed_expected_ratio_60m",
+        "null_one_bin_absolute_calibration_error_60m",
+        "null_harrell_c",
+        "null_uno_c_60m",
+        "null_auc_60m",
+        "null_brier_60m",
+        "harrell_c",
+        "uno_c_60m",
+        "auc_60m",
+        "brier_60m",
+        "cal_60m_observed_expected_ratio",
+        "cal_60m_ipcw_logistic_calibration_slope",
+        "cal_60m_ici",
+        "base_minus_null_harrell_c",
+        "base_minus_null_uno_c_60m",
+        "base_minus_null_auc_60m",
+        "null_minus_base_brier_60m"
+      ]
+    },
+    {
+      "role": "source_data:null_reference_macro_comparison.csv",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/Source_Data/null_reference_macro_comparison.csv",
+      "sha256": "585031796fb54ee536d03a3df9ae52704b87d852d448f168f4bc3d694a97ee4d",
+      "bytes": 809,
+      "rows": 1,
+      "columns": [
+        "aggregation",
+        "cells",
+        "null_predicted_risk_60m",
+        "test_km_observed_risk_60m",
+        "null_observed_expected_ratio_60m",
+        "null_one_bin_absolute_calibration_error_60m",
+        "null_harrell_c",
+        "null_uno_c_60m",
+        "null_auc_60m",
+        "null_brier_60m",
+        "harrell_c",
+        "uno_c_60m",
+        "auc_60m",
+        "brier_60m",
+        "cal_60m_observed_expected_ratio",
+        "cal_60m_ipcw_logistic_calibration_slope",
+        "cal_60m_ici",
+        "base_minus_null_harrell_c",
+        "base_minus_null_uno_c_60m",
+        "base_minus_null_auc_60m",
+        "null_minus_base_brier_60m"
+      ]
+    },
+    {
+      "role": "source_data:q4_minus_q1_risk_difference.csv",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/Source_Data/q4_minus_q1_risk_difference.csv",
+      "sha256": "ca0fcfebaa5dc3a41587b73cbfff7835e66ea8619774c7efcf8760c8662e30cb",
+      "bytes": 1984,
+      "rows": 14,
+      "columns": [
+        "organ_system",
+        "contrast",
+        "requested_horizon_months",
+        "bootstrap_replicates",
+        "bootstrap_ci95_low",
+        "bootstrap_ci95_high",
+        "aj_target_cif_q1",
+        "aj_target_cif_q4",
+        "aj_target_cif_risk_difference_q4_minus_q1"
+      ]
+    },
+    {
+      "role": "source_data:quartile_numbers_at_risk.csv",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/Source_Data/quartile_numbers_at_risk.csv",
+      "sha256": "d24387ed834f11739e6df952f505c8fc28784e402b0f39117b767d23692857db",
+      "bytes": 8094,
+      "rows": 168,
+      "columns": [
+        "organ_system",
+        "gap_quartile_crossfit",
+        "requested_time_months",
+        "evaluated_time_months",
+        "at_risk_before",
+        "n_total",
+        "target_events_total",
+        "competing_deaths_total"
+      ]
+    },
+    {
+      "role": "source_data:reviewer_key_numbers.json",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/Source_Data/reviewer_key_numbers.json",
+      "sha256": "7deff2778a943bffbe9398b7cb2fe0ccb25e801177826520a577562abfdff938",
+      "bytes": 3869
+    },
+    {
+      "role": "source_data:target_gap_ph_diagnostics.csv",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/Source_Data/target_gap_ph_diagnostics.csv",
+      "sha256": "26c0b79cd2cd18d5ca9a666bb104e77a45af6a990bb420cea4676a0c607741f4",
+      "bytes": 1921,
+      "rows": 14,
+      "columns": [
+        "organ_system",
+        "covariate",
+        "time_transform",
+        "n_events",
+        "chi_square",
+        "df",
+        "p_value",
+        "q_value_bh_all_covariate_tests",
+        "gap_q_value_bh_14_tests"
+      ]
+    },
+    {
+      "role": "result_summary",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/RESULT_SUMMARY.md",
+      "sha256": "cf24a627073b635a3db1483fb79b6eefd1165a391fb771a680afbac8cadf72a9",
+      "bytes": 1892
+    },
+    {
+      "role": "qa_report",
+      "path": "E:/MPU/Code/Age-Prediction-0620/Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/QA_REPORT.json",
+      "sha256": "9cd7f88707e8890f2a93a96ca3bdbac277cac3cb67c0ea8c452105364a8868b2",
+      "bytes": 1031
+    }
+  ],
+  "key_claims": {
+    "supported": "positive prognostic associations in both time windows, competing-risk-adjusted absolute-risk separation, and held-out incremental prediction beyond a strong clinical baseline",
+    "not_supported": "universal proportional hazards, Fine-Gray regression, causal effects, clinical thresholds, or uniformly improved calibration"
+  }
+}

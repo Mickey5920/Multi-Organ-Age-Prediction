@@ -1,0 +1,86 @@
+{
+  "schema_version": "r1m3.multiple_testing_closure.manifest.v1",
+  "status": "PASS",
+  "source_files": {
+    "primary_single_gap": {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\Final_Fig_0716\\Fig08\\Package_0626_Style\\Combined_Single_Gap_Full_Cox_Results.csv",
+      "sha256": "c4b2c8eb18c2922b6649f8f600bbdffd540c41966d8fb9f43ac504eb97c2c664"
+    },
+    "all_gap_sensitivity": {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\Final_Fig_0716\\Fig08\\Package_0626_Style\\Combined_Cox_Bootstrap_Results.csv",
+      "sha256": "bfd80c1cf67bdbe0e1a9f38da601f6daf7645fcd8903be55f9381588562df848"
+    }
+  },
+  "output_files": [
+    {
+      "path": "BEST_SKILL_CARD.md",
+      "bytes": 1169,
+      "sha256": "cf20e260675cff20668d81ed5a53c1cc7edd76b4f43521d838264bac3cd0a54c"
+    },
+    {
+      "path": "fig8_all_gap_sensitivity_age_gap_bh.csv",
+      "bytes": 527176,
+      "sha256": "792e339fa0ddeeeda3932f731ccebb11054edadfe389f53fcc3b2720f966d906"
+    },
+    {
+      "path": "fig8_all_gap_sensitivity_full_with_bh.csv",
+      "bytes": 833405,
+      "sha256": "7752fc6d3d85441a3d2e962e1c0cd27a9b3c0fa945072dbfa11ce86a1de217a7"
+    },
+    {
+      "path": "fig8_bh_family_summary.csv",
+      "bytes": 48388,
+      "sha256": "b5ee980231b1646e20440386370317bce58f4c2f5b5cac16263505cdcaf0645b"
+    },
+    {
+      "path": "fig8_bh_significance_summary.csv",
+      "bytes": 1098,
+      "sha256": "24cb996c282d77ae04d975562dec6c300ce6c42291b996d96bc0631933b04678"
+    },
+    {
+      "path": "fig8_bh_status_changes.csv",
+      "bytes": 5448,
+      "sha256": "7d0a2546ff7461b6b34aba9caf80ffaf10580b24efdabe811ef9044e6df6e771"
+    },
+    {
+      "path": "fig8_primary_single_gap_age_gap_bh.csv",
+      "bytes": 673637,
+      "sha256": "783571e9d5e4a9e45e2113f62b09be77e80bbb2c1a918f0afadd07f5cf0ae3a3"
+    },
+    {
+      "path": "fig8_primary_single_gap_full_with_bh.csv",
+      "bytes": 1101414,
+      "sha256": "36a16e7d3b7b83b26b6fa256708ca59be3b9eddd1bf1fc12c6499a2afae09478"
+    },
+    {
+      "path": "multiple_testing_families_corrected.csv",
+      "bytes": 4239,
+      "sha256": "4701f204c60334d39e7960ff2212504c1de014b4f3236a87c743cc15f58dbf7a"
+    },
+    {
+      "path": "multiple_testing_family_source_validation.csv",
+      "bytes": 12035,
+      "sha256": "13a35efe15fe731abffa153d4c5216e571cb1cc98861e2b4ed151a2d72a827a8"
+    },
+    {
+      "path": "multiple_testing_family_table_changes.csv",
+      "bytes": 1152,
+      "sha256": "38e7791a1d7bf8db1b343cbe582042a9504551bb5fee6ee1fccf13a79452049d"
+    },
+    {
+      "path": "README_CN.md",
+      "bytes": 5865,
+      "sha256": "1e582fc872b6097b0aa226794cd8ece5f3f3470d1a984f3e2bd50dd378d5143b"
+    },
+    {
+      "path": "RESULT_SUMMARY.json",
+      "bytes": 3916,
+      "sha256": "b8082865370a89ec07e82be278339b18327de9d10013d75a8109b8d14cbbedb9"
+    },
+    {
+      "path": "run_multiple_testing_closure.py",
+      "bytes": 42069,
+      "sha256": "13dbbce231d6c92d0627de0a6f1cec971d55bab5e458776aa16a5fd1db87a6c3"
+    }
+  ]
+}

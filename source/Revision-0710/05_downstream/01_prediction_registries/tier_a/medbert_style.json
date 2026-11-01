@@ -1,0 +1,104 @@
+{
+  "schema_version": "revision0710_prediction_registry_v1",
+  "method": "medbert_style",
+  "selection": "five explicit completed run directories; no discovery or globbing",
+  "run_directories": [
+    {
+      "outer_fold": 0,
+      "path": "../../../02_baselines_5fold/01_plain_temporal/medbert_style/fold0/057b7e20f7c7",
+      "run_config_sha256": "91bed19f5f0466d53bc50404d10e475622617e0b85d34f916bc2c581896bfe85"
+    },
+    {
+      "outer_fold": 1,
+      "path": "../../../02_baselines_5fold/01_plain_temporal/medbert_style/fold1/8fa5d9302e45",
+      "run_config_sha256": "bcfc2a0c17e0f37380d757d90893cb8e6565ad0bc6101579b6920b6ee3d28ee8"
+    },
+    {
+      "outer_fold": 2,
+      "path": "../../../02_baselines_5fold/01_plain_temporal/medbert_style/fold2/5cf2edc50976",
+      "run_config_sha256": "21b63718a0e34eca9b1e3c3219a68323456b1bd5bd682e2517a5b5722f0ecffa"
+    },
+    {
+      "outer_fold": 3,
+      "path": "../../../02_baselines_5fold/01_plain_temporal/medbert_style/fold3/0d44b6271b13",
+      "run_config_sha256": "906d5acdd52e37b418446211ad9d5b00752db7d111e51d9651a22dc1698c702b"
+    },
+    {
+      "outer_fold": 4,
+      "path": "../../../02_baselines_5fold/01_plain_temporal/medbert_style/fold4/806bfcce7056",
+      "run_config_sha256": "aabe816bc4d070b74ad98ac192e2e4119f91bb0a9881d35f55731c02bda16576"
+    }
+  ],
+  "prediction_files": [
+    {
+      "outer_fold": 0,
+      "split_role": "validation",
+      "path": "../../../02_baselines_5fold/01_plain_temporal/medbert_style/fold0/057b7e20f7c7/validation_predictions_long.parquet",
+      "sha256": "049cb61362e618b65ec5f6e43c4beac05cdc165a43a124a2a3a6c2e559a987bc",
+      "rows": 639492
+    },
+    {
+      "outer_fold": 0,
+      "split_role": "test",
+      "path": "../../../02_baselines_5fold/01_plain_temporal/medbert_style/fold0/057b7e20f7c7/test_predictions_long.parquet",
+      "sha256": "b13e5eb1d3260b5dfd0bf5d121345706282488a91d1513ce7482a0dcb3879265",
+      "rows": 639485
+    },
+    {
+      "outer_fold": 1,
+      "split_role": "validation",
+      "path": "../../../02_baselines_5fold/01_plain_temporal/medbert_style/fold1/8fa5d9302e45/validation_predictions_long.parquet",
+      "sha256": "dc2ccb81e655481d5bfa8f7b2edbf087679fd6cc54f793c016f67c03b3660530",
+      "rows": 639471
+    },
+    {
+      "outer_fold": 1,
+      "split_role": "test",
+      "path": "../../../02_baselines_5fold/01_plain_temporal/medbert_style/fold1/8fa5d9302e45/test_predictions_long.parquet",
+      "sha256": "81cf3fb63a0f78501a938cddbca14526813c4427a8990d4710126cb8e64e877b",
+      "rows": 639492
+    },
+    {
+      "outer_fold": 2,
+      "split_role": "validation",
+      "path": "../../../02_baselines_5fold/01_plain_temporal/medbert_style/fold2/5cf2edc50976/validation_predictions_long.parquet",
+      "sha256": "c76d34d9c2709f4e7d9022c56c05f5f3000646434e7e05e003612a4e20d983d4",
+      "rows": 639471
+    },
+    {
+      "outer_fold": 2,
+      "split_role": "test",
+      "path": "../../../02_baselines_5fold/01_plain_temporal/medbert_style/fold2/5cf2edc50976/test_predictions_long.parquet",
+      "sha256": "796bb31817684e770a1dd22fe37929ed8733df256bb152c74cd6ee6bc363b0a3",
+      "rows": 639471
+    },
+    {
+      "outer_fold": 3,
+      "split_role": "validation",
+      "path": "../../../02_baselines_5fold/01_plain_temporal/medbert_style/fold3/0d44b6271b13/validation_predictions_long.parquet",
+      "sha256": "9cc4610fdd187a07edcc325852549af8b2037106b14148d2709eeadcce04d29c",
+      "rows": 639492
+    },
+    {
+      "outer_fold": 3,
+      "split_role": "test",
+      "path": "../../../02_baselines_5fold/01_plain_temporal/medbert_style/fold3/0d44b6271b13/test_predictions_long.parquet",
+      "sha256": "832f5cfa7d6f2b8a4816be5e0cc6a993c2ffc087a79e69c3b8a7fd2d4b142bb4",
+      "rows": 639471
+    },
+    {
+      "outer_fold": 4,
+      "split_role": "validation",
+      "path": "../../../02_baselines_5fold/01_plain_temporal/medbert_style/fold4/806bfcce7056/validation_predictions_long.parquet",
+      "sha256": "1b46aac7a7df1705ae7f7ae10f2fd246159c7794c02607ed73b28ab3421d805c",
+      "rows": 639485
+    },
+    {
+      "outer_fold": 4,
+      "split_role": "test",
+      "path": "../../../02_baselines_5fold/01_plain_temporal/medbert_style/fold4/806bfcce7056/test_predictions_long.parquet",
+      "sha256": "3264aff6f179b81c57b822cec114d50b5137c6a5eba061ae81cdec59e726ba6c",
+      "rows": 639492
+    }
+  ]
+}

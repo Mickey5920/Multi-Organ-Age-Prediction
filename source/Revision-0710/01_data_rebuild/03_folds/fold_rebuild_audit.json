@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-07-09T20:49:39.909550+00:00",
+  "status": "PASS",
+  "participant_n": 456773,
+  "unique_participant_n": 456773,
+  "fold_sizes": {
+    "0": 91355,
+    "1": 91356,
+    "2": 91353,
+    "3": 91353,
+    "4": 91356
+  },
+  "assignment_fields": [
+    "sex_norm",
+    "chronological_age_decile",
+    "phenotype_missingness_bin"
+  ],
+  "future_outcome_fields_used_for_assignment": [],
+  "outer_role_gate": true,
+  "fold0_validation_inner_counts": {
+    "screen": 45757,
+    "calibration": 45599
+  }
+}

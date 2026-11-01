@@ -1,0 +1,103 @@
+{
+  "schema_version": "revision0710.fig13_fig14.panel_schema.v8",
+  "status": "PREFREEZE_LOCKED_EXTERNAL_COHORT_REANALYSIS",
+  "historical_exposure_binding": {
+    "receipt": "V7_SCIENTIFIC_REVIEWER_NO_GO.json",
+    "receipt_sha256": "4c85c203ea81f58bb2dbc36da324ba20dc3829d5847b167afa8200a9c8b44d07",
+    "analysis_label": "locked external-cohort reanalysis",
+    "zero_shot_definition": "checkpoint parameters were not updated using external data",
+    "prohibited_labels": [
+      "untouched validation",
+      "prospective validation",
+      "independent confirmatory validation"
+    ]
+  },
+  "legacy_style_policy": "Reuse only panel geometry, typography, colors, symbols, and axis treatment from Revision-0626/Final_Figure_Data_0708; never reuse historical numeric data, estimates, labels, horizons, or claims.",
+  "figure_13": {
+    "cohort": "MIMIC-IV v3.1",
+    "population": "selected second-admission survived-discharge adult hospital cohort",
+    "panels": [
+      {
+        "panel": "A",
+        "title_semantics": "Cohort, feature, vocabulary, and pre-index density coverage",
+        "source_tables": ["mimic_cohort_flow", "mimic_feature_coverage", "external_vocabulary_coverage", "mimic_density_diagnostics"],
+        "claim_limit": "selected hospital-system cohort, not general-population transport"
+      },
+      {
+        "panel": "B",
+        "title_semantics": "Raw age transfer without checkpoint-parameter update",
+        "source_tables": ["zero_shot_age_metrics"],
+        "claim_limit": "zero-shot describes checkpoint parameters only; the external cohorts have prior result exposure"
+      },
+      {
+        "panel": "C",
+        "title_semantics": "Calibration, domain shift, and density sensitivity",
+        "source_tables": ["per_checkpoint_predictions", "ensemble_predictions", "zero_shot_age_metrics", "mimic_density_diagnostics"],
+        "estimand": "raw calibration plus participant-level density-age, density-gap, density-absolute-error correlations and age error in absolute pre-index density strata"
+      },
+      {
+        "panel": "D",
+        "title_semantics": "Held-out relative statistical increment at 6 and 12 months",
+        "source_tables": ["mimic_incident_endpoints", "mimic_predictive_metrics", "mimic_density_adjusted_risk_sensitivity"],
+        "estimand": "age+sex versus age+sex+gap and the separate age+sex+density versus age+sex+density+gap sensitivity",
+        "uncertainty": "B=200 subject-cluster intervals conditional on fixed training-fold target/death Cox models and censoring KM",
+        "claim_limit": "relative statistical increment only; no clinical utility, deployability, 24-month, or 60-month claim"
+      },
+      {
+        "panel": "E",
+        "title_semantics": "Incident-eligible association and complete PH diagnostics",
+        "source_tables": ["mimic_full_cohort_associations", "mimic_cox_ph_diagnostics"],
+        "estimand": "non-held-out association plus every covariate and GLOBAL scaled-Schoenfeld rank/log1p-day diagnostic for full and held-out target/death models; all diagnostic durations are shifted by exactly +1 day to preserve day-0 death, order, and ties",
+        "claim_limit": "association and model diagnostics, not causality or prediction in the full input cohort"
+      },
+      {
+        "panel": "F",
+        "title_semantics": "Competing death and recurrent-record sensitivity",
+        "source_tables": ["mimic_incident_competing_risk_curves", "mimic_recurrent_sensitivity_metrics"],
+        "claim_limit": "incident and recurrent results remain physically separate"
+      }
+    ]
+  },
+  "figure_14": {
+    "cohort": "NHANES P_2017-March2020 and August2021-August2023 releases",
+    "population": "release-specific MEC-examined integer age 40-73 domains",
+    "panels": [
+      {
+        "panel": "A",
+        "title_semantics": "Release-specific mapping, fixed value QC, and label isolation",
+        "source_tables": ["nhanes_feature_coverage", "nhanes_release_slot_qc", "external_vocabulary_coverage"],
+        "execution_rule": "nonfinite or prefrozen-range violation aborts before inference; no external-data-driven trimming or winsorization"
+      },
+      {
+        "panel": "B",
+        "title_semantics": "Raw age transfer without checkpoint-parameter update",
+        "source_tables": ["zero_shot_age_metrics"],
+        "claim_limit": "locked external-cohort reanalysis, not untouched or independent confirmation"
+      },
+      {
+        "panel": "C",
+        "title_semantics": "Release-specific calibration and domain shift",
+        "source_tables": ["per_checkpoint_predictions", "ensemble_predictions", "nhanes_release_survey_sensitivity"]
+      },
+      {
+        "panel": "D",
+        "title_semantics": "External-label cross-fitted recalibration sensitivity",
+        "source_tables": ["nhanes_local_recalibration_sensitivity"],
+        "claim_limit": "not zero-shot and cannot replace Panel B"
+      },
+      {
+        "panel": "E",
+        "title_semantics": "Exploratory survey-weighted cross-sectional questionnaire association",
+        "source_tables": ["nhanes_questionnaire_associations"],
+        "claim_limit": "exploratory association only; not incident prediction, clinical utility, deployability, or causality"
+      },
+      {
+        "panel": "F",
+        "title_semantics": "Release-specific descriptive sensitivity",
+        "source_tables": ["nhanes_release_survey_sensitivity", "nhanes_questionnaire_associations"],
+        "between_release_test_performed": false,
+        "claim_limit": "side-by-side only; visual differences are not heterogeneity"
+      }
+    ]
+  }
+}

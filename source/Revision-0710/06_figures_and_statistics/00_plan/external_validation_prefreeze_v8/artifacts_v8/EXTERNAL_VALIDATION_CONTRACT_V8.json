@@ -1,0 +1,667 @@
+{
+  "schema_version": "revision0710.external_validation.contract.v8",
+  "status": "DRAFT_PREFREEZE_V8_NOT_FROZEN_NOT_AUTHORIZED",
+  "created_date": "2026-07-11",
+  "purpose": "Validity-first locked external-cohort reanalysis of the frozen five-checkpoint D07-003/E55 model in MIMIC-IV v3.1 and two non-overlapping NHANES releases; zero-shot means checkpoint parameters are not updated from external data and does not mean untouched, prospective, or independent confirmatory validation.",
+  "success_definition": {
+    "validity_first": true,
+    "minimum_external_performance_threshold": null,
+    "post_hoc_external_optimization_allowed": false,
+    "weak_or_negative_transport_results_must_be_reported": true
+  },
+  "resource_budget": {
+    "schema_version": "revision0710.external_validation.resource_budget.v8",
+    "status": "V8_FOUR_MODEL_B200_COMPLETE_PH_ACCOUNTING_36_TO_48_HOUR_RESERVATION",
+    "scientific_method_changed_from_v7": true,
+    "predecessor_evidence": {
+      "v7_prefreeze_manifest_sha256": "f29138079ab1a28eda07fa5fa32264f635c6503d8e8f28c452937e954ada164a",
+      "v7_contract_sha256": "3ff8ef20701ce09fd9cfc39e4eb182fb473f439291d92b2999d7ce7e318f716b",
+      "v7_runtime_sha256": "73f4996b73be55916b9811dba1c50a65c6708866f62baf42e1be6a5b1f563244",
+      "v7_source_registry_sha256": "9faec15419d1a34d15ee40767d02095167b59209b5170faf602f8f6329a3bd76",
+      "v7_scientific_no_go_sha256": "4c85c203ea81f58bb2dbc36da324ba20dc3829d5847b167afa8200a9c8b44d07",
+      "v8_attempt_01_support_no_go_sha256": "94c2168ee4d0b7862767c2aee0d7acdd1bb29299ce31836617b18f80b0ce3e7f"
+    },
+    "accounting": {
+      "heldout_analysis_count": 210,
+      "predictive_models_per_heldout_analysis": 4,
+      "cause_specific_cox_fits_per_heldout_analysis": 8,
+      "shared_core_ph_fits_per_heldout_analysis": 8,
+      "conditional_bootstrap_calls_per_heldout_analysis": 4,
+      "conditional_bootstrap_replicates_per_model": 200,
+      "full_association_analysis_count": 42,
+      "full_association_primary_fits_per_analysis": 1,
+      "full_association_shared_core_ph_fits_per_analysis": 1,
+      "formal_recompute_passes": 2,
+      "total_cause_specific_predictive_fits": 3360,
+      "total_heldout_shared_core_ph_fits": 3360,
+      "total_conditional_b200_calls": 1680,
+      "total_full_association_primary_fits": 84,
+      "total_full_association_shared_core_ph_fits": 84,
+      "v6_frozen_corrected_core_hours": 11.66222526651202,
+      "v6_fresh_corrected_core_hours": 12.347672947476752
+    },
+    "operational_reservation": {
+      "minimum_hours": 36.0,
+      "safer_hours": 48.0,
+      "not_a_wall_time_upper_bound": true,
+      "covers_or_reserves": [
+        "label-blind cache construction",
+        "CLIP vocabulary extension encoding and model restore",
+        "prediction sealing and disk IO",
+        "NHANES survey and age-metric aggregation",
+        "stage05 and stage06 four-model conditional B=200 bootstrap statistics",
+        "complete shared-core PH diagnostics for all target/death model covariates",
+        "publication copy, rehash, and receipt validation"
+      ],
+      "monitoring": "retain resumable stage receipts and monitor RAM, disk, and elapsed time"
+    }
+  },
+  "reviewer_editor_alignment": {
+    "Reviewer1_Major6": "external validation is interpreted through calibration, domain shift, differing disease ascertainment, and explicitly sensitivity-only recalibration; weak transport remains reportable",
+    "Reviewer2_Comment2": "the exact sequence alignment and external code, text, phenotype, unit, and missingness mappings are published and mechanically verified before outcome read",
+    "Editor_original_supported_scope": "report results accurately, remove overstated conclusions, explain cohort and data-source limitations, and predeclare sequence alignment, outlier handling, cross-validation, model selection, bias correction, Cox assumptions, calibration, and competing death",
+    "post_V7_scientific_review": "V8 closes prior-result exposure, participant-level density confounding, complete per-covariate and GLOBAL PH diagnostics, conditional-utility language, and NHANES release-slot QC gaps recorded in the byte-bound V7 scientific NO-GO receipt"
+  },
+  "prohibited_actions": [
+    "fine-tune or update any learned model parameter on MIMIC or NHANES",
+    "distill from any model, age label, disease label, endpoint, or external metric",
+    "fit any external correction in the raw zero-shot or sealed-UKB-corrected primary path",
+    "select checkpoints, mappings, landmarks, feature cleaning, horizons, endpoints, or calibration after external performance is viewed",
+    "use any NHANES questionnaire label file in the model-input process",
+    "combine DEMO_J/J_* with P_* in one NHANES analysis",
+    "invent cross-release pooled NHANES survey weights",
+    "combine MIMIC incident and recurrent endpoints in one table, curve, metric, or claim",
+    "use ICD9 for any MIMIC endpoint without a separately audited future authorization",
+    "write any formal cache, prediction, metric, HR, KM, CIF, or figure before a frozen contract and exact authorization exist",
+    "describe this locked external-cohort reanalysis as untouched, prospective, or independent confirmatory validation",
+    "describe relative age+sex statistical increments as clinical utility, deployment readiness, or deployable performance",
+    "use external-data-driven trimming, winsorization, quantile clipping, or outlier thresholds for NHANES"
+  ],
+  "bindings": {
+    "code_artifacts": [
+      {
+        "name": "builder",
+        "relative_path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/build_external_validation_prefreeze_v8.py",
+        "bytes": 199447,
+        "sha256": "e8c80708099ca8a866084318f69de89293537b49febb51222f1e0ad506599543"
+      },
+      {
+        "name": "independent_verifier",
+        "relative_path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/verify_external_validation_prefreeze_v8.py",
+        "bytes": 86695,
+        "sha256": "fa8749b6410cf71561b743f01e96ac96fa516cedf92768d2560438c98155c072"
+      },
+      {
+        "name": "tests",
+        "relative_path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/tests/test_external_validation_prefreeze_v8.py",
+        "bytes": 97903,
+        "sha256": "05f1d16e64c3682260222db072e617c5bd44de47683be3469dc971e21f42c7ce"
+      },
+      {
+        "name": "formal_executor",
+        "relative_path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/execute_external_validation_v8.py",
+        "bytes": 63620,
+        "sha256": "4ecd23ce91b98684f37c5ee4718339b6b5e0982a50e498ccd934d789f9ff717d"
+      },
+      {
+        "name": "formal_executor_runtime",
+        "relative_path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/execute_external_validation_v8_runtime.py",
+        "bytes": 252336,
+        "sha256": "fac60749e238f6ec19d42fa6c8300a11947b4d416b1c5cf328c12a731124499b"
+      },
+      {
+        "name": "execution_guard",
+        "relative_path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/v8_execution_guard.py",
+        "bytes": 7956,
+        "sha256": "594491916228eb239b8a2a36a25b3a16c0e50a6d3172d240eb17ae0301973b66"
+      },
+      {
+        "name": "environment_probe",
+        "relative_path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/v8_environment_probe.py",
+        "bytes": 612,
+        "sha256": "bac0d9469d624535fcf4d103a202b444f326b8c89844d16206cb1daf55800a59"
+      },
+      {
+        "name": "scientific_extensions",
+        "relative_path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/v8_scientific_extensions.py",
+        "bytes": 40390,
+        "sha256": "5a6385a35d28ba4fa954862e2e18b7c023ef996e8800e25b4d2f78b348e024c7"
+      },
+      {
+        "name": "v7_scientific_reviewer_no_go",
+        "relative_path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/V7_SCIENTIFIC_REVIEWER_NO_GO.json",
+        "bytes": 3678,
+        "sha256": "4c85c203ea81f58bb2dbc36da324ba20dc3829d5847b167afa8200a9c8b44d07"
+      },
+      {
+        "name": "v7_read_only_tree_snapshot",
+        "relative_path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/V7_READ_ONLY_TREE_SNAPSHOT.json",
+        "bytes": 9494,
+        "sha256": "5c5f0cdc6591691d11be20c5f9680ee6859913f7ab9e7ea2964440a9fe55f0b2"
+      },
+      {
+        "name": "fig13_fig14_panel_schema",
+        "relative_path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/FIG13_FIG14_PANEL_SCHEMA_V8.json",
+        "bytes": 5616,
+        "sha256": "1c0b7cac53ebedc75bef2c16c828843701122a577b2de4fe2b1cbf624a13f09a"
+      },
+      {
+        "name": "fig13_fig14_caption_and_reviewer_response",
+        "relative_path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/FIG13_FIG14_CAPTION_AND_REVIEWER_RESPONSE_V8.md",
+        "bytes": 4398,
+        "sha256": "31eb8cf2df9896bb1360d32317e371361048e9dd16046e79dc813a9da5d36197"
+      },
+      {
+        "name": "v8_attempt_01_support_audit_no_go",
+        "relative_path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/00_superseded/v8_prefreeze_attempt_01_support_audit_no_go/SUPPORT_AUDIT_NO_GO_V8_ATTEMPT_01.json",
+        "bytes": 986,
+        "sha256": "94c2168ee4d0b7862767c2aee0d7acdd1bb29299ce31836617b18f80b0ce3e7f"
+      }
+    ],
+    "prefreeze_artifacts": [
+      {
+        "name": "source_registry",
+        "path": "SOURCE_REGISTRY_V8.json",
+        "bytes": 53502,
+        "sha256": "d8182600e80ed0d67d123dc09cbe328021a63768fc5b898546811cecc04fe268"
+      },
+      {
+        "name": "mimic_feature_map",
+        "path": "MIMIC_78_SLOT_MAP_V8.csv",
+        "bytes": 44272,
+        "sha256": "368ea8ad08886514a367d8705438f90d645f1599ec5eb86005cda02f71dacc6d"
+      },
+      {
+        "name": "nhanes_feature_map",
+        "path": "NHANES_78_SLOT_RELEASE_MAP_V8.csv",
+        "bytes": 40210,
+        "sha256": "5e506841f34b9ca9b4609fb33f952aee4ba91f2e425fd9985a87e22926aea08d"
+      },
+      {
+        "name": "nhanes_label_map",
+        "path": "NHANES_QUESTIONNAIRE_LABEL_MAP_V8.csv",
+        "bytes": 3601,
+        "sha256": "499ab0d9f685d6503f3ee7308521a2d97e752853a2a115c78d3954191f5861fb"
+      },
+      {
+        "name": "mimic_icd10_map",
+        "path": "MIMIC_ICD10_ORGAN_MAP_V8.csv",
+        "bytes": 4725,
+        "sha256": "a62d7920e88fcf354b0262d60653fbe304d73ade50fd970528b766630890f16d"
+      },
+      {
+        "name": "output_schemas",
+        "path": "OUTPUT_SCHEMAS_V8.json",
+        "bytes": 217060,
+        "sha256": "e2cef0401cef69ddd3f8c5db030fb0658c05d564dc8eeb49cd62442d7ab0a77a"
+      },
+      {
+        "name": "formal_authorization_schema",
+        "path": "FORMAL_AUTHORIZATION_SCHEMA_V8.json",
+        "bytes": 3364,
+        "sha256": "b55f521a3fb42fd411bffd561dfa0c3328d573fdefc54ccd598cbf5c27490125"
+      },
+      {
+        "name": "environment_lock",
+        "path": "ENVIRONMENT_LOCK_V8.json",
+        "bytes": 6947,
+        "sha256": "2ef18d33106b296f6aff9a16bf1f54531e16640b095078da8d11d99b5de80811"
+      }
+    ],
+    "source_registry_sha256": "d8182600e80ed0d67d123dc09cbe328021a63768fc5b898546811cecc04fe268",
+    "source_registry_external_records": 42,
+    "source_registry_locked_artifacts": 38,
+    "checkpoint_count": 5,
+    "correction_file_count": 5,
+    "completion_receipt_count": 5,
+    "phenotype_transform_count": 5,
+    "correction_keys_exact": 35,
+    "inference_environment": {
+      "python_executable": "C:\\Users\\Mickey\\.conda\\envs\\Torch_25\\python.exe",
+      "required_packages": [
+        "numpy",
+        "pandas",
+        "scipy",
+        "scikit-learn",
+        "torch",
+        "open-clip-torch"
+      ],
+      "device": "cpu",
+      "torch_num_threads": 1,
+      "torch_num_interop_threads": 1,
+      "deterministic_algorithms": true,
+      "worker_protocol": "hash_bound_subprocess_with_create_once_stage_receipt"
+    },
+    "statistics_environment": {
+      "python_executable": "D:\\Anaconda\\python.exe",
+      "required_packages": [
+        "numpy",
+        "pandas",
+        "pyarrow",
+        "scipy",
+        "scikit-learn",
+        "statsmodels"
+      ],
+      "cox_implementation": "statsmodels.duration.hazard_regression.PHReg",
+      "worker_protocol": "hash_bound_subprocess_with_create_once_stage_receipt"
+    },
+    "environment_lock_sha256": "2ef18d33106b296f6aff9a16bf1f54531e16640b095078da8d11d99b5de80811",
+    "v7_scientific_reviewer_no_go_sha256": "4c85c203ea81f58bb2dbc36da324ba20dc3829d5847b167afa8200a9c8b44d07",
+    "v7_tree_snapshot_sha256": "5c5f0cdc6591691d11be20c5f9680ee6859913f7ab9e7ea2964440a9fe55f0b2",
+    "shared_survival_core_relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/04_cox_diagnostics_and_competing_risk/survival_analysis_core.py",
+    "shared_survival_core_sha256": "6c4dd7eef4ea690d0d88a330f117d8d0b45274d788e10862ab665e245e435a1b"
+  },
+  "sealed_age_correction": {
+    "key": [
+      "checkpoint_outer_fold",
+      "organ_system"
+    ],
+    "cardinality": "5 * 7 = 35 exact unique keys",
+    "formula": "corrected_age_gap = raw_age_gap - (intercept + slope * chronological_age)",
+    "formula_tolerance": 1e-12,
+    "csv_json_parameter_tolerance": 5e-15,
+    "external_fit_performed": false,
+    "per_checkpoint_correction_then_mean5": true
+  },
+  "compact_cache_contract": {
+    "compact_cache_core_sha256": "4687592d19acb730fc2e6c9aa95d019e179d18351f6cb0347c93e51939287fe7",
+    "build_compact_cache_sha256": "9bcb4746dc787df4d1b8105cfcf3838699c9a25dd0ade891755752f7bbdbb6a6",
+    "cache_config_sha256": "c804d07be9430aee98b70e692601b97c3234fb76ca92288ab30d634e276484c0",
+    "sequence_length": 32,
+    "selection": {
+      "primary": {
+        "input_variant": "mimic_primary_hospital_icd_only_explicit_unit_phenotype",
+        "allowed_sources": [
+          "hospital_icd"
+        ],
+        "crop": "latest 32 after exact stable sort and dedup"
+      },
+      "bare_omr_sensitivity": {
+        "input_variant": "mimic_sensitivity_hospital_icd_only_bare_omr_unit_assumptions",
+        "allowed_sources": [
+          "hospital_icd"
+        ],
+        "crop": "latest 32 after exact stable sort and dedup"
+      },
+      "inpatient_prescription_proxy_sensitivity": {
+        "input_variant": "mimic_sensitivity_hospital_icd_plus_inpatient_prescription_proxy",
+        "allowed_sources": [
+          "hospital_icd",
+          "inpatient_prescription_proxy"
+        ],
+        "minimum_latest_hospital_icd": 8,
+        "minimum_latest_inpatient_prescription_proxy": 8,
+        "remaining_global_latest": 16,
+        "short_modality_unused_quota_reallocated_to_global_latest": true
+      }
+    },
+    "strict_pre_index": "active event_time < landmark and relative_days is integer <= -1",
+    "relative_day_formula": "floor((event_time - landmark_time) / 86400 seconds)",
+    "sort_order": [
+      "participant_id",
+      "event_time",
+      "event_type_id",
+      "canonical_code_utf8_bytes",
+      "canonical_description_utf8_bytes",
+      "source_row_number"
+    ],
+    "sort_algorithm": "stable mergesort",
+    "dedup_key": [
+      "participant_id",
+      "event_time",
+      "canonical_code",
+      "canonical_description",
+      "source"
+    ],
+    "dedup_keep": "first after exact stable sort",
+    "event_type_ids": {
+      "padding": 0,
+      "hospital_icd": 1,
+      "inpatient_prescription_proxy": 2
+    },
+    "text_key_bytes": "ASCII semantic role + byte 0x1F + normalized UTF-8 description",
+    "padding": "valid_mask=false and code_id=text_id=relative_days=event_type_id=0",
+    "inpatient_prescription_proxy_active_code_id": 0,
+    "inpatient_prescription_proxy_active_text_id": "strictly positive",
+    "nhanes_sequence": "32 padding slots for phenotype_only_label_blind primary input"
+  },
+  "vocabulary_and_embedding_extension": {
+    "original_code_vocab_sha256": "3d2d61b6e0a34261a6d5681e87fc9d539f62376c838a21c04c6cc4c4c47a025c",
+    "original_text_vocab_sha256": "53b352dd9ebead5d5a78c3e8bf440485341110845d9265cf0620549f70196310",
+    "original_embedding_table_sha256": "d711b36404898e3d488316c7e6eb82668beb6ce60f8c23b1c5e2d85017788d31",
+    "original_rows_immutable": true,
+    "icd10": "NFKC, trim Unicode whitespace, uppercase, remove decimal, exact bare UKB code match first",
+    "icd9_namespace_text": "ICD9\\u001F{canonical_code_without_decimal}",
+    "icd9_namespace_bytes_hex_prefix": "494344391f",
+    "description_normalization": "NFKC then collapse every Unicode whitespace run to one ASCII space and trim",
+    "empty_description_fallback": "{code_system} code {canonical_code_without_namespace}",
+    "text_role_separator_byte_hex": "1f",
+    "unseen_token_order": "unique canonical UTF-8 byte strings sorted lexicographically",
+    "clip_model": "ViT-B-16",
+    "clip_pretrained": "openai",
+    "clip_weight_sha256": "4b8699299b1e8997753c64b052ba32031449d5d853f55a039148560ee02b820f",
+    "open_clip_version": "3.3.0",
+    "torch_version": "2.5.1",
+    "device": "cpu",
+    "encode_dtype": "float32",
+    "stored_extension_dtype": "little-endian float16",
+    "encode_batch_size": 4,
+    "torch_threads": 1,
+    "torch_interop_threads": 1,
+    "deterministic_algorithms": true,
+    "original_row_bytes_policy": "copy original little-endian float16 row bytes as the exact prefix; append extension row bytes; never re-encode original rows",
+    "cpu_probe_requirement": "encode the same fixed texts twice in one process and require identical SHA-256 after one float32-to-float16 cast",
+    "required_coverage_output_table": "shared/03_cache_audit/external_vocabulary_coverage.csv",
+    "required_coverage_dimensions": [
+      "source rows by modality and code system",
+      "unique canonical tokens",
+      "exact frozen-vocab matches",
+      "deterministic extension tokens",
+      "invalid or dropped tokens with closed reason",
+      "participants with zero events",
+      "pre-crop and post-crop active events",
+      "original embedding prefix byte hash"
+    ],
+    "coverage_token_classes_exact": [
+      "exact_frozen_vocab",
+      "deterministic_extension",
+      "invalid_dropped",
+      "zero_event"
+    ],
+    "coverage_closed_cardinality": 60,
+    "coverage_code_systems_separate": [
+      "ICD9",
+      "ICD10",
+      "INPATIENT_RX",
+      "not_applicable"
+    ],
+    "learned_projection_or_parameter_change": false
+  },
+  "shared_prediction": {
+    "fine_tuning": false,
+    "distillation": false,
+    "optimizer_created": false,
+    "backward_called": false,
+    "checkpoint_selection_from_external_metrics": false,
+    "per_checkpoint_predictions_required": true,
+    "ensemble": "arithmetic mean of the exact same participant-organ rows from folds 0..4",
+    "checkpoint_age_anchor": {
+      "fold0": {
+        "key": "age_anchor_train_folds_2_to_4_only",
+        "value": 57.03986740112305
+      },
+      "fold1": {
+        "key": "age_anchor_train_role_only",
+        "value": 57.03695297241211
+      },
+      "fold2": {
+        "key": "age_anchor_train_role_only",
+        "value": 57.03803253173828
+      },
+      "fold3": {
+        "key": "age_anchor_train_role_only",
+        "value": 57.04105758666992
+      },
+      "fold4": {
+        "key": "age_anchor_train_role_only",
+        "value": 57.04116439819336
+      }
+    },
+    "raw_zero_shot_primary": true,
+    "sealed_ukb_corrected_gap_primary_for_downstream": true,
+    "local_external_calibration_zero_shot": false,
+    "zero_shot_definition": "checkpoint_parameters_never_updated_using_external_data_only",
+    "untouched_validation_claim_allowed": false,
+    "prospective_validation_claim_allowed": false,
+    "independent_confirmatory_claim_allowed": false
+  },
+  "mimic_iv_3_1": {
+    "role": "hospitalized-EHR transport and hospital-recorded post-discharge risk",
+    "landmark": "discharge time of the second chronologically sorted admission after time-valid, adult-at-discharge, and survived-discharge filtering",
+    "admission_selection_order": "filter finite ordered times, compute integer age and require age>=18, require deathtime absent or after discharge, then stable sort and take ordinal 2",
+    "admission_sort": "admittime ascending, dischtime ascending, numeric hadm_id ascending",
+    "valid_admission": "finite admittime/dischtime, dischtime > admittime, age at discharge >=18, and admissions.deathtime absent or strictly after discharge",
+    "chronological_age": "integer anchor_age + (index discharge calendar year - integer anchor_year); reject anchor_age=91",
+    "age_populations": {
+      "age_metric_primary": "integer 40 through 73 inclusive common support",
+      "age_metric_adult_sensitivity": "integer age >=18, anchor_age !=91",
+      "age_quantization_sensitivities": [
+        "common-support chronological age minus 0.5 year",
+        "common-support chronological age plus 0.5 year"
+      ],
+      "risk_primary": "all adult non-topcoded integer-year participants"
+    },
+    "model_event_cutoff": "strictly before discharge landmark",
+    "preseal_diagnosis_materialization": "PyArrow record-batch stream; predicate hadm_id against completed-admission allowlist with dischtime strictly before landmark; write preindex-only Parquet before any pandas conversion or canonicalization; raw rows converted to pandas and materialized post-index rows must both equal zero",
+    "phenotype_cutoff": "labs require charttime and storetime at or before discharge; date-only OMR must precede the discharge calendar date; both use the frozen 365-day window",
+    "feature_coverage_output": "01_mimic/01_mapping/feature_coverage.csv with all 78 slots, observed n/fraction, source hash/selector/unit/formula",
+    "participant_density": {
+      "construction_phase": "label_blind_cache_before_prediction_and_outcome_read",
+      "measures": [
+        "pre_crop_event_count",
+        "post_crop_event_count",
+        "history_span_days",
+        "observed_phenotype_slots"
+      ],
+      "fixed_strata": "pre_crop_event_count low=0-7, medium=8-31, high>=32",
+      "strata_training_or_outcome_dependent": false,
+      "age_error_and_gap_correlations_output": "01_mimic/08_density_sensitivity/density_diagnostics.csv",
+      "heldout_risk_sensitivity": "age+sex+density versus age+sex+density+corrected_gap; density scaling fit on four training folds only",
+      "interpretation": "relative statistical increment only; no clinical utility or deployability claim"
+    },
+    "cox_ph_diagnostics": {
+      "shared_core_relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/04_cox_diagnostics_and_competing_risk/survival_analysis_core.py",
+      "shared_core_sha256": "6c4dd7eef4ea690d0d88a330f117d8d0b45274d788e10862ab665e245e435a1b",
+      "coverage": "full association age/sex/gap and every held-out target/death base/augmented/density covariate",
+      "grain": "role x variant x organ x horizon x fold x model x cause x covariate x transform",
+      "duration_rule": "diagnostic duration = observed_time_days + 1 day for every row, preserving order and ties while supporting day-0 death; log transform is therefore log1p(original days)",
+      "transforms": [
+        "rank_lifelines_cumsum_event",
+        "log1p_days"
+      ],
+      "global_test": "joint scaled-Schoenfeld score vector with complete covariance; never Fisher or minimum-p aggregation",
+      "failed_fit_rows_retained": true,
+      "silent_drop_allowed": false
+    },
+    "diagnosis_time_proxy": "associated completed admission dischtime is the availability/event timestamp; preseal model events require dischtime < landmark, baseline endpoint history uses dischtime <= landmark, and post-index outcomes require dischtime > landmark; diagnosis seq_num and hadm_id break ties",
+    "subject_observation_end": "maximum valid admissions.dischtime, labevents.charttime, omr.chartdate, and prescriptions stop/start time, bounded by the frozen death ascertainment cap",
+    "phenotype_data_availability": {
+      "labevents": "require nonmissing charttime and storetime, both <= discharge landmark; latest tie order charttime, storetime, labevent_id",
+      "omr": "date-only OMR requires chartdate strictly before the discharge calendar date and within the prior 365 calendar days; same-calendar-date OMR is excluded"
+    },
+    "administrative_censor": "minimum of prespecified 6/12-month horizon and subject-specific observation end",
+    "death_ascertainment_cap": "minimum of index_time plus the integer calendar-day offset from index date to patients.dod, and last valid hospital discharge plus 365 days; cap is also an administrative censor boundary",
+    "month_days": "6 months=182.5 days; 12 months=365.0 days",
+    "horizons": {
+      "authorized_months_exact": [
+        6,
+        12
+      ],
+      "authorized_days_exact": [
+        182.5,
+        365.0
+      ]
+    },
+    "death_time": "date-only patients.dod: dates before index calendar date are inconsistent/excluded; the same calendar date is a conservative day-0 competing death after survived-discharge eligibility; later dates use integer calendar-day offset",
+    "postseal_only_fields": [
+      "patients.dod",
+      "postindex diagnoses",
+      "subject observation end",
+      "min(index_time + integer calendar-day DOD offset, last valid discharge plus 365 days) follow-up cap",
+      "NHANES questionnaire labels"
+    ],
+    "target_death_tie": "death wins when death_time <= target_time",
+    "incident_primary": {
+      "endpoint_code_system": "ICD10 only",
+      "exclude_any_preindex_icd9": true,
+      "target_free_definition": "no mapped target-organ ICD10 from any completed admission with dischtime <= index discharge",
+      "event": "first mapped target-organ ICD10 availability at a completed admission dischtime strictly after index discharge",
+      "icd9_endpoint_authorized": false
+    },
+    "recurrent_sensitivity": {
+      "physically_separate": true,
+      "population": "mapped target-organ ICD10 available from a completed admission with dischtime <= index discharge and no completed pre-index/index ICD9",
+      "event": "next mapped target-organ ICD10 availability at a completed admission dischtime strictly after index discharge",
+      "may_combine_with_incident": false
+    },
+    "competing_death": {
+      "primary_cause_specific": true,
+      "aalen_johansen_target_and_death_cif": true,
+      "target_or_death_composite_sensitivity": false,
+      "curve_output": "01_mimic/06_incident_risk/competing_risk_curves.csv with AJ target/death CIF and separately labelled cause-specific KM only",
+      "fine_gray": "unauthorized unless separately audited"
+    },
+    "external_hash_fold": "first 8 SHA256 bytes of 'revision0710-external-v3|{subject_id}', big-endian, modulo 5",
+    "ipcw": {
+      "censoring_km_fit": "four training hash folds only",
+      "evaluation": "held-out fifth fold only",
+      "outcome_definition": "case=target before death/censor/horizon; control=event-free at horizon or competing death before horizon; loss/admin censor before horizon is unobserved",
+      "censor_definition": "censor event=subject observation end or death ascertainment cap before target/death/horizon; target and death are non-censor terminal events for G",
+      "left_limit": true,
+      "minimum_G": 0.05,
+      "weight_cap": "99th percentile of training-fold weights",
+      "same_horizon_training_nuisance_only": true,
+      "absolute_risk": "reconstruct post-jump Breslow baseline hazard increments from complete target and competing-death PHReg risk sets, including first and final event-time jumps, then integrate them into target CIF; use target Cox linear predictor for cause-specific Harrell C and target CIF probability for IPCW AUC, Brier, and linear calibration",
+      "brier_normalization": "sum IPCW squared error divided by full held-out test n",
+      "diagnostics": "unfloored G minimum, G floor, training p99 cap, capped count, effective sample size, observed and censored counts"
+    },
+    "full_cohort_hr": {
+      "analysis_population": "full non-held-out organ-specific incident-eligible cohort after excluding baseline target ICD10 and any completed pre-index ICD9; not the full 95,683-subject MIMIC input cohort",
+      "exposure": "corrected_age_gap_mean5 standardized by the incident-eligible organ-specific analysis-population SD",
+      "covariates": "integer chronological age + sex_male + standardized corrected age gap",
+      "ties": "Efron",
+      "standard_error": "subject-level robust sandwich",
+      "multiplicity": "Benjamini-Hochberg across seven organs within each input variant and horizon",
+      "proportional_hazards_test": "scaled Schoenfeld residual test for exposure"
+    },
+    "bootstrap": "one global PCG64 SeedSequence subject-cluster multiplicity plan with B=200 shared across all organs, horizons, variants, and fixed hash folds; resample held-out subjects while keeping training-fold target Cox, death Cox, and censoring KM fixed",
+    "claim_limits": [
+      "hospital-recorded endpoints, not complete population incidence",
+      "only 6- and 12-month horizons are authorized under the available death ascertainment",
+      "non-held-out incident-eligible organ-specific HR is association, held-out delta C/IPCW is prediction, neither is causal"
+    ]
+  },
+  "nhanes": {
+    "role": "cross-sectional phenotype-domain transfer and disease association, not longitudinal incident prediction",
+    "allowed_releases_exact_order": [
+      "P_2017_MARCH2020_PREPANDEMIC",
+      "L_AUG2021_AUG2023"
+    ],
+    "forbid_DEMO_J_or_J_star_with_P_star": true,
+    "p_release": "official P_* 2017-March 2020 pre-pandemic release, including the 2017-2018 sample",
+    "l_release": "official *_L August 2021-August 2023 release",
+    "primary_input": "phenotype_only_label_blind",
+    "questionnaire_files_read_by_input_builder": [],
+    "event_sequence": "all 32 slots padding",
+    "primary_age_population": "RIDSTATR == 2 and RIDAGEYR integer 40 through 73 inclusive",
+    "primary_age_integer_guard": "fractional RIDAGEYR in the examined 40-73 candidate range is a hard error",
+    "raw_registry_primary_count_sanity": {
+      "P_2017_MARCH2020_PREPANDEMIC": 4916,
+      "L_AUG2021_AUG2023": 3720,
+      "total": 8636
+    },
+    "age_80_top_coded": "exclude from MAE, RMSE, R2, calibration intercept/slope, and every exact-error calculation; inclusion is an exact error",
+    "feature_map": "78 slots for each release; unavailable slots remain raw_zero=0/missing_mask=true",
+    "all_78_slots_adjudicated_only_after_mechanical_audit": true,
+    "release_slot_qc": {
+      "grain": "release x all 78 phenotype slots",
+      "required_fields": "finite count, prefrozen physical-unit range count, min, q01, q25, median, q75, q99, max",
+      "decision_rule": "any observed nonfinite or value outside a prefrozen unit range aborts before inference",
+      "external_data_driven_trimming_or_winsorization": false,
+      "quantiles_descriptive_only": true
+    },
+    "questionnaire_labels": "exploratory Panel E; six estimable organs per release; immune fixed not_estimable; outcome-only physical process",
+    "input_label_physical_isolation": true,
+    "survey_weight_sensitivity": {
+      "P_2017_MARCH2020_PREPANDEMIC": "WTMECPRP within P release only",
+      "L_AUG2021_AUG2023": "WTMEC2YR within L release only",
+      "cross_release_pooled_weight": "forbidden"
+    },
+    "local_crossfit_calibration": {
+      "regression": "chronological_age = beta0 + beta1*predicted_age_raw_mean5 + beta2*sex_male",
+      "folds": "for held-out hash fold k, fit on the other four folds within the same release and organ",
+      "coefficient_order": "intercept,predicted_age_raw_mean5,sex_male",
+      "application": "apply the three training-fold coefficients once to held-out predicted_age_raw_mean5 and sex_male",
+      "role": "sensitivity only; never zero-shot and never enters primary predictions or corrected gaps"
+    },
+    "questionnaire_association": {
+      "model": "release-specific survey-weighted logistic regression",
+      "exposure": "corrected_age_gap_mean5 standardized within release and organ",
+      "covariates": "intercept + standardized corrected gap + chronological age centered per 10 years + sex_male",
+      "design": "full release-specific examined MEC design retained; integer age 40-73 enters as a survey domain; MEC weight, SDMVSTRA strata, SDMVPSU PSU",
+      "inference": "survey-domain pseudolikelihood Taylor linearization with PSU within strata, centered lonely PSU, and t/Wald reference using design df = PSU minus strata",
+      "multiplicity": "Benjamini-Hochberg across six estimable organs within each release"
+    },
+    "claim_limit": "locked release-specific age-transfer reanalysis and exploratory cross-sectional association only; not untouched confirmation, incident prediction, clinical utility, deployability, longitudinal robustness, causal effect, or network conservation"
+  },
+  "statistical_algorithms": {
+    "aalen_johansen": "at each unique event time update all-cause survival S(t)=S(t-)*(1-d_all/n); add CIF_k(t)=CIF_k(t-)+S(t-)*d_k/n; death is cause 2 and wins exact ties",
+    "harrell_c": "comparable pairs require earlier observed target event; ties in risk contribute 0.5",
+    "phreg_baseline_hazard": "use fitted Efron PHReg coefficients but reconstruct Breslow dH0(t)=d(t)/sum_{i:Ti>=t}exp(xi beta) directly from the complete risk set; cumulative risk at a horizon is the sum of all jumps at t<=horizon, including first and final event-time jumps",
+    "ipcw_auc_brier": "target CIF from explicit post-jump Breslow target/death cause-specific hazard jumps; IPCW AUC ranks target CIF probability rather than target cause-specific linear predictor; case=target before terminal boundary; control=event-free at horizon or competing death before horizon; subject observation/admin censor before horizon is unobserved; fit censoring KM on four training folds, evaluate left-limit G on held-out fold, clamp G at 0.05, cap at training-weight p99; Brier divides by full test n",
+    "bootstrap": "one global PCG64 SeedSequence participant-cluster multiplicity plan retained across organs, horizons, variants, and folds; predictive intervals are conditional on fixed training-fold target/death Cox and censor KM",
+    "uncertainty": "predictive rows use linear 2.5/97.5 percentiles over B=200 conditional held-out subject-cluster replicates; zero-shot age metrics, full time-grid curves, and recurrent CIFs are explicitly point-only; Cox HRs use robust Wald intervals"
+  },
+  "output_schema": {
+    "relative_path": "OUTPUT_SCHEMAS_V8.json",
+    "sha256": "e2cef0401cef69ddd3f8c5db030fb0658c05d564dc8eeb49cd62442d7ab0a77a",
+    "all_columns_bind_dtype_nullability_key_grain_cardinality_enum_unit_formula_tolerance": true,
+    "formal_receipt": "one create-once manifest with path, bytes, SHA256, rows, columns, and formula/tolerance schema SHA256 for each of all 20 tables"
+  },
+  "negative_tests_required": [
+    "duplicate JSON key",
+    "extra key or record",
+    "missing key or record",
+    "wrong JSON type including bool-versus-int",
+    "reordered ordered record",
+    "wrong source or artifact SHA-256",
+    "wrong relative or absolute path",
+    "formal target or staging target already exists",
+    "DEMO_J/J_* combined with P_*",
+    "NHANES questionnaire source enters input registry",
+    "NHANES age 80 enters exact-error population",
+    "NHANES primary L32 contains any active event",
+    "MIMIC primary incident row has any pre-index ICD9",
+    "MIMIC ICD9 endpoint requested",
+    "MIMIC incident and recurrent rows share one physical table",
+    "event at or after landmark",
+    "timeline tie/dedup/order, primary latest-32, or inpatient-prescription sensitivity 8+8+16 crop mismatch",
+    "padding nonzero or active inpatient-prescription-proxy event_code_id nonzero",
+    "text role or 0x1F separator mismatch",
+    "Unicode/whitespace/code namespace/fallback mismatch",
+    "correction key count other than 5x7 or external fit flag true",
+    "corrected gap formula error above 1e-12",
+    "CLIP model/version/weight/device/dtype/batch/thread/determinism mismatch",
+    "original UKB embedding prefix bytes change",
+    "checkpoint count/hash or transform count/hash mismatch",
+    "MIMIC map selector/unit/formula mutation including lymphocyte and reticulocyte conversions",
+    "lab charttime before landmark but storetime after landmark",
+    "date-only OMR on the discharge calendar date",
+    "overlapping admission diagnosis classified before completed dischtime",
+    "same-calendar-date DOD silently dropped instead of day-0 competing death",
+    "non-midnight index with later date-only DOD shifted by a fractional day or censored at the death cap",
+    "PHReg pre-jump cumulative hazard used as post-jump or first/final Breslow event jump omitted",
+    "IPCW AUC ranks cause-specific Cox linear predictor instead of target CIF probability",
+    "NHANES release identity or cohort-specific input variant substituted in a sealed prediction universe",
+    "runtime ICD NFKC/internal-whitespace mismatch",
+    "one output key silently deleted from an upstream-bound universe",
+    "completed publish bundle table/manifest/lineage bytes tampered before resume or jointly self-consistent bundle copies diverge from stage05/stage06 successful-attempt originals",
+    "output schema dtype/cardinality/enum mutation",
+    "formal authorization field/path/hash/environment/mode/executor/target/seed/key-order/record-schema/rejection-policy mismatch",
+    "None or NaN accepted by a canonicalizer"
+  ],
+  "formal_gate": {
+    "contract_frozen": false,
+    "formal_authorization_exists": false,
+    "formal_lock_exists": false,
+    "formal_consumed_authorization_exists": false,
+    "formal_target_relative_path": "Revision-0710/06_figures_and_statistics/04_external_validation/source_data_v1",
+    "formal_target_resolved": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\06_figures_and_statistics\\04_external_validation\\source_data_v1",
+    "formal_target_exists": false,
+    "formal_execution_authorized": false,
+    "formal_B200_conditional_execution_performed": false,
+    "formal_cache_inference_metrics_hr_km_cif_written": false,
+    "authorization_schema_relative_path": "FORMAL_AUTHORIZATION_SCHEMA_V8.json",
+    "authorization_schema_sha256": "b55f521a3fb42fd411bffd561dfa0c3328d573fdefc54ccd598cbf5c27490125"
+  }
+}

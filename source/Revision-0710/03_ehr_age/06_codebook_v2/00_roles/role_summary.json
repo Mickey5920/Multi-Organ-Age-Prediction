@@ -1,0 +1,99 @@
+{
+  "schema_version": "revision0710.ehr_age.codebook_v2.roles.v1",
+  "status": "PASS",
+  "phase": "trusted_fixed_preprocessing_before_model_development",
+  "model_development_must_read_only_materialized_artifacts": true,
+  "outer_test_fold_present": false,
+  "outer_test_participant_rows": 0,
+  "definition": {
+    "train_folds": [
+      2,
+      3,
+      4
+    ],
+    "calibration_and_screen_fold": 1,
+    "open_development_fold": 0,
+    "model_inputs": "unchanged Revision-0710 compact L32 cache",
+    "outcomes": "corrected ICD codebook v2 60-month incident endpoints"
+  },
+  "counts": {
+    "participants_by_fold": {
+      "0": 91355,
+      "1": 91356,
+      "2": 91353,
+      "3": 91353,
+      "4": 91356
+    },
+    "development_participants": 365418,
+    "development_participant_organ_rows": 2557926,
+    "open_fold0_participants": 91355,
+    "open_fold0_participant_organ_rows": 639485,
+    "development_strict_health": 81767,
+    "open_fold0_strict_health": 20362
+  },
+  "sources": {
+    "organ_outcomes_60m_v2": {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\01_data_rebuild\\09_v2_labels\\organ_outcomes_60m.parquet",
+      "bytes": 26461801,
+      "sha256": "3a9021f00080c25fd523debcdf075a5be8281c9658db261af99a8bdc11f4e735"
+    },
+    "fold_manifest_5fold": {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\01_data_rebuild\\03_folds\\fold_manifest_5fold.parquet",
+      "bytes": 3558712,
+      "sha256": "298e52f8e9eba0ce895f87b4af341f0ad306880b1be416ac0511859a0918b450"
+    },
+    "fold1_inner_split": {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\01_data_rebuild\\03_folds\\fold0_validation_calibration_screen.parquet",
+      "bytes": 580670,
+      "sha256": "70ce44ac75674c5c1b4b9ad2863ded0776e667458ba4807cb3c9660273404747"
+    },
+    "chronological_age_targets": {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\01_data_rebuild\\04_cache_v1\\targets\\chronological_age_targets.parquet",
+      "bytes": 3487358,
+      "sha256": "4cae046274a96afc52b5be5db94ff258d5751ddcf2bbecdac8814b650151dd0f"
+    },
+    "unchanged_cache_batch_manifest": {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\01_data_rebuild\\04_cache_v1\\batch_manifest.json",
+      "bytes": 15788,
+      "sha256": "f8eea9e59cb7532df7c86ffa752ac48ec23f89b400d4c5cb14566ea0b56468d8"
+    }
+  },
+  "artifacts": {
+    "development_labels": {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\00_roles\\fold0_development_labels.parquet",
+      "bytes": 6824775,
+      "sha256": "470f3d95f95d243d2172a70de856b37c8f0829f1a94b08aa3b911721fec07403"
+    },
+    "development_ages": {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\00_roles\\fold0_development_ages.parquet",
+      "bytes": 2802737,
+      "sha256": "acf2950edd85b4ebcd220e875efe114ffa511543b3f73423909a343f9473dc8c"
+    },
+    "open_labels": {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\00_roles\\fold0_open_labels.parquet",
+      "bytes": 1850916,
+      "sha256": "bff36552f1552da183a90200dc15de6624696d4b08d1eef15d6d4f11f87091a6"
+    },
+    "open_ages": {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\00_roles\\fold0_open_ages.parquet",
+      "bytes": 886233,
+      "sha256": "9686a670cd32484fc312898f0a37e7cf66b99b6cb4df87663b859c47e5a6f0c6"
+    },
+    "joint_labels": {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\00_roles\\fold0_development_labels.parquet",
+      "bytes": 6824775,
+      "sha256": "470f3d95f95d243d2172a70de856b37c8f0829f1a94b08aa3b911721fec07403"
+    },
+    "age_targets": {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\00_roles\\fold0_development_ages.parquet",
+      "bytes": 2802737,
+      "sha256": "acf2950edd85b4ebcd220e875efe114ffa511543b3f73423909a343f9473dc8c"
+    }
+  },
+  "leakage_checks": {
+    "development_contains_fold0": false,
+    "development_open_participant_overlap": 0,
+    "future_icd_used_as_model_input": false,
+    "input_cache_rebuilt_or_copied": false
+  }
+}

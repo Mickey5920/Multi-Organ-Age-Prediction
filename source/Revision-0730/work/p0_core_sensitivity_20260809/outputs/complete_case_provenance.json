@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-08-09T13:39:13.947841+00:00",
+  "analysis": "fixed-model phenotype-complete fully adjusted Cox sensitivity",
+  "complete_case_definition": "phenotype_missing_fraction == 0 (all 78 phenotypes observed)",
+  "model_retrained": false,
+  "context_audit": {
+    "participants": 456773,
+    "legacy_vs_codebook_v2_prevalent_organ_count_changed": 41388,
+    "no_baseline_icd_participants": 175637,
+    "no_baseline_icd_or_gp_participants": 121505,
+    "codebook_v2_prevalent_burden_mean": 0.39525760060248744,
+    "codebook_v2_prevalent_burden_max": 7
+  },
+  "input_sha256": {
+    "e47_oof": "bfc9e0de88121bb4b520bd6c878ac4d655d00b7d1dfa1f64b5f7a4de0b633239",
+    "context": "2b4d46d69b1c5c2c9629b27c12dce2d4c3460028fc16a0baffcdfdcbd44fb0bc",
+    "labels": "ce8dbbd8a149a872655cb6d37c0f2f7928b1471d4a54857c7d1189ecebcaaa27",
+    "primary_reference": "8b823e56d97da7969b3f4a9359979fe025db5bc95324104240ffe00d5c91fae6"
+  },
+  "output_sha256": "4e6a8ed0cd49290db4bd05140d70206e9878e5ae7622dc579e35f1f848f838ed",
+  "python": "3.11.13 | packaged by Anaconda, Inc. | (main, Jun  5 2025, 13:03:15) [MSC v.1929 64 bit (AMD64)]"
+}

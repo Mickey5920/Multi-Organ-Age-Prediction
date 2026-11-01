@@ -1,0 +1,12 @@
+{
+  "metrics": {
+    "mae": 3.7187850700045444,
+    "n_participant_organ_rows": 714903,
+    "n_participants": 102129,
+    "pearson": 0.7942582792567301,
+    "prediction_scale": "raw predicted chronological age before age-gap correction",
+    "r2": 0.6261939944870831,
+    "scope": "strict_healthy_reference_60m pooled outer-test OOF participant-organ rows"
+  },
+  "schema_version": "revision0710.ehr_age.corrected_primary.canonical_pooled_strict.v1"
+}

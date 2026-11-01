@@ -1,0 +1,263 @@
+{
+  "schema_version": "revision0710.external_validation.fig13_fig14.render.v1",
+  "status": "FIG13_FIG14_RENDER_COMPLETE",
+  "created_at": "2026-07-16T05:37:03+08:00",
+  "style_reference": "Revision-0626 Final_Figure_Data_0708: Times New Roman, organ colors, white background, thin axes",
+  "outputs": [
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Main_Figure\\Fig13_MIMIC_external_validation.png",
+      "bytes": 794480,
+      "sha256": "c15c1ac76228d655c14ceafb87ec3535d10fcae724a6dcb836b40306a39a91ca"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Main_Figure\\Fig13_MIMIC_external_validation.pdf",
+      "bytes": 93539,
+      "sha256": "4736475bc0c4795a97bc3aeeaf28bd84d6fd1635a19ddd652dc0ed19c79b330c"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Main_Figure\\Fig13_MIMIC_external_validation.svg",
+      "bytes": 134436,
+      "sha256": "219e85007510fcef7d4f1e2fea6348b2d0857e64f18fa305cfa306be93e0c819"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Panels\\Fig13A.png",
+      "bytes": 155538,
+      "sha256": "ad029a4b750f03a04ab8bd686aa74cf8466ad3af9631d20a679a442243f678c0"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Panels\\Fig13A.pdf",
+      "bytes": 90167,
+      "sha256": "19e0798f758eb7cf9ce7f72b68158072f20552008388525f39ff694074b6f4e2"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Panels\\Fig13A.svg",
+      "bytes": 126404,
+      "sha256": "efce9ccef6b5f24a3bbd49af809f40e772b57984320c2f160771cdd4ae72083b"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Panels\\Fig13B.png",
+      "bytes": 131513,
+      "sha256": "1e23c4107673585942a3aec113f254080dbcc471a849cf83f4c6b94861e97def"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Panels\\Fig13B.pdf",
+      "bytes": 90288,
+      "sha256": "9216572c1eb16efaf7c997d8ce33cf60d96779a990a7074d2d59a45ebf28891e"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Panels\\Fig13B.svg",
+      "bytes": 105135,
+      "sha256": "1512290856ccc043a92df81f2dc729bf60bc2f3627993c49ea46b63e071964b3"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Panels\\Fig13C.png",
+      "bytes": 140987,
+      "sha256": "cc1ce68fb4eea84b8a2c56c9a8d9a90079779685780c60b0721c5acfaeb95ae1"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Panels\\Fig13C.pdf",
+      "bytes": 90526,
+      "sha256": "4ae4fdc004e7a0233beae8aa285a9664173d082a587270a8f20248698a2d58db"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Panels\\Fig13C.svg",
+      "bytes": 98252,
+      "sha256": "e42f7be50273b9a1bc74d982106b992cbd291f25068789583503635b3b368516"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Panels\\Fig13D.png",
+      "bytes": 107653,
+      "sha256": "88410b341b09b27b74a0d4322d0553d68cf9ab232b6528d8bd4ed4c29157b477"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Panels\\Fig13D.pdf",
+      "bytes": 92510,
+      "sha256": "9acc2a9c7321964eecd155ca536c657243633e9c760a821fd8b469e4451baab8"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Panels\\Fig13D.svg",
+      "bytes": 121839,
+      "sha256": "db688120205f86175ca1ed46f4b5a6dbcafe557a200a054cfcf07426b72559b3"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Panels\\Fig13E.png",
+      "bytes": 91470,
+      "sha256": "b7be3152558a6bbeb985e715732c63d1f4c3a85c72bd3ac03c261edb5679bc51"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Panels\\Fig13E.pdf",
+      "bytes": 90158,
+      "sha256": "021c64e13218bcbb44c2078dec297e16d98893361c46cbd9302ad48d267951cf"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Panels\\Fig13E.svg",
+      "bytes": 99756,
+      "sha256": "ec9023d62bf09ddc8e7259a754a167f8260799284b844f62cab1c9f1ab0d146e"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Panels\\Fig13F.png",
+      "bytes": 152919,
+      "sha256": "a951ed241c9bd8ae4dbe06bff0a4c642fba4b99baf5035a443cf48e75b99daff"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Panels\\Fig13F.pdf",
+      "bytes": 90495,
+      "sha256": "ceb6dd49776de777e98f2a0f75bd133b16811c154e6c3441dd4fc8636b9e6cf4"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Panels\\Fig13F.svg",
+      "bytes": 95700,
+      "sha256": "6e2546e4cba44c610189ae57e361f939233095b726f0bebd673f9caeccee076d"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Supplementary\\Fig13S1_paired_risk_deltas.png",
+      "bytes": 225433,
+      "sha256": "3ad94719d1898fe112c29469348aa235f066e673712793af302352813b4978fa"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Supplementary\\Fig13S1_paired_risk_deltas.pdf",
+      "bytes": 52410,
+      "sha256": "0fe9391bdb44997762d170f0e664600140c345fdd1174a63becd98880b96bf9b"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Supplementary\\Fig13S1_paired_risk_deltas.svg",
+      "bytes": 73809,
+      "sha256": "a992714ab812dfaa226ba37e5363d030c069b9486b1a3e1dd9643b0d299b8683"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Supplementary\\Fig13S2_Aalen_Johansen.png",
+      "bytes": 435160,
+      "sha256": "2e3eae0b5db8ba1a57d63e9dba2c82574f3c12ca1b54a67edd8dd468115099a8"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Supplementary\\Fig13S2_Aalen_Johansen.pdf",
+      "bytes": 50557,
+      "sha256": "9d0e3ccaf97c70c45242128af106ca6095fc665ee315d160f0b9a05db5b007ae"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig13\\Supplementary\\Fig13S2_Aalen_Johansen.svg",
+      "bytes": 84075,
+      "sha256": "7aeb02353d825578754a82e6e95083c51b15e541010ed583175c683ccb0e0b86"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Main_Figure\\Fig14_NHANES_external_validation.png",
+      "bytes": 626821,
+      "sha256": "f1e0fa8f93802f96139e1162e464b067273a594bff8ae4860fcd1c2604d6e67b"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Main_Figure\\Fig14_NHANES_external_validation.pdf",
+      "bytes": 81273,
+      "sha256": "43f255a18e4362a8982dc3fcbb53931562f533b60cd55eed5c1393b1debca5d1"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Main_Figure\\Fig14_NHANES_external_validation.svg",
+      "bytes": 123425,
+      "sha256": "d89aee40508b40b0df9b87b401d7f532aa2ee29ad4fb9fd81f830ac1b6bf13d4"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Panels\\Fig14A.png",
+      "bytes": 81584,
+      "sha256": "a93e9327af5cd16c54d1d2e0303e3f4f9e5ba4a3bf3a06ef63aa73b8aa7ac99e"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Panels\\Fig14A.pdf",
+      "bytes": 77076,
+      "sha256": "6a4e5f0a4f8d090951e8bc6880d3d21531123534602dec453a6b0527bcf07b10"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Panels\\Fig14A.svg",
+      "bytes": 116275,
+      "sha256": "b1545dce83046a739b25306ea4d9873a7f2afb21db3b4036fe59b59d74df8a12"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Panels\\Fig14B.png",
+      "bytes": 50469,
+      "sha256": "618e716c3f8846dd5d327fbbb4836fd758c2b30918a1baef7c3f0423798a7bbf"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Panels\\Fig14B.pdf",
+      "bytes": 77014,
+      "sha256": "a60c4798c8875eb59247e0abdb189f04e317d27b52ecd197be62b285442c3e91"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Panels\\Fig14B.svg",
+      "bytes": 110555,
+      "sha256": "90c293b037507fb21c737ed093f4c792edc466b92f2cfed0ec65aa49531a03ca"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Panels\\Fig14C.png",
+      "bytes": 98457,
+      "sha256": "20672b3fdd8e933aa8927b13f34be18229a2b8839c6f6ec0154f4219f38afb4b"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Panels\\Fig14C.pdf",
+      "bytes": 77786,
+      "sha256": "922c1b3a9175a880be6d9a3ce2a70f1c9f01d396b777a57a895db585461cc8a7"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Panels\\Fig14C.svg",
+      "bytes": 104075,
+      "sha256": "f2c9de73b7b15b6be5353c392e9c26d6ff9a73321fe023a588374eb19d376d7a"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Panels\\Fig14D.png",
+      "bytes": 151846,
+      "sha256": "ec546d63fb608ea23235cc30f565e7aac5a6abbc2b85964c59812e8653061a25"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Panels\\Fig14D.pdf",
+      "bytes": 77561,
+      "sha256": "46ee516325bdb52d64be200a4bd2d591f5983a239642f5555d5d3dcb965f42ed"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Panels\\Fig14D.svg",
+      "bytes": 110412,
+      "sha256": "5dcb2abe67ae5b8cd8716c87aad8cf743367f815614f2ce30d422488d1ac44f0"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Panels\\Fig14E.png",
+      "bytes": 103189,
+      "sha256": "a02bce36e0abc3f4592b6495a54a42fa5a1398c08527c4112b9cbdca7fca7b8c"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Panels\\Fig14E.pdf",
+      "bytes": 77603,
+      "sha256": "7f6807a4dd542e72918bc2cd567922c6db3e1b132ed7d887b5ed3b77f3ad6827"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Panels\\Fig14E.svg",
+      "bytes": 106495,
+      "sha256": "b1ea944482c2f08ef0a3479efaaa5a5986c6a8b833bed36a2e7bec2812e7d8a3"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Panels\\Fig14F.png",
+      "bytes": 91553,
+      "sha256": "7a729955859ae782e8cfedb0721b87362a00fb2bda7ea73184e072e61d79587d"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Panels\\Fig14F.pdf",
+      "bytes": 77447,
+      "sha256": "f68cdb202ec1e0588b32fdafd661ad4b2ac2266e78c9b898245e04d344f7099c"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Panels\\Fig14F.svg",
+      "bytes": 100600,
+      "sha256": "527d2583fff6a209c908f1e7d5985a771766737182fdf4b15aa25c753fb07483"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Supplementary\\Fig14S1_raw_vs_recalibrated_metrics.png",
+      "bytes": 230933,
+      "sha256": "2375bc00888e2c3c1ae8dc82bae6b86e067aab488f7b2d3577111d4ce9fe81b5"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Supplementary\\Fig14S1_raw_vs_recalibrated_metrics.pdf",
+      "bytes": 54066,
+      "sha256": "582749f4f2a85537bb339a9f2c1e4d798f8b9d4e6507bd2fc01ca8d4a75a4ea1"
+    },
+    {
+      "path": "Revision-0710\\Final_Fig_0716\\Fig14\\Supplementary\\Fig14S1_raw_vs_recalibrated_metrics.svg",
+      "bytes": 73384,
+      "sha256": "ff7b59ea874178e68144fba5dab1a42b36d6bdf02dea189814ecde43191b3521"
+    }
+  ]
+}

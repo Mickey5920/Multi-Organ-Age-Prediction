@@ -1,0 +1,1512 @@
+{
+  "schema_version": "revision0710.fig04_fig05.ablation_prefreeze.contract.v8",
+  "status": "PREFREEZE_V8_FORMAL_AUTHORIZATION_ABSENT",
+  "created_date": "2026-07-11",
+  "scope": {
+    "figures": [
+      "Fig04",
+      "Fig05"
+    ],
+    "purpose": "Hash-bound formal comparison executor prefreeze with fresh canonical control and scaled integration evidence",
+    "formal_training_executed": false,
+    "formal_source_or_render_executed": false,
+    "v1_modified": false
+  },
+  "v1_immutable_bindings": {
+    "records": [
+      {
+        "name": "ablation_inputs",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v1/ablation_inputs.py",
+        "bytes": 4347,
+        "sha256": "68df38620c1a9928d9051d65860394cf7a0b93bbc1a3d08546297aae7b63c999"
+      },
+      {
+        "name": "ablation_loss",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v1/ablation_loss.py",
+        "bytes": 6239,
+        "sha256": "472b57de9fd2cf29fa3d8824aceee5c728cf3b9559a36de35ef7952d00d605c9"
+      },
+      {
+        "name": "ablation_model",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v1/ablation_model.py",
+        "bytes": 12882,
+        "sha256": "6e691b5ca2af9f45fbe9b4b8caee65ceb6495f25f4aafa6ccfb58ea728091eb8"
+      },
+      {
+        "name": "contract",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v1/FROZEN_ABLATION_CONTRACT.json",
+        "bytes": 22414,
+        "sha256": "a1dbde3c0b684b45bdab75dc6ea7695a8bf854a9bc24e3ef3a2918e856bd602c"
+      },
+      {
+        "name": "queue",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v1/ABLATION_QUEUE.csv",
+        "bytes": 20118,
+        "sha256": "aa6ae492a56a0782b104591c6c145c017f2d5d5ad68edc515238f7050c734bc2"
+      },
+      {
+        "name": "receipt",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v1/PREFREEZE_VALIDATION_RECEIPT.json",
+        "bytes": 6102,
+        "sha256": "b288b164f2a94e81130db96041813ac016576b1444d7582cb293a60003994a74"
+      },
+      {
+        "name": "registry",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v1/VARIANT_REGISTRY.json",
+        "bytes": 10826,
+        "sha256": "1b4ec0e3f15bafdfcd103af68a2e54a3d2c1bdaff20ccc768a49b0831c18f574"
+      }
+    ]
+  },
+  "artifact_bindings": {
+    "records": [
+      {
+        "name": "queue_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/ABLATION_QUEUE_V8.csv",
+        "bytes": 17307,
+        "sha256": "a2d1dddcb0cd064814eef9541281226eb1f8ef9dc9aef91e144901a92d6cd953"
+      },
+      {
+        "name": "authorization_schema_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/FORMAL_AUTHORIZATION_SCHEMA_V8.json",
+        "bytes": 2690,
+        "sha256": "bd115ce59ea086406e51990f6acf8a378f7a75f8b4dc4b75fd92f3edde81b916"
+      },
+      {
+        "name": "formal_executor_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/formal_executor.py",
+        "bytes": 35174,
+        "sha256": "83fcd86889947b488549f411b392120b829508f839d6288bfebbd1a5af2a6a9e"
+      },
+      {
+        "name": "isolated_worker_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/isolated_worker.py",
+        "bytes": 40667,
+        "sha256": "0dc04782c0da2baf950f2544e411a7b40c185be6a8ccd19e35032f3af15963e5"
+      },
+      {
+        "name": "output_schemas_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/OUTPUT_SCHEMAS_V8.json",
+        "bytes": 27001,
+        "sha256": "a5a461d4404887bc1861d97524fc593e4639bcff30e7c8a65d8a62153bb91983"
+      },
+      {
+        "name": "resource_budget_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/RESOURCE_BUDGET_AND_PREFLIGHT_V8.json",
+        "bytes": 6385,
+        "sha256": "b05c56d063c3afc055dce829b1fe87012333c9ed3f69d27b25f3a4c23b05c1e2"
+      },
+      {
+        "name": "scaled_integration_runner_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/run_scaled_integration_smoke.py",
+        "bytes": 17309,
+        "sha256": "72261e291085a583c60158da9d42fc577bb10d0025a4a9d0bd76b2ede75afce2"
+      },
+      {
+        "name": "authorization_validator_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_authorization.py",
+        "bytes": 13888,
+        "sha256": "998189d80698b3a0987376c115053eb0cf1031c7f58134000b43619c232f7e7a"
+      },
+      {
+        "name": "contract_validator_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_contract.py",
+        "bytes": 29894,
+        "sha256": "9e8bec62cbe1397213e282734f6f0bcd12d5b1742d101b79b773e791fa00ed2a"
+      },
+      {
+        "name": "data_roles_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_data.py",
+        "bytes": 26571,
+        "sha256": "c7b081c7d818349defef2670e6fe1fd343154e5d040ba87f55843d5a9aad40f8"
+      },
+      {
+        "name": "input_ablation_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_inputs.py",
+        "bytes": 6045,
+        "sha256": "16172be0851aa8172df2d4609ade167ac39464816527ebee11d06f5d6984bbdb"
+      },
+      {
+        "name": "loss_ablation_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_loss.py",
+        "bytes": 4865,
+        "sha256": "c3e3cef7204f472b974e14673095558648357a7ba0391868a2e2fc139fb0d0af"
+      },
+      {
+        "name": "model_ablation_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_model.py",
+        "bytes": 5426,
+        "sha256": "bdb61e1a3df3d5fa95a8a02052e8454e1c8c4f0d26034090bf061723e26c9d4b"
+      },
+      {
+        "name": "schema_validator_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_schema_validator.py",
+        "bytes": 98073,
+        "sha256": "2accc1e39cfa65ea104629066f3ff3a3405b2c4dfab8691c4aab62f9f7d72de7"
+      },
+      {
+        "name": "state_machine_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_state_machine.py",
+        "bytes": 6633,
+        "sha256": "2c896365752dc52d16fe8d65d55c2297eb40bf441e256d1fbfc81770d991efcf"
+      },
+      {
+        "name": "training_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_training.py",
+        "bytes": 21641,
+        "sha256": "cdcaadae6053d11b8e12e5edb51c12e6b8e1de35c9468fd7f8ba4e4f775e3ff3"
+      },
+      {
+        "name": "independent_replay_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_independent_replay.py",
+        "bytes": 13919,
+        "sha256": "050630e2b31d364fe43920df5ba0a911ba1d11936764c1451173b82ea23e1f12"
+      },
+      {
+        "name": "formal_independent_verifier_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/verify_formal_attempt_v8_independent.py",
+        "bytes": 10979,
+        "sha256": "8f25dba7a768396598a2fa42f397ef9b9dedbf29329bf315cb4e7109aded61df"
+      },
+      {
+        "name": "variant_registry_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/VARIANT_REGISTRY_V8.json",
+        "bytes": 10587,
+        "sha256": "c8970599030994e73de902ada4195bcff7d55f677fa15c786ded1335f5fa6148"
+      },
+      {
+        "name": "tests_conftest",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/tests/conftest.py",
+        "bytes": 283,
+        "sha256": "4d45bf980bb3affb21a08c3887bd352406ec929a83e780a28d6c66beefce26bf"
+      },
+      {
+        "name": "tests_authorization_executor",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/tests/test_authorization_executor.py",
+        "bytes": 6960,
+        "sha256": "d3684897abfe75616d817cb5187f5915824f55ce4de20a0f003ff4ce00849972"
+      },
+      {
+        "name": "tests_contract_queue",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/tests/test_contract_queue_protocol.py",
+        "bytes": 9117,
+        "sha256": "77f77bb3fc4d1aea24c80586d0e746d76edbe2c507dc07d5eee17b7495bced10"
+      },
+      {
+        "name": "tests_model_training",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/tests/test_model_training_wiring.py",
+        "bytes": 6621,
+        "sha256": "bb84de0e4e4f408b92f870acd9949ca41ccbe1db2e102efe0f4ec2ef7e188372"
+      },
+      {
+        "name": "tests_schema_state",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/tests/test_schema_state_machine.py",
+        "bytes": 6758,
+        "sha256": "92eeed9f747494df0cdbf28bb815cbeaec63d8e17caa3ba8e2203cb4e0c96fbf"
+      },
+      {
+        "name": "tests_v8_integrity",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/tests/test_v8_integrity.py",
+        "bytes": 10531,
+        "sha256": "a3ad307029583cd25f7d3801fd2850c662bdc8ed489a711e1ab47c5192152d8a"
+      },
+      {
+        "name": "cuda_production_shape_preflight_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/run_cuda_production_shape_preflight.py",
+        "bytes": 12584,
+        "sha256": "db8377eb21193d252bf6cfa7530995729f08b0850f02074726a2b61d521640cb"
+      },
+      {
+        "name": "worker_access_guard_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/worker_access_guard.py",
+        "bytes": 8627,
+        "sha256": "ba3bc1f33f8a5098c088e6d3da07103a28c0781e044c27f8317d76f737ce6c92"
+      },
+      {
+        "name": "terminal_go_schema_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/TERMINAL_GO_SCHEMA_V8.json",
+        "bytes": 1645,
+        "sha256": "9871defbdb355ebe83770a8b6dd9c1b1cc4df2de9cc103f264f89e020785f01a"
+      },
+      {
+        "name": "fresh_test_result_schema_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/FRESH_TEST_RESULT_SCHEMA_V8.json",
+        "bytes": 846,
+        "sha256": "5f605a919e32e6e9c8b7e1dd02e096bb557c9cf0399055be6d211125f5d29ca9"
+      },
+      {
+        "name": "independent_verifier_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/verify_prefreeze_v8_independent.py",
+        "bytes": 48970,
+        "sha256": "45a780696b7066663473253e3d27da763f28de336f15a92efa8bc02936f8831e"
+      },
+      {
+        "name": "refresh_prefreeze_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/refresh_prefreeze_v8.py",
+        "bytes": 8339,
+        "sha256": "1bb1dc5b3f15068008ca33718b7b1ce7aac11b4348cf1b77046472a79694b706"
+      },
+      {
+        "name": "runtime_guard_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_runtime_guard.py",
+        "bytes": 12007,
+        "sha256": "dddb5ae5ac0af24128094fa54592250f2e4c4418f283261ef961766b4ba16e9c"
+      },
+      {
+        "name": "tests_deep_replay_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/tests/test_deep_replay_v8.py",
+        "bytes": 24764,
+        "sha256": "ef8f4fb1ee13617d341e1af0efcec9603bfbaf257a6848a1053e4dabca56ce04"
+      },
+      {
+        "name": "finalize_prefreeze_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/finalize_prefreeze_v8.py",
+        "bytes": 10356,
+        "sha256": "4a08d3ddeabd2619ed1be34e0264243fc007cd5ed8f2c67c35565829056458a5"
+      },
+      {
+        "name": "readme_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/README_V8.md",
+        "bytes": 3087,
+        "sha256": "64bac705ba5c06a70aaf806936a9ecce218b363b3927318f909b75251cfb279b"
+      },
+      {
+        "name": "re_review_request_v8",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/INDEPENDENT_RE_REVIEW_REQUEST_V8.md",
+        "bytes": 1853,
+        "sha256": "6d5ebc9a91aafe1fbe76bb2957bf26b0ff906efe3e8eb6b493a4e948cb350948"
+      },
+      {
+        "name": "v7_terminal_review_no_go",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/V7_TERMINAL_REVIEW_NO_GO.md",
+        "bytes": 9118,
+        "sha256": "fee15cba9df3452403f395b012b673eaf76b9822297dcdb59936dfe559d0e6bc"
+      },
+      {
+        "name": "tests_v8_terminal_hardening",
+        "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/tests/test_v8_terminal_hardening.py",
+        "bytes": 15494,
+        "sha256": "e7ce7cd8437d6244367cb75cffd624d9481e6d89d7cd7a11e286819f8aa3567d"
+      }
+    ]
+  },
+  "canonical_bindings": {
+    "records": [
+      {
+        "name": "cache_hard_gate",
+        "path": "Revision-0710/01_data_rebuild/04_cache_v1/cache_hard_gate.json",
+        "bytes": 57466,
+        "sha256": "573a76a01543a3752bd4448d84fdaa5e68e300b823a2a90f216018a2bc63e955"
+      },
+      {
+        "name": "leakage_gate",
+        "path": "Revision-0710/01_data_rebuild/05_leakage_audit/leakage_gate.json",
+        "bytes": 5077,
+        "sha256": "40ff1d55702c18668dfde249524eaf327b009a2b7ee05953514833c84bfe1185"
+      },
+      {
+        "name": "embedding_tables",
+        "path": "Revision-0710/01_data_rebuild/04_cache_v1/embedding_tables.pt",
+        "bytes": 55779854,
+        "sha256": "d711b36404898e3d488316c7e6eb82668beb6ce60f8c23b1c5e2d85017788d31"
+      },
+      {
+        "name": "compact_cache_dataset",
+        "path": "Revision-0710/02_baselines_5fold/common/compact_cache_dataset.py",
+        "bytes": 12535,
+        "sha256": "3c7d31239a327cd11c7115c3bf17ec7b82f25eb8769e17915957236a68751d75"
+      },
+      {
+        "name": "ehr_age_model",
+        "path": "Revision-0710/03_ehr_age/01_model/ehr_age_model.py",
+        "bytes": 22588,
+        "sha256": "9c282a7d534ac49d4ec3dd3e6c6167dc266fa691b1b1af34c1dab547245bd153"
+      },
+      {
+        "name": "private_retain_age",
+        "path": "Revision-0710/03_ehr_age/01_model/private_retain_age.py",
+        "bytes": 13721,
+        "sha256": "76f477299dc40af92031f8b76136e25cdda54392d0c02e45bd4f637b1250115b"
+      },
+      {
+        "name": "ehr_age_losses",
+        "path": "Revision-0710/03_ehr_age/01_model/ehr_age_losses.py",
+        "bytes": 15565,
+        "sha256": "a33170eafddadf3a80027e90193e25609fdf3a0002e70c2794516f0293282f67"
+      },
+      {
+        "name": "ehr_age_data",
+        "path": "Revision-0710/03_ehr_age/02_runner/ehr_age_data.py",
+        "bytes": 23470,
+        "sha256": "43571991dcaf91cc45073b229edbc4b5ed0f2950f0228eb74e860de3c578b7c3"
+      },
+      {
+        "name": "ehr_age_training",
+        "path": "Revision-0710/03_ehr_age/02_runner/ehr_age_training.py",
+        "bytes": 55935,
+        "sha256": "9b3a89a10034a3d3a06ca4a9c27ddcb94c70609d1d4aecf37c31035b6ce91b3a"
+      },
+      {
+        "name": "role_registry",
+        "path": "Revision-0710/03_ehr_age/04_fixed_replication/00_role_artifacts/ROLE_ARTIFACT_REGISTRY.FROZEN.json",
+        "bytes": 4181,
+        "sha256": "c76214e3770a87a66642574eaa680ade1e3e3cb1c983cbea9e57cc6cf18f160c"
+      },
+      {
+        "name": "role_validation",
+        "path": "Revision-0710/03_ehr_age/04_fixed_replication/00_role_artifacts/ROLE_ARTIFACT_VALIDATION.PASS.json",
+        "bytes": 608,
+        "sha256": "3c8f30914037bd5bde1346fe1e70aca2a70396df2e3da6307b6f603d57bf0310"
+      },
+      {
+        "name": "outer_fold_0_train_manifest",
+        "path": "Revision-0710/03_ehr_age/04_fixed_replication/00_role_artifacts/outer_fold_0/01_train/role_manifest.json",
+        "bytes": 2473,
+        "sha256": "0879cf63295612341622dc59487ed976109ff395875fa949b90551f53c2b5e26"
+      },
+      {
+        "name": "outer_fold_0_calibration_manifest",
+        "path": "Revision-0710/03_ehr_age/04_fixed_replication/00_role_artifacts/outer_fold_0/02_calibration/role_manifest.json",
+        "bytes": 2487,
+        "sha256": "e7f251a2201f5d782a2ffaa4ab94c08b3d4041cf271d7b3e850cd10ceb7bb0b3"
+      },
+      {
+        "name": "outer_fold_0_outer_test_manifest",
+        "path": "Revision-0710/03_ehr_age/04_fixed_replication/00_role_artifacts/outer_fold_0/03_outer_test/role_manifest.json",
+        "bytes": 2484,
+        "sha256": "ab0918c317296adcc5dc0415225d96ce3dd77933e713c6db6af63446dc2b350b"
+      },
+      {
+        "name": "outer_fold_1_train_manifest",
+        "path": "Revision-0710/03_ehr_age/04_fixed_replication/00_role_artifacts/outer_fold_1/01_train/role_manifest.json",
+        "bytes": 2473,
+        "sha256": "cbe9ba812561d134b3da403ab02962f026400061e9885b8bf7a00af4e67abf4d"
+      },
+      {
+        "name": "outer_fold_1_calibration_manifest",
+        "path": "Revision-0710/03_ehr_age/04_fixed_replication/00_role_artifacts/outer_fold_1/02_calibration/role_manifest.json",
+        "bytes": 2487,
+        "sha256": "3070291d080c98d10b9cd9b29c5cb09229240172571b80d8ae70b717508ec6f6"
+      },
+      {
+        "name": "outer_fold_1_outer_test_manifest",
+        "path": "Revision-0710/03_ehr_age/04_fixed_replication/00_role_artifacts/outer_fold_1/03_outer_test/role_manifest.json",
+        "bytes": 2484,
+        "sha256": "5310af6475f9e300a8eb4ff8526485513faa1f19191f4f8fb4d53b89f108dd7b"
+      },
+      {
+        "name": "outer_fold_2_train_manifest",
+        "path": "Revision-0710/03_ehr_age/04_fixed_replication/00_role_artifacts/outer_fold_2/01_train/role_manifest.json",
+        "bytes": 2473,
+        "sha256": "7d61c1dbf548d2221c1299dfa7ea35118a09a3bf6001c6c70921250d70d22e7c"
+      },
+      {
+        "name": "outer_fold_2_calibration_manifest",
+        "path": "Revision-0710/03_ehr_age/04_fixed_replication/00_role_artifacts/outer_fold_2/02_calibration/role_manifest.json",
+        "bytes": 2487,
+        "sha256": "3a15b9bc9addab2734286c4e0b9a3978e122c344d5a4cc14d85d30e56ac3306d"
+      },
+      {
+        "name": "outer_fold_2_outer_test_manifest",
+        "path": "Revision-0710/03_ehr_age/04_fixed_replication/00_role_artifacts/outer_fold_2/03_outer_test/role_manifest.json",
+        "bytes": 2484,
+        "sha256": "103c7bbc5ba4aab21333de009d0286632aed06fbc1b00cc04d6ba6cdb89f88c4"
+      },
+      {
+        "name": "outer_fold_3_train_manifest",
+        "path": "Revision-0710/03_ehr_age/04_fixed_replication/00_role_artifacts/outer_fold_3/01_train/role_manifest.json",
+        "bytes": 2473,
+        "sha256": "a93ab9fd41304fee0f3fc210d932db4d1d7b654691287144b42ac1f22afbdbd2"
+      },
+      {
+        "name": "outer_fold_3_calibration_manifest",
+        "path": "Revision-0710/03_ehr_age/04_fixed_replication/00_role_artifacts/outer_fold_3/02_calibration/role_manifest.json",
+        "bytes": 2487,
+        "sha256": "aaa158b5ead24740f6d6b36ef663daf235256b9726263fa964565ef53aaa94da"
+      },
+      {
+        "name": "outer_fold_3_outer_test_manifest",
+        "path": "Revision-0710/03_ehr_age/04_fixed_replication/00_role_artifacts/outer_fold_3/03_outer_test/role_manifest.json",
+        "bytes": 2484,
+        "sha256": "7d3a80e11b600a8ffd753f4091e3739d163814a575bdcea7b907479d24552f7a"
+      },
+      {
+        "name": "outer_fold_4_train_manifest",
+        "path": "Revision-0710/03_ehr_age/04_fixed_replication/00_role_artifacts/outer_fold_4/01_train/role_manifest.json",
+        "bytes": 2473,
+        "sha256": "14129117fa0c431f45227c9ea3c47c20fc86b24045e40ac35a39d145617b04a9"
+      },
+      {
+        "name": "outer_fold_4_calibration_manifest",
+        "path": "Revision-0710/03_ehr_age/04_fixed_replication/00_role_artifacts/outer_fold_4/02_calibration/role_manifest.json",
+        "bytes": 2487,
+        "sha256": "dd36f9ba6789bda719660af256b7d4d724d4bf8c8d8dbb289eb5636789f6eb78"
+      },
+      {
+        "name": "outer_fold_4_outer_test_manifest",
+        "path": "Revision-0710/03_ehr_age/04_fixed_replication/00_role_artifacts/outer_fold_4/03_outer_test/role_manifest.json",
+        "bytes": 2484,
+        "sha256": "a4433155246b57685e8e2048a76689efd5fe88883296c2d080ecf4470216fc9c"
+      }
+    ]
+  },
+  "cache_artifact_bindings": {
+    "schema_version": "revision0710.fig04_fig05.cache_artifact_bindings.v8",
+    "batch_manifest": {
+      "name": "batch_manifest",
+      "path": "batch_manifest.json",
+      "bytes": 15788,
+      "sha256": "f8eea9e59cb7532df7c86ffa752ac48ec23f89b400d4c5cb14566ea0b56468d8"
+    },
+    "shards": [
+      {
+        "ordinal": 0,
+        "path": "shards/fold0_batch000.npz",
+        "bytes": 2587561,
+        "sha256": "150c61f1d9a1f34c332c71170ea67f3268e1f343cee30b2dfaad95143b2845e3",
+        "fold_id": 0,
+        "batch_in_fold": 0,
+        "n": 8192,
+        "active_events": 82557,
+        "storage_active_events": 126084
+      },
+      {
+        "ordinal": 1,
+        "path": "shards/fold0_batch001.npz",
+        "bytes": 2583804,
+        "sha256": "c0874b4a35ea911603efcc689307d1f9f36b3f6f0f3871026a2ed9ff39d0666f",
+        "fold_id": 0,
+        "batch_in_fold": 1,
+        "n": 8192,
+        "active_events": 82485,
+        "storage_active_events": 125467
+      },
+      {
+        "ordinal": 2,
+        "path": "shards/fold0_batch002.npz",
+        "bytes": 2573204,
+        "sha256": "6ad4e017568828fce70214f4fbb760ec89c0092adbebc68de5348b5773ff2d21",
+        "fold_id": 0,
+        "batch_in_fold": 2,
+        "n": 8192,
+        "active_events": 80738,
+        "storage_active_events": 123378
+      },
+      {
+        "ordinal": 3,
+        "path": "shards/fold0_batch003.npz",
+        "bytes": 2576862,
+        "sha256": "68c0b00104634a7025d9911c42829a28d9ce1dea7870a068d188aebab50964da",
+        "fold_id": 0,
+        "batch_in_fold": 3,
+        "n": 8192,
+        "active_events": 81637,
+        "storage_active_events": 124787
+      },
+      {
+        "ordinal": 4,
+        "path": "shards/fold0_batch004.npz",
+        "bytes": 2586233,
+        "sha256": "bb139412f11ece65eab9add128f876a50b013596c6a19d35cf31397614f7ccdd",
+        "fold_id": 0,
+        "batch_in_fold": 4,
+        "n": 8192,
+        "active_events": 82080,
+        "storage_active_events": 125282
+      },
+      {
+        "ordinal": 5,
+        "path": "shards/fold0_batch005.npz",
+        "bytes": 2606225,
+        "sha256": "e826ae9362a67c8ff9a0d9c14ed290ec18d9776e2f1ee00b927ce09ab2b04ca0",
+        "fold_id": 0,
+        "batch_in_fold": 5,
+        "n": 8192,
+        "active_events": 84213,
+        "storage_active_events": 129368
+      },
+      {
+        "ordinal": 6,
+        "path": "shards/fold0_batch006.npz",
+        "bytes": 2607135,
+        "sha256": "a0399cac30194afe61e7688a4fd8aadcb48353ad99d6400dd8e2230bfbde8422",
+        "fold_id": 0,
+        "batch_in_fold": 6,
+        "n": 8192,
+        "active_events": 84501,
+        "storage_active_events": 130207
+      },
+      {
+        "ordinal": 7,
+        "path": "shards/fold0_batch007.npz",
+        "bytes": 2580263,
+        "sha256": "23419c52e356d90d10d6159a2764a1d5bdc46328d05d1de054189ea576689780",
+        "fold_id": 0,
+        "batch_in_fold": 7,
+        "n": 8192,
+        "active_events": 81758,
+        "storage_active_events": 125656
+      },
+      {
+        "ordinal": 8,
+        "path": "shards/fold0_batch008.npz",
+        "bytes": 2593927,
+        "sha256": "d16b2630316911d7cec6270f4960c3d627e30b29bc67bbc2e582581a9f11549e",
+        "fold_id": 0,
+        "batch_in_fold": 8,
+        "n": 8192,
+        "active_events": 83253,
+        "storage_active_events": 127016
+      },
+      {
+        "ordinal": 9,
+        "path": "shards/fold0_batch009.npz",
+        "bytes": 2598671,
+        "sha256": "d44eca798953a8cd11fcf016c0791b3776903affe886c71485f034673225c13f",
+        "fold_id": 0,
+        "batch_in_fold": 9,
+        "n": 8192,
+        "active_events": 83982,
+        "storage_active_events": 129231
+      },
+      {
+        "ordinal": 10,
+        "path": "shards/fold0_batch010.npz",
+        "bytes": 2581344,
+        "sha256": "2220cb5d6ffdc736e3ada987f4dca647e098f66010f46bcdc05f2d191f76308e",
+        "fold_id": 0,
+        "batch_in_fold": 10,
+        "n": 8192,
+        "active_events": 82119,
+        "storage_active_events": 125383
+      },
+      {
+        "ordinal": 11,
+        "path": "shards/fold0_batch011.npz",
+        "bytes": 394252,
+        "sha256": "1c44256db0fe7a8168edf827b8882fe38c9066aa5f549ebc763e6c266c0dd8eb",
+        "fold_id": 0,
+        "batch_in_fold": 11,
+        "n": 1243,
+        "active_events": 12211,
+        "storage_active_events": 18774
+      },
+      {
+        "ordinal": 12,
+        "path": "shards/fold1_batch000.npz",
+        "bytes": 2582765,
+        "sha256": "e7701455caf1bedfbe51cbc294eb0df1f9c143acb2b330f1aa7b29e4ea90e90c",
+        "fold_id": 1,
+        "batch_in_fold": 0,
+        "n": 8192,
+        "active_events": 81693,
+        "storage_active_events": 124579
+      },
+      {
+        "ordinal": 13,
+        "path": "shards/fold1_batch001.npz",
+        "bytes": 2570910,
+        "sha256": "fc861449da3d63bc8605b9527f098e96fc1d2a3eb8292fd02ca343f7044b6bba",
+        "fold_id": 1,
+        "batch_in_fold": 1,
+        "n": 8192,
+        "active_events": 80772,
+        "storage_active_events": 122230
+      },
+      {
+        "ordinal": 14,
+        "path": "shards/fold1_batch002.npz",
+        "bytes": 2580707,
+        "sha256": "faab3aeb3b87139f384d2d2e72f9f26540677c6c441557f8c795b4259f917ca5",
+        "fold_id": 1,
+        "batch_in_fold": 2,
+        "n": 8192,
+        "active_events": 81981,
+        "storage_active_events": 124478
+      },
+      {
+        "ordinal": 15,
+        "path": "shards/fold1_batch003.npz",
+        "bytes": 2594513,
+        "sha256": "6d03d4da6ed5e235d03106ea68ce8c57518833bcdcc8dd877faf62c0e28df31a",
+        "fold_id": 1,
+        "batch_in_fold": 3,
+        "n": 8192,
+        "active_events": 83198,
+        "storage_active_events": 126956
+      },
+      {
+        "ordinal": 16,
+        "path": "shards/fold1_batch004.npz",
+        "bytes": 2576949,
+        "sha256": "5df947c5a9ec23c868272be21c813f85ea3518f055a111120816aa820330712a",
+        "fold_id": 1,
+        "batch_in_fold": 4,
+        "n": 8192,
+        "active_events": 81091,
+        "storage_active_events": 122925
+      },
+      {
+        "ordinal": 17,
+        "path": "shards/fold1_batch005.npz",
+        "bytes": 2593911,
+        "sha256": "0b2addb537c7f26d5643399269ed1f1057d0215227aea41cda24a80550ae734e",
+        "fold_id": 1,
+        "batch_in_fold": 5,
+        "n": 8192,
+        "active_events": 83082,
+        "storage_active_events": 127036
+      },
+      {
+        "ordinal": 18,
+        "path": "shards/fold1_batch006.npz",
+        "bytes": 2586527,
+        "sha256": "20f4284ef75e84487f46c2c6f812531737e3c80a6ff4102a4a012ba9ac91c5e2",
+        "fold_id": 1,
+        "batch_in_fold": 6,
+        "n": 8192,
+        "active_events": 83246,
+        "storage_active_events": 128606
+      },
+      {
+        "ordinal": 19,
+        "path": "shards/fold1_batch007.npz",
+        "bytes": 2580257,
+        "sha256": "14bc66a84e717746cd496561eddef83c7174aa783ddcbd88aa47b728bb30cbd4",
+        "fold_id": 1,
+        "batch_in_fold": 7,
+        "n": 8192,
+        "active_events": 82213,
+        "storage_active_events": 124660
+      },
+      {
+        "ordinal": 20,
+        "path": "shards/fold1_batch008.npz",
+        "bytes": 2585887,
+        "sha256": "c4acb860c3d420b073f772cd0df45f70144cec83e98de409a8ca81325e36cd6a",
+        "fold_id": 1,
+        "batch_in_fold": 8,
+        "n": 8192,
+        "active_events": 82490,
+        "storage_active_events": 126568
+      },
+      {
+        "ordinal": 21,
+        "path": "shards/fold1_batch009.npz",
+        "bytes": 2586307,
+        "sha256": "1f3989fade0af7a4fe4e1161c595b595862a046c305026e6bf9129eaf612e6f4",
+        "fold_id": 1,
+        "batch_in_fold": 9,
+        "n": 8192,
+        "active_events": 81707,
+        "storage_active_events": 122781
+      },
+      {
+        "ordinal": 22,
+        "path": "shards/fold1_batch010.npz",
+        "bytes": 2578812,
+        "sha256": "21dbe3e9ca27b6fdce4d32cceac0ad546e85bcc5f902aaa9efab2799a72352de",
+        "fold_id": 1,
+        "batch_in_fold": 10,
+        "n": 8192,
+        "active_events": 81647,
+        "storage_active_events": 125167
+      },
+      {
+        "ordinal": 23,
+        "path": "shards/fold1_batch011.npz",
+        "bytes": 402029,
+        "sha256": "001856a55619de657b3234e261545fbfcd8aee6a72725d4760457641f5596c47",
+        "fold_id": 1,
+        "batch_in_fold": 11,
+        "n": 1244,
+        "active_events": 12760,
+        "storage_active_events": 19604
+      },
+      {
+        "ordinal": 24,
+        "path": "shards/fold2_batch000.npz",
+        "bytes": 2596590,
+        "sha256": "c60257fefcbf2483a7a9b674b06b9f180d1bcbe9f1755af4a989de9a4eb285e0",
+        "fold_id": 2,
+        "batch_in_fold": 0,
+        "n": 8192,
+        "active_events": 83767,
+        "storage_active_events": 129281
+      },
+      {
+        "ordinal": 25,
+        "path": "shards/fold2_batch001.npz",
+        "bytes": 2570950,
+        "sha256": "cecec31c40689ee398c082f09e9fd6aeb47ead88354400404d9a434ab0bd74b8",
+        "fold_id": 2,
+        "batch_in_fold": 1,
+        "n": 8192,
+        "active_events": 81106,
+        "storage_active_events": 123782
+      },
+      {
+        "ordinal": 26,
+        "path": "shards/fold2_batch002.npz",
+        "bytes": 2569386,
+        "sha256": "5948485678a87ba63ab7f6c50d6b69845da28974d6af9689b31ec0c2414c50f5",
+        "fold_id": 2,
+        "batch_in_fold": 2,
+        "n": 8192,
+        "active_events": 80118,
+        "storage_active_events": 121634
+      },
+      {
+        "ordinal": 27,
+        "path": "shards/fold2_batch003.npz",
+        "bytes": 2597530,
+        "sha256": "556bf03ecf647f7e9026af1f0ce93fd8f4c558ee669b10f0af8fd5b92d52a197",
+        "fold_id": 2,
+        "batch_in_fold": 3,
+        "n": 8192,
+        "active_events": 83514,
+        "storage_active_events": 127636
+      },
+      {
+        "ordinal": 28,
+        "path": "shards/fold2_batch004.npz",
+        "bytes": 2579183,
+        "sha256": "3ee726622f7977ec0fda01fc80d36fb4255f10be80a7dc7c681b7215168cefc4",
+        "fold_id": 2,
+        "batch_in_fold": 4,
+        "n": 8192,
+        "active_events": 81550,
+        "storage_active_events": 123824
+      },
+      {
+        "ordinal": 29,
+        "path": "shards/fold2_batch005.npz",
+        "bytes": 2584650,
+        "sha256": "fcc49d4da3a1b374e173658d55810255e25988053aa91c7c5fd2efdb5b8e32c5",
+        "fold_id": 2,
+        "batch_in_fold": 5,
+        "n": 8192,
+        "active_events": 82207,
+        "storage_active_events": 125859
+      },
+      {
+        "ordinal": 30,
+        "path": "shards/fold2_batch006.npz",
+        "bytes": 2585084,
+        "sha256": "cd58affcb807d9853a8580f25a365243b4f01dc62125e54bbadc8b78274c3c30",
+        "fold_id": 2,
+        "batch_in_fold": 6,
+        "n": 8192,
+        "active_events": 82916,
+        "storage_active_events": 126824
+      },
+      {
+        "ordinal": 31,
+        "path": "shards/fold2_batch007.npz",
+        "bytes": 2598789,
+        "sha256": "b6e550bd9af23c046552e112cce3aebbf49be814f9452bbd543e3a10482e6a23",
+        "fold_id": 2,
+        "batch_in_fold": 7,
+        "n": 8192,
+        "active_events": 83241,
+        "storage_active_events": 126963
+      },
+      {
+        "ordinal": 32,
+        "path": "shards/fold2_batch008.npz",
+        "bytes": 2574940,
+        "sha256": "7b0acd4cf9fafd1a2d1022931f380dfd8bbe882e18426eb411ca366d5250ba6f",
+        "fold_id": 2,
+        "batch_in_fold": 8,
+        "n": 8192,
+        "active_events": 81239,
+        "storage_active_events": 122565
+      },
+      {
+        "ordinal": 33,
+        "path": "shards/fold2_batch009.npz",
+        "bytes": 2583369,
+        "sha256": "d4981ad85385ec417aa71fee9958212bf9e92880b7fdba53d6989e015bccd116",
+        "fold_id": 2,
+        "batch_in_fold": 9,
+        "n": 8192,
+        "active_events": 82500,
+        "storage_active_events": 126841
+      },
+      {
+        "ordinal": 34,
+        "path": "shards/fold2_batch010.npz",
+        "bytes": 2607446,
+        "sha256": "b8d645be1dac61b12ca1278fbc93c144796606eff345ba16a485fcf2fddfe367",
+        "fold_id": 2,
+        "batch_in_fold": 10,
+        "n": 8192,
+        "active_events": 84720,
+        "storage_active_events": 129392
+      },
+      {
+        "ordinal": 35,
+        "path": "shards/fold2_batch011.npz",
+        "bytes": 404393,
+        "sha256": "d25488ed30fc0566046c61375bb9b7b256c57e9f0e852046a97fecc2de3850a1",
+        "fold_id": 2,
+        "batch_in_fold": 11,
+        "n": 1241,
+        "active_events": 13036,
+        "storage_active_events": 20083
+      },
+      {
+        "ordinal": 36,
+        "path": "shards/fold3_batch000.npz",
+        "bytes": 2571402,
+        "sha256": "734c6b8921c67ebd67b4cd0a9497409b6be4bdf7395c5db368ef73c335e4508b",
+        "fold_id": 3,
+        "batch_in_fold": 0,
+        "n": 8192,
+        "active_events": 81564,
+        "storage_active_events": 125395
+      },
+      {
+        "ordinal": 37,
+        "path": "shards/fold3_batch001.npz",
+        "bytes": 2607384,
+        "sha256": "6026cd3af391eb91817f1ea0096f5d9e6e8c48fdf4fc480b42cc580a45c64430",
+        "fold_id": 3,
+        "batch_in_fold": 1,
+        "n": 8192,
+        "active_events": 84674,
+        "storage_active_events": 131129
+      },
+      {
+        "ordinal": 38,
+        "path": "shards/fold3_batch002.npz",
+        "bytes": 2588051,
+        "sha256": "ee141e194d60b53ca9d136b4be3763e75408f33ae26176a21a0a474e7c8b846e",
+        "fold_id": 3,
+        "batch_in_fold": 2,
+        "n": 8192,
+        "active_events": 81826,
+        "storage_active_events": 124420
+      },
+      {
+        "ordinal": 39,
+        "path": "shards/fold3_batch003.npz",
+        "bytes": 2579718,
+        "sha256": "8de9249aef27bf49ccb221b6f2434358b40aaf3ca39e43e94cbe3da019056543",
+        "fold_id": 3,
+        "batch_in_fold": 3,
+        "n": 8192,
+        "active_events": 82143,
+        "storage_active_events": 125857
+      },
+      {
+        "ordinal": 40,
+        "path": "shards/fold3_batch004.npz",
+        "bytes": 2597701,
+        "sha256": "034c78040955e8bf1a20115635355b511c3af2b874dfd802a6d9609888803d9b",
+        "fold_id": 3,
+        "batch_in_fold": 4,
+        "n": 8192,
+        "active_events": 83858,
+        "storage_active_events": 127483
+      },
+      {
+        "ordinal": 41,
+        "path": "shards/fold3_batch005.npz",
+        "bytes": 2594370,
+        "sha256": "bb15d8281bda8fdde1c5b73c7b2b7d3bb03fc1bcfe88649a6716bade5d733b75",
+        "fold_id": 3,
+        "batch_in_fold": 5,
+        "n": 8192,
+        "active_events": 83273,
+        "storage_active_events": 126776
+      },
+      {
+        "ordinal": 42,
+        "path": "shards/fold3_batch006.npz",
+        "bytes": 2584136,
+        "sha256": "6065ef1a5aec6a620571ab4c255d228bdb871ed72bbc9fe98e4e708246c0b705",
+        "fold_id": 3,
+        "batch_in_fold": 6,
+        "n": 8192,
+        "active_events": 81975,
+        "storage_active_events": 125234
+      },
+      {
+        "ordinal": 43,
+        "path": "shards/fold3_batch007.npz",
+        "bytes": 2602075,
+        "sha256": "09f740d4aa78dad92baa03fb8f1293e3349943284237e538c3893727425db89e",
+        "fold_id": 3,
+        "batch_in_fold": 7,
+        "n": 8192,
+        "active_events": 84585,
+        "storage_active_events": 130191
+      },
+      {
+        "ordinal": 44,
+        "path": "shards/fold3_batch008.npz",
+        "bytes": 2600383,
+        "sha256": "a4e8f5100cce270345289b425aba4fc40c5afd2ef66cb61b9a8e40f9a37d0b53",
+        "fold_id": 3,
+        "batch_in_fold": 8,
+        "n": 8192,
+        "active_events": 83864,
+        "storage_active_events": 127777
+      },
+      {
+        "ordinal": 45,
+        "path": "shards/fold3_batch009.npz",
+        "bytes": 2592330,
+        "sha256": "676bbd7c33bea1ae2b8cd29d811f07e62ea7eb5442f2b5063bd22f0411d4b4c6",
+        "fold_id": 3,
+        "batch_in_fold": 9,
+        "n": 8192,
+        "active_events": 83025,
+        "storage_active_events": 127077
+      },
+      {
+        "ordinal": 46,
+        "path": "shards/fold3_batch010.npz",
+        "bytes": 2594542,
+        "sha256": "06b8fdd3da413f65e477fa5379e75ddffca13690beb2588c1f8b41b85a3ff20c",
+        "fold_id": 3,
+        "batch_in_fold": 10,
+        "n": 8192,
+        "active_events": 83045,
+        "storage_active_events": 127285
+      },
+      {
+        "ordinal": 47,
+        "path": "shards/fold3_batch011.npz",
+        "bytes": 396349,
+        "sha256": "21558e189924126a14176034072761271654ca5dcff4126c238453ead12b947f",
+        "fold_id": 3,
+        "batch_in_fold": 11,
+        "n": 1241,
+        "active_events": 12248,
+        "storage_active_events": 18366
+      },
+      {
+        "ordinal": 48,
+        "path": "shards/fold4_batch000.npz",
+        "bytes": 2582310,
+        "sha256": "bc6e33c225828c5b0641c490564e3bd3a05e80872b951e2d55823ea33cc346df",
+        "fold_id": 4,
+        "batch_in_fold": 0,
+        "n": 8192,
+        "active_events": 81730,
+        "storage_active_events": 124421
+      },
+      {
+        "ordinal": 49,
+        "path": "shards/fold4_batch001.npz",
+        "bytes": 2568555,
+        "sha256": "728c1bb106d393ac59c20a6b2b94a2f648ec7beb089ff7e4442feb1c4de5f3ab",
+        "fold_id": 4,
+        "batch_in_fold": 1,
+        "n": 8192,
+        "active_events": 80726,
+        "storage_active_events": 122561
+      },
+      {
+        "ordinal": 50,
+        "path": "shards/fold4_batch002.npz",
+        "bytes": 2587028,
+        "sha256": "1b2aeec192c63bc8dce6b4720c02547371a32daba20eec2488ce6f00c58cbddb",
+        "fold_id": 4,
+        "batch_in_fold": 2,
+        "n": 8192,
+        "active_events": 81892,
+        "storage_active_events": 124541
+      },
+      {
+        "ordinal": 51,
+        "path": "shards/fold4_batch003.npz",
+        "bytes": 2589165,
+        "sha256": "95b6da12d13c49bfd20bae89231a2eafee33689106c7a5030afd0bc872f8dee7",
+        "fold_id": 4,
+        "batch_in_fold": 3,
+        "n": 8192,
+        "active_events": 83097,
+        "storage_active_events": 127063
+      },
+      {
+        "ordinal": 52,
+        "path": "shards/fold4_batch004.npz",
+        "bytes": 2574224,
+        "sha256": "790793d7828f2ca8de47c9bf5eaf05f8efd499f90c37dfc2e9fc6b207dfb46d1",
+        "fold_id": 4,
+        "batch_in_fold": 4,
+        "n": 8192,
+        "active_events": 81843,
+        "storage_active_events": 125733
+      },
+      {
+        "ordinal": 53,
+        "path": "shards/fold4_batch005.npz",
+        "bytes": 2572407,
+        "sha256": "b79e8f5b76af02c32af9c1f235db48889dd5c8084e06938727adda218c4a8efe",
+        "fold_id": 4,
+        "batch_in_fold": 5,
+        "n": 8192,
+        "active_events": 80817,
+        "storage_active_events": 124367
+      },
+      {
+        "ordinal": 54,
+        "path": "shards/fold4_batch006.npz",
+        "bytes": 2572332,
+        "sha256": "d629c63f37752b96b2d3134ac06d4538cb2c6458120cbae43a822d0a94291367",
+        "fold_id": 4,
+        "batch_in_fold": 6,
+        "n": 8192,
+        "active_events": 80412,
+        "storage_active_events": 122810
+      },
+      {
+        "ordinal": 55,
+        "path": "shards/fold4_batch007.npz",
+        "bytes": 2572202,
+        "sha256": "392c548f42c595084d060531aaf964b8b61e9ec7a715f5a0c6db419cb92b0a74",
+        "fold_id": 4,
+        "batch_in_fold": 7,
+        "n": 8192,
+        "active_events": 80557,
+        "storage_active_events": 122494
+      },
+      {
+        "ordinal": 56,
+        "path": "shards/fold4_batch008.npz",
+        "bytes": 2565477,
+        "sha256": "94ad6bbba2b3f3fe767ecac805d76ecc22913235d8dfa88acb7f2bec7078a2a0",
+        "fold_id": 4,
+        "batch_in_fold": 8,
+        "n": 8192,
+        "active_events": 80499,
+        "storage_active_events": 122090
+      },
+      {
+        "ordinal": 57,
+        "path": "shards/fold4_batch009.npz",
+        "bytes": 2589548,
+        "sha256": "7c51a004f0cd126589edaf4ce754eeb3b2ef151b20d5893d98145562d9d1f34e",
+        "fold_id": 4,
+        "batch_in_fold": 9,
+        "n": 8192,
+        "active_events": 82747,
+        "storage_active_events": 127026
+      },
+      {
+        "ordinal": 58,
+        "path": "shards/fold4_batch010.npz",
+        "bytes": 2582499,
+        "sha256": "823fba4be08490db9002a1a37a190a35c14bfd21f6a50abe03b0f3b5217d3d8f",
+        "fold_id": 4,
+        "batch_in_fold": 10,
+        "n": 8192,
+        "active_events": 81917,
+        "storage_active_events": 124600
+      },
+      {
+        "ordinal": 59,
+        "path": "shards/fold4_batch011.npz",
+        "bytes": 399988,
+        "sha256": "e3e05bce754cdd58ae08b5eaaf61e4461c31ece642cba2cba7132a6a274c1a80",
+        "fold_id": 4,
+        "batch_in_fold": 11,
+        "n": 1244,
+        "active_events": 13041,
+        "storage_active_events": 19897
+      }
+    ],
+    "fold_transform_manifest": {
+      "name": "fold_transform_manifest",
+      "path": "fold_transform_manifest.json",
+      "bytes": 2273,
+      "sha256": "d78f0076071bea925384647bd2c2b72fd6f1139cebac43d967f242eb48211892"
+    },
+    "fold_transforms": [
+      {
+        "ordinal": 0,
+        "path": "fold_transforms/outer_fold_0.npz",
+        "bytes": 2498,
+        "sha256": "98b8ba07bfd248a584efd62726f4d6f373d74143a5362faabed3b991f5ab43cf",
+        "outer_fold": 0,
+        "validation_fold": 1,
+        "train_folds": [
+          2,
+          3,
+          4
+        ],
+        "train_n": 274062,
+        "feature_hash": "f95f012addde438255a94bd15b9ecf9343b89e85266b2e33922f45d23d5c17cc",
+        "train_id_hash": "da8d0074fa1030fb6ab10d2841ca954d65103828b64614e4bd07f581de94ac11"
+      },
+      {
+        "ordinal": 1,
+        "path": "fold_transforms/outer_fold_1.npz",
+        "bytes": 2494,
+        "sha256": "30467f63014cea4d24af835f4b602bbf14f3c6c9d26b4a2d38c5d019ad04f03b",
+        "outer_fold": 1,
+        "validation_fold": 2,
+        "train_folds": [
+          0,
+          3,
+          4
+        ],
+        "train_n": 274064,
+        "feature_hash": "f95f012addde438255a94bd15b9ecf9343b89e85266b2e33922f45d23d5c17cc",
+        "train_id_hash": "e6ff9bba3ce4e4d6adee260a08137f92b92101ffc5a489523f612b7afbb43d95"
+      },
+      {
+        "ordinal": 2,
+        "path": "fold_transforms/outer_fold_2.npz",
+        "bytes": 2496,
+        "sha256": "5a6cc638c1ed0bb943b4278bdf62c5cdc0590c51239dc35115ddbe58cf547a16",
+        "outer_fold": 2,
+        "validation_fold": 3,
+        "train_folds": [
+          0,
+          1,
+          4
+        ],
+        "train_n": 274067,
+        "feature_hash": "f95f012addde438255a94bd15b9ecf9343b89e85266b2e33922f45d23d5c17cc",
+        "train_id_hash": "7cff5ba6387aa9db396bb515be0e67d5894f3a17c678b4b408524fa20e4b792c"
+      },
+      {
+        "ordinal": 3,
+        "path": "fold_transforms/outer_fold_3.npz",
+        "bytes": 2498,
+        "sha256": "40a2fba5ca510c49c198bdef183b2cc0738da70e79d0980d606982d22038a116",
+        "outer_fold": 3,
+        "validation_fold": 4,
+        "train_folds": [
+          0,
+          1,
+          2
+        ],
+        "train_n": 274064,
+        "feature_hash": "f95f012addde438255a94bd15b9ecf9343b89e85266b2e33922f45d23d5c17cc",
+        "train_id_hash": "95ea07975cb6336c98319a6c4a0d1abfb3381b43d6ddd95cd1acf20ecddb8b43"
+      },
+      {
+        "ordinal": 4,
+        "path": "fold_transforms/outer_fold_4.npz",
+        "bytes": 2498,
+        "sha256": "28b44283e543f161f4b0df31f2aa76985722eb1e47b477bd35ee183aa635425c",
+        "outer_fold": 4,
+        "validation_fold": 0,
+        "train_folds": [
+          1,
+          2,
+          3
+        ],
+        "train_n": 274062,
+        "feature_hash": "f95f012addde438255a94bd15b9ecf9343b89e85266b2e33922f45d23d5c17cc",
+        "train_id_hash": "45a7444ac9e33d126f4e7ba5685222237ce2bfd7b9cc1e5408c0baf6081136b8"
+      }
+    ]
+  },
+  "environment": {
+    "formal": {
+      "python_executable": "C:\\Users\\Mickey\\.conda\\envs\\ICD-Prediction\\python.exe",
+      "python": "3.11.13",
+      "torch": "2.5.1",
+      "torch_cuda": "11.8",
+      "cudnn": 90100,
+      "numpy": "2.2.5",
+      "pandas": "2.3.3",
+      "scipy": "1.16.0",
+      "scikit_learn": "1.7.1",
+      "lifelines": "0.30.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "visible_gpu_count": 1,
+      "cublas_workspace_config": ":4096:8"
+    },
+    "scaled_integration": {
+      "device": "cpu",
+      "formal_gpu_used": false,
+      "formal_data_used": false
+    }
+  },
+  "execution_roots": {
+    "formal_run_root": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\04_ablation_runs\\fig04_fig05_same_contract_5fold_v8",
+    "scaled_smoke_root": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\06_figures_and_statistics\\00_plan\\fig04_fig05_ablation_prefreeze_v8\\smoke",
+    "formal_source_fig04": "Revision-0710/06_figures_and_statistics/05_source_data_by_figure/Fig04/source_data_v8",
+    "formal_source_fig05": "Revision-0710/06_figures_and_statistics/05_source_data_by_figure/Fig05/source_data_v8",
+    "formal_render_fig04": "Revision-0710/06_figures_and_statistics/06_rendered_figures/Fig04/render_v8_legacy_style",
+    "formal_render_fig05": "Revision-0710/06_figures_and_statistics/06_rendered_figures/Fig05/render_v8_legacy_style"
+  },
+  "variant_protocol": {
+    "variant_ids": [
+      "fig04_01_canonical_control",
+      "fig04_02_no_organ_queries",
+      "fig04_03_no_common_bidirectional_gru",
+      "fig04_04_no_survival_supervision",
+      "fig04_05_no_strict_offset_shrinkage",
+      "fig04_06_no_consistency_objective",
+      "fig04_07_seven_independent_organ_age_heads",
+      "fig05_01_no_phenotypes_or_missingness",
+      "fig05_02_no_hospital_icd",
+      "fig05_03_no_gp_prescriptions",
+      "fig05_04_no_event_text",
+      "fig05_05_no_longitudinal_events"
+    ],
+    "run_ids": [
+      "fig04_01_canonical_control__outer0",
+      "fig04_01_canonical_control__outer1",
+      "fig04_01_canonical_control__outer2",
+      "fig04_01_canonical_control__outer3",
+      "fig04_01_canonical_control__outer4",
+      "fig04_02_no_organ_queries__outer0",
+      "fig04_02_no_organ_queries__outer1",
+      "fig04_02_no_organ_queries__outer2",
+      "fig04_02_no_organ_queries__outer3",
+      "fig04_02_no_organ_queries__outer4",
+      "fig04_03_no_common_bidirectional_gru__outer0",
+      "fig04_03_no_common_bidirectional_gru__outer1",
+      "fig04_03_no_common_bidirectional_gru__outer2",
+      "fig04_03_no_common_bidirectional_gru__outer3",
+      "fig04_03_no_common_bidirectional_gru__outer4",
+      "fig04_04_no_survival_supervision__outer0",
+      "fig04_04_no_survival_supervision__outer1",
+      "fig04_04_no_survival_supervision__outer2",
+      "fig04_04_no_survival_supervision__outer3",
+      "fig04_04_no_survival_supervision__outer4",
+      "fig04_05_no_strict_offset_shrinkage__outer0",
+      "fig04_05_no_strict_offset_shrinkage__outer1",
+      "fig04_05_no_strict_offset_shrinkage__outer2",
+      "fig04_05_no_strict_offset_shrinkage__outer3",
+      "fig04_05_no_strict_offset_shrinkage__outer4",
+      "fig04_06_no_consistency_objective__outer0",
+      "fig04_06_no_consistency_objective__outer1",
+      "fig04_06_no_consistency_objective__outer2",
+      "fig04_06_no_consistency_objective__outer3",
+      "fig04_06_no_consistency_objective__outer4",
+      "fig04_07_seven_independent_organ_age_heads__outer0",
+      "fig04_07_seven_independent_organ_age_heads__outer1",
+      "fig04_07_seven_independent_organ_age_heads__outer2",
+      "fig04_07_seven_independent_organ_age_heads__outer3",
+      "fig04_07_seven_independent_organ_age_heads__outer4",
+      "fig05_01_no_phenotypes_or_missingness__outer0",
+      "fig05_01_no_phenotypes_or_missingness__outer1",
+      "fig05_01_no_phenotypes_or_missingness__outer2",
+      "fig05_01_no_phenotypes_or_missingness__outer3",
+      "fig05_01_no_phenotypes_or_missingness__outer4",
+      "fig05_02_no_hospital_icd__outer0",
+      "fig05_02_no_hospital_icd__outer1",
+      "fig05_02_no_hospital_icd__outer2",
+      "fig05_02_no_hospital_icd__outer3",
+      "fig05_02_no_hospital_icd__outer4",
+      "fig05_03_no_gp_prescriptions__outer0",
+      "fig05_03_no_gp_prescriptions__outer1",
+      "fig05_03_no_gp_prescriptions__outer2",
+      "fig05_03_no_gp_prescriptions__outer3",
+      "fig05_03_no_gp_prescriptions__outer4",
+      "fig05_04_no_event_text__outer0",
+      "fig05_04_no_event_text__outer1",
+      "fig05_04_no_event_text__outer2",
+      "fig05_04_no_event_text__outer3",
+      "fig05_04_no_event_text__outer4",
+      "fig05_05_no_longitudinal_events__outer0",
+      "fig05_05_no_longitudinal_events__outer1",
+      "fig05_05_no_longitudinal_events__outer2",
+      "fig05_05_no_longitudinal_events__outer3",
+      "fig05_05_no_longitudinal_events__outer4"
+    ],
+    "runs": 60,
+    "outer_folds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "fresh_model_and_optimizer_per_run": true,
+    "unknown_variant_policy": "FAIL_CLOSED",
+    "formal_comparator": "fig04_01_canonical_control",
+    "single_component_ablation_ids": [
+      "fig04_02_no_organ_queries",
+      "fig04_03_no_common_bidirectional_gru",
+      "fig04_04_no_survival_supervision",
+      "fig04_05_no_strict_offset_shrinkage",
+      "fig04_06_no_consistency_objective"
+    ],
+    "bundled_architecture_comparison_ids": [
+      "fig04_07_seven_independent_organ_age_heads"
+    ],
+    "causal_component_language_allowed": false
+  },
+  "training_protocol": {
+    "seed": 7210,
+    "batch_size": 2048,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 1.0,
+    "warmup_epochs": 3,
+    "scheduler": "linear_warmup_then_cosine_decay",
+    "scheduler_horizon_epochs": 60,
+    "train_through_epoch": 60,
+    "capture_epoch": 55,
+    "evaluate_only_epoch": 55,
+    "deterministic": true,
+    "tf32": true,
+    "amp": true,
+    "restart_from_epoch_one_same_seed": true,
+    "resume_training_state": false,
+    "fresh_random_initialization_all_runs": true,
+    "fold0_checkpoint_reuse": false,
+    "warm_start": false,
+    "fine_tune": false,
+    "teacher": false,
+    "distillation": false,
+    "ensemble": false,
+    "seed_retry": false,
+    "performance_selection": false,
+    "fold_drop": false
+  },
+  "role_protocol": {
+    "training_worker_allowed_roles": [
+      "train"
+    ],
+    "training_worker_calibration_or_outer_paths_allowed": false,
+    "calibration_open_condition": "E60_COMPLETE_AND_E55_SEALED",
+    "calibration_fits": [
+      "sealed_age_correction",
+      "sealed_cox_nuisance"
+    ],
+    "calibration_model_selection_allowed": false,
+    "outer_open_condition": "CALIBRATION_SEALED_AND_LEDGER_COMMITTED",
+    "outer_refit_allowed": false,
+    "cyclic_calibration_fold_by_outer": {
+      "0": 1,
+      "1": 2,
+      "2": 3,
+      "3": 4,
+      "4": 0
+    }
+  },
+  "evaluation_protocol": {
+    "evaluate_only_epoch": 55,
+    "strict_population": "outer_test strict_healthy_reference_60m == 1",
+    "strict_metrics": [
+      "raw_strict_mae",
+      "raw_strict_pearson",
+      "raw_strict_r2"
+    ],
+    "risk_population": "all eligible outer_test at-risk participants",
+    "risk_metric": "age+sex Harrell delta C-index",
+    "organs": [
+      "cardiovascular",
+      "hepatic",
+      "immune",
+      "metabolic",
+      "musculoskeletal",
+      "pulmonary",
+      "renal"
+    ],
+    "organ_count": 7,
+    "macro_rule": "unweighted mean across seven organ delta C-index values",
+    "performance_selection_allowed": false,
+    "all_folds_required": true,
+    "validation_nuisance_verification": "independent_refit_7_age_corrections_and_14_cox_models",
+    "cox_convergence_warning_policy": "HARD_FAIL",
+    "prediction_label_alignment": "exact_frozen_role_row_order_age_sex_strict_duration_event_at_risk",
+    "checkpoint_replay": "strict_production_restore_and_all_validation_and_outer_rows_bounded_deterministic_replay",
+    "training_provenance": "seed7210_initial_reconstruction_and_independent_full_epoch_step_replay",
+    "task_claim_opened_path_closure": "exact_expected_path_binding_plus_separate_process_python_audit_hook_sensitive_access_evidence",
+    "deep_artifacts_per_run": 22
+  },
+  "state_machine": {
+    "attempt_directories": "create_only_monotonic_attempt_ordinal",
+    "failure_receipt_required": true,
+    "failed_training_restart": "epoch_1_same_seed_fresh_state",
+    "training_resume_allowed": false,
+    "evaluation_resume_boundary": "training_complete_and_capture_sealed",
+    "attempt_selection": "lowest_completed_attempt_ordinal_without_metric",
+    "aggregate_gate": "exact_60_of_60_receipts",
+    "gpu_lock": "os_backed_with_persistent_audit_and_stale_active_recovery",
+    "independent_replay_resume": "create_only_cache_recomputed_from_primary_attempt_outputs_on_every_validation"
+  },
+  "authorization_protocol": {
+    "formal_authorization_file": "FORMAL_AUTHORIZATION_V8.json",
+    "must_be_absent_at_prefreeze": true,
+    "exact_schema": "FORMAL_AUTHORIZATION_SCHEMA_V8.json",
+    "all_60_together": true,
+    "partial_authorization_allowed": false,
+    "formal_executor_without_authorization": "HARD_FAIL",
+    "hash_bindings_required": [
+      "contract",
+      "registry",
+      "queue",
+      "output_schema",
+      "executor",
+      "worker",
+      "model",
+      "loss",
+      "input",
+      "data",
+      "schema_validator",
+      "training",
+      "contract_validator",
+      "runtime_guard",
+      "v1_runtime",
+      "independent_replay",
+      "formal_independent_verifier",
+      "cache_artifact_bindings",
+      "tests",
+      "worker_access_guard",
+      "independent_terminal_go",
+      "mutually_exclusive_current_version_terminal_decision",
+      "prefreeze_and_independent_cuda_resource_evidence"
+    ],
+    "independent_terminal_go_required": true
+  },
+  "resource_protocol": {
+    "budget_file": "RESOURCE_BUDGET_AND_PREFLIGHT_V8.json",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "max_concurrent_training_runs": 1,
+    "raw_primary_training_gpu_hours": 36.8589,
+    "raw_independent_replay_gpu_hours": 36.8589,
+    "raw_combined_gpu_hours": 73.7177,
+    "estimated_total_gpu_hours": 89.9356,
+    "independent_full_replay_required": true,
+    "budget_can_change_protocol": false,
+    "micro_benchmark_authorized": false
+  },
+  "publication_firewall": {
+    "formal_training_allowed": false,
+    "formal_source_allowed": false,
+    "formal_render_allowed": false,
+    "formal_targets_that_must_not_exist": [
+      "Revision-0710/04_ablation_runs/fig04_fig05_same_contract_5fold_v8",
+      "Revision-0710/06_figures_and_statistics/05_source_data_by_figure/Fig04/source_data_v8",
+      "Revision-0710/06_figures_and_statistics/05_source_data_by_figure/Fig05/source_data_v8",
+      "Revision-0710/06_figures_and_statistics/06_rendered_figures/Fig04/render_v8_legacy_style",
+      "Revision-0710/06_figures_and_statistics/06_rendered_figures/Fig05/render_v8_legacy_style"
+    ]
+  },
+  "scaled_integration_protocol": {
+    "authorized": true,
+    "device": "cpu",
+    "variants": 12,
+    "outer_fold": 0,
+    "train_through_epoch": 2,
+    "capture_epoch": 1,
+    "evaluate_only_epoch": 1,
+    "roles": [
+      "train",
+      "calibration",
+      "outer_test"
+    ],
+    "roles_physically_separate": true,
+    "real_forward_backward_clip_scheduler_amp_path": true,
+    "formal_data_allowed": false,
+    "formal_gpu_allowed": false,
+    "formal_output_allowed": false
+  }
+}

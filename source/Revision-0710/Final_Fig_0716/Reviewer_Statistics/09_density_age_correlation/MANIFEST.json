@@ -1,0 +1,71 @@
+{
+  "schema_version": "revision0710.density_age_correlation.manifest.v2",
+  "status": "PASS",
+  "created_utc": "2026-07-22T17:43:04.558792+00:00",
+  "analysis_description": "Descriptive density correlations and cross-fitted density-stratified age metrics using final frozen five-fold outer-test predictions; no model retraining.",
+  "input_sha256": {
+    "Revision-0710\\03_ehr_age\\06_codebook_v2\\02_fivefold_frozen_huber1\\02_summary\\oof_predictions.parquet": "bfc9e0de88121bb4b520bd6c878ac4d655d00b7d1dfa1f64b5f7a4de0b633239",
+    "Revision-0710\\01_data_rebuild\\04_cache_v1\\batch_manifest.json": "f8eea9e59cb7532df7c86ffa752ac48ec23f89b400d4c5cb14566ea0b56468d8",
+    "Revision-0710\\01_data_rebuild\\07_corrected_primary_v1\\01_index_and_events\\icd_participant_summary.parquet": "1f78e9440e5f7c67f9b3ec6808b708ee2a89291e1ee62a9f38091be8555455ef",
+    "Revision-0710\\01_data_rebuild\\07_corrected_primary_v1\\01_index_and_events\\gp_participant_summary.parquet": "203061949e63c2f40d12f9e321d9e22ee0b1094673ef3ce445effd189b50a889"
+  },
+  "script": {
+    "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/09_density_age_correlation/run_density_age_correlation.py",
+    "sha256": "38aa86db78d1a3c41e9f3048c2b4d919d5b42e0279fce97c98d4d79ef274b036"
+  },
+  "environment": {
+    "python": "3.11.13",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "numpy": "2.2.5",
+    "pandas": "2.3.3",
+    "scipy": "1.16.0",
+    "matplotlib": "3.10.5"
+  },
+  "outputs": [
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/09_density_age_correlation/Source_Data/age_density_correlations.csv",
+      "bytes": 6950,
+      "sha256": "e6ecc6cc9e3081fb954986c611d08c2ca40066548355619297c83b14d94b3868"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/09_density_age_correlation/Source_Data/gap_density_correlations.csv",
+      "bytes": 54437,
+      "sha256": "52fbf9a0d9ce107fdce054e3b165e6c49bae508f19e171238dd6494039221c16"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/09_density_age_correlation/Source_Data/absolute_error_density_correlations.csv",
+      "bytes": 58300,
+      "sha256": "06c203ee370fb95a4cf33f85558e8a01ad466628fe50f1c7d59ca745e2cf356c"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/09_density_age_correlation/Source_Data/density_stratified_strict_age_metrics.csv",
+      "bytes": 5646,
+      "sha256": "2cc614fbc7f68a344d155b0c3893846e73b051a64bdb843fcef236ef2f0f5530"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/09_density_age_correlation/Source_Data/density_stratum_crossfit_thresholds.csv",
+      "bytes": 209,
+      "sha256": "814266dede43319b1db66d23840c11f51ddc0b1fe0e32e7cd795995774156f33"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/09_density_age_correlation/Figures/Supplementary_Density_Age_Correlation.png",
+      "bytes": 752450,
+      "sha256": "39edb02bc4ad1daeda9238131b458e78bcc04611887bf53ca80df404077b6c2a"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/09_density_age_correlation/Figures/Supplementary_Density_Age_Correlation.pdf",
+      "bytes": 44864,
+      "sha256": "f43d4bed9be7eab2c4ee55b50fcf2109716796fa67f972340dcc368344fcdc1d"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/09_density_age_correlation/Figures/Supplementary_Density_Age_Correlation.svg",
+      "bytes": 53572,
+      "sha256": "1d7f3a0731714a550f6cb72677d88bef0bbd6e233b3ecac6a93086997ac2ade5"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/09_density_age_correlation/QA_REPORT.json",
+      "bytes": 3085,
+      "sha256": "facbe39ab0e7f46098075acfca7ae52771f74b3e823ee582a62a12b750c82130"
+    }
+  ]
+}

@@ -1,0 +1,852 @@
+{
+  "schema_version": "revision0710.reviewer_statistics.paired_uncertainty.input_manifest.v1",
+  "status": "ALL_INPUT_HASHES_VERIFIED",
+  "contract_sha256": "3f6d69b7900494d7c944d9bc3395a507b5034110e66ba1f9a5931e8dfde270cf",
+  "source_count": 33,
+  "sources": [
+    {
+      "kind": "analysis_contract",
+      "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/analysis_contract.json",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\06_figures_and_statistics\\03_reviewer_statistics\\06_paired_uncertainty_and_fdr\\analysis_contract.json",
+      "bytes": 3723,
+      "sha256": "3f6d69b7900494d7c944d9bc3395a507b5034110e66ba1f9a5931e8dfde270cf"
+    },
+    {
+      "kind": "ehr_oof",
+      "relative_path": "Revision-0710/03_ehr_age/04_fixed_replication/02_published_fivefold/02_oof_hr_km_inputs/ehr_age_d07_003_e55_oof.parquet",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\02_published_fivefold\\02_oof_hr_km_inputs\\ehr_age_d07_003_e55_oof.parquet",
+      "bytes": 107042181,
+      "sha256": "35a37a39f555f3d5706da5049a00498f3d30c21aca265cf807b49f2561d43a69",
+      "rows": 3197411,
+      "columns": [
+        "participant_id",
+        "organ_system",
+        "outer_fold",
+        "fold_role",
+        "split_role",
+        "actual_age",
+        "sex",
+        "strict_healthy_reference_60m",
+        "predicted_age_raw",
+        "raw_age_gap",
+        "expected_age_gap",
+        "corrected_age_gap",
+        "corrected_predicted_age",
+        "at_risk",
+        "duration_months",
+        "event",
+        "contract_sha256",
+        "run_config_sha256",
+        "e55_checkpoint_sha256",
+        "outer_control_manifest_sha256",
+        "outer_test_role_manifest_sha256",
+        "age_correction_sha256",
+        "cox_nuisance_manifest_sha256",
+        "fold_receipt_sha256"
+      ]
+    },
+    {
+      "kind": "ehr_registry",
+      "relative_path": "Revision-0710/03_ehr_age/04_fixed_replication/02_published_fivefold/00_prediction_registry/ehr_age_d07_003_e55.json",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\02_published_fivefold\\00_prediction_registry\\ehr_age_d07_003_e55.json",
+      "bytes": 3832,
+      "sha256": "c11b9d2b81017444d8f10154429f10aa98493c0f75004b2aec770170eb0b639b"
+    },
+    {
+      "kind": "ehr_evaluation_summary",
+      "relative_path": "Revision-0710/03_ehr_age/04_fixed_replication/02_published_fivefold/01_evaluation/parity_audit/evaluation_summary.json",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\02_published_fivefold\\01_evaluation\\parity_audit\\evaluation_summary.json",
+      "bytes": 2272,
+      "sha256": "5d58d93cb30e84f2c16c244a3174a4816f7f39fe9745dded6f37d0896bd7fea2"
+    },
+    {
+      "kind": "ehr_cox_cells",
+      "relative_path": "Revision-0710/03_ehr_age/04_fixed_replication/02_published_fivefold/01_evaluation/parity_audit/cox_fold_organ_cells.csv",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\02_published_fivefold\\01_evaluation\\parity_audit\\cox_fold_organ_cells.csv",
+      "bytes": 4049,
+      "sha256": "6f0b769bf4908817a833b8ce02db81aff91f4d5d123d3a49422f242f45bcda1a"
+    },
+    {
+      "kind": "participant_masks",
+      "relative_path": "Revision-0710/01_data_rebuild/02_outcomes_60m/participant_followup_and_evaluation_masks.parquet",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\01_data_rebuild\\02_outcomes_60m\\participant_followup_and_evaluation_masks.parquet",
+      "bytes": 6740257,
+      "sha256": "2f7a1822f9a346dd866c850e88cd8f9572734c88f019a8867f475a8cff6539b4",
+      "rows": 456773,
+      "columns": [
+        "participant_id",
+        "index_date",
+        "chronological_age",
+        "sex",
+        "phenotype_missing_count",
+        "phenotype_missing_fraction",
+        "death_date",
+        "lost_to_followup_date",
+        "date1_followup_end",
+        "last_icd_date",
+        "last_gp_date",
+        "gp_deduction_date",
+        "observed_followup_end",
+        "followup_ascertained_60m",
+        "death_within_60m",
+        "has_prevalent_any_icd",
+        "first_incident_any_date",
+        "strict_healthy_reference_60m"
+      ]
+    },
+    {
+      "kind": "organ_outcomes",
+      "relative_path": "Revision-0710/01_data_rebuild/02_outcomes_60m/organ_outcomes_60m.parquet",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\01_data_rebuild\\02_outcomes_60m\\organ_outcomes_60m.parquet",
+      "bytes": 19536229,
+      "sha256": "3ce09bca650758a4044e81c312dd781c71ca823f1d4567d3d0473158ec1248ee",
+      "rows": 3197411,
+      "columns": [
+        "participant_id",
+        "event",
+        "duration_months",
+        "competing_death",
+        "at_risk",
+        "censor_reason",
+        "outcome_end_date",
+        "organ_system",
+        "index_date",
+        "first_incident_target_date",
+        "has_prevalent_target",
+        "strict_healthy_reference_60m",
+        "full_incident_risk_set_60m",
+        "cohort_state_60m"
+      ]
+    },
+    {
+      "kind": "fold_roles",
+      "relative_path": "Revision-0710/01_data_rebuild/03_folds/outer_fold_roles.parquet",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\01_data_rebuild\\03_folds\\outer_fold_roles.parquet",
+      "bytes": 8115127,
+      "sha256": "b8c8d25bcd9228e2e4dafef5c4bec92ec9efac17d0f4125fe87b00b92c3a5249",
+      "rows": 2283865,
+      "columns": [
+        "participant_id",
+        "fold_id",
+        "outer_fold",
+        "split_role"
+      ]
+    },
+    {
+      "kind": "canonical_evaluator",
+      "relative_path": "Revision-0710/05_downstream/common/crossfit_metrics.py",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\common\\crossfit_metrics.py",
+      "bytes": 18312,
+      "sha256": "b95822403bba86be355c947f6f1d36f1bbcd3661b322a4189533112e5418c2d2"
+    },
+    {
+      "kind": "retain:prediction_registry",
+      "relative_path": "Revision-0710/05_downstream/01_prediction_registries/tier_a/retain.json",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\01_prediction_registries\\tier_a\\retain.json",
+      "bytes": 4362,
+      "sha256": "d475f12f3e1993d0a238b202a9e6d4b65969e4415a8cf0a934ad1d7a38d938f7"
+    },
+    {
+      "kind": "retain:evaluation_summary",
+      "relative_path": "Revision-0710/05_downstream/02_baseline_evaluation/retain/evaluation_summary.json",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\02_baseline_evaluation\\retain\\evaluation_summary.json",
+      "bytes": 2264,
+      "sha256": "b7f631690b1a71ddc80c19db4f87ced2909e307314f5baa32b3895b03af51252"
+    },
+    {
+      "kind": "retain:age_correction",
+      "relative_path": "Revision-0710/05_downstream/02_baseline_evaluation/retain/linear_correction_parameters.csv",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\02_baseline_evaluation\\retain\\linear_correction_parameters.csv",
+      "bytes": 2359,
+      "sha256": "0f476b8c2970d1a8134b58d78407ea7d41b0be117a7cbc30215ed756d200fa07"
+    },
+    {
+      "kind": "retain:cox_cells",
+      "relative_path": "Revision-0710/05_downstream/02_baseline_evaluation/retain/cox_fold_organ_cells.csv",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\02_baseline_evaluation\\retain\\cox_fold_organ_cells.csv",
+      "bytes": 3612,
+      "sha256": "75d9282c99dda2368ed0f8ddb07bb2069a73d646e653913689515100bafc6f01"
+    },
+    {
+      "kind": "behrt_style:prediction_registry",
+      "relative_path": "Revision-0710/05_downstream/01_prediction_registries/tier_a/behrt_style.json",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\01_prediction_registries\\tier_a\\behrt_style.json",
+      "bytes": 4442,
+      "sha256": "2f563c576c5a5162c49d15bfd471788622ac3d1a1aedc7e9ab50054ba475136a"
+    },
+    {
+      "kind": "behrt_style:evaluation_summary",
+      "relative_path": "Revision-0710/05_downstream/02_baseline_evaluation/behrt_style/evaluation_summary.json",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\02_baseline_evaluation\\behrt_style\\evaluation_summary.json",
+      "bytes": 2272,
+      "sha256": "de3ee4c578ca4d123464d6ea495cc022af0e9f20f20d9147cbe2fc425791e18b"
+    },
+    {
+      "kind": "behrt_style:age_correction",
+      "relative_path": "Revision-0710/05_downstream/02_baseline_evaluation/behrt_style/linear_correction_parameters.csv",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\02_baseline_evaluation\\behrt_style\\linear_correction_parameters.csv",
+      "bytes": 2534,
+      "sha256": "07a0d78182ff8503ef38383398d4a223ffd4581758d5bd23bcc316490dfc00b1"
+    },
+    {
+      "kind": "behrt_style:cox_cells",
+      "relative_path": "Revision-0710/05_downstream/02_baseline_evaluation/behrt_style/cox_fold_organ_cells.csv",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\02_baseline_evaluation\\behrt_style\\cox_fold_organ_cells.csv",
+      "bytes": 3789,
+      "sha256": "4e8f57964d6da4e46f2f09b76c25b0ecdf27a6bd474cb7115fc205d68bbe440f"
+    },
+    {
+      "kind": "medbert_style:prediction_registry",
+      "relative_path": "Revision-0710/05_downstream/01_prediction_registries/tier_a/medbert_style.json",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\01_prediction_registries\\tier_a\\medbert_style.json",
+      "bytes": 4474,
+      "sha256": "62259c5fe62c594b276f9002a324e16802f3db9c17b61ef7d4031fe2f642ec23"
+    },
+    {
+      "kind": "medbert_style:evaluation_summary",
+      "relative_path": "Revision-0710/05_downstream/02_baseline_evaluation/medbert_style/evaluation_summary.json",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\02_baseline_evaluation\\medbert_style\\evaluation_summary.json",
+      "bytes": 2276,
+      "sha256": "33e6464909d47a0bebe294c67430e9f04be86ec46b12bab65811c552873673b1"
+    },
+    {
+      "kind": "medbert_style:age_correction",
+      "relative_path": "Revision-0710/05_downstream/02_baseline_evaluation/medbert_style/linear_correction_parameters.csv",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\02_baseline_evaluation\\medbert_style\\linear_correction_parameters.csv",
+      "bytes": 2590,
+      "sha256": "0676260ec7b4ca8d50c2c0b06ee992c3dace5258acb4e8ef57cd3844ed180265"
+    },
+    {
+      "kind": "medbert_style:cox_cells",
+      "relative_path": "Revision-0710/05_downstream/02_baseline_evaluation/medbert_style/cox_fold_organ_cells.csv",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\02_baseline_evaluation\\medbert_style\\cox_fold_organ_cells.csv",
+      "bytes": 3862,
+      "sha256": "0985403f85f3a5c479ab1aa058c6bf7b9e4ff6cc29eb0162fddc969ea40e9e4f"
+    },
+    {
+      "kind": "retain_organquery:prediction_registry",
+      "relative_path": "Revision-0710/05_downstream/01_prediction_registries/tier_b/retain_organquery.json",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\01_prediction_registries\\tier_b\\retain_organquery.json",
+      "bytes": 4613,
+      "sha256": "24611820a70724016845e1ff4c73e77cf6c5e0b01696735fcfe7d8016a64f569"
+    },
+    {
+      "kind": "retain_organquery:evaluation_summary",
+      "relative_path": "Revision-0710/05_downstream/02_baseline_evaluation/retain_organquery/evaluation_summary.json",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\02_baseline_evaluation\\retain_organquery\\evaluation_summary.json",
+      "bytes": 2278,
+      "sha256": "bacee86203808647338bc4a8d62841ee68217d94bfbe8badb22c5a8d4bf06a1d"
+    },
+    {
+      "kind": "retain_organquery:age_correction",
+      "relative_path": "Revision-0710/05_downstream/02_baseline_evaluation/retain_organquery/linear_correction_parameters.csv",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\02_baseline_evaluation\\retain_organquery\\linear_correction_parameters.csv",
+      "bytes": 2743,
+      "sha256": "cfff3fba7c86801874fd49d85b6be0559ff835fc0e7802a65475774702a26027"
+    },
+    {
+      "kind": "retain_organquery:cox_cells",
+      "relative_path": "Revision-0710/05_downstream/02_baseline_evaluation/retain_organquery/cox_fold_organ_cells.csv",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\02_baseline_evaluation\\retain_organquery\\cox_fold_organ_cells.csv",
+      "bytes": 3995,
+      "sha256": "b50300a28f06f0eb46a6f0b3a5dcf2fd0da14644df5e09ca4143c1ef7af1606c"
+    },
+    {
+      "kind": "behrt_style_organquery:prediction_registry",
+      "relative_path": "Revision-0710/05_downstream/01_prediction_registries/tier_b/behrt_style_organquery.json",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\01_prediction_registries\\tier_b\\behrt_style_organquery.json",
+      "bytes": 4693,
+      "sha256": "8c5d01dc02057f84347b2316e932ce2996bd304f7cf83a830409431ea20784c0"
+    },
+    {
+      "kind": "behrt_style_organquery:evaluation_summary",
+      "relative_path": "Revision-0710/05_downstream/02_baseline_evaluation/behrt_style_organquery/evaluation_summary.json",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\02_baseline_evaluation\\behrt_style_organquery\\evaluation_summary.json",
+      "bytes": 2286,
+      "sha256": "47e5cfb6b4a0d979eabc9222958e4871308be056134a08381f3dfd1ca961f47b"
+    },
+    {
+      "kind": "behrt_style_organquery:age_correction",
+      "relative_path": "Revision-0710/05_downstream/02_baseline_evaluation/behrt_style_organquery/linear_correction_parameters.csv",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\02_baseline_evaluation\\behrt_style_organquery\\linear_correction_parameters.csv",
+      "bytes": 2929,
+      "sha256": "b7412338804c31ace0be6e360ace2c0980ad18559f1e2bb76ee99671f1df9caf"
+    },
+    {
+      "kind": "behrt_style_organquery:cox_cells",
+      "relative_path": "Revision-0710/05_downstream/02_baseline_evaluation/behrt_style_organquery/cox_fold_organ_cells.csv",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\02_baseline_evaluation\\behrt_style_organquery\\cox_fold_organ_cells.csv",
+      "bytes": 4169,
+      "sha256": "7d2b9415950689f675dc9de7034124d85989cea147edfaaa9b449b1f081af620"
+    },
+    {
+      "kind": "medbert_style_organquery:prediction_registry",
+      "relative_path": "Revision-0710/05_downstream/01_prediction_registries/tier_b/medbert_style_organquery.json",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\01_prediction_registries\\tier_b\\medbert_style_organquery.json",
+      "bytes": 4725,
+      "sha256": "7a20680f7cd0721f0ff3263353befdc4cf19db67ede13fd1b700a3a1e85badd2"
+    },
+    {
+      "kind": "medbert_style_organquery:evaluation_summary",
+      "relative_path": "Revision-0710/05_downstream/02_baseline_evaluation/medbert_style_organquery/evaluation_summary.json",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\02_baseline_evaluation\\medbert_style_organquery\\evaluation_summary.json",
+      "bytes": 2285,
+      "sha256": "e8057dd1e589956808e280915ff2e85ccf2d480dc78fe78e4959e227047c20e2"
+    },
+    {
+      "kind": "medbert_style_organquery:age_correction",
+      "relative_path": "Revision-0710/05_downstream/02_baseline_evaluation/medbert_style_organquery/linear_correction_parameters.csv",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\02_baseline_evaluation\\medbert_style_organquery\\linear_correction_parameters.csv",
+      "bytes": 2992,
+      "sha256": "40ca4f1eda422e8a0adcc1db90d2b0779aa19e6c4e04e5391ffa7a37cb63a940"
+    },
+    {
+      "kind": "medbert_style_organquery:cox_cells",
+      "relative_path": "Revision-0710/05_downstream/02_baseline_evaluation/medbert_style_organquery/cox_fold_organ_cells.csv",
+      "absolute_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\02_baseline_evaluation\\medbert_style_organquery\\cox_fold_organ_cells.csv",
+      "bytes": 4238,
+      "sha256": "19836133ea3f818340bfe5d80468d0f7431c4e338cac6cf05ee5ae3a6d8ffe6b"
+    }
+  ],
+  "prediction_registries": {
+    "ehr_age_d07_003_e55": {
+      "registry_relative_path": "Revision-0710/03_ehr_age/04_fixed_replication/02_published_fivefold/00_prediction_registry/ehr_age_d07_003_e55.json",
+      "registry_sha256": "c11b9d2b81017444d8f10154429f10aa98493c0f75004b2aec770170eb0b639b",
+      "prediction_files": [
+        {
+          "outer_fold": 0,
+          "split_role": "test",
+          "rows": 639485,
+          "sha256": "fbf5d91ec3d9f398549ead2a898d8248f83fb305aeb53b42482f7903625488e4",
+          "relative_path": "Revision-0710/03_ehr_age/04_fixed_replication/01_runs/outer_fold_0/reuse_d07_003_e55/test_predictions_long.normalized.parquet"
+        },
+        {
+          "outer_fold": 0,
+          "split_role": "validation",
+          "rows": 639492,
+          "sha256": "fce693510241ebdcc298165a1ff8def54d00caa78ec8b13ad493c8fad713971e",
+          "relative_path": "Revision-0710/03_ehr_age/04_fixed_replication/01_runs/outer_fold_0/reuse_d07_003_e55/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 1,
+          "split_role": "test",
+          "rows": 639492,
+          "sha256": "c26d89c3075f4d792ccd8c7974cb6153ebf35b7ac11cd3b8f16841b76d37905c",
+          "relative_path": "Revision-0710/03_ehr_age/04_fixed_replication/01_runs/outer_fold_1/attempts/primary_e55_v1/score/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 1,
+          "split_role": "validation",
+          "rows": 639471,
+          "sha256": "ddf015f22d6d9acf8439600080b8efaca2344515ababe06c085662d392977f0d",
+          "relative_path": "Revision-0710/03_ehr_age/04_fixed_replication/01_runs/outer_fold_1/attempts/primary_e55_v1/evaluation/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 2,
+          "split_role": "test",
+          "rows": 639471,
+          "sha256": "74526549f193a663c88e9bfb72a8b744ebdcd3e5da24839d934c89719273c5a6",
+          "relative_path": "Revision-0710/03_ehr_age/04_fixed_replication/01_runs/outer_fold_2/attempts/primary_e55_v1/score/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 2,
+          "split_role": "validation",
+          "rows": 639471,
+          "sha256": "b0c987361e7bd1847131d04dc58ca4de02695c0f630f6fd2fd288143e3213ff8",
+          "relative_path": "Revision-0710/03_ehr_age/04_fixed_replication/01_runs/outer_fold_2/attempts/primary_e55_v1/evaluation/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 3,
+          "split_role": "test",
+          "rows": 639471,
+          "sha256": "007d7f11483c3a523025d22851265c24342f06c7a9ee63e95ed9066a7de01a7e",
+          "relative_path": "Revision-0710/03_ehr_age/04_fixed_replication/01_runs/outer_fold_3/attempts/primary_e55_v1/score/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 3,
+          "split_role": "validation",
+          "rows": 639492,
+          "sha256": "00c1af89172d7231c14ed27142bd2a415550b66aa9454c1a139130d12112d1a4",
+          "relative_path": "Revision-0710/03_ehr_age/04_fixed_replication/01_runs/outer_fold_3/attempts/primary_e55_v1/evaluation/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 4,
+          "split_role": "test",
+          "rows": 639492,
+          "sha256": "691753b533a69b01d01626825bdb7c20fa1de985dfe451a85fdb9ffa4807f99e",
+          "relative_path": "Revision-0710/03_ehr_age/04_fixed_replication/01_runs/outer_fold_4/attempts/primary_e55_v1/score/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 4,
+          "split_role": "validation",
+          "rows": 639485,
+          "sha256": "2dd74d3762068dab077d731a76f12f874cf6d4c835765b682490b3bcbbfe055c",
+          "relative_path": "Revision-0710/03_ehr_age/04_fixed_replication/01_runs/outer_fold_4/attempts/primary_e55_v1/evaluation/validation_predictions_long.parquet"
+        }
+      ]
+    },
+    "retain": {
+      "registry_relative_path": "Revision-0710/05_downstream/01_prediction_registries/tier_a/retain.json",
+      "registry_sha256": "d475f12f3e1993d0a238b202a9e6d4b65969e4415a8cf0a934ad1d7a38d938f7",
+      "prediction_files": [
+        {
+          "outer_fold": 0,
+          "split_role": "test",
+          "rows": 639485,
+          "sha256": "35531bc738ef2c0b2460f0bcc57f4e0852837557d34849a8cfde49f56799ccaa",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/retain/fold0/0aadb1edbf5b/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 0,
+          "split_role": "validation",
+          "rows": 639492,
+          "sha256": "c0777fd3b7da5ad335c79b67184ea5cf170a625fcb915df2f880689f19b3abd8",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/retain/fold0/0aadb1edbf5b/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 1,
+          "split_role": "test",
+          "rows": 639492,
+          "sha256": "9808d5f6d70691667c7471484be24a37d4c26607e107c283253877d0cdd21501",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/retain/fold1/ce70b085f1b2/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 1,
+          "split_role": "validation",
+          "rows": 639471,
+          "sha256": "d348006828cf6fed072e6b7f5fee20f6edc489a242c4290adf0b0aae3acbefb4",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/retain/fold1/ce70b085f1b2/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 2,
+          "split_role": "test",
+          "rows": 639471,
+          "sha256": "cce63c4c27b6f179b15a1aafee2b70b6f5058b3d8a41b1614b990126258288e3",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/retain/fold2/f46183ea6d82/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 2,
+          "split_role": "validation",
+          "rows": 639471,
+          "sha256": "15a21c880a5d269df02aea6f7198b095085558ec61d90612ebcafda9ebe0d59f",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/retain/fold2/f46183ea6d82/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 3,
+          "split_role": "test",
+          "rows": 639471,
+          "sha256": "31846ebf482ab487b1ba7efe37d1d4d09c9355d7e264cf6fa8e2fd780275cd46",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/retain/fold3/46078a3af70c/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 3,
+          "split_role": "validation",
+          "rows": 639492,
+          "sha256": "6464bacbaa97227338e1d52e54e60acc0a421fa11b963c999c08eb8b2dddde3c",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/retain/fold3/46078a3af70c/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 4,
+          "split_role": "test",
+          "rows": 639492,
+          "sha256": "3347b55ec61f7f13b112dd5fa3ba0963add063f22b1ecd8a8300b68c63d61f28",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/retain/fold4/07005fb52cdb/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 4,
+          "split_role": "validation",
+          "rows": 639485,
+          "sha256": "9dd3079be4e6ed9c1902e2e1685191712adb18cf9ec8ee45be0f49d20315133e",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/retain/fold4/07005fb52cdb/validation_predictions_long.parquet"
+        }
+      ]
+    },
+    "behrt_style": {
+      "registry_relative_path": "Revision-0710/05_downstream/01_prediction_registries/tier_a/behrt_style.json",
+      "registry_sha256": "2f563c576c5a5162c49d15bfd471788622ac3d1a1aedc7e9ab50054ba475136a",
+      "prediction_files": [
+        {
+          "outer_fold": 0,
+          "split_role": "test",
+          "rows": 639485,
+          "sha256": "768a3cecaed66c4682e22de529506854e7caa209e7d01e35006ce02667d9d4d7",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/behrt_style/fold0/52e71b16b560/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 0,
+          "split_role": "validation",
+          "rows": 639492,
+          "sha256": "c5f42a99c121867a2763ece1d13c735cacce32382311605123050be19d66a618",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/behrt_style/fold0/52e71b16b560/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 1,
+          "split_role": "test",
+          "rows": 639492,
+          "sha256": "851e42428b0b7cc6d2b0f2e247f7b46291153a7e1573a21bdd44e77e13330d67",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/behrt_style/fold1/3c8e177c6a8c/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 1,
+          "split_role": "validation",
+          "rows": 639471,
+          "sha256": "3b5663f7c41d5b3baf82f2501da699c3f233693f7c30da625fd266b128e13b81",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/behrt_style/fold1/3c8e177c6a8c/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 2,
+          "split_role": "test",
+          "rows": 639471,
+          "sha256": "fc547de7faddc78806f9dfb42c2f949c771d7c9ec74cf335300f44e311301675",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/behrt_style/fold2/bea7bae3850c/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 2,
+          "split_role": "validation",
+          "rows": 639471,
+          "sha256": "56fd6a505205ba78cf6169466fcb438a2c8575269753b39b3b1d94e3c01adc43",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/behrt_style/fold2/bea7bae3850c/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 3,
+          "split_role": "test",
+          "rows": 639471,
+          "sha256": "0b54790905fb8e00516684ac54874a39a7ce515293d3544fdf16fa6c1051a908",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/behrt_style/fold3/7fad45e298a6/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 3,
+          "split_role": "validation",
+          "rows": 639492,
+          "sha256": "45a932e8f83bad7c37ab1358fea977310cd467909502a697c6ed4882a5a96401",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/behrt_style/fold3/7fad45e298a6/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 4,
+          "split_role": "test",
+          "rows": 639492,
+          "sha256": "6b672811e2955edd8910cb003a9cdbd681a34acef06462dfc997dffcde06ea7e",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/behrt_style/fold4/1c3980c7be18/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 4,
+          "split_role": "validation",
+          "rows": 639485,
+          "sha256": "6b4c9399c4a73628dc13280e5cdf51ae0de16d5a6c8ad32bd2f454a27f9e1230",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/behrt_style/fold4/1c3980c7be18/validation_predictions_long.parquet"
+        }
+      ]
+    },
+    "medbert_style": {
+      "registry_relative_path": "Revision-0710/05_downstream/01_prediction_registries/tier_a/medbert_style.json",
+      "registry_sha256": "62259c5fe62c594b276f9002a324e16802f3db9c17b61ef7d4031fe2f642ec23",
+      "prediction_files": [
+        {
+          "outer_fold": 0,
+          "split_role": "test",
+          "rows": 639485,
+          "sha256": "b13e5eb1d3260b5dfd0bf5d121345706282488a91d1513ce7482a0dcb3879265",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/medbert_style/fold0/057b7e20f7c7/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 0,
+          "split_role": "validation",
+          "rows": 639492,
+          "sha256": "049cb61362e618b65ec5f6e43c4beac05cdc165a43a124a2a3a6c2e559a987bc",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/medbert_style/fold0/057b7e20f7c7/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 1,
+          "split_role": "test",
+          "rows": 639492,
+          "sha256": "81cf3fb63a0f78501a938cddbca14526813c4427a8990d4710126cb8e64e877b",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/medbert_style/fold1/8fa5d9302e45/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 1,
+          "split_role": "validation",
+          "rows": 639471,
+          "sha256": "dc2ccb81e655481d5bfa8f7b2edbf087679fd6cc54f793c016f67c03b3660530",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/medbert_style/fold1/8fa5d9302e45/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 2,
+          "split_role": "test",
+          "rows": 639471,
+          "sha256": "796bb31817684e770a1dd22fe37929ed8733df256bb152c74cd6ee6bc363b0a3",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/medbert_style/fold2/5cf2edc50976/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 2,
+          "split_role": "validation",
+          "rows": 639471,
+          "sha256": "c76d34d9c2709f4e7d9022c56c05f5f3000646434e7e05e003612a4e20d983d4",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/medbert_style/fold2/5cf2edc50976/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 3,
+          "split_role": "test",
+          "rows": 639471,
+          "sha256": "832f5cfa7d6f2b8a4816be5e0cc6a993c2ffc087a79e69c3b8a7fd2d4b142bb4",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/medbert_style/fold3/0d44b6271b13/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 3,
+          "split_role": "validation",
+          "rows": 639492,
+          "sha256": "9cc4610fdd187a07edcc325852549af8b2037106b14148d2709eeadcce04d29c",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/medbert_style/fold3/0d44b6271b13/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 4,
+          "split_role": "test",
+          "rows": 639492,
+          "sha256": "3264aff6f179b81c57b822cec114d50b5137c6a5eba061ae81cdec59e726ba6c",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/medbert_style/fold4/806bfcce7056/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 4,
+          "split_role": "validation",
+          "rows": 639485,
+          "sha256": "1b46aac7a7df1705ae7f7ae10f2fd246159c7794c02607ed73b28ab3421d805c",
+          "relative_path": "Revision-0710/02_baselines_5fold/01_plain_temporal/medbert_style/fold4/806bfcce7056/validation_predictions_long.parquet"
+        }
+      ]
+    },
+    "retain_organquery": {
+      "registry_relative_path": "Revision-0710/05_downstream/01_prediction_registries/tier_b/retain_organquery.json",
+      "registry_sha256": "24611820a70724016845e1ff4c73e77cf6c5e0b01696735fcfe7d8016a64f569",
+      "prediction_files": [
+        {
+          "outer_fold": 0,
+          "split_role": "test",
+          "rows": 639485,
+          "sha256": "fc4699c64ddd63f422d9d390758275de2b939e2d327290259df9f87dd256a605",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold0/ec00a534580f/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 0,
+          "split_role": "validation",
+          "rows": 639492,
+          "sha256": "d7d6d600ec8c7af65251487ded925f05bfb0c8a7a7c5ec06cd7b0dabbaf596df",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold0/ec00a534580f/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 1,
+          "split_role": "test",
+          "rows": 639492,
+          "sha256": "6d326a252d3cd254c00044547933d3bcd2aaf635237f0288266ec6691a125833",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold1/f191c4b9e228/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 1,
+          "split_role": "validation",
+          "rows": 639471,
+          "sha256": "3f814085baa33c76824015412c5e6de5ffde6e3c75e4bfd38c2d35bdbfde9cd5",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold1/f191c4b9e228/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 2,
+          "split_role": "test",
+          "rows": 639471,
+          "sha256": "66ed07f9cd05f108b083c2db4768bb01e989b89b4a82091316bf5dc659aba390",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold2/8d98c3bb8fa6/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 2,
+          "split_role": "validation",
+          "rows": 639471,
+          "sha256": "39f9acce9e6b226c4e89a800e1c2e08962a218bc2bcb5eccb7aefc5106ef501d",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold2/8d98c3bb8fa6/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 3,
+          "split_role": "test",
+          "rows": 639471,
+          "sha256": "245d97b5c35f93762c9d2e5b545cfb59f3eb83706244e60bb54604301de7f08d",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold3/cd0d37c1bcf6/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 3,
+          "split_role": "validation",
+          "rows": 639492,
+          "sha256": "377d1f9035f58f54e21012218ee302b31d5190b4c108e6e3e1590dc249f96268",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold3/cd0d37c1bcf6/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 4,
+          "split_role": "test",
+          "rows": 639492,
+          "sha256": "5670d9354ce72f5e88d38a04400c8f6a0e8c822b6aa2c74fc275ee1e3ef80ea9",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold4/8f55ad65fba3/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 4,
+          "split_role": "validation",
+          "rows": 639485,
+          "sha256": "4e5da030dd67ef0c2c380b682ae22f70ac58fd5d1162c72d67fa9f2b8ec150fe",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold4/8f55ad65fba3/validation_predictions_long.parquet"
+        }
+      ]
+    },
+    "behrt_style_organquery": {
+      "registry_relative_path": "Revision-0710/05_downstream/01_prediction_registries/tier_b/behrt_style_organquery.json",
+      "registry_sha256": "8c5d01dc02057f84347b2316e932ce2996bd304f7cf83a830409431ea20784c0",
+      "prediction_files": [
+        {
+          "outer_fold": 0,
+          "split_role": "test",
+          "rows": 639485,
+          "sha256": "4fdb29df436bd84a125871edd6299055eac8712f8e1d368f0a236f97c4df7815",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/behrt_style_organquery/fold0/ddc4138d5769/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 0,
+          "split_role": "validation",
+          "rows": 639492,
+          "sha256": "3fb64ba80aa8ac2503d7aee3d848dfb6d394fb6f7dc265ed28958a71031f644a",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/behrt_style_organquery/fold0/ddc4138d5769/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 1,
+          "split_role": "test",
+          "rows": 639492,
+          "sha256": "80cf620aaae6352d13ecdd99e591ce44f0328cb92bab6be3b933f34343bf944d",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/behrt_style_organquery/fold1/26ab32344018/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 1,
+          "split_role": "validation",
+          "rows": 639471,
+          "sha256": "789b17e6b8b83fe2a2aebcf0f70253eaafdc840e5e375f4b7a27e4a0720ad0ce",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/behrt_style_organquery/fold1/26ab32344018/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 2,
+          "split_role": "test",
+          "rows": 639471,
+          "sha256": "942f9593f02ab7a02d9f92aa448c2f0d108d84746a655635bf8bcb00cb6321cb",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/behrt_style_organquery/fold2/f850b389da50/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 2,
+          "split_role": "validation",
+          "rows": 639471,
+          "sha256": "acd224b0c316e0cd3b3333f311a6036f01097509b6f89fb548fd13cd0b34c1ce",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/behrt_style_organquery/fold2/f850b389da50/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 3,
+          "split_role": "test",
+          "rows": 639471,
+          "sha256": "56ae901f70b9ab2a3902c5c7722d0fde5f6edb1f1c411389d197f9605d0916f0",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/behrt_style_organquery/fold3/038ef7f27afe/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 3,
+          "split_role": "validation",
+          "rows": 639492,
+          "sha256": "a5f4094dc4ec59e0de77b6a75c572e89c1d8f321b39e277a8da487c0fe99658b",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/behrt_style_organquery/fold3/038ef7f27afe/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 4,
+          "split_role": "test",
+          "rows": 639492,
+          "sha256": "ce5e9ff42666b86564b2e811b4df82f82e6eecaada800d4cba13fa071cb8c951",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/behrt_style_organquery/fold4/fcd739a04efe/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 4,
+          "split_role": "validation",
+          "rows": 639485,
+          "sha256": "c39e16e42458fb284931a4ee79d9b3e7276d9319d8338cf00ab96199f34269aa",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/behrt_style_organquery/fold4/fcd739a04efe/validation_predictions_long.parquet"
+        }
+      ]
+    },
+    "medbert_style_organquery": {
+      "registry_relative_path": "Revision-0710/05_downstream/01_prediction_registries/tier_b/medbert_style_organquery.json",
+      "registry_sha256": "7a20680f7cd0721f0ff3263353befdc4cf19db67ede13fd1b700a3a1e85badd2",
+      "prediction_files": [
+        {
+          "outer_fold": 0,
+          "split_role": "test",
+          "rows": 639485,
+          "sha256": "a448d6d03ff0b773c9cdbca4c35e9d125028cd2a04c3c73b01b92e6406fe5b6b",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold0/e6fa10b2ad67/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 0,
+          "split_role": "validation",
+          "rows": 639492,
+          "sha256": "8fefbb480e4d7fe1c9fff3735ca1fa8b96c2f0c5ffb38af4686a0c63736169db",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold0/e6fa10b2ad67/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 1,
+          "split_role": "test",
+          "rows": 639492,
+          "sha256": "a42f17c1483fecc9cc70cd42b43592d71e53dc34eabebbc4dd162f31ae0efe09",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold1/7d1423e1aebe/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 1,
+          "split_role": "validation",
+          "rows": 639471,
+          "sha256": "fa574ceef1dc4b1ad21eac46ef83f627762ebc1dd281a99c815583d0d6edc084",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold1/7d1423e1aebe/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 2,
+          "split_role": "test",
+          "rows": 639471,
+          "sha256": "17599e03ad9710029219436335bbc953a5cfb228a4f3a338847bfc25f1ba767b",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold2/d76cee880c7b/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 2,
+          "split_role": "validation",
+          "rows": 639471,
+          "sha256": "9701250121b0b9ceea5ba8e9392d671f671ef17e1c801d212de4b696edecb3d0",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold2/d76cee880c7b/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 3,
+          "split_role": "test",
+          "rows": 639471,
+          "sha256": "09a6b8bb12785dce40c2b3499c76863ef34c23285d389af0998a66f03de4b5a3",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold3/952a3c8ab0d5/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 3,
+          "split_role": "validation",
+          "rows": 639492,
+          "sha256": "46bfbbef9457fffad753db4f68de5d61ea4f2f808f696cc846d762e19954580a",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold3/952a3c8ab0d5/validation_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 4,
+          "split_role": "test",
+          "rows": 639492,
+          "sha256": "ee83bcf4756103d1c6d1107b657871bdd7d36c003c19524183908774c6a8c563",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold4/64540b8a9057/test_predictions_long.parquet"
+        },
+        {
+          "outer_fold": 4,
+          "split_role": "validation",
+          "rows": 639485,
+          "sha256": "6c78156d355eac7c22d6a7cd3e6fc67123dd4efce9968a8b269f0c24503012f3",
+          "relative_path": "Revision-0710/02_baselines_5fold/02_organquery_enhanced/medbert_style_organquery/fold4/64540b8a9057/validation_predictions_long.parquet"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "pyarrow": "14.0.2"
+  }
+}

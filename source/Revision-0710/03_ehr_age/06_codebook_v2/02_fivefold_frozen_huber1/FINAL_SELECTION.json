@@ -1,0 +1,51 @@
+{
+  "schema_version": "revision0710.ehr_age.codebook_v2.final_selection.v1",
+  "status": "FROZEN",
+  "variant": "shared_private_independent_view_huber1",
+  "epoch": 47,
+  "training_scheduler_horizon_epochs": 60,
+  "selection_basis": "all four metrics strictly better than the metric-wise best of the six formal codebook-v2 baselines",
+  "extra_three_model_equal_weight_mean": "retained as a nonbinding design diagnostic, not promoted to a formal baseline",
+  "from_scratch_for_every_outer_fold": true,
+  "fine_tune": false,
+  "distillation": false,
+  "checkpoint_averaging": false,
+  "fold0_source": {
+    "metrics_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\01_runs\\shared_private_independent_view_huber1_fold0\\metrics.json",
+    "metrics_sha256": "fe07ec16c99b6e28c67e11030fec7fdeafc6a1ca87ef1e6a8fff5ce5a83e9007",
+    "checkpoint_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\01_runs\\shared_private_independent_view_huber1_fold0\\checkpoint.pt",
+    "checkpoint_sha256": "c1c035f4d76ded05038e81a163eb56f5d9de4d0716d9a3c1a5813992389fd37f"
+  },
+  "fold0_metrics": {
+    "strict_mae": 3.6848713487028326,
+    "strict_pearson": 0.8005781562118879,
+    "strict_r2": 0.6357497213528585,
+    "full_risk_macro_delta_c": 0.04175945947248229
+  },
+  "formal_baseline_values": {
+    "strict_mae": 3.720129337160603,
+    "strict_pearson": 0.7941554245408285,
+    "strict_r2": 0.6251940714932764,
+    "full_risk_macro_delta_c": 0.011954426818589926
+  },
+  "fold0_strictly_better": {
+    "strict_mae": true,
+    "strict_pearson": true,
+    "strict_r2": true,
+    "full_risk_macro_delta_c": true
+  },
+  "inputs": {
+    "baseline_targets": {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\11_codebook_v2\\baseline_targets.json",
+      "sha256": "4b40b06611cf3abf876b46a92585c9217b4be05618e0d88f7cbdaf634872b0ab"
+    },
+    "baseline_metric_envelope": {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\11_codebook_v2\\02_summary\\baseline_metric_envelope.json",
+      "sha256": "ed765ed90cee784eadbb449dab6773c4a518013dabb9aa71eef6312663ce8680"
+    },
+    "codebook_v2_outcomes": {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\01_data_rebuild\\09_v2_labels\\organ_outcomes_60m.parquet",
+      "sha256": "3a9021f00080c25fd523debcdf075a5be8281c9658db261af99a8bdc11f4e735"
+    }
+  }
+}

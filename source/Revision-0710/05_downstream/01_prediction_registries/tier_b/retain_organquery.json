@@ -1,0 +1,104 @@
+{
+  "schema_version": "revision0710_prediction_registry_v1",
+  "method": "retain_organquery",
+  "selection": "five explicit completed run directories; no discovery or globbing",
+  "run_directories": [
+    {
+      "outer_fold": 0,
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold0/ec00a534580f",
+      "run_config_sha256": "153451e31c478d31987781e15fc43e8fbf79e32480a0769784e9ea2db2570ac5"
+    },
+    {
+      "outer_fold": 1,
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold1/f191c4b9e228",
+      "run_config_sha256": "cbfc5861350b03a05e6ce8995f22b83b8a01ab701efc865b5ce335871f2a008e"
+    },
+    {
+      "outer_fold": 2,
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold2/8d98c3bb8fa6",
+      "run_config_sha256": "1ec618562b5177d4baebfb2c99aad3fa19e06abcbe0ee206888dd1e3a69b3c91"
+    },
+    {
+      "outer_fold": 3,
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold3/cd0d37c1bcf6",
+      "run_config_sha256": "4033b39a8c9382be33a298b32f318489198ec6f1ffe2e9309dc3422c28673c32"
+    },
+    {
+      "outer_fold": 4,
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold4/8f55ad65fba3",
+      "run_config_sha256": "9dd3ac67bc2292dfd89af7e12f5f7027ae37e6838df65e8e65e9e13db9ea1913"
+    }
+  ],
+  "prediction_files": [
+    {
+      "outer_fold": 0,
+      "split_role": "validation",
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold0/ec00a534580f/validation_predictions_long.parquet",
+      "sha256": "d7d6d600ec8c7af65251487ded925f05bfb0c8a7a7c5ec06cd7b0dabbaf596df",
+      "rows": 639492
+    },
+    {
+      "outer_fold": 0,
+      "split_role": "test",
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold0/ec00a534580f/test_predictions_long.parquet",
+      "sha256": "fc4699c64ddd63f422d9d390758275de2b939e2d327290259df9f87dd256a605",
+      "rows": 639485
+    },
+    {
+      "outer_fold": 1,
+      "split_role": "validation",
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold1/f191c4b9e228/validation_predictions_long.parquet",
+      "sha256": "3f814085baa33c76824015412c5e6de5ffde6e3c75e4bfd38c2d35bdbfde9cd5",
+      "rows": 639471
+    },
+    {
+      "outer_fold": 1,
+      "split_role": "test",
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold1/f191c4b9e228/test_predictions_long.parquet",
+      "sha256": "6d326a252d3cd254c00044547933d3bcd2aaf635237f0288266ec6691a125833",
+      "rows": 639492
+    },
+    {
+      "outer_fold": 2,
+      "split_role": "validation",
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold2/8d98c3bb8fa6/validation_predictions_long.parquet",
+      "sha256": "39f9acce9e6b226c4e89a800e1c2e08962a218bc2bcb5eccb7aefc5106ef501d",
+      "rows": 639471
+    },
+    {
+      "outer_fold": 2,
+      "split_role": "test",
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold2/8d98c3bb8fa6/test_predictions_long.parquet",
+      "sha256": "66ed07f9cd05f108b083c2db4768bb01e989b89b4a82091316bf5dc659aba390",
+      "rows": 639471
+    },
+    {
+      "outer_fold": 3,
+      "split_role": "validation",
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold3/cd0d37c1bcf6/validation_predictions_long.parquet",
+      "sha256": "377d1f9035f58f54e21012218ee302b31d5190b4c108e6e3e1590dc249f96268",
+      "rows": 639492
+    },
+    {
+      "outer_fold": 3,
+      "split_role": "test",
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold3/cd0d37c1bcf6/test_predictions_long.parquet",
+      "sha256": "245d97b5c35f93762c9d2e5b545cfb59f3eb83706244e60bb54604301de7f08d",
+      "rows": 639471
+    },
+    {
+      "outer_fold": 4,
+      "split_role": "validation",
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold4/8f55ad65fba3/validation_predictions_long.parquet",
+      "sha256": "4e5da030dd67ef0c2c380b682ae22f70ac58fd5d1162c72d67fa9f2b8ec150fe",
+      "rows": 639485
+    },
+    {
+      "outer_fold": 4,
+      "split_role": "test",
+      "path": "../../../02_baselines_5fold/02_organquery_enhanced/retain_organquery/fold4/8f55ad65fba3/test_predictions_long.parquet",
+      "sha256": "5670d9354ce72f5e88d38a04400c8f6a0e8c822b6aa2c74fc275ee1e3ef80ea9",
+      "rows": 639492
+    }
+  ]
+}

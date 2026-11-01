@@ -1,0 +1,29 @@
+{
+  "storage_sequence_length": 64,
+  "primary_train_sequence_length": 32,
+  "storage_crop_rule": "balanced_modality_latest",
+  "storage_minimum_icd": 16,
+  "storage_minimum_gp": 16,
+  "primary_crop_rule": "balanced_modality_latest",
+  "balanced_crop_sensitivity": {
+    "minimum_icd": 8,
+    "minimum_gp": 8,
+    "remaining_global_latest": 16
+  },
+  "participant_batch_size": 8192,
+  "clip_model": "ViT-B-16",
+  "clip_pretrained": "openai",
+  "embedding_dtype": "float16",
+  "embedding_normalized": false,
+  "code_prompt": "{text}",
+  "description_prompt": "{text}",
+  "drug_prompt": "{text}",
+  "event_type_ids": {
+    "padding": 0,
+    "hospital_icd": 1,
+    "gp_prescription": 2
+  },
+  "padding_id": 0,
+  "outcomes_in_cache": false,
+  "phenotype_preprocessed_in_cache": false
+}

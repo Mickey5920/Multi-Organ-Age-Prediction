@@ -1,0 +1,864 @@
+{
+  "schema_version": "revision0710_ehr_age_d07_003_e55_fixed_replication_v1",
+  "status": "FROZEN_BEFORE_REPLICATION",
+  "execution_started": false,
+  "decision": "SUBSTANTIVE_BASELINE_SUPERIORITY_FREEZE_E55",
+  "method": "ehr_age_d07_003_private_retain",
+  "fixed_checkpoint_epoch": 55,
+  "formal_d07_status_preserved": "NON_PROMOTABLE",
+  "formal_gate_change_allowed": false,
+  "decision_document": {
+    "path": "Revision-0710/03_ehr_age/00_contract/D07_003_SUBSTANTIVE_BASELINE_SUPERIORITY_FREEZE_E55.md",
+    "sha256": "e4a00f6681ad6d705db4fb8f073e79e4fb2819a9c39e34f64c491f1edbb107a2"
+  },
+  "runbook": {
+    "path": "Revision-0710/03_ehr_age/04_fixed_replication/RUNBOOK.md",
+    "sha256": "24dbf6f5f86e4d20d09157cd2dd1fcc5aa22afe792611f5406141b09e89b47dd"
+  },
+  "independent_review": {
+    "path": "Revision-0710/03_ehr_age/00_contract/D07_003_FIXED_REPLICATION_V2_INDEPENDENT_REVIEW.md",
+    "sha256": "e37f1d8e529e78aaf494caa4b628dd5f41138a599243a1fcfe0dfda46aa3021c",
+    "status": "PASS_FOR_FIRST_CLEAN_FORMAL_EXECUTION",
+    "p0_findings": 0
+  },
+  "cancelled_candidate": {
+    "candidate_id": "D07-004",
+    "status": "CANCELLED_WITHOUT_CONFIG_OR_EXECUTION",
+    "historical_plan_path": "Revision-0710/03_ehr_age/00_contract/D07_003_OUTCOME_AND_D07_004_CORRELATION_PLAN_DRAFT.md",
+    "historical_plan_sha256": "1a4d1b09c8c85e1d04040389ac9e5504855ef0b920ecdb456e1334fe383c58ec",
+    "configuration_exists": false,
+    "execution_authorized": false
+  },
+  "parent_d07_003": {
+    "path": "Revision-0710/03_ehr_age/00_contract/ehr_age_d07_003_private_retain_v1.json",
+    "sha256": "73c46ce884458f39148aed47a5843be76d55e96db8253c4a88bb30f70ebaf84c",
+    "candidate_id": "003_private_retain",
+    "fixed_epoch": 55,
+    "result_status": "NON_PROMOTABLE",
+    "architecture_inheritance": "exact model section; no override",
+    "loss_inheritance": "exact loss section; no override",
+    "optimizer_and_schedule_inheritance": "exact effective fields; outer-fold role fields are the only changes",
+    "learned_state_reuse": "outer Fold 0 only"
+  },
+  "freeze_basis": {
+    "criterion": "all four same-epoch point estimates beat the strongest same-Fold-0 baseline, with a materially larger full-risk gain",
+    "baseline_method": "retain",
+    "baseline_registry": {
+      "path": "Revision-0710/05_downstream/01_prediction_registries/tier_a/retain.json",
+      "sha256": "d475f12f3e1993d0a238b202a9e6d4b65969e4415a8cf0a934ad1d7a38d938f7"
+    },
+    "epoch_55": {
+      "strict_mae": 3.704726228183137,
+      "strict_pearson": 0.7980159278491296,
+      "strict_r2": 0.6329455267960042,
+      "age_sex_harrell_macro_delta_c": 0.04422257822708307,
+      "positive_organs": 7,
+      "organs_beating_baseline": 7
+    },
+    "retain": {
+      "strict_mae": 3.7151314765615147,
+      "strict_pearson": 0.7973061889870954,
+      "strict_r2": 0.6306619984265939,
+      "age_sex_harrell_macro_delta_c": 0.013957939439256384
+    },
+    "ehr_age_minus_retain": {
+      "strict_mae": -0.010405248378377863,
+      "strict_pearson": 0.000709738862034182,
+      "strict_r2": 0.00228352836941037,
+      "age_sex_harrell_macro_delta_c": 0.03026463878782669
+    },
+    "formal_margin_exception": {
+      "metric": "strict_pearson",
+      "shortfall": 0.000290261137965819,
+      "consequence": "historical D07-003 remains NON_PROMOTABLE"
+    }
+  },
+  "d07_003_evidence": {
+    "run_config": {
+      "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/candidates/003_private_retain/run_config.json",
+      "sha256": "479532fa848e33ef7272261f15020c4f508dcf3dbe5d1eb9fbb3c15822ed3cfe"
+    },
+    "model_preflight": {
+      "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/candidates/003_private_retain/model_preflight_before_optimizer.json",
+      "sha256": "ed7e07f714291828c41920d5d6a73725244fa4dceda47ea7bd0467deda8069d3"
+    },
+    "training_history": {
+      "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/candidates/003_private_retain/training_history.json",
+      "sha256": "de24af4784e421f1816e59b81c770106829fc81f18b48826de57ffd506a00664"
+    },
+    "checkpoint_set": {
+      "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/candidates/003_private_retain/checkpoint_set_before_fold0.json",
+      "sha256": "bdb0759bd0bf0f35c5c017d5d050c7f3fc57d4971e8cf24b32386d3f640dcfeb"
+    },
+    "checkpoint_decision": {
+      "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/candidates/003_private_retain/checkpoint_decision.json",
+      "sha256": "9a4769bc36a772256ea0b30eac5a5d213c96db6f932803ddd3997b54b11837c1"
+    },
+    "strict_age_history": {
+      "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/candidates/003_private_retain/fold0_raw_strict_age_history.jsonl",
+      "sha256": "f3fb59e6949be0f2f8be157562b8a2f2de3081c1f258dc776ef277976a6ab326"
+    },
+    "risk_history": {
+      "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/candidates/003_private_retain/fold0_harrell_risk_history.jsonl",
+      "sha256": "b20b181b845c5c01e35b3b5c7fdfa193582cb834f3118b6cd3732c926d614be1"
+    },
+    "metrics": {
+      "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/candidates/003_private_retain/fold0_open_development_metrics.json",
+      "sha256": "df7fd01cf613c1e210e29ef0bd4e8d11d2e1dcdbd0ccaffd0e780d3971b6755d"
+    },
+    "summary": {
+      "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/candidates/003_private_retain/candidate_summary.json",
+      "sha256": "c07f82419be3eda62c0d1056602be465461ea13ee36b46037b4f413b796a8918"
+    },
+    "artifact_registry": {
+      "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/candidates/003_private_retain/artifact_hashes.json",
+      "sha256": "10c0c88462abbbaee4d4caeb4c15a637412901311cf97c2b2bd672bed1d8f796"
+    },
+    "read_ledger": {
+      "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/FOLD0_READ_LEDGER/000003__003_private_retain.json",
+      "sha256": "37f5c75a3a58e99ae07f9a4ab64f31659af7bec988ab4fb1e62391ddf032d0ad"
+    },
+    "completion_receipt": {
+      "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/FOLD0_READ_RECEIPTS/000003__003_private_retain.complete.json",
+      "sha256": "e44ccec67583cd8b1131460f55d4deff07050b5df174f6ffe805d3ffb6c227e0"
+    }
+  },
+  "fold0_reuse": {
+    "checkpoint": {
+      "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/candidates/003_private_retain/epoch_checkpoints/trainable_checkpoint_epoch_0055.pt",
+      "file_sha256": "4900c9d332d1a7c56281a465ad9b02d37d69a3a4ed76400cbe98a24efa0a5c08",
+      "trainable_parameter_sha256": "84c56b066e6607953bf1c2a74b3c1c1ac95c1c95fa766c529653a632cd317bde"
+    },
+    "existing_test_predictions": {
+      "path": "Revision-0710/03_ehr_age/03_runs/fold0/open_development/candidates/003_private_retain/fold0_open_development_predictions_long.parquet",
+      "sha256": "2421c4731afb49ed12ff5ae693d38931e833cafe3c42bf0d1501e1e9f9f948cc",
+      "rows": 639485,
+      "observed_columns_lack": ["outer_fold", "split_role"]
+    },
+    "canonical_test_repackaging": {
+      "create_once": true,
+      "historical_source_open_condition": "after outer-0 evaluation manifest and read ledger are committed",
+      "add_constants": {"outer_fold": 0, "split_role": "test"},
+      "historical_source_columns_used_as_values": ["participant_id", "organ_system", "predicted_age"],
+      "authoritative_outer0_role_columns": [
+        "actual_age",
+        "sex",
+        "strict_healthy_reference_60m",
+        "duration_months",
+        "event",
+        "at_risk"
+      ],
+      "output_columns_exact": ["participant_id", "organ_system", "actual_age", "predicted_age", "outer_fold", "split_role"],
+      "prediction_or_label_value_change_allowed": false,
+      "row_reordering_allowed": false,
+      "required_row_count": 639485,
+      "participant_organ_uniqueness_required": true,
+      "actual_age_must_match_outer0_role_artifact": true,
+      "historical_outcome_columns_may_drive_new_scoring": false,
+      "source_and_repackaged_sha256_required": true
+    },
+    "reuse_training_complete_receipt": {
+      "schema_version": "revision0710.ehr_age.fixed_replication.reuse_training_complete.v1",
+      "status": "D07_003_E60_COMPLETE_E55_FIXED_REUSE",
+      "create_once": true,
+      "must_bind": [
+        "replication_contract_sha256",
+        "parent_d07_003_sha256",
+        "role_artifact_validation_sha256",
+        "source_run_config_sha256",
+        "source_training_history_sha256",
+        "source_checkpoint_set_sha256",
+        "fixed_e55_checkpoint_sha256",
+        "outer_control_manifest_sha256"
+      ],
+      "must_assert": {
+        "retrained": false,
+        "completed_epochs_in_source_run": 60,
+        "fixed_checkpoint_epoch": 55
+      }
+    },
+    "missing_required_artifact": "full Fold 1 validation predictions generated from the frozen epoch-55 checkpoint",
+    "retraining_allowed": false,
+    "historical_metric_recalculation_allowed": false
+  },
+  "roles": [
+    {
+      "outer_fold": 0,
+      "calibration_fold": 1,
+      "train_folds": [2, 3, 4],
+      "mode": "reuse_d07_003_e55",
+      "seed": 7210
+    },
+    {
+      "outer_fold": 1,
+      "calibration_fold": 2,
+      "train_folds": [0, 3, 4],
+      "mode": "train_from_scratch",
+      "seed": 7210
+    },
+    {
+      "outer_fold": 2,
+      "calibration_fold": 3,
+      "train_folds": [0, 1, 4],
+      "mode": "train_from_scratch",
+      "seed": 7210
+    },
+    {
+      "outer_fold": 3,
+      "calibration_fold": 4,
+      "train_folds": [0, 1, 2],
+      "mode": "train_from_scratch",
+      "seed": 7210
+    },
+    {
+      "outer_fold": 4,
+      "calibration_fold": 0,
+      "train_folds": [1, 2, 3],
+      "mode": "train_from_scratch",
+      "seed": 7210
+    }
+  ],
+  "training_freeze": {
+    "seed": 7210,
+    "second_seed_allowed": false,
+    "max_epochs": 60,
+    "full_budget_required": true,
+    "fixed_checkpoint_epoch": 55,
+    "capture_epoch_55_and_continue_through_epoch_60": true,
+    "evaluate_only_epoch": 55,
+    "batch_size": 2048,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 1.0,
+    "warmup_epochs": 3,
+    "scheduler": "cosine",
+    "scheduler_horizon_epochs": 60,
+    "event_dropout_probability": 0.1,
+    "performance_early_stopping_enabled": false,
+    "deterministic": true,
+    "tf32": true,
+    "amp": true,
+    "fold_specific_hyperparameter_overrides_allowed": false,
+    "training_metrics_allowed": ["objective_losses", "learning_rate", "gradient_norm", "amp_scale", "finite_value_checks"],
+    "heldout_performance_during_training_allowed": false
+  },
+  "architecture_and_loss_freeze": {
+    "source": "parent_d07_003",
+    "model_section_sha_binding": "covered by parent_d07_003 full-file SHA256",
+    "loss_section_sha_binding": "covered by parent_d07_003 full-file SHA256",
+    "allowed_model_overrides": [],
+    "allowed_loss_overrides": [],
+    "initialization_outer_1_to_4": "random_except_frozen_cache_embedding_tables",
+    "initialization_audit": {
+      "expected_initial_trainable_parameter_sha256": "cf54feb052f9b09556a1355e8e078c82dabbaa036c1e0387e05d85688373a8a8",
+      "scope": "each outer Fold 1-4 immediately before optimizer step 1",
+      "exact_match_required": true,
+      "age_anchor_is_nontrainable_buffer": true,
+      "common_private_rng_initialization_audit_required": true,
+      "optimizer_parameter_binding_audit_required": true,
+      "mismatch_is_hard_failure": true
+    },
+    "common_risk_initialization_policy": "same namespaced RNG-isolated D07-003 construction",
+    "outer_1_to_4_learned_state_inputs_allowed": false
+  },
+  "role_artifact_contract": {
+    "schema_version": "revision0710_ehr_age_fixed_replication_role_registry_v1",
+    "status_required_before_training": "PASS",
+    "physical_separation_required": true,
+    "trusted_builder_may_read_full_frozen_label_sources": true,
+    "training_process_may_read_full_frozen_label_sources": false,
+    "root": "Revision-0710/03_ehr_age/04_fixed_replication/00_role_artifacts",
+    "build_before_any_fold_training": true,
+    "create_once": true,
+    "deterministic_payload_contract": {
+      "role_parquets_manifests_registry_method_spec_and_train_authorizations_exclude_wall_clock_fields": true,
+      "random_or_process_identifiers_in_canonical_payloads_allowed": false,
+      "staging_directory_name_may_be_nondeterministic_but_must_not_enter_canonical_payloads": true,
+      "same_inputs_code_and_environment_require_same_artifact_sha256": true
+    },
+    "atomic_publication": {
+      "canonical_root_must_not_exist_before_build": true,
+      "staging_is_unique_sibling_on_same_volume": true,
+      "all_five_outer_folds_built_and_validated_before_promotion": true,
+      "registry_method_spec_role_manifests_train_authorizations_and_validation_pass_sealed_before_promotion": true,
+      "promotion_operation": "single same-volume atomic directory rename from staging to canonical root",
+      "failure_receipt_required_in_staging": true,
+      "failed_staging_retained": true,
+      "canonical_root_must_remain_absent_on_failure": true,
+      "partial_canonical_tree_allowed": false
+    },
+    "all_five_outer_roles_frozen_together": true,
+    "validation_pass": {
+      "path": "Revision-0710/03_ehr_age/04_fixed_replication/00_role_artifacts/ROLE_ARTIFACT_VALIDATION.PASS.json",
+      "schema_version": "revision0710.ehr_age.fixed_replication.role_artifact_validation.v1",
+      "status": "PASS",
+      "created_in_staging_before_atomic_promotion": true,
+      "deterministic_no_wall_clock_fields": true,
+      "must_bind_contract_sha256": true,
+      "must_bind_role_registry_sha256": true,
+      "must_cover_all_five_outer_folds_and_all_three_roles": true,
+      "performance_metrics_allowed": false,
+      "validate_only_must_independently_recompute_and_match": true,
+      "training_worker_receives_path": false,
+      "training_worker_receives_expected_sha256_only": true
+    },
+    "roles_per_outer_fold": ["train", "calibration", "outer_test"],
+    "artifacts_per_role": ["age_targets.parquet", "joint_labels.parquet", "role_manifest.json"],
+    "age_target_columns_exact": ["participant_id", "fold_id", "chronological_age"],
+    "joint_label_columns_exact": [
+      "participant_id",
+      "fold_id",
+      "inner_role",
+      "organ_system",
+      "duration_months",
+      "event",
+      "at_risk",
+      "strict_healthy_reference_60m"
+    ],
+    "inner_role_values": {
+      "train": "train",
+      "calibration": "calibration",
+      "outer_test": "outer_test"
+    },
+    "organ_axis_order": [
+      "cardiovascular",
+      "hepatic",
+      "immune",
+      "metabolic",
+      "musculoskeletal",
+      "pulmonary",
+      "renal"
+    ],
+    "participant_rules": {
+      "unique_within_age_artifact": true,
+      "exactly_seven_joint_rows_per_participant": true,
+      "role_sets_pairwise_disjoint": true,
+      "role_sets_exhaustive": true,
+      "fold_assignment_exact": true,
+      "cross_outer_reuse_expected": true
+    },
+    "manifest_must_bind": [
+      "contract_sha256",
+      "source_sha256",
+      "outer_fold",
+      "role",
+      "allowed_reader_stage",
+      "participant_ids_sha256",
+      "participant_count",
+      "participant_organ_rows",
+      "artifact_paths",
+      "artifact_sha256"
+    ],
+    "role_manifest_schema": "revision0710.ehr_age.fixed_replication.single_role_manifest.v1",
+    "outer_control_manifest_schema": "revision0710.ehr_age.fixed_replication.outer_control_manifest.v1",
+    "role_manifests_are_separate_files": true,
+    "fold_wide_manifest_may_expose_all_role_paths_to_training_worker": false,
+    "train_only_authorization": {
+      "schema_version": "revision0710.ehr_age.fixed_replication.train_only_authorization.v1",
+      "create_once": true,
+      "authorized_outer_folds": [1, 2, 3, 4],
+      "outer_fold_0_training_authorization_allowed": false,
+      "allowed_top_level_keys_exact": [
+        "schema_version",
+        "status",
+        "replication_contract_sha256",
+        "parent_d07_003_sha256",
+        "outer_fold",
+        "train_folds",
+        "seed",
+        "max_epochs",
+        "fixed_checkpoint_epoch",
+        "train_method_spec",
+        "outer_control_manifest_sha256",
+        "train_role_manifest_sha256",
+        "train_age_targets",
+        "train_joint_labels",
+        "train_participant_count",
+        "train_participant_ids_canonical_sha256",
+        "label_free_cache",
+        "outer_transform",
+        "calibration_or_outer_paths_present",
+        "learned_checkpoint_inputs"
+      ],
+      "forbidden_contents": [
+        "role_registry_path",
+        "calibration_manifest_path",
+        "calibration_age_targets_path",
+        "calibration_joint_labels_path",
+        "outer_test_manifest_path",
+        "outer_test_age_targets_path",
+        "outer_test_joint_labels_path",
+        "full_source_label_path"
+      ],
+      "training_worker_receives_master_contract": false,
+      "training_worker_receives_full_role_registry": false,
+      "training_worker_receives_fold_wide_manifest": false
+    },
+    "sanitized_method_spec": {
+      "schema_version": "revision0710.ehr_age.fixed_replication.sanitized_method_spec.v1",
+      "create_once": true,
+      "derived_from_contract_sha256": true,
+      "allowed_top_level_keys_exact": [
+        "schema_version",
+        "status",
+        "replication_contract_sha256",
+        "parent_d07_003_sha256",
+        "candidate_id",
+        "initial_trainable_parameter_sha256",
+        "model",
+        "loss",
+        "training",
+        "cache_sha256",
+        "code_lineage",
+        "label_or_outcome_paths_present",
+        "learned_checkpoint_inputs"
+      ],
+      "forbidden_contents": [
+        "master_contract_path",
+        "role_registry_path",
+        "full_source_label_path",
+        "calibration_path",
+        "outer_test_path",
+        "baseline_prediction_path",
+        "learned_checkpoint_input_path"
+      ]
+    },
+    "training_worker_allowed_label_role": "train only",
+    "calibration_worker_open_condition": "epoch 60 complete and epoch-55 checkpoint plus pre-calibration manifest sealed",
+    "outer_worker_open_condition": "calibration predictions and nuisance outputs sealed; precommitted evaluation manifest and outer read ledger committed"
+  },
+  "role_artifact_sources": {
+    "fold_manifest": {
+      "path": "Revision-0710/01_data_rebuild/03_folds/fold_manifest_5fold.parquet",
+      "sha256": "298e52f8e9eba0ce895f87b4af341f0ad306880b1be416ac0511859a0918b450"
+    },
+    "outer_fold_roles": {
+      "path": "Revision-0710/01_data_rebuild/03_folds/outer_fold_roles.parquet",
+      "sha256": "b8c8d25bcd9228e2e4dafef5c4bec92ec9efac17d0f4125fe87b00b92c3a5249"
+    },
+    "chronological_age_targets": {
+      "path": "Revision-0710/01_data_rebuild/04_cache_v1/targets/chronological_age_targets.parquet",
+      "sha256": "4cae046274a96afc52b5be5db94ff258d5751ddcf2bbecdac8814b650151dd0f"
+    },
+    "participant_masks": {
+      "path": "Revision-0710/01_data_rebuild/02_outcomes_60m/participant_followup_and_evaluation_masks.parquet",
+      "sha256": "2f7a1822f9a346dd866c850e88cd8f9572734c88f019a8867f475a8cff6539b4"
+    },
+    "organ_outcomes": {
+      "path": "Revision-0710/01_data_rebuild/02_outcomes_60m/organ_outcomes_60m.parquet",
+      "sha256": "3ce09bca650758a4044e81c312dd781c71ca823f1d4567d3d0473158ec1248ee"
+    }
+  },
+  "common_label_free_inputs": {
+    "compact_cache": "Revision-0710/01_data_rebuild/04_cache_v1",
+    "cache_hard_gate_sha256": "573a76a01543a3752bd4448d84fdaa5e68e300b823a2a90f216018a2bc63e955",
+    "cache_input_gate_sha256": "6c8488bb9451b2f12b42c3c5220112d8bbb30bd4f302bf379974ee94196d8cf1",
+    "embedding_tables_sha256": "d711b36404898e3d488316c7e6eb82668beb6ce60f8c23b1c5e2d85017788d31",
+    "shards_are_label_free": true,
+    "targets_physically_outside_shards": true
+  },
+  "stage_machine": [
+    "LOAD_TRAIN_ONLY",
+    "MODEL_PREFLIGHT",
+    "TRAIN_E01_E60_CAPTURE_E55",
+    "SEAL_E55",
+    "LOAD_CALIBRATION_AFTER_E60",
+    "PREDICT_CALIBRATION_E55",
+    "SEAL_EVALUATION_BEFORE_OUTER",
+    "COMMIT_OUTER_READ",
+    "LOAD_OUTER_AFTER_LEDGER",
+    "SCORE_OUTER_E55",
+    "FINALIZE_RECEIPT"
+  ],
+  "protocol": {
+    "outer_1_to_4_from_scratch": true,
+    "outer_1_to_4_no_learned_input": true,
+    "outer_metric_selection": false,
+    "outer_metric_tuning": false,
+    "calibration_metric_selection": false,
+    "calibration_metric_tuning": false,
+    "target_metrics_other_epochs_allowed": false,
+    "no_target_label_read_before_ledger": true,
+    "no_calibration_label_read_before_epoch_60_and_e55_seal": true,
+    "fine_tune": false,
+    "warm_start": false,
+    "teacher": false,
+    "distillation": false,
+    "baseline_predictions_as_targets": false,
+    "checkpoint_averaging": false,
+    "ensemble": false,
+    "seed_retry": false,
+    "fold_exclusion_after_result": false,
+    "fold0_open_development_disclosed": true,
+    "fold0_training_use_for_other_outer_folds_allowed": true,
+    "confirmatory_or_external_validation_claim_allowed": false,
+    "partial_results_for_hr_km_allowed": false,
+    "training_worker_reads_full_role_registry": false,
+    "training_worker_reads_calibration_or_outer_role_manifest": false,
+    "training_phase_resume_allowed": false,
+    "evaluation_phase_resume_requires_epoch60_training_complete_receipt": true
+  },
+  "failure_and_resume_policy": {
+    "attempt_directories_create_only": true,
+    "failed_attempt_overwrite_or_delete_allowed": false,
+    "model_weight_only_resume_allowed": false,
+    "training_phase_resume_allowed": false,
+    "training_interruption_action": "seal current attempt FAILED; create a new attempt and restart at epoch 1 with seed 7210 and the unchanged contract",
+    "optimizer_only_resume_allowed": false,
+    "minimum_full_state_for_any_future_resume_protocol": [
+      "model_state",
+      "optimizer_state",
+      "scheduler_state",
+      "amp_scaler_state",
+      "python_rng_state",
+      "numpy_rng_state",
+      "torch_cpu_rng_state",
+      "all_torch_cuda_rng_states",
+      "batcher_epoch_and_cursor",
+      "completed_epoch",
+      "contract_and_code_hashes"
+    ],
+    "current_protocol_emits_in_training_full_state_resume_points": false,
+    "evaluation_phase_resume_allowed": true,
+    "evaluation_resume_precondition": "valid epoch-60 training_complete receipt and sealed epoch-55 checkpoint",
+    "evaluation_resume_boundary": "new create-only evaluation attempt from the valid epoch-60 training-complete receipt",
+    "partial_evaluation_or_existing_ledger_reuse_guaranteed": false,
+    "fold0_automatic_failure_recovery_supported": false,
+    "infrastructure_failure_changes_seed": false,
+    "numerical_failure_authorizes_tuning": false
+  },
+  "data_lineage": {
+    "source_paths": {
+      "organ_outcomes_60m": "Revision-0710/01_data_rebuild/02_outcomes_60m/organ_outcomes_60m.parquet",
+      "chronological_age_targets": "Revision-0710/01_data_rebuild/04_cache_v1/targets/chronological_age_targets.parquet",
+      "fold_manifest_5fold": "Revision-0710/01_data_rebuild/03_folds/fold_manifest_5fold.parquet",
+      "outer_fold_roles": "Revision-0710/01_data_rebuild/03_folds/outer_fold_roles.parquet",
+      "participant_masks": "Revision-0710/01_data_rebuild/02_outcomes_60m/participant_followup_and_evaluation_masks.parquet"
+    },
+    "source_sha256": {
+      "organ_outcomes_60m": "3ce09bca650758a4044e81c312dd781c71ca823f1d4567d3d0473158ec1248ee",
+      "chronological_age_targets": "4cae046274a96afc52b5be5db94ff258d5751ddcf2bbecdac8814b650151dd0f",
+      "fold_manifest_5fold": "298e52f8e9eba0ce895f87b4af341f0ad306880b1be416ac0511859a0918b450",
+      "outer_fold_roles": "b8c8d25bcd9228e2e4dafef5c4bec92ec9efac17d0f4125fe87b00b92c3a5249",
+      "participant_masks": "2f7a1822f9a346dd866c850e88cd8f9572734c88f019a8867f475a8cff6539b4"
+    },
+    "cache_paths": {
+      "cache_run_manifest": "Revision-0710/01_data_rebuild/04_cache_v1/cache_run_manifest.json",
+      "hard_gate": "Revision-0710/01_data_rebuild/04_cache_v1/cache_hard_gate.json",
+      "input_gate": "Revision-0710/01_data_rebuild/04_cache_v1/cache_input_gate.json",
+      "leakage_gate": "Revision-0710/01_data_rebuild/05_leakage_audit/leakage_gate.json",
+      "batch_manifest": "Revision-0710/01_data_rebuild/04_cache_v1/batch_manifest.json",
+      "embedding_tables": "Revision-0710/01_data_rebuild/04_cache_v1/embedding_tables.pt",
+      "fold_transform_manifest": "Revision-0710/01_data_rebuild/04_cache_v1/fold_transform_manifest.json"
+    },
+    "cache_sha256": {
+      "cache_run_manifest": "ac3077142c7e946feaf793c338bc8016095cfac04559e99477659c49db0f46d9",
+      "hard_gate": "573a76a01543a3752bd4448d84fdaa5e68e300b823a2a90f216018a2bc63e955",
+      "input_gate": "6c8488bb9451b2f12b42c3c5220112d8bbb30bd4f302bf379974ee94196d8cf1",
+      "leakage_gate": "40ff1d55702c18668dfde249524eaf327b009a2b7ee05953514833c84bfe1185",
+      "batch_manifest": "f8eea9e59cb7532df7c86ffa752ac48ec23f89b400d4c5cb14566ea0b56468d8",
+      "embedding_tables": "d711b36404898e3d488316c7e6eb82668beb6ce60f8c23b1c5e2d85017788d31",
+      "fold_transform_manifest": "d78f0076071bea925384647bd2c2b72fd6f1139cebac43d967f242eb48211892"
+    },
+    "cli_source_override_allowed": false,
+    "all_hashes_verified_before_role_build": true
+  },
+  "evaluation_freeze": {
+    "predictions_per_outer_fold": ["validation", "test"],
+    "prediction_columns_exact": [
+      "participant_id",
+      "organ_system",
+      "actual_age",
+      "predicted_age",
+      "outer_fold",
+      "split_role"
+    ],
+    "validation_population": "complete cyclic calibration fold",
+    "target_population": "complete paired outer fold",
+    "strict_age_population": "strict_healthy_reference_60m=1",
+    "risk_population": "organ-specific at_risk=1",
+    "age_correction_fit_role": "validation only",
+    "cox_nuisance_fit_role": "validation only",
+    "outer_fit_allowed": false,
+    "sealed_nuisance_contract": {
+      "seal_before_outer_read": true,
+      "age_correction_required_fields": [
+        "replication_contract_sha256",
+        "calibration_role_manifest_sha256",
+        "training_complete_sha256",
+        "fixed_e55_checkpoint_sha256",
+        "outer_fold",
+        "calibration_fold",
+        "calibration_participant_ids_sha256",
+        "strict_reference_participant_ids_sha256",
+        "validation_predictions_sha256",
+        "parameters"
+      ],
+      "age_correction_parameter_fields_exact": [
+        "organ_system",
+        "intercept",
+        "slope",
+        "fit_population_count"
+      ],
+      "cox_models_per_outer_fold": 14,
+      "cox_models": "seven organs times base(age+sex) and full(age+sex+corrected_age_gap)",
+      "cox_required_fields": [
+        "replication_contract_sha256",
+        "calibration_role_manifest_sha256",
+        "training_complete_sha256",
+        "fixed_e55_checkpoint_sha256",
+        "outer_fold",
+        "calibration_fold",
+        "organ_system",
+        "model_role",
+        "covariate_order",
+        "calibration_participant_ids_sha256",
+        "at_risk_participant_ids_sha256",
+        "feature_means",
+        "feature_scales",
+        "penalizer",
+        "coefficients",
+        "fit_participant_count",
+        "fit_event_count",
+        "fit_diagnostics",
+        "validation_predictions_sha256"
+      ],
+      "nuisance_manifest_must_bind_age_correction_path_and_sha256": true,
+      "nuisance_manifest_sha256_required": true,
+      "outer_worker_may_fit_or_refit": false,
+      "outer_worker_action": "apply sealed age-correction and Cox transforms/coefficients, then score Harrell C only",
+      "post_receipt_canonical_parity_audit_required": true,
+      "parity_audit_can_replace_primary_staged_result": false
+    },
+    "metrics": [
+      "strict_mae",
+      "strict_pearson",
+      "strict_r2",
+      "age_sex_harrell_macro_delta_c",
+      "age_sex_harrell_delta_c_by_organ"
+    ],
+    "every_fold_retained": true,
+    "fold_level_point_estimates_reported": true,
+    "five_fold_summary_reported": true,
+    "confidence_interval_contract": "not promised by the current canonical evaluator; any bootstrap or other CI is a separately frozen post-receipt analysis",
+    "performance_can_change_method": false,
+    "historical_fold0_metric_overwrite_allowed": false
+  },
+  "outputs": {
+    "root": "Revision-0710/03_ehr_age/04_fixed_replication",
+    "role_artifacts": "00_role_artifacts",
+    "runs": "01_runs",
+    "published_fivefold_bundle": "02_published_fivefold",
+    "prediction_registry": "02_published_fivefold/00_prediction_registry/ehr_age_d07_003_e55.json",
+    "evaluation": "02_published_fivefold/01_evaluation",
+    "oof_hr_km_inputs": "02_published_fivefold/02_oof_hr_km_inputs",
+    "receipts": "02_published_fivefold/03_receipts",
+    "legacy_sibling_output_directories_allowed": false,
+    "required_fold_receipts": 5,
+    "required_prediction_files": 10,
+    "oof_outer_test_coverage": "each participant exactly once and each participant-organ exactly once",
+    "hr_km_row_schema_exact": [
+      "participant_id",
+      "organ_system",
+      "outer_fold",
+      "fold_role",
+      "split_role",
+      "actual_age",
+      "sex",
+      "strict_healthy_reference_60m",
+      "predicted_age_raw",
+      "raw_age_gap",
+      "expected_age_gap",
+      "corrected_age_gap",
+      "corrected_predicted_age",
+      "at_risk",
+      "duration_months",
+      "event",
+      "contract_sha256",
+      "run_config_sha256",
+      "e55_checkpoint_sha256",
+      "outer_control_manifest_sha256",
+      "outer_test_role_manifest_sha256",
+      "age_correction_sha256",
+      "cox_nuisance_manifest_sha256",
+      "fold_receipt_sha256"
+    ],
+    "hr_km_fold_role_values": {
+      "outer_0": "OPEN_DEVELOPMENT",
+      "outer_1_to_4": "FIXED_REPLICATION"
+    },
+    "hr_km_split_role_value": "test",
+    "hr_km_manifest_and_data_dictionary_required": true,
+    "km_threshold_source": "pre-fixed before outer access or fitted on the paired calibration fold only",
+    "km_threshold_may_use_outer_outcomes": false,
+    "aggregate_publication": {
+      "canonical_bundle": "Revision-0710/03_ehr_age/04_fixed_replication/02_published_fivefold",
+      "canonical_bundle_must_not_exist_before_aggregation": true,
+      "unique_same_volume_staging_required": true,
+      "staging_subdirectories_exact": [
+        "00_prediction_registry",
+        "01_evaluation",
+        "02_oof_hr_km_inputs",
+        "03_receipts"
+      ],
+      "parity_coverage_schema_and_hash_checks_complete_before_publication": true,
+      "failure_receipt_and_staging_retention_required": true,
+      "publication_operation": "single same-volume atomic directory rename from complete staging root to canonical bundle",
+      "authoritative_completion_marker": "02_published_fivefold/03_receipts/FIVE_FOLD_AGGREGATION_COMPLETE.json",
+      "completion_marker_written_last": true,
+      "outputs_without_completion_marker_may_be_consumed": false,
+      "partial_outputs_for_hr_km_or_figures_allowed": false
+    },
+    "hr_km_handoff_requires_complete_5fold": true
+  },
+  "canonical_downstream": {
+    "post_receipt_parity_evaluator": {
+      "path": "Revision-0710/05_downstream/scripts/evaluate_method_5fold.py",
+      "sha256": "79603543f36ab8bf9991381bb73a5e557a230552d6938cd47840e601be495979"
+    },
+    "metrics_library": {
+      "path": "Revision-0710/05_downstream/common/crossfit_metrics.py",
+      "sha256": "b95822403bba86be355c947f6f1d36f1bbcd3661b322a4189533112e5418c2d2"
+    },
+    "primary_evaluator": "hash-bound stagewise fit/seal/score implementation in fixed_replication_runner.py",
+    "existing_canonical_fit_plus_score_evaluator_is_primary": false,
+    "final_purpose": "five-fold OOF model characterization and frozen HR/KM/Fig2-Fig14 input reconstruction"
+  },
+  "execution_interface": {
+    "entrypoint": "Revision-0710/03_ehr_age/02_runner/run_fixed_replication.py",
+    "orchestrator": "Revision-0710/03_ehr_age/02_runner/fixed_replication_runner.py",
+    "isolated_training_worker": "Revision-0710/03_ehr_age/02_runner/fixed_replication_train_worker.py",
+    "training_worker_is_subprocess_only": true,
+    "subcommands": [
+      "build-role-artifacts",
+      "validate-only",
+      "run-fold",
+      "run-sequence",
+      "select-receipts",
+      "aggregate-5fold"
+    ],
+    "expected_contract_sha256_argument_required": true,
+    "post_build_commands_require_expected_role_registry_sha256": true,
+    "post_build_commands_require_expected_role_validation_sha256": true,
+    "contract_status_required": "FROZEN_BEFORE_REPLICATION",
+    "data_source_path_overrides_allowed": false,
+    "role_root_override_allowed": false,
+    "output_root_override_allowed": false,
+    "verify_code_lineage_before_every_subcommand": true,
+    "hardcoded_contract_sha256_in_code_allowed": false,
+    "train_worker_required_expected_sha256_arguments": [
+      "expected_contract_sha256",
+      "expected_train_authorization_sha256",
+      "expected_role_validation_sha256"
+    ],
+    "train_worker_run_config_and_completion_bind_role_validation_sha256": true,
+    "receipt_selection": {
+      "schema_version": "revision0710.ehr_age.fixed_replication.receipt_selection.v1",
+      "create_once": true,
+      "explicit_paths_without_glob_or_discovery": true,
+      "exactly_one_complete_receipt_per_outer_fold": true,
+      "all_receipt_sha256_values_required": true,
+      "mixed_attempt_ids_allowed_only_for_infrastructure_recovery_under_the_same_contract_seed_and_config": true,
+      "performance_based_attempt_selection_allowed": false,
+      "aggregate_must_consume_selection_manifest": true
+    }
+  },
+  "formal_environment_contract": {
+    "training_device": "cuda",
+    "cuda_required_for_formal_training": true,
+    "cuda_absence_is_hard_failure": true,
+    "cpu_formal_training_allowed": false,
+    "amp_required": true,
+    "tf32_required": true,
+    "receipt_required_fields": [
+      "python_version",
+      "torch_version",
+      "torch_cuda_version",
+      "cudnn_version",
+      "lifelines_version",
+      "pandas_version",
+      "numpy_version",
+      "cuda_available",
+      "gpu_name",
+      "gpu_count",
+      "nvidia_driver_version",
+      "amp_enabled",
+      "tf32_enabled"
+    ]
+  },
+  "code_lineage": {
+    "ehr_age_model": {
+      "path": "Revision-0710/03_ehr_age/01_model/ehr_age_model.py",
+      "sha256": "9c282a7d534ac49d4ec3dd3e6c6167dc266fa691b1b1af34c1dab547245bd153"
+    },
+    "private_retain_age": {
+      "path": "Revision-0710/03_ehr_age/01_model/private_retain_age.py",
+      "sha256": "76f477299dc40af92031f8b76136e25cdda54392d0c02e45bd4f637b1250115b"
+    },
+    "ehr_age_losses": {
+      "path": "Revision-0710/03_ehr_age/01_model/ehr_age_losses.py",
+      "sha256": "a33170eafddadf3a80027e90193e25609fdf3a0002e70c2794516f0293282f67"
+    },
+    "ehr_age_data": {
+      "path": "Revision-0710/03_ehr_age/02_runner/ehr_age_data.py",
+      "sha256": "43571991dcaf91cc45073b229edbc4b5ed0f2950f0228eb74e860de3c578b7c3"
+    },
+    "ehr_age_training": {
+      "path": "Revision-0710/03_ehr_age/02_runner/ehr_age_training.py",
+      "sha256": "9b3a89a10034a3d3a06ca4a9c27ddcb94c70609d1d4aecf37c31035b6ce91b3a"
+    },
+    "d07_candidate_runner": {
+      "path": "Revision-0710/03_ehr_age/02_runner/d07_candidate_runner.py",
+      "sha256": "2bda8e05aff360ba4857a5abe5bd35a53c8976818780cc951c56c6aa4cbb20d8"
+    },
+    "d07_open_fold0_development": {
+      "path": "Revision-0710/03_ehr_age/02_runner/d07_open_fold0_development.py",
+      "sha256": "daeaaf8dc71691a236b119843ababba0d9e17229ea05d89879a01154beaf9bfa"
+    },
+    "compact_cache_dataset": {
+      "path": "Revision-0710/02_baselines_5fold/common/compact_cache_dataset.py",
+      "sha256": "3c7d31239a327cd11c7115c3bf17ec7b82f25eb8769e17915957236a68751d75"
+    },
+    "crossfit_metrics": {
+      "path": "Revision-0710/05_downstream/common/crossfit_metrics.py",
+      "sha256": "b95822403bba86be355c947f6f1d36f1bbcd3661b322a4189533112e5418c2d2"
+    },
+    "post_receipt_parity_evaluator": {
+      "path": "Revision-0710/05_downstream/scripts/evaluate_method_5fold.py",
+      "sha256": "79603543f36ab8bf9991381bb73a5e557a230552d6938cd47840e601be495979"
+    },
+    "fixed_replication_runner": {
+      "path": "Revision-0710/03_ehr_age/02_runner/fixed_replication_runner.py",
+      "sha256": "041ed865d25624ee1088b92a1057a870163c3bdf2e6e683253418633fb01923e"
+    },
+    "fixed_replication_train_worker": {
+      "path": "Revision-0710/03_ehr_age/02_runner/fixed_replication_train_worker.py",
+      "sha256": "7a617284841395a7ab258bb43d0a1479bbe098e3f29d32b4fe243dfbf711617a"
+    },
+    "fixed_replication_entrypoint": {
+      "path": "Revision-0710/03_ehr_age/02_runner/run_fixed_replication.py",
+      "sha256": "acd8b42956c2ab351a193865396fe2d39d6d5370023786081723933b207411c1"
+    },
+    "code_hashes_must_match_before_role_build": true
+  },
+  "verification": {
+    "python": "C:\\Users\\Mickey\\.conda\\envs\\ICD-Prediction\\python.exe",
+    "targeted_test_file": {
+      "path": "Revision-0710/03_ehr_age/tests/test_fixed_replication_runner.py",
+      "sha256": "5e03fa5c508b0efaf8f51d79d255164bb07fdf1ffc6df12e91594644387ce053"
+    },
+    "py_compile": "PASS",
+    "targeted_tests": {"passed": 14, "failed": 0},
+    "full_ehr_age_tests": {"passed": 164, "failed": 0},
+    "role_build_executed": false,
+    "formal_training_executed": false
+  },
+  "authorization": {
+    "role_build_authorized": true,
+    "validation_authorized": true,
+    "formal_training_authorized": true,
+    "aggregation_authorized": true,
+    "authorization_condition": "satisfied by the hash-bound v2 source snapshot, independent P0=0 review, frozen contract status, and execution_started=false"
+  }
+}

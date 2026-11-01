@@ -1,0 +1,27 @@
+{
+  "checkpoint_sha256": "19b327673123e719c792db5573ff54bc94a5b43e9b80456ca45774054602ddf6",
+  "created_at": "2026-07-13T11:53:12+00:00",
+  "fold_metrics_csv": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\04_ablation_runs\\fig04_fig05_corrected_primary_v1\\01_tasks\\01_fig04_01_canonical_control__outer0\\03_outer_test\\fold_metrics.csv",
+  "frozen_contract_sha256": "902464a1a0322de4ad1c9374d26d7ae4fc663728f98bb335ce8178d9dd141177",
+  "metrics": {
+    "age_sex_harrell_macro_delta_c": 0.04461318551152297,
+    "checkpoint_sha256": "19b327673123e719c792db5573ff54bc94a5b43e9b80456ca45774054602ddf6",
+    "evaluation_epoch": 55,
+    "figure": "Fig04",
+    "outer_fold": 0,
+    "raw_strict_mae": 3.708148206601915,
+    "raw_strict_pearson": 0.7977473750466987,
+    "raw_strict_r2": 0.6323539355968824,
+    "run_id": "fig04_01_canonical_control__outer0",
+    "strict_n_participant_organ_rows": 142534,
+    "strict_n_participants": 20362,
+    "variant_id": "fig04_01_canonical_control"
+  },
+  "next_action": "Review metrics, then relaunch with --continue-after-fold0-gate.",
+  "outer_fold": 0,
+  "run_id": "fig04_01_canonical_control__outer0",
+  "schema_version": "revision0710.fig04_fig05.corrected_primary.fold0_gate.v1",
+  "status": "AWAITING_REVIEW",
+  "task_complete_path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\04_ablation_runs\\fig04_fig05_corrected_primary_v1\\01_tasks\\01_fig04_01_canonical_control__outer0\\TASK_COMPLETE.json",
+  "variant_id": "fig04_01_canonical_control"
+}

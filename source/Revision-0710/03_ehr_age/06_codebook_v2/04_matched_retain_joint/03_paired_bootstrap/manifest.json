@@ -1,0 +1,19 @@
+{
+  "schema_version": "revision0710.ehr_age.codebook_v2.matched_control_bootstrap.v1",
+  "status": "COMPLETE",
+  "completed_utc": "2026-07-17T14:29:19+00:00",
+  "n_resamples": 1000,
+  "bootstrap_unit": "participant within outer fold; paired models",
+  "cox_models_refit_per_resample": false,
+  "comparison": "EHR-AGE versus RETAIN-organquery with matched supervision and training contract",
+  "inputs": {
+    "main_oof": {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\02_fivefold_frozen_huber1\\02_summary\\oof_predictions.parquet",
+      "sha256": "bfc9e0de88121bb4b520bd6c878ac4d655d00b7d1dfa1f64b5f7a4de0b633239"
+    },
+    "matched_oof": {
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\04_matched_retain_joint\\02_summary\\oof_predictions.parquet",
+      "sha256": "2659230d6e66b2adb0f8e2fc32b2f60cb2a9e236d27b33e3291048cd786bf914"
+    }
+  }
+}

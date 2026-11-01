@@ -1,0 +1,174 @@
+{
+  "schema_version": "final_figure_0725.m11.direct_specificity.candidate.v1",
+  "status": "PASS",
+  "generated_at_utc": "2026-07-26T20:20:34.610346Z",
+  "candidate_only": true,
+  "pointer_updated": false,
+  "inputs": [
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/02_fivefold_frozen_huber1/02_summary/oof_predictions.parquet",
+      "bytes": 109823293,
+      "sha256": "bfc9e0de88121bb4b520bd6c878ac4d655d00b7d1dfa1f64b5f7a4de0b633239"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/01_runs/shared_private_independent_view_huber1_fold0/run_config.json",
+      "bytes": 7575,
+      "sha256": "db74b4a92a9e3fe62644b06e14f4e6c537a17922c13d451fc8d0ac3b6612fbe6"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/02_fivefold_frozen_huber1/FINAL_SELECTION.json",
+      "bytes": 2493,
+      "sha256": "88fa375df53cca84a31a8a5e23341ae07e00806c31263e190ea9f7dddb01f729"
+    },
+    {
+      "path": "Revision-0710/05_downstream/06_metric_v2/01_contextual_covariates/participant_context_covariates.parquet",
+      "bytes": 6896709,
+      "sha256": "2b4d46d69b1c5c2c9629b27c12dce2d4c3460028fc16a0baffcdfdcbd44fb0bc"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Codebook_v2_Huber1/00_inputs/fig11_fig12/display_group_membership.parquet",
+      "bytes": 6225267,
+      "sha256": "53bba3cd1e478b374097680eb008309b5527a489a0313cd5aac1b7251b7c462c"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/01_MAIN_FIGURES/M11_Shared_Specific_Decomposition/CANDIDATE_v1/source_data/shared_specific_variance_full_and_16groups.csv",
+      "bytes": 1671,
+      "sha256": "aff89fdf33da4588eaaad00e9214f147499c94efa61185c8d984c64766b5bafb"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/01_MAIN_FIGURES/M11_Shared_Specific_Decomposition/CANDIDATE_v1/source_data/shared_specific_variance_bootstrap_1000.csv",
+      "bytes": 53490,
+      "sha256": "d550b671f1c86e572be8d0a757ec871e0019b8ce58dc7ad3e0a9992df9a3f732"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/01_runs/shared_private_independent_view_huber1_fold0/fold1_calibration_predictions.parquet",
+      "bytes": 10996798,
+      "sha256": "180ba894c56de383d2f1c9da8e37798ef3408e463bb0f0599711ce522800be95"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/01_runs/shared_private_independent_view_huber1_fold0/fold0_predictions.parquet",
+      "bytes": 20561844,
+      "sha256": "d6ba2a1378366c55ad7cb7e73f4403402199f84e225582ecc579b65a049f5151"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/02_fivefold_frozen_huber1/01_outer_folds/outer_fold_1/calibration_predictions.parquet",
+      "bytes": 20601588,
+      "sha256": "639228a5176d908e85bd75a11c1d9bc221acb239df83c523227faaae3dae0c97"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/02_fivefold_frozen_huber1/01_outer_folds/outer_fold_1/outer_predictions.parquet",
+      "bytes": 20591145,
+      "sha256": "37ed3bb206d4a70b9c63083159e51039ee6a81851cbb88457d9bac5e99e47512"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/02_fivefold_frozen_huber1/01_outer_folds/outer_fold_2/calibration_predictions.parquet",
+      "bytes": 20591577,
+      "sha256": "f529b1dd9635103aa74e1fba3d492d2dfd28e8445162551701dd365507296c59"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/02_fivefold_frozen_huber1/01_outer_folds/outer_fold_2/outer_predictions.parquet",
+      "bytes": 20588777,
+      "sha256": "29bc29e62e7692218ffa2e8a5a732b2b7bd8544eecd518fa2808c4c7ec86bf81"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/02_fivefold_frozen_huber1/01_outer_folds/outer_fold_3/calibration_predictions.parquet",
+      "bytes": 20617214,
+      "sha256": "83c1eaeb461d4f3e26b081cdb44ab31adde873145d6047a3101da94ebd7a1031"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/02_fivefold_frozen_huber1/01_outer_folds/outer_fold_3/outer_predictions.parquet",
+      "bytes": 20611566,
+      "sha256": "09cf8e2bac8a491273910b3ef9b4ab493c9e392a7c5efab4e1e785664c8b011f"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/02_fivefold_frozen_huber1/01_outer_folds/outer_fold_4/calibration_predictions.parquet",
+      "bytes": 20591113,
+      "sha256": "a0b3dd9bb85e5caad8b4d7533f92c5ee16b0d1e55e4a556812152ce9a81986ea"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/02_fivefold_frozen_huber1/01_outer_folds/outer_fold_4/outer_predictions.parquet",
+      "bytes": 20597678,
+      "sha256": "0c8a1a5f757a53cdd8b5237559af8b3afa25edd3263f11b5d4b6f7ad84c9b55f"
+    }
+  ],
+  "code": {
+    "path": "Revision-0710/Final_Figure_0725/01_MAIN_FIGURES/M11_Shared_Specific_Decomposition/scripts/build_m11_direct_specificity_candidate.py",
+    "bytes": 41129,
+    "sha256": "b0fdc8e07d81cdeadc90bb16041017cfa50a82261bc4e3d33644685ed74e4e4d",
+    "dependency": {
+      "path": "Revision-0710/Final_Figure_0725/01_MAIN_FIGURES/M11_Shared_Specific_Decomposition/scripts/build_m11_shared_specific_candidate.py",
+      "bytes": 39032,
+      "sha256": "f879da48b1f1319b6f074882e5b21362b9060c93637fe0f091c61de72890c400"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "Revision-0710/Final_Figure_0725/01_MAIN_FIGURES/M11_Shared_Specific_Decomposition/CANDIDATE_v2_DIRECT_EVIDENCE/outputs/M11_candidate_direct_organ_specificity.pdf",
+      "bytes": 76163,
+      "sha256": "60faab2d38a632cff4da2f2722a9a0a500207c69edefa0fd70e6f45c33517814"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/01_MAIN_FIGURES/M11_Shared_Specific_Decomposition/CANDIDATE_v2_DIRECT_EVIDENCE/outputs/M11_candidate_direct_organ_specificity.png",
+      "bytes": 621624,
+      "sha256": "90ba8e8ec8bc283fa5bbb644f65a0e9b5ebff9d96c5b2dda7d4bd9b605b440ad"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/01_MAIN_FIGURES/M11_Shared_Specific_Decomposition/CANDIDATE_v2_DIRECT_EVIDENCE/outputs/M11_candidate_direct_organ_specificity.svg",
+      "bytes": 82391,
+      "sha256": "dd92ea306e3b698bfb6ea4923348ffbdf50e896406b5e9fa070b47fc74d82877"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/01_MAIN_FIGURES/M11_Shared_Specific_Decomposition/CANDIDATE_v2_DIRECT_EVIDENCE/qa/QA_REPORT.json",
+      "bytes": 727,
+      "sha256": "3da5c6c0f89ff06253f8289101d861540c8c053bc978c721c30d1b9d44d730bf"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/01_MAIN_FIGURES/M11_Shared_Specific_Decomposition/CANDIDATE_v2_DIRECT_EVIDENCE/README_CN.md",
+      "bytes": 1040,
+      "sha256": "6ed1d057eac214351303bf19038d9c18d154820570c75de9bfeba4ef2608bb55"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/01_MAIN_FIGURES/M11_Shared_Specific_Decomposition/CANDIDATE_v2_DIRECT_EVIDENCE/source_data/analysis_contract.json",
+      "bytes": 1840,
+      "sha256": "36285c36a2dd632304ae25d8688c52b8fe8b2fcbe0f6a79a9621cb24b2edc5df"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/01_MAIN_FIGURES/M11_Shared_Specific_Decomposition/CANDIDATE_v2_DIRECT_EVIDENCE/source_data/cross_organ_relative_offset_fullrisk_cox_49.csv",
+      "bytes": 18353,
+      "sha256": "9735f7e37160c44a1f365f6c36e71bd8955b44c9b4ffafa5dee85f25bd7b5700"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/01_MAIN_FIGURES/M11_Shared_Specific_Decomposition/CANDIDATE_v2_DIRECT_EVIDENCE/source_data/matched_vs_offtarget_specificity_summary.csv",
+      "bytes": 1321,
+      "sha256": "88dc9bfb5a7942510dd47bac466e5cae1dce94739a63a34ce9e46e95ebaa5dff"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/01_MAIN_FIGURES/M11_Shared_Specific_Decomposition/CANDIDATE_v2_DIRECT_EVIDENCE/source_data/shared_specific_variance_bootstrap_1000.csv",
+      "bytes": 51624,
+      "sha256": "02637b95fdd6d643af27d8a684fdad990af0c46f053687591a6c1490508a538f"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/01_MAIN_FIGURES/M11_Shared_Specific_Decomposition/CANDIDATE_v2_DIRECT_EVIDENCE/source_data/shared_specific_variance_full_and_16groups.csv",
+      "bytes": 1634,
+      "sha256": "3f5e0de01c8befd5ef6dfe8261aabf30bb086e1d5e2852d79a705362c87805ad"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/01_MAIN_FIGURES/M11_Shared_Specific_Decomposition/CANDIDATE_v2_DIRECT_EVIDENCE/source_data/target_relative_offset_heldout_delta_c_35cells.csv",
+      "bytes": 15467,
+      "sha256": "b79486023190f33da0e1cb9d92d3242a95de56d46e524b6c19fe22ca65cad705"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/01_MAIN_FIGURES/M11_Shared_Specific_Decomposition/CANDIDATE_v2_DIRECT_EVIDENCE/source_data/target_relative_offset_heldout_delta_c_7organs.csv",
+      "bytes": 1081,
+      "sha256": "7b532d9a7aaa0e4241e7068618b7e876501df7244cf9c21124ade46e897eedf3"
+    }
+  ],
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.4",
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "matplotlib": "3.8.4",
+    "seaborn": "0.13.2"
+  }
+}

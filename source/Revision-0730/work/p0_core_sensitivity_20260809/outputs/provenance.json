@@ -1,0 +1,102 @@
+{
+  "created_utc": "2026-08-09T13:29:58.118816+00:00",
+  "analysis": "baseline-only calibration-reference sensitivity",
+  "baseline_only_reference": "has_preindex_icd == 0 and codebook-v2 prevalent_organ_count == 0; no future follow-up requirement",
+  "future_outcomes_used_for_reference_selection": false,
+  "model_retrained": false,
+  "workspace_root": "E:\\MPU\\Code\\Age-Prediction-0620",
+  "python": "3.11.13 | packaged by Anaconda, Inc. | (main, Jun  5 2025, 13:03:15) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "input_sha256": {
+    "e47_final_selection": "88fa375df53cca84a31a8a5e23341ae07e00806c31263e190ea9f7dddb01f729",
+    "context": "2b4d46d69b1c5c2c9629b27c12dce2d4c3460028fc16a0baffcdfdcbd44fb0bc",
+    "labels": "ce8dbbd8a149a872655cb6d37c0f2f7928b1471d4a54857c7d1189ecebcaaa27",
+    "e47_oof_predictions": "bfc9e0de88121bb4b520bd6c878ac4d655d00b7d1dfa1f64b5f7a4de0b633239"
+  },
+  "registry_prediction_files": [
+    {
+      "outer_fold": 0,
+      "split_role": "validation",
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\01_runs\\shared_private_independent_view_huber1_fold0\\fold1_calibration_predictions.parquet",
+      "sha256_observed": "180ba894c56de383d2f1c9da8e37798ef3408e463bb0f0599711ce522800be95"
+    },
+    {
+      "outer_fold": 0,
+      "split_role": "test",
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\01_runs\\shared_private_independent_view_huber1_fold0\\fold0_predictions.parquet",
+      "sha256_observed": "d6ba2a1378366c55ad7cb7e73f4403402199f84e225582ecc579b65a049f5151"
+    },
+    {
+      "outer_fold": 1,
+      "split_role": "validation",
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\02_fivefold_frozen_huber1\\01_outer_folds\\outer_fold_1\\calibration_predictions.parquet",
+      "sha256_observed": "639228a5176d908e85bd75a11c1d9bc221acb239df83c523227faaae3dae0c97"
+    },
+    {
+      "outer_fold": 1,
+      "split_role": "test",
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\02_fivefold_frozen_huber1\\01_outer_folds\\outer_fold_1\\outer_predictions.parquet",
+      "sha256_observed": "37ed3bb206d4a70b9c63083159e51039ee6a81851cbb88457d9bac5e99e47512"
+    },
+    {
+      "outer_fold": 2,
+      "split_role": "validation",
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\02_fivefold_frozen_huber1\\01_outer_folds\\outer_fold_2\\calibration_predictions.parquet",
+      "sha256_observed": "f529b1dd9635103aa74e1fba3d492d2dfd28e8445162551701dd365507296c59"
+    },
+    {
+      "outer_fold": 2,
+      "split_role": "test",
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\02_fivefold_frozen_huber1\\01_outer_folds\\outer_fold_2\\outer_predictions.parquet",
+      "sha256_observed": "29bc29e62e7692218ffa2e8a5a732b2b7bd8544eecd518fa2808c4c7ec86bf81"
+    },
+    {
+      "outer_fold": 3,
+      "split_role": "validation",
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\02_fivefold_frozen_huber1\\01_outer_folds\\outer_fold_3\\calibration_predictions.parquet",
+      "sha256_observed": "83c1eaeb461d4f3e26b081cdb44ab31adde873145d6047a3101da94ebd7a1031"
+    },
+    {
+      "outer_fold": 3,
+      "split_role": "test",
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\02_fivefold_frozen_huber1\\01_outer_folds\\outer_fold_3\\outer_predictions.parquet",
+      "sha256_observed": "09cf8e2bac8a491273910b3ef9b4ab493c9e392a7c5efab4e1e785664c8b011f"
+    },
+    {
+      "outer_fold": 4,
+      "split_role": "validation",
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\02_fivefold_frozen_huber1\\01_outer_folds\\outer_fold_4\\calibration_predictions.parquet",
+      "sha256_observed": "a0b3dd9bb85e5caad8b4d7533f92c5ee16b0d1e55e4a556812152ce9a81986ea"
+    },
+    {
+      "outer_fold": 4,
+      "split_role": "test",
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\02_fivefold_frozen_huber1\\01_outer_folds\\outer_fold_4\\outer_predictions.parquet",
+      "sha256_observed": "0c8a1a5f757a53cdd8b5237559af8b3afa25edd3263f11b5d4b6f7ad84c9b55f"
+    }
+  ],
+  "burden_context_audit": {
+    "participants": 456773,
+    "legacy_vs_codebook_v2_prevalent_organ_count_changed": 41388,
+    "no_baseline_icd_participants": 175637,
+    "no_baseline_icd_or_gp_participants": 121505,
+    "codebook_v2_prevalent_burden_mean": 0.39525760060248744,
+    "codebook_v2_prevalent_burden_max": 7
+  },
+  "output_sha256": {
+    "age_and_age_gap_metrics.csv": "251a3b1b66eb54f2342fe636a5271ef7edb0b629ba9bb42ea94e8eea235fec29",
+    "baseline_only_correction_parameters.csv": "ad1717a6ded16d67cbb80b5163737c2e5ffe837dacae887df4fc9ae7e3b3feca",
+    "baseline_only_reference_detailed_burden_cox.csv": "92f034fc0e4560255b0a73a0e703f92bfc1d9e2aa32b020a6ba160d466a4170a",
+    "cox_covariate_transform_audit.csv": "3f0c61a341a4da13fdb15ff84c2e021e8be64213ef106d8dbef0dcd46172ba38",
+    "cox_foldwise_harrell_c.csv": "407309a7df296b1742164ed1136874150d545a2c5afb5f3929e43436d3a1b2e6",
+    "cox_gap_transform_audit.csv": "84d8ce457c468deb87986d5626a226ec9e09d36c4fd317270bd8445301886c40",
+    "current_vs_baseline_only_OSAG_agreement.csv": "def6a695c34257862e56a98806cf75fdba8d0001329080c36f9d8c0c37571aae",
+    "four_group_OSAG_summary.csv": "429016cf8f1e1fd5a5106e8b08a968554de49ea1c252d3c3947542b8081b05de",
+    "prediction_registry_audit.csv": "e7f3c96a346c5375049320f0012d66e9de00fdac705298da1c2d17a35ce449c6",
+    "baseline_only_oof_by_fold\\outer_fold_0.parquet": "267af3a37441c310ca35e94668061cd54cfd2f5146019430d87290b74d849ffa",
+    "baseline_only_oof_by_fold\\outer_fold_1.parquet": "87e6d6bd31c102132f78680548a6cb002505bd12660f2c312ffa3120734557d6",
+    "baseline_only_oof_by_fold\\outer_fold_2.parquet": "06f659c6005d974d75657791b1a811e84bfa8282f57b196f9b241402301b5425",
+    "baseline_only_oof_by_fold\\outer_fold_3.parquet": "cbfe6555ca9f32d5242c988e50052c9de63dfb7c50fe8252a918f62414514be7",
+    "baseline_only_oof_by_fold\\outer_fold_4.parquet": "d110d62b4eca073cb1164741265a5df5f00782d4e31417dfbdd3acb05c12918e"
+  }
+}

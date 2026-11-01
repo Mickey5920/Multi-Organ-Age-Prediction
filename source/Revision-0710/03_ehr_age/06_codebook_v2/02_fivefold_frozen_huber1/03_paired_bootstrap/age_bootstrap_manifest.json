@@ -1,0 +1,18 @@
+{
+  "schema_version": "revision0710.ehr_age.codebook_v2.age_bootstrap.v1",
+  "status": "COMPLETE",
+  "completed_utc": "2026-07-17T07:52:57+00:00",
+  "n_resamples": 1000,
+  "seed": 7172026,
+  "bootstrap_unit": "participant within outer fold; seven organ rows retained",
+  "strict_participants": 102129,
+  "strict_rows": 714903,
+  "main_oof": {
+    "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\02_fivefold_frozen_huber1\\02_summary\\oof_predictions.parquet",
+    "sha256": "bfc9e0de88121bb4b520bd6c878ac4d655d00b7d1dfa1f64b5f7a4de0b633239"
+  },
+  "baseline_registry": {
+    "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\05_downstream\\01_prediction_registries\\tier_a\\retain.json",
+    "sha256": "d475f12f3e1993d0a238b202a9e6d4b65969e4415a8cf0a934ad1d7a38d938f7"
+  }
+}

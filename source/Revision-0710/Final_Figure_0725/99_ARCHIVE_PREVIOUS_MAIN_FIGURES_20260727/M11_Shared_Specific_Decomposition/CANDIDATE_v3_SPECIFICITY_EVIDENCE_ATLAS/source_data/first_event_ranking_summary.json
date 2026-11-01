@@ -1,0 +1,44 @@
+{
+  "eligibility": "at risk for all seven target organs and at least one 60-month event",
+  "participants_at_risk_all_seven": 325280,
+  "participants_with_first_event": 72730,
+  "participants_with_tied_first_event": 20331,
+  "participants_with_unique_first_event": 52399,
+  "observed_top1_accuracy": 0.41641688436683627,
+  "observed_top2_accuracy": 0.6457307850955589,
+  "unique_first_observed_top1_accuracy": 0.34832725815378157,
+  "unique_first_observed_top2_accuracy": 0.5716521307658543,
+  "unique_first_bootstrap_top1_ci95": [
+    0.34439493120097714,
+    0.35212599477089257
+  ],
+  "unique_first_bootstrap_top2_ci95": [
+    0.5676825893623925,
+    0.5757557396133514
+  ],
+  "unique_first_permutation_top1_mean": 0.14253918967919235,
+  "unique_first_permutation_top2_mean": 0.2839975381209565,
+  "bootstrap_top1_ci95": [
+    0.41315791282826897,
+    0.41985425546542005
+  ],
+  "bootstrap_top2_ci95": [
+    0.6424164718823044,
+    0.6492919015536918
+  ],
+  "permutation_top1_mean": 0.19068428433933726,
+  "permutation_top1_ci95": [
+    0.10235150556854118,
+    0.32446858242815896
+  ],
+  "permutation_top2_mean": 0.3612817681836931,
+  "permutation_top2_ci95": [
+    0.19241544067097485,
+    0.5521689811632063
+  ],
+  "tie_aware_random_chance_top1": 0.19061695900689432,
+  "tie_aware_random_chance_top2": 0.3624390275840846,
+  "bootstrap_replicates": 1000,
+  "label_permutation_replicates": 1000,
+  "seed": 20260727
+}

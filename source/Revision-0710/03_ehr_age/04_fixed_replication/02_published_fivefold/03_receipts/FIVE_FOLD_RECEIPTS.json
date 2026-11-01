@@ -1,0 +1,30 @@
+{
+  "contract_sha256": "05b8c00123cc2c6accb9ec6bd1a33aec999f0789513be4bc9a15c1f68b866f81",
+  "receipts": [
+    {
+      "outer_fold": 0,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\01_runs\\outer_fold_0\\reuse_d07_003_e55\\FOLD_COMPLETE_RECEIPT.json",
+      "sha256": "979b1246c02c240da1ebf6f422c7b94ba295400f017866d0c5ed37a84f861e27"
+    },
+    {
+      "outer_fold": 1,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\01_runs\\outer_fold_1\\attempts\\primary_e55_v1\\score\\FOLD_COMPLETE_RECEIPT.json",
+      "sha256": "89228f37bdac846e29847e414a278c8417cfd6e45f029e04e74119fb9ed6a281"
+    },
+    {
+      "outer_fold": 2,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\01_runs\\outer_fold_2\\attempts\\primary_e55_v1\\score\\FOLD_COMPLETE_RECEIPT.json",
+      "sha256": "2c9b7f93b681904420b52a0605117d6b2b205c3d6fb21bc82b4b277a824d09bb"
+    },
+    {
+      "outer_fold": 3,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\01_runs\\outer_fold_3\\attempts\\primary_e55_v1\\score\\FOLD_COMPLETE_RECEIPT.json",
+      "sha256": "d1ecc1370f15574d602572d7fe2bca8f6f92a825355ebd0ec9fa2399ea946eb5"
+    },
+    {
+      "outer_fold": 4,
+      "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\04_fixed_replication\\01_runs\\outer_fold_4\\attempts\\primary_e55_v1\\score\\FOLD_COMPLETE_RECEIPT.json",
+      "sha256": "4587095f46bf241821036b3feb4d74ae6e84c4265581786a147c2c59d9d33364"
+    }
+  ]
+}

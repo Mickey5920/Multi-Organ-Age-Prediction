@@ -1,0 +1,2510 @@
+{
+  "status": "VERSIONED_SOURCE_SNAPSHOT",
+  "version": "r2-20261101",
+  "source_policy": "Retained study source/configuration/mapping files remain byte-identical. Earlier public root entry points/image are preserved as explicitly identified historical files. Separate delivery entries provide portable figure generation, explicit-Array ICD preparation/verification and release-catalog checks; retained study algorithms and frozen inputs are unchanged.",
+  "tasks": {
+    "source_manifests": {
+      "entry": "Revision-0710/01_data_rebuild/scripts/01_build_source_manifests.py",
+      "profile": "statistics",
+      "root_mode": "output"
+    },
+    "icd_events": {
+      "entry": "Revision-0710/01_data_rebuild/scripts/02_build_icd_events.py",
+      "profile": "statistics",
+      "root_mode": "output"
+    },
+    "gp_events": {
+      "entry": "Revision-0710/01_data_rebuild/scripts/03_build_gp_events.py",
+      "profile": "statistics",
+      "root_mode": "output"
+    },
+    "outcomes_and_folds": {
+      "entry": "Revision-0710/01_data_rebuild/scripts/04_build_outcomes_and_folds.py",
+      "profile": "statistics",
+      "root_mode": "output"
+    },
+    "corrected_rebuild": {
+      "entry": "Revision-0710/01_data_rebuild/07_corrected_primary_v1/run_corrected_primary_rebuild.py",
+      "profile": "statistics",
+      "root_mode": "output"
+    },
+    "codebook_v2": {
+      "entry": "Revision-0710/01_data_rebuild/08_icd_codebook_v2/build_codebook_v2.py",
+      "profile": "statistics",
+      "root_mode": "output"
+    },
+    "labels_v2": {
+      "entry": "Revision-0710/01_data_rebuild/09_v2_labels/build_v2_labels.py",
+      "profile": "statistics",
+      "root_mode": "output"
+    },
+    "compact_cache": {
+      "entry": "Revision-0710/01_data_rebuild/04_cache_v1/scripts/build_compact_cache.py",
+      "profile": "statistics for --skip-embeddings; embedding for --only-embeddings",
+      "root_mode": "output"
+    },
+    "frozen_outer_fold": {
+      "entry": "Revision-0710/03_ehr_age/06_codebook_v2/run_frozen_outer_fold.py",
+      "profile": "neural",
+      "output_flag": "--output-dir"
+    },
+    "support_adapter": {
+      "entry": "Revision-0710/03_ehr_age/06_codebook_v2/train_external_common_support_adapter.py",
+      "profile": "neural",
+      "output_flag": "--output-dir"
+    },
+    "matched_comparator": {
+      "entry": "Revision-0710/02_baselines_5fold/04_objective_and_generic_20260808/scripts/train_objective_adapter.py",
+      "profile": "neural",
+      "output_flag": "--output-root",
+      "dispatch": "parsed_run"
+    },
+    "harmonize_statistics": {
+      "entry": "Revisions-1030/work/r1_2_5_reproducibility_20261031/harmonize_statistics.py",
+      "profile": "statistics",
+      "output_flag": "--output",
+      "project_flag": "--project-root"
+    },
+    "external_paired": {
+      "entry": "Revisions-1030/work/r1_3_external_20261031/run_external_paired.py",
+      "profile": "statistics",
+      "output_flag": "--output"
+    },
+    "information_matched": {
+      "entry": "Revisions-1030/work/r1_1_information_matched_20261031/run_information_matched.py",
+      "profile": "cox",
+      "output_flag": "--run-root"
+    },
+    "training_reference": {
+      "entry": "Revisions-1030/work/r1_4_reference_20261031/train_baseline_reference.py",
+      "profile": "neural",
+      "output_flag": "--output"
+    },
+    "reference_evaluation": {
+      "entry": "Revisions-1030/work/r1_4_reference_20261031/evaluate_reference.py",
+      "profile": "mixed by phase; see README",
+      "output_flag": "--output"
+    },
+    "leakage_audit": {
+      "entry": "Revision-0710/01_data_rebuild/scripts/05_audit_rebuild.py",
+      "profile": "statistics",
+      "root_mode": "output"
+    },
+    "prepare_roles": {
+      "entry": "Revision-0710/03_ehr_age/06_codebook_v2/prepare_v2_roles.py",
+      "profile": "statistics",
+      "root_mode": "output"
+    },
+    "context_covariates": {
+      "entry": "Revision-0710/05_downstream/06_metric_v2/scripts/materialize_contextual_covariates.py",
+      "profile": "statistics",
+      "root_mode": "output"
+    },
+    "fold0_model": {
+      "entry": "Revision-0710/03_ehr_age/06_codebook_v2/run_fold0_current.py",
+      "profile": "neural",
+      "root_mode": "project",
+      "output_flag": "--output-dir"
+    },
+    "summarize_model": {
+      "entry": "Revision-0710/03_ehr_age/06_codebook_v2/summarize_frozen_fivefold.py",
+      "profile": "neural (imports the frozen model runner, even for summary/help)",
+      "root_mode": "project",
+      "dispatch": "parsed_kwargs",
+      "function": "build_summary",
+      "arguments": [
+        "model"
+      ]
+    },
+    "external_validation": {
+      "entry": "Revision-0710/06_figures_and_statistics/04_external_validation/scripts/run_external_v2_0717.py",
+      "profile": "statistics for cache/seal/statistics; neural for infer",
+      "root_mode": "project"
+    },
+    "clinical_utility": {
+      "entry": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/03_clinical_utility/01_formal_run/scripts/run_0710_clinical_utility.py",
+      "profile": "cox",
+      "root_mode": "project"
+    },
+    "final_clinical_utility": {
+      "entry": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/07_final_model_clinical_utility/run_final_model_clinical_utility.py",
+      "profile": "cox",
+      "root_mode": "project"
+    },
+    "shared_covariance": {
+      "entry": "Revision-0730/0-Others/Fig7_Shared_Component_SEM/scripts/build_figure6_shared_component_residual_atlas.py",
+      "profile": "covariance",
+      "root_mode": "project"
+    },
+    "covariance_diagnostics": {
+      "entry": "Revision-0730/0-Others/Fig7_Shared_Component_SEM/scripts/validate_shared_component_sem.py",
+      "profile": "covariance",
+      "root_mode": "project"
+    },
+    "covariance_estimators": {
+      "entry": "Revision-0730/0-Others/Fig7_Shared_Component_SEM/scripts/explore_sem_estimators.py",
+      "profile": "covariance",
+      "root_mode": "project"
+    }
+  },
+  "files": [
+    {
+      "path": "Cox-0621/0-3-1-Filter-Health and Disease Organ Group.py",
+      "sha256": "132b7854c1c604fcbdc9672c62beb91da1fc782e42a4a052186d95592a682d9a",
+      "bytes": 32944,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/00_contract/SOURCE_FINGERPRINTS.json",
+      "sha256": "137d2e67ec9431b4792ac94f226cdc1ac54c8cf65f3f633dcaaf8da2727f79e4",
+      "bytes": 2906,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/00_contract/metric_v3/ARTIFACT_MANIFEST.v3.json",
+      "sha256": "c49d079c247e4162b8da7bade7aa424de71767fc23236804e088bba959768036",
+      "bytes": 2804,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/00_contract/metric_v3/SUCCESS_CRITERIA.v3.json",
+      "sha256": "fdaec5f73cdf344e9e153a0bf44ac5945845a0edc34c544da32e7178fe1b7432",
+      "bytes": 6319,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/00_config/source_paths.json",
+      "sha256": "7e4e76a9630e47909df7957301a7fe201d5f32ca365e4e81862b9b000d689ec5",
+      "bytes": 1155,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/01_index_and_events/phenotype_feature_columns.json",
+      "sha256": "dd5515d3df836faf51b4449507d89aab38dee0a56dabfe99b6b23e9b1c8605a4",
+      "bytes": 3303,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/03_folds/fold_rebuild_audit.json",
+      "sha256": "9e1ecb37b7aa807c8c5490f7e146ff59dda9ad1654f8186ff5f6b3fd8b397e4d",
+      "bytes": 537,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/04_cache_v1/batch_manifest.json",
+      "sha256": "f8eea9e59cb7532df7c86ffa752ac48ec23f89b400d4c5cb14566ea0b56468d8",
+      "bytes": 15788,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/04_cache_v1/cache_config.json",
+      "sha256": "c804d07be9430aee98b70e692601b97c3234fb76ca92288ab30d634e276484c0",
+      "bytes": 781,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/04_cache_v1/cache_hard_gate.json",
+      "sha256": "573a76a01543a3752bd4448d84fdaa5e68e300b823a2a90f216018a2bc63e955",
+      "bytes": 57466,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/04_cache_v1/cache_run_manifest.json",
+      "sha256": "ac3077142c7e946feaf793c338bc8016095cfac04559e99477659c49db0f46d9",
+      "bytes": 2915,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/04_cache_v1/embedding_manifest.json",
+      "sha256": "5abb2d27bc5b16307578a16a8db6b800b6675a921a1340f87cbf0c3e925d89c6",
+      "bytes": 952,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/04_cache_v1/fold_transform_manifest.json",
+      "sha256": "d78f0076071bea925384647bd2c2b72fd6f1139cebac43d967f242eb48211892",
+      "bytes": 2273,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/04_cache_v1/modality_starvation_audit.json",
+      "sha256": "77b76da0e1ef301877cb2507c0ebd87879fe68d1b84fb2256d7502e6ba970c0e",
+      "bytes": 629,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/04_cache_v1/scripts/build_compact_cache.py",
+      "sha256": "9bcb4746dc787df4d1b8105cfcf3838699c9a25dd0ade891755752f7bbdbb6a6",
+      "bytes": 27693,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/05_leakage_audit/leakage_gate.json",
+      "sha256": "40ff1d55702c18668dfde249524eaf327b009a2b7ee05953514833c84bfe1185",
+      "bytes": 5077,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/06_icd_codebook_v1/02_v1_corrected_primary/mapping.csv",
+      "bytes": 66249,
+      "sha256": "b65bd1a7dd356bf496e955e1d64b5caf8c1e1540803bbcd037442c4a44aabcd9"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/06_icd_codebook_v1/build_codebook.py",
+      "sha256": "4857636dfc01ed5eeb07341a2d8e2540c9c42e64b01968875b49b59582f5a339",
+      "bytes": 30189,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/06_icd_codebook_v1/tests/test_build_codebook.py",
+      "sha256": "c2a4f98d706bbec5d7dfcbc9e76e5fd593dd2c67e7686993a74ca56ef5df1161",
+      "bytes": 6041,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/07_corrected_primary_v1/01_index_and_events/icd_rebuild_audit.json",
+      "sha256": "d3b95ee13a3a15dc3675f6d2bf2e6e44514010c0a6ba20542e25293cec899657",
+      "bytes": 947,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/07_corrected_primary_v1/02_outcomes_60m/outcome_rebuild_audit.json",
+      "sha256": "b09b0903fc1f685ae554a5b7ab174c43ed9b5cb0cbbed3489bd33c33e2402965",
+      "bytes": 339,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/07_corrected_primary_v1/04_delta_audit/DELTA_AND_LEAKAGE_AUDIT.json",
+      "sha256": "ed7d3c4e341e4f965198671920149692b9d956f11e52df0cc7b560ff2ca4221c",
+      "bytes": 4812,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/07_corrected_primary_v1/MANIFEST.json",
+      "sha256": "80bc754fe579e68c69d084070a4c226bb9bc19b1bbedf8c2734d4117f8fdc874",
+      "bytes": 13913,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/07_corrected_primary_v1/run_corrected_primary_rebuild.py",
+      "sha256": "dbdefb6a7a006b1c1f8f3416370b1c9b54387f580aa1f0bb326e74791737ea29",
+      "bytes": 21114,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/08_icd_codebook_v2/build_codebook_v2.py",
+      "sha256": "3cb4cbd275b0d5cb5bdef398236a2ef1ac0e22be1e0a40e044b6862d7c38d427",
+      "bytes": 46120,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/08_icd_codebook_v2/codebook_v2.csv",
+      "bytes": 97295,
+      "sha256": "c2a6b36d4a37a7ef9be6ea2fd18c2774b4b56f4ea1732343188449df81b69678"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/09_v2_labels/build_v2_labels.py",
+      "sha256": "903a62944f8cd919ce040a49b2121db9c6180fe0cd9b8aca9a30ae6086c270e1",
+      "bytes": 22371,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/scripts/01_build_source_manifests.py",
+      "sha256": "c3a535357f7bb5f21e18622c2bd5374272248b321fc03ae8436bfe48ae757af8",
+      "bytes": 10640,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/scripts/02_build_icd_events.py",
+      "sha256": "5b8ea7a694931b5c3cca6808d5c63b6fd748867f9ad13b4558e956f318aea5c6",
+      "bytes": 16994,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/scripts/03_build_gp_events.py",
+      "sha256": "95bbef7d02ea7aeab2a318fde0abe4238ef1b4ca82884c1f5ee98f4c0b151cb4",
+      "bytes": 10161,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/scripts/04_build_outcomes_and_folds.py",
+      "sha256": "692f2e6f7423477a22d7dc1e775f898d782056c98205f653629969c38bf46207",
+      "bytes": 15157,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/scripts/05_audit_rebuild.py",
+      "sha256": "a736ef2af3a8cef32e361f7bfa41f50e53acbdc71d746cf0e1b6bf2b74593e7b",
+      "bytes": 39048,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/scripts/07_fingerprint_sources.py",
+      "sha256": "c566f987b520775453176bd26a28081bb868817d55dddd408402815e8be4acc2",
+      "bytes": 1818,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/scripts/compact_cache_core.py",
+      "sha256": "4687592d19acb730fc2e6c9aa95d019e179d18351f6cb0347c93e51939287fe7",
+      "bytes": 11369,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/scripts/leakage_safe_core.py",
+      "sha256": "05d996a191e751e99b4a92325f3fb275b847e8be83ef91df05f31b0809cf2f1d",
+      "bytes": 7621,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/scripts/outcome_table_core.py",
+      "sha256": "22a5f97fce1961a157f783ed3af3408016cac797849984924d54cd6112a664c7",
+      "bytes": 4754,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/01_data_rebuild/scripts/source_manifest_core.py",
+      "sha256": "dc6b5c2ff3c7a75fbb37c5df3a8b991e3077b864160b621c7cba1c3e348cecd5",
+      "bytes": 5202,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/02_baselines_5fold/04_objective_and_generic_20260808/03_evaluation/registries/medbert_style_prospective.json",
+      "sha256": "175feba460727cc98ca29644f8b84f52dbe8c0353acff4b6e9694e67fdeb436c",
+      "bytes": 4201,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/02_baselines_5fold/04_objective_and_generic_20260808/04_aligned_v2_evaluation_20260809/comparison_summary_aligned_v2.json",
+      "sha256": "cc1f739695e0e8c4032e75fe943dc1ee1aee320e2497cabedd478336ba7e3cad",
+      "bytes": 15531,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/02_baselines_5fold/04_objective_and_generic_20260808/04_aligned_v2_evaluation_20260809/paired_bootstrap/strict_mae_bootstrap_manifest.json",
+      "sha256": "5f1c352c45f95f5ff2f7b097f815c45b835e7114337cd1ecd84fe93dd56a5c41",
+      "bytes": 3435,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/02_baselines_5fold/04_objective_and_generic_20260808/configs/experiment.json",
+      "sha256": "033660bb5f51bfaf1c2dbca4349df479e19c804c74e1ed50eba957d1aeba1822",
+      "bytes": 2335,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/02_baselines_5fold/04_objective_and_generic_20260808/scripts/bootstrap_objective_matched_v2.py",
+      "sha256": "40fe14261e01d6c84df537bc3e4517ffd1b0e93ddd371b535d8a9de7ed9ad95c",
+      "bytes": 20088,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/02_baselines_5fold/04_objective_and_generic_20260808/scripts/bootstrap_strict_mae_v2.py",
+      "sha256": "d80b1b0784bc6f33466aad0d64f8c5f2998b30b2aca8d20985925019a3da9f6c",
+      "bytes": 8309,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/02_baselines_5fold/04_objective_and_generic_20260808/scripts/experiment_models.py",
+      "sha256": "6e1c0194503ffe05a8ab1d52bdd587099dfc1749b0b98dc7ada564d584136c34",
+      "bytes": 15189,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/02_baselines_5fold/04_objective_and_generic_20260808/scripts/summarize_aligned_v2_evaluation.py",
+      "sha256": "a69e262d7d53811142476a44351d8e13ed7030e1231afbe5a88497417b2197b2",
+      "bytes": 6718,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/02_baselines_5fold/04_objective_and_generic_20260808/scripts/train_generic_neural.py",
+      "sha256": "ca7a03cb0498daec78c6d781f6039ffff7eeed5068c27d3f24d0450f31b4fef9",
+      "bytes": 12966,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/02_baselines_5fold/04_objective_and_generic_20260808/scripts/train_linear_svr.py",
+      "sha256": "78359326d7bc3069a94c46268241b93211df98c4daf062e484e96212dfd1ff98",
+      "bytes": 16125,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/02_baselines_5fold/04_objective_and_generic_20260808/scripts/train_objective_adapter.py",
+      "sha256": "1caf74d11774cc82bf246d98ff7fe1e395dcf3155daf07b9586e48b19819c8bc",
+      "bytes": 19830,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/02_baselines_5fold/04_objective_and_generic_20260808/scripts/validate_weighted_concordance.py",
+      "sha256": "636a8bde29251e72ab663e0969f19b646d2f014a39837156faae32f615e71f6e",
+      "bytes": 1940,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/02_baselines_5fold/common/__init__.py",
+      "sha256": "93278d541eb48d3a97e156ed6eb668851338118eee541709e8785d0144de554f",
+      "bytes": 732,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/02_baselines_5fold/common/baseline_models.py",
+      "sha256": "8066d3f45eda2bc0893f0c54bf108a288104bee2bf7c9fb7e0ee5999c731bfc1",
+      "bytes": 9402,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/02_baselines_5fold/common/compact_cache_dataset.py",
+      "sha256": "3c7d31239a327cd11c7115c3bf17ec7b82f25eb8769e17915957236a68751d75",
+      "bytes": 12535,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/02_baselines_5fold/common/masked_backbones.py",
+      "sha256": "ea001e2ae1a590e8827c07049693e75e1f4fff6db22993e0687c9f1bc1064ca9",
+      "bytes": 24322,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/02_baselines_5fold/scripts/baseline_training.py",
+      "sha256": "cac9485885d8df6a973aa7b6a0ae3c1c4d8e3b39529fe4659779812c04cbadf5",
+      "bytes": 24108,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/02_baselines_5fold/scripts/train_baseline.py",
+      "sha256": "5f1fda34ac81e8ddba21382c05d7118fd85c6765d96e9beebb22cf5256c9ea5a",
+      "bytes": 1766,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/00_contract/ehr_age_d04_base_head_mlp_v1.json",
+      "sha256": "3b01b5858503299b778c26761c7ff462196549d8758c6066acc838cab8c8c88d",
+      "bytes": 3144,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/00_contract/ehr_age_d07_002_baseline_native_objective_v1.json",
+      "sha256": "bb52ebb59cdb6facc928f87a7bb7e5bd1712e8dba61bbf8de11745423d640e9e",
+      "bytes": 14524,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/00_contract/ehr_age_d07_003_e55_fixed_replication_v1.json",
+      "sha256": "05b8c00123cc2c6accb9ec6bd1a33aec999f0789513be4bc9a15c1f68b866f81",
+      "bytes": 37659,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/00_contract/ehr_age_d07_003_private_retain_v1.json",
+      "sha256": "73c46ce884458f39148aed47a5843be76d55e96db8253c4a88bb30f70ebaf84c",
+      "bytes": 19388,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/01_model/__init__.py",
+      "sha256": "ecfea0dd8694f4f02f205b462d2d29248915e3b85c3749d66de81b2df6060321",
+      "bytes": 754,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/01_model/age_expert_losses.py",
+      "sha256": "0d0dc505881efa41c45b2be83868d8936aa58064f8e1752867f3f8088b3e6c2c",
+      "bytes": 7399,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/01_model/ehr_age_losses.py",
+      "sha256": "d7b571ee8689448160427034a63dd28b5f1f5512c76ace0da9758dfc059a23c1",
+      "bytes": 16271,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/01_model/ehr_age_model.py",
+      "sha256": "5f08843ad324f48f21b06dc4b83467deeb39c5d09780f2cdfbd9d34b910363ef",
+      "bytes": 24692,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/01_model/private_retain_age.py",
+      "sha256": "76f477299dc40af92031f8b76136e25cdda54392d0c02e45bd4f637b1250115b",
+      "bytes": 13721,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/02_runner/d07_candidate_runner.py",
+      "sha256": "2bda8e05aff360ba4857a5abe5bd35a53c8976818780cc951c56c6aa4cbb20d8",
+      "bytes": 110906,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/02_runner/d07_open_fold0_development.py",
+      "sha256": "daeaaf8dc71691a236b119843ababba0d9e17229ea05d89879a01154beaf9bfa",
+      "bytes": 67632,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/02_runner/ehr_age_data.py",
+      "sha256": "43571991dcaf91cc45073b229edbc4b5ed0f2950f0228eb74e860de3c578b7c3",
+      "bytes": 23470,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/02_runner/ehr_age_training.py",
+      "sha256": "9b3a89a10034a3d3a06ca4a9c27ddcb94c70609d1d4aecf37c31035b6ce91b3a",
+      "bytes": 55935,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/02_runner/fixed_replication_runner.py",
+      "sha256": "041ed865d25624ee1088b92a1057a870163c3bdf2e6e683253418633fb01923e",
+      "bytes": 148840,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/02_runner/fixed_replication_train_worker.py",
+      "sha256": "7a617284841395a7ab258bb43d0a1479bbe098e3f29d32b4fe243dfbf711617a",
+      "bytes": 32286,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/02_runner/label_cache/fold0_development_joint_labels.manifest.json",
+      "sha256": "416bd0790b7594c5d1200261bb0b1d85b8090233753af3f95234531f6c94ff34",
+      "bytes": 2487,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/02_runner/run_fixed_replication.py",
+      "sha256": "acd8b42956c2ab351a193865396fe2d39d6d5370023786081723933b207411c1",
+      "bytes": 16014,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/02_runner/sealed_outer_test/fold0_outer_test_materialization.manifest.json",
+      "sha256": "bea942a81be40da43c3b6e5bae57d863f94f8e0f363eff0739d4866e85a016f6",
+      "bytes": 938,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/03_runs/fold0/development/06b1fd87ec50/development_summary.json",
+      "sha256": "a0910ab486e99d1feb8c5b969c28da19896ea5bc1e8c7eee802b5b77cc91219f",
+      "bytes": 2206,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/04_fixed_replication/02_published_fivefold/00_prediction_registry/ehr_age_d07_003_e55.json",
+      "sha256": "c11b9d2b81017444d8f10154429f10aa98493c0f75004b2aec770170eb0b639b",
+      "bytes": 3832,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/04_fixed_replication/02_published_fivefold/01_evaluation/parity_audit/evaluation_summary.json",
+      "sha256": "5d58d93cb30e84f2c16c244a3174a4816f7f39fe9745dded6f37d0896bd7fea2",
+      "bytes": 2272,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/04_fixed_replication/02_published_fivefold/03_receipts/FIVE_FOLD_RECEIPTS.json",
+      "sha256": "4c7bd87f0dd0e669df2a80d007ae44cd61455df691d97e6bf892cde43a010000",
+      "bytes": 1646,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/05_corrected_primary_v1/01_canonical_5fold/02_metrics/pooled_strict_metrics.json",
+      "sha256": "e7366f3d76b6ef90ca7cbb55407e0a6778cc4878ec88be73f9206135e375a90b",
+      "bytes": 464,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/00_roles/role_summary.json",
+      "sha256": "4609ef7cb458d52755c67d36fc36eaea0b842d3fbc3bd2e186146532fb4e1c9c",
+      "bytes": 4332,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/01_runs/current_architecture_fold0/metrics.json",
+      "sha256": "a2f52e692c04499a539d71f2ab66ea13c16fd7a4363c35e3e50d0adde2495e46",
+      "bytes": 18929,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/01_runs/shared_private_independent_view_huber1_fold0/age_correction.json",
+      "sha256": "72b4cd9dff7aec27830acda12165c939e9ebb63039dadb6aabc3844f7938a52e",
+      "bytes": 1381,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/01_runs/shared_private_independent_view_huber1_fold0/metrics.json",
+      "sha256": "fe07ec16c99b6e28c67e11030fec7fdeafc6a1ca87ef1e6a8fff5ce5a83e9007",
+      "bytes": 18948,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/01_runs/shared_private_independent_view_huber1_fold0/run_config.json",
+      "sha256": "db74b4a92a9e3fe62644b06e14f4e6c537a17922c13d451fc8d0ac3b6612fbe6",
+      "bytes": 7575,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/02_fivefold_frozen_huber1/02_summary/fivefold_summary.json",
+      "sha256": "fe83631710d0c26845f6db5b7751641b05c307e9e20be3dcde9762dbc21c3b93",
+      "bytes": 6843,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/02_fivefold_frozen_huber1/03_paired_bootstrap/age_bootstrap_manifest.json",
+      "sha256": "6f1ccef12b3863c729f6eee8cf2bb830932635dea416a5048d88427d564f5eba",
+      "bytes": 843,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/02_fivefold_frozen_huber1/03_paired_bootstrap/risk_bootstrap_manifest.json",
+      "sha256": "2d3c5cf48de1a62604b41cb66f40a3f9627b7ac1309d9d4db12d2d2561a0be8c",
+      "bytes": 1638,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/02_fivefold_frozen_huber1/FINAL_SELECTION.json",
+      "sha256": "88fa375df53cca84a31a8a5e23341ae07e00806c31263e190ea9f7dddb01f729",
+      "bytes": 2493,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/03_no_incident_control/02_summary/summary.json",
+      "sha256": "2953e16053a32296146e5df29c55853dd192b756297e5774d17d51c937d8fab3",
+      "bytes": 5589,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/04_matched_retain_joint/03_paired_bootstrap/manifest.json",
+      "sha256": "6e4e35dc115d8db46f44086cc24a5cdea2399164b98f21be1672348c2c3c3e2a",
+      "bytes": 964,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/04_matched_retain_joint/FINAL_SELECTION.json",
+      "sha256": "f3d70df7b9b28d5962dd1f7a644466751e64d7aa62f474ae2f58cc1782c4f330",
+      "bytes": 1532,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/bootstrap_age_advantage.py",
+      "sha256": "bf4de26120847f7415a805e5a20c7050c8e9e4eed86be8f2a4fa6577559046b8",
+      "bytes": 9139,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/bootstrap_matched_control.py",
+      "sha256": "d5da3c0f6125e45306281f4ab13abafc924a9625585578a6de8b194c8a3e833d",
+      "bytes": 15757,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/bootstrap_risk_advantage.py",
+      "sha256": "b2ed10a0c6c1334752d09303ee6b9e5dbd15c6cf6dfaec9a667d4867da6442e1",
+      "bytes": 17149,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/evaluate_no_incident_fivefold.py",
+      "sha256": "ba093616b5f98b12cddbe616e629c91e6312780c98497699ba930436c5068854",
+      "bytes": 8625,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/prepare_v2_roles.py",
+      "sha256": "1f7334d1635fab067af280a925c4732052f30230bfa5e47f9927276b784b82b7",
+      "bytes": 13012,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/run_fold0_current.py",
+      "sha256": "d2b0ed8d8f7b91b5bb921df61630f0eb6bba5d19e2dbe78ea5599203a88b1121",
+      "bytes": 26162,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/run_frozen_outer_fold.py",
+      "sha256": "6ab360967794dc3c9ab2fdd40e495b1538a06aeb51261e3e1c2636a654ccd868",
+      "bytes": 31481,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/summarize_external_common_support_adapter.py",
+      "sha256": "5cdeba9eb57ad7e9ce951a673cb231e13c875ccd41fc37042381ad9aa6f019b6",
+      "bytes": 5733,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/summarize_frozen_fivefold.py",
+      "sha256": "cafa6265c4f3824aa060b40c508c95a1a15a6b76fc55e01a53008ce4fd4a7216",
+      "bytes": 13096,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/train_external_common_support_adapter.py",
+      "sha256": "58f7643c7763b2acada70f6a7f0ed938894dc7b53cf54e0b15eed944ec006e41",
+      "bytes": 18335,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/06_codebook_v2/train_no_incident_outer_fold.py",
+      "sha256": "d9cd4799a809e6a70bba36a9878ac4b8c8c11a7b72212d95a1c3068d1b6f160c",
+      "bytes": 12220,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/03_ehr_age/tests/test_fixed_replication_runner.py",
+      "sha256": "5e03fa5c508b0efaf8f51d79d255164bb07fdf1ffc6df12e91594644387ce053",
+      "bytes": 9390,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/04_ablation_runs/fig04_fig05_corrected_primary_v1/00_runner/FROZEN_CONTRACT_CORRECTED_PRIMARY_V1.json",
+      "sha256": "902464a1a0322de4ad1c9374d26d7ae4fc663728f98bb335ce8178d9dd141177",
+      "bytes": 58874,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/04_ablation_runs/fig04_fig05_corrected_primary_v1/00_runner/contract_runtime.py",
+      "sha256": "5958fda32288f7bfe04f02c3eba97411d46499e2ecf9b342fa2ddf4fd5e1b2de",
+      "bytes": 19861,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/04_ablation_runs/fig04_fig05_corrected_primary_v1/00_runner/freeze_contract.py",
+      "sha256": "542ad8aab2823f0bd4d4710bf7577b9ff4799d29516fe8685ae62c5d4ede503a",
+      "bytes": 13628,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/04_ablation_runs/fig04_fig05_corrected_primary_v1/00_runner/monitor_two_workers_light.py",
+      "sha256": "b8578cd72ea4836481a0cd04f85ac9775614d375d65ccbb4c8f36c29dd967499",
+      "bytes": 7415,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/04_ablation_runs/fig04_fig05_corrected_primary_v1/00_runner/multiworker_queue.py",
+      "sha256": "d768a01ce3eaf4828296a9abe6bd620c7e0f756365d51ba487f470052604da0f",
+      "bytes": 23742,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/04_ablation_runs/fig04_fig05_corrected_primary_v1/00_runner/run_direct_5fold.py",
+      "sha256": "95104ba6fb4c86bfda3160c5faea3b18309f7eee3ab0ab5e6a8087d057efb48c",
+      "bytes": 25758,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/04_ablation_runs/fig04_fig05_corrected_primary_v1/00_runner/run_two_worker_queue.py",
+      "sha256": "bd5774bd5cb8c22c3ee4f2878f28fe699d1ba0731b7e8736153dc42b8132ebd7",
+      "bytes": 15395,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/04_ablation_runs/fig04_fig05_corrected_primary_v1/02_summary/FOLD0_CANONICAL_GATE.json",
+      "sha256": "da5fad3076c6e2b53bbf7f6d879a2140587a9366b701cd4b2233a9d5792547bb",
+      "bytes": 1532,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/04_ablation_runs/fig04_fig05_direct_5fold/00_runner/run_direct_5fold.py",
+      "sha256": "0b70f7f6a562b915c93a3b74a5514cad722c3e22f23b0bc07b60e9930fd02115",
+      "bytes": 18630,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/01_prediction_registries/tier_a/behrt_style.json",
+      "sha256": "2f563c576c5a5162c49d15bfd471788622ac3d1a1aedc7e9ab50054ba475136a",
+      "bytes": 4442,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/05_downstream/01_prediction_registries/tier_a/ehrformer_style.json",
+      "sha256": "72b2bce89436e2dfad32ab1b8dbb2ce49dc10cd8eeb2a2583e73d50c994229d6",
+      "bytes": 4626,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/05_downstream/01_prediction_registries/tier_a/medbert_style.json",
+      "sha256": "62259c5fe62c594b276f9002a324e16802f3db9c17b61ef7d4031fe2f642ec23",
+      "bytes": 4474,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/05_downstream/01_prediction_registries/tier_a/retain.json",
+      "sha256": "d475f12f3e1993d0a238b202a9e6d4b65969e4415a8cf0a934ad1d7a38d938f7",
+      "bytes": 4362,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/05_downstream/01_prediction_registries/tier_b/behrt_style_organquery.json",
+      "sha256": "8c5d01dc02057f84347b2316e932ce2996bd304f7cf83a830409431ea20784c0",
+      "bytes": 4693,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/05_downstream/01_prediction_registries/tier_b/ehrformer_style_organquery.json",
+      "sha256": "4a5e94c369a3e9605767fe9e96fd764d07b8d2520af4ca054649d48d8c9cfd58",
+      "bytes": 4802,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/05_downstream/01_prediction_registries/tier_b/medbert_style_organquery.json",
+      "sha256": "7a20680f7cd0721f0ff3263353befdc4cf19db67ede13fd1b700a3a1e85badd2",
+      "bytes": 4725,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/05_downstream/01_prediction_registries/tier_b/retain_organquery.json",
+      "sha256": "24611820a70724016845e1ff4c73e77cf6c5e0b01696735fcfe7d8016a64f569",
+      "bytes": 4613,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/05_downstream/03_baseline_summary/baseline_evaluation_registry.json",
+      "sha256": "94c023ae656f14084ce89aaea644b1b272e3ad1919cf75c23c358e298dcc2c77",
+      "bytes": 1670,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/05_downstream/06_metric_v2/CANDIDATE_DATA_DICTIONARY.json",
+      "sha256": "110bbddd624ee56569524fe150a2e23942bc3feb9db543629a21b0faa0cfb10c",
+      "bytes": 10153,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/05_downstream/06_metric_v2/common/__init__.py",
+      "sha256": "e1bcb1206985b456619ab31d31e43f9fd977a217b38e3f197554830986854bb4",
+      "bytes": 1088,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/06_metric_v2/common/clinical_utility_metrics.py",
+      "sha256": "55abc121c470a39d8b2c7a1566559a88e1d7a013db04a282bcbba6d2d1e4cfc2",
+      "bytes": 11353,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/06_metric_v2/common/contextual_covariates.py",
+      "sha256": "e12338f5e381d6b2d8fc5d52de7a424fb0e72dd22869ea655e7d7ff2c09e1d67",
+      "bytes": 6766,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/06_metric_v2/common/cox_scoring.py",
+      "sha256": "8da0284fcbefc5d1dcd296a43d79f7a6816833d23faf18a8a243fed015c2d57f",
+      "bytes": 5347,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/06_metric_v2/common/paired_bootstrap.py",
+      "sha256": "67f4706959f19cd6be3a2b7cd54853162255ed0704991afb454bafb32bae3fba",
+      "bytes": 8161,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/06_metric_v2/common/survival_metrics.py",
+      "sha256": "96a13fab451d439acb05b1f819cb870842c7a0e8c66c8bdb4cbfdd7d1b08d587",
+      "bytes": 16749,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/06_metric_v2/scripts/materialize_contextual_covariates.py",
+      "sha256": "fdcf6b558fcb7edf9875dd3069da7e5ab74877149009fadee49acf85c0d0a776",
+      "bytes": 22318,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/06_metric_v2/scripts/smoke_components.py",
+      "sha256": "cb871a2624531e1b002a7eee8c210898a35164ba89987ad86ba0b14f81cce8eb",
+      "bytes": 2697,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/06_metric_v2/validate_metric_v2_contract.py",
+      "sha256": "cca735275116276b4c27b80c460405abac78b2cd2e749c5229b4b65c4efa9412",
+      "bytes": 23688,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/07_metric_v3/validate_metric_v3_contract.py",
+      "sha256": "610da83d18b8934a4995dea79530cb7305b49c662446c06a5c62c733741b05d8",
+      "bytes": 4638,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/08_d07_fold0_baseline/build_d07_fold0_baseline.py",
+      "sha256": "cfaa5238c174a5bed12a434e516b0a40e0acb94bb1715c224cbf10b040882779",
+      "bytes": 33491,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/09_ehr_age_fixed_5fold/01_scripts/build_comparison_audit.py",
+      "sha256": "12df26139f77cef14d584754e6bf62927556360461019fab5cf0c28b29356a9d",
+      "bytes": 25953,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/09_ehr_age_fixed_5fold/04_tests/test_build_comparison_audit.py",
+      "sha256": "85497d5402d106c82561b580e5088f44dac95532998cc0a217433b915b176257",
+      "bytes": 8076,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/10_corrected_primary_v1/03_audit/baseline_outcome_change_audit.json",
+      "sha256": "0a6b1b9f94df960699a397afaddb7ed60209565996cf5855407e867794f4d3aa",
+      "bytes": 2535,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/05_downstream/10_corrected_primary_v1/MANIFEST.json",
+      "sha256": "5c037639f709776e4cfafaf2f1d7af1772230a83c16d42729771a082edeac5be",
+      "bytes": 17481,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/05_downstream/10_corrected_primary_v1/run_baseline_reevaluation.py",
+      "sha256": "7e236adb610ef52359d1051b7d221407bcdbd99d8534d1e2571a5a4c0dd0aa95",
+      "bytes": 13653,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/11_codebook_v2/02_summary/baseline_evaluation_registry.json",
+      "sha256": "70b5b3d111e0cafcf3373cb30a9e161bded498454a2a33485e9b49cc19332291",
+      "bytes": 2123,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/05_downstream/11_codebook_v2/02_summary/baseline_method_table.json",
+      "sha256": "d38817ba02e9dec9ac862d7c4969bf834b449fa26ca56dd4f8aa3da6d2247d17",
+      "bytes": 6553,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/05_downstream/11_codebook_v2/02_summary/baseline_metric_envelope.json",
+      "sha256": "6f45913c3a3a2eec4a11054544ae400f238e2250b8fb00faf84ed3f14d4872e6",
+      "bytes": 3399,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/05_downstream/11_codebook_v2/baseline_targets.json",
+      "sha256": "16d099eb71012b569e898c7e0737234534a6c002df4a0d7751119ada5f7fbb8a",
+      "bytes": 543,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/05_downstream/11_codebook_v2/run_v2_baselines.py",
+      "sha256": "6e3094bf406f9facfd2083a20a160264f07cc9b2348876d5230b5f90ac36d329",
+      "bytes": 5650,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/common/__init__.py",
+      "sha256": "dcbe7ce9a8acc3ebf09dbb2b32ae5670d94fa166f1f23b911d4cbce4a60a737d",
+      "bytes": 69,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/common/crossfit_metrics.py",
+      "sha256": "b95822403bba86be355c947f6f1d36f1bbcd3661b322a4189533112e5418c2d2",
+      "bytes": 18312,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/scripts/build_prediction_registry.py",
+      "sha256": "ce895d7fcb83fee38cb7d157f054fc44f1f5897c0ebbf6df702864278d5856ec",
+      "bytes": 8025,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/scripts/evaluate_fold0_development.py",
+      "sha256": "eee141e911616013489ec5910d7cdeb727e0c5e2a43af79ffc2d53ad0a0f894a",
+      "bytes": 16498,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/scripts/evaluate_method_5fold.py",
+      "sha256": "79603543f36ab8bf9991381bb73a5e557a230552d6938cd47840e601be495979",
+      "bytes": 25900,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/scripts/summarize_baseline_envelope.py",
+      "sha256": "450d2e1eea1852242e7418758c294560e6188cf67a24d57538cef0dbb7f71c70",
+      "bytes": 15557,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/05_downstream/scripts/summarize_fold0_development_envelope.py",
+      "sha256": "3d5ad24891e8eb37ada671a13719c1e7777ab4c465a564af511ad8d12c9dddaf",
+      "bytes": 18298,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/FIG13_FIG14_PANEL_SCHEMA_V8.json",
+      "sha256": "1c0b7cac53ebedc75bef2c16c828843701122a577b2de4fe2b1cbf624a13f09a",
+      "bytes": 5616,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/artifacts_v8/ENVIRONMENT_LOCK_V8.json",
+      "sha256": "2ef18d33106b296f6aff9a16bf1f54531e16640b095078da8d11d99b5de80811",
+      "bytes": 6947,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/artifacts_v8/EXTERNAL_VALIDATION_CONTRACT_V8.json",
+      "sha256": "0a5f3b73c2f1cd4bb9ba2c995e41759f1953183e49f4ef6d3b89ef672e7f8cda",
+      "bytes": 38649,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/artifacts_v8/MIMIC_78_SLOT_MAP_V8.csv",
+      "bytes": 44272,
+      "sha256": "368ea8ad08886514a367d8705438f90d645f1599ec5eb86005cda02f71dacc6d"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/artifacts_v8/MIMIC_ICD10_ORGAN_MAP_V8.csv",
+      "bytes": 4725,
+      "sha256": "a62d7920e88fcf354b0262d60653fbe304d73ade50fd970528b766630890f16d"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/artifacts_v8/NHANES_78_SLOT_RELEASE_MAP_V8.csv",
+      "bytes": 40210,
+      "sha256": "5e506841f34b9ca9b4609fb33f952aee4ba91f2e425fd9985a87e22926aea08d"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/artifacts_v8/NHANES_QUESTIONNAIRE_LABEL_MAP_V8.csv",
+      "bytes": 3601,
+      "sha256": "499ab0d9f685d6503f3ee7308521a2d97e752853a2a115c78d3954191f5861fb"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/artifacts_v8/OUTPUT_SCHEMAS_V8.json",
+      "sha256": "e2cef0401cef69ddd3f8c5db030fb0658c05d564dc8eeb49cd62442d7ab0a77a",
+      "bytes": 217060,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/artifacts_v8/SOURCE_REGISTRY_V8.json",
+      "sha256": "d8182600e80ed0d67d123dc09cbe328021a63768fc5b898546811cecc04fe268",
+      "bytes": 53502,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/build_external_validation_prefreeze_v8.py",
+      "sha256": "e8c80708099ca8a866084318f69de89293537b49febb51222f1e0ad506599543",
+      "bytes": 199447,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/execute_external_validation_v8.py",
+      "sha256": "4ecd23ce91b98684f37c5ee4718339b6b5e0982a50e498ccd934d789f9ff717d",
+      "bytes": 63620,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/execute_external_validation_v8_runtime.py",
+      "sha256": "5f2abb09c759738ec44233302182d72587b98276a71dd05fa1620f3bfb660847",
+      "bytes": 254011,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/tests/test_external_validation_prefreeze_v8.py",
+      "sha256": "05f1d16e64c3682260222db072e617c5bd44de47683be3469dc971e21f42c7ce",
+      "bytes": 97903,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/v8_environment_probe.py",
+      "sha256": "bac0d9469d624535fcf4d103a202b444f326b8c89844d16206cb1daf55800a59",
+      "bytes": 612,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/v8_execution_guard.py",
+      "sha256": "594491916228eb239b8a2a36a25b3a16c0e50a6d3172d240eb17ae0301973b66",
+      "bytes": 7956,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/v8_scientific_extensions.py",
+      "sha256": "5a6385a35d28ba4fa954862e2e18b7c023ef996e8800e25b4d2f78b348e024c7",
+      "bytes": 40390,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/external_validation_prefreeze_v8/verify_external_validation_prefreeze_v8.py",
+      "sha256": "fa8749b6410cf71561b743f01e96ac96fa516cedf92768d2560438c98155c072",
+      "bytes": 86695,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v1/ablation_inputs.py",
+      "sha256": "68df38620c1a9928d9051d65860394cf7a0b93bbc1a3d08546297aae7b63c999",
+      "bytes": 4347,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v1/ablation_loss.py",
+      "sha256": "472b57de9fd2cf29fa3d8824aceee5c728cf3b9559a36de35ef7952d00d605c9",
+      "bytes": 6239,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v1/ablation_model.py",
+      "sha256": "6e691b5ca2af9f45fbe9b4b8caee65ceb6495f25f4aafa6ccfb58ea728091eb8",
+      "bytes": 12882,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/FROZEN_ABLATION_CONTRACT_V8.json",
+      "sha256": "e1f0454dbf2b9bbc734bd98233b21af3b9d2ccab7a526d33a10b280d11e2bc26",
+      "bytes": 56032,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/OUTPUT_SCHEMAS_V8.json",
+      "sha256": "a5a461d4404887bc1861d97524fc593e4639bcff30e7c8a65d8a62153bb91983",
+      "bytes": 27001,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/VARIANT_REGISTRY_V8.json",
+      "sha256": "c8970599030994e73de902ada4195bcff7d55f677fa15c786ded1335f5fa6148",
+      "bytes": 10587,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/finalize_prefreeze_v8.py",
+      "sha256": "4a08d3ddeabd2619ed1be34e0264243fc007cd5ed8f2c67c35565829056458a5",
+      "bytes": 10356,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/formal_executor.py",
+      "sha256": "83fcd86889947b488549f411b392120b829508f839d6288bfebbd1a5af2a6a9e",
+      "bytes": 35174,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/isolated_worker.py",
+      "sha256": "0dc04782c0da2baf950f2544e411a7b40c185be6a8ccd19e35032f3af15963e5",
+      "bytes": 40667,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/refresh_prefreeze_v8.py",
+      "sha256": "1bb1dc5b3f15068008ca33718b7b1ce7aac11b4348cf1b77046472a79694b706",
+      "bytes": 8339,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/run_cuda_production_shape_preflight.py",
+      "sha256": "db8377eb21193d252bf6cfa7530995729f08b0850f02074726a2b61d521640cb",
+      "bytes": 12584,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/run_scaled_integration_smoke.py",
+      "sha256": "72261e291085a583c60158da9d42fc577bb10d0025a4a9d0bd76b2ede75afce2",
+      "bytes": 17309,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/tests/conftest.py",
+      "sha256": "4d45bf980bb3affb21a08c3887bd352406ec929a83e780a28d6c66beefce26bf",
+      "bytes": 283,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/tests/test_authorization_executor.py",
+      "sha256": "d3684897abfe75616d817cb5187f5915824f55ce4de20a0f003ff4ce00849972",
+      "bytes": 6960,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/tests/test_contract_queue_protocol.py",
+      "sha256": "77f77bb3fc4d1aea24c80586d0e746d76edbe2c507dc07d5eee17b7495bced10",
+      "bytes": 9117,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/tests/test_deep_replay_v8.py",
+      "sha256": "ef8f4fb1ee13617d341e1af0efcec9603bfbaf257a6848a1053e4dabca56ce04",
+      "bytes": 24764,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/tests/test_model_training_wiring.py",
+      "sha256": "bb84de0e4e4f408b92f870acd9949ca41ccbe1db2e102efe0f4ec2ef7e188372",
+      "bytes": 6621,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/tests/test_schema_state_machine.py",
+      "sha256": "92eeed9f747494df0cdbf28bb815cbeaec63d8e17caa3ba8e2203cb4e0c96fbf",
+      "bytes": 6758,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/tests/test_v8_integrity.py",
+      "sha256": "a3ad307029583cd25f7d3801fd2850c662bdc8ed489a711e1ab47c5192152d8a",
+      "bytes": 10531,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/tests/test_v8_terminal_hardening.py",
+      "sha256": "e7ce7cd8437d6244367cb75cffd624d9481e6d89d7cd7a11e286819f8aa3567d",
+      "bytes": 15494,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_authorization.py",
+      "sha256": "998189d80698b3a0987376c115053eb0cf1031c7f58134000b43619c232f7e7a",
+      "bytes": 13888,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_contract.py",
+      "sha256": "9e8bec62cbe1397213e282734f6f0bcd12d5b1742d101b79b773e791fa00ed2a",
+      "bytes": 29894,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_data.py",
+      "sha256": "c7b081c7d818349defef2670e6fe1fd343154e5d040ba87f55843d5a9aad40f8",
+      "bytes": 26571,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_independent_replay.py",
+      "sha256": "050630e2b31d364fe43920df5ba0a911ba1d11936764c1451173b82ea23e1f12",
+      "bytes": 13919,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_inputs.py",
+      "sha256": "16172be0851aa8172df2d4609ade167ac39464816527ebee11d06f5d6984bbdb",
+      "bytes": 6045,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_loss.py",
+      "sha256": "c3e3cef7204f472b974e14673095558648357a7ba0391868a2e2fc139fb0d0af",
+      "bytes": 4865,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_model.py",
+      "sha256": "bdb61e1a3df3d5fa95a8a02052e8454e1c8c4f0d26034090bf061723e26c9d4b",
+      "bytes": 5426,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_runtime_guard.py",
+      "sha256": "dddb5ae5ac0af24128094fa54592250f2e4c4418f283261ef961766b4ba16e9c",
+      "bytes": 12007,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_schema_validator.py",
+      "sha256": "2accc1e39cfa65ea104629066f3ff3a3405b2c4dfab8691c4aab62f9f7d72de7",
+      "bytes": 98073,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_state_machine.py",
+      "sha256": "2c896365752dc52d16fe8d65d55c2297eb40bf441e256d1fbfc81770d991efcf",
+      "bytes": 6633,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/v8_training.py",
+      "sha256": "cdcaadae6053d11b8e12e5edb51c12e6b8e1de35c9468fd7f8ba4e4f775e3ff3",
+      "bytes": 21641,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/verify_formal_attempt_v8_independent.py",
+      "sha256": "8f25dba7a768396598a2fa42f397ef9b9dedbf29329bf315cb4e7109aded61df",
+      "bytes": 10979,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/verify_prefreeze_v8_independent.py",
+      "sha256": "45a780696b7066663473253e3d27da763f28de336f15a92efa8bc02936f8831e",
+      "bytes": 48970,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/00_plan/fig04_fig05_ablation_prefreeze_v8/worker_access_guard.py",
+      "sha256": "ba3bc1f33f8a5098c088e6d3da07103a28c0781e044c27f8317d76f737ce6c92",
+      "bytes": 8627,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/01_density_and_burden_v2_5_candidate5_clean_formal_runtime/src/candidate5_runtime/statistics.py",
+      "sha256": "ddaf20f75614f8d31998c0915b668a61090f785069931bf2554180df0dcd017e",
+      "bytes": 23499,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/03_clinical_utility/01_formal_run/scripts/run_0710_clinical_utility.py",
+      "sha256": "c419bda9e458fbd35825c7cac5b9101c3c49a0d0cd1e3e1dbfce007073e79a09",
+      "bytes": 33859,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/04_cox_diagnostics_and_competing_risk/ANALYSIS_CONTRACT.json",
+      "sha256": "39497925fd248a6484bcf311f0e6f48b7b572d4e3312f5998f39edb9358e72ea",
+      "bytes": 2767,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/04_cox_diagnostics_and_competing_risk/run_primary_survival.py",
+      "sha256": "9216d420c01ac893bfe98057aad496bf351e265b3fcfa1bf6afc121ff8ce9120",
+      "bytes": 49109,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/04_cox_diagnostics_and_competing_risk/survival_analysis_core.py",
+      "sha256": "6c4dd7eef4ea690d0d88a330f117d8d0b45274d788e10862ab665e245e435a1b",
+      "bytes": 27852,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/05_fig11_fig12_marginal_and_review_closure/01_scripts/run_clinical_utility_paired_bootstrap.py",
+      "sha256": "913873621e2153c6b68e898af3dd2edcd80db1c87cf4003aa1789439a645a674",
+      "bytes": 35506,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/05_fig11_fig12_marginal_and_review_closure/01_scripts/run_density_burden_nested_cox.py",
+      "sha256": "3cc3a62aad137aae2d26668ceb0b0f8becf0433dc3544040c4b522286eac7d6c",
+      "bytes": 13465,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/05_fig11_fig12_marginal_and_review_closure/01_scripts/run_m3_time_window_sensitivity.py",
+      "sha256": "1100301fb6f88675a8eae85416e3fe67e892a6fc269368bb63f0e5500576ccf2",
+      "bytes": 8408,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/05_fig11_fig12_marginal_and_review_closure/01_scripts/run_marginal_gap_associations.py",
+      "sha256": "583aa97c0b6443492d7f85a7c1e0f335410c44be90ab53b000df0945cd0e1b25",
+      "bytes": 12196,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/05_fig11_fig12_marginal_and_review_closure/01_scripts/verify_closure_outputs.py",
+      "sha256": "5631a9fda39cc43f56e7c7fc81cc47205c7ee1507dda330703975ee96f947600",
+      "bytes": 6901,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/00_input_lock/INPUT_MANIFEST.json",
+      "sha256": "9ce668bf7d9dacb38ce4f4685c91234dc0eaf8e2f023c6753cfcf88c2b346e51",
+      "bytes": 44262,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/01_age/AGE_EXECUTION_AUDIT.json",
+      "sha256": "2b2d7502dd9504c3fe77806e08820f7484832e86abdcfe1eca51d651b8f12c6a",
+      "bytes": 1260,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/01_age/AGE_FINAL_RECEIPT.json",
+      "sha256": "d52df7302b1343adaa2212f7692f9012acb9b4e9104874c25c9ca824b687d151",
+      "bytes": 4003,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/01_age/AGE_POINT_PARITY.json",
+      "sha256": "8c4757d723c508890433d77b55c3135c9c6e7a0dd4a55443cda1f0e5b20fa9c3",
+      "bytes": 7359,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/01_age/AGE_RUN_MANIFEST.json",
+      "sha256": "8715b43dc534fa353c5556a6f5b43acc7cd613bb653a5134ff9a2b70181d6c28",
+      "bytes": 2038,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/02_risk_score_cache/00_risk_input_lock/RISK_INPUT_MANIFEST.json",
+      "sha256": "a54d7ded9d5a0af796b582e4e4fea36ea5f6b72fe1ab519192d2bcabb161b42a",
+      "bytes": 74802,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/02_risk_score_cache/01_reference/REFERENCE_SCORE_MANIFEST.json",
+      "sha256": "33a370306481d1dd7113f0de8515df8a8eac3182d009a65fb50e49a7652c4106",
+      "bytes": 1373,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/03_risk_bootstrap/03_all_six_fdr/FDR_COMPLETE.json",
+      "sha256": "40c908979e750f15250ac6afa80e3cc7e353d9c7dd6326ac656b238571838615",
+      "bytes": 1398,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/FINAL_RECEIPT.json",
+      "sha256": "dcc5734c842153ec1796136db5b47157afa861a9ede48ea72451649f57db1288",
+      "bytes": 7328,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/analysis_contract.json",
+      "sha256": "3f6d69b7900494d7c944d9bc3395a507b5034110e66ba1f9a5931e8dfde270cf",
+      "bytes": 3723,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/paired_uncertainty.py",
+      "sha256": "0cd9309279fb678c09026491206da806ac0b6481632af0f2b7377a32963347ba",
+      "bytes": 43626,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/run_paired_uncertainty.py",
+      "sha256": "d5b2dc8e8be037e6b9aa899641160a20e82fb761b9faaafc3a5802f772d0438b",
+      "bytes": 59873,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/verify_final_receipts.py",
+      "sha256": "a2a025877fa9dc2cd1fc6f6fa6796a06719817f13d0a9ab423358e2c8318408f",
+      "bytes": 8850,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_supplementary_closure_0716/run_missingness_outlier_sensitivity.py",
+      "sha256": "50bbb717a1be4cfb36be2e2691542dfa1d9fd8676090159a5add45d8a8587a3d",
+      "bytes": 22781,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/07_final_model_clinical_utility/run_fast_final_model_bootstrap.py",
+      "sha256": "f9807098b97d85ed4d14b0e1ffa7a98eca27914c625a4d2ad8d02337ef69ff63",
+      "bytes": 27048,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/07_final_model_clinical_utility/run_final_model_clinical_utility.py",
+      "sha256": "53d1803da3ec434020172ad38a3bca9291d62cbfb1eeb73c8d1e6f214a2a8094",
+      "bytes": 9968,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/07_final_model_clinical_utility/run_final_model_clinical_utility_bootstrap.py",
+      "sha256": "0c28762207f59a3656a06bc1cb4266160ce49217d423291a8471470eaf529a1f",
+      "bytes": 21992,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/08_r3_5_pairwise_association_diagnostics/run_r3_5_pairwise_association_diagnostics.py",
+      "sha256": "8b166e7f0b8a2582e5c93d554c8b150fa221727d9a649b997e991147c31ed54d",
+      "bytes": 28197,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/09_r3_7_final_model_outlier_sensitivity/run_r3_7_final_model_outlier_sensitivity.py",
+      "sha256": "8bb1b69a913d22e513924dbcf3717fc27df66c96a4c710449d5382c018ab888c",
+      "bytes": 21345,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/10_r3_9_fold_age_distribution/build_r3_9_fold_age_distribution.py",
+      "sha256": "0e372eb767a46717f01fdfdb6887b0396aafc31bc52372306ade10a8b57375b4",
+      "bytes": 11984,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/11_r3_11_temporal_history_coverage/run_r3_11_temporal_history_coverage.py",
+      "sha256": "00b36b584ea5182abd918cbdb5cee2dd6f701f631b5b2d81d8d188bea56ddaa6",
+      "bytes": 19654,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/12_r3_12_bias_correction_sensitivity/run_r3_12_bias_correction_sensitivity.py",
+      "sha256": "309e9b75a34b9d0be64c74f8c5020d78e04adc6599289836a96bb7c8ab63b207",
+      "bytes": 22676,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/04_external_validation/core_0716/CORE_CONTRACT_0716.json",
+      "sha256": "a90f05f680092cdaac01fa89ba7c1290915b135d6bcfa1e60b580a08451bdaca",
+      "bytes": 4333,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/04_external_validation/core_0716/shared/02_label_blind_cache/MANIFEST.json",
+      "sha256": "8b4abea7c3f536d38da4e2bc7bd37c3a608c792de1006538b07815fa4c826f0e",
+      "bytes": 4791,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/04_external_validation/core_0716/shared/04_inference_work/PREDICTION_SEAL_RECEIPT.json",
+      "sha256": "f6514a2837da43bc889626deca528415e6a8982a8b10bd581f61814e1f1d9534",
+      "bytes": 911,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/04_external_validation/core_0716/shared/05_outcomes_after_prediction_seal/OUTCOME_READ_RECEIPT.json",
+      "sha256": "64cff20b7a7136e4f15d3f20c80d8dbabf73f9e4fc3a1d95f7f0befbde9d4d7b",
+      "bytes": 1319,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/04_external_validation/core_0716/shared/06_statistics/BASIC_STATISTICS_RECEIPT.json",
+      "sha256": "d40703574aaa19a73b51bb0ff9f3961028a23084585cee73c4b0657d37fc9ae2",
+      "bytes": 4016,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/04_external_validation/core_0716/shared/06_statistics/RISK_STATISTICS_RECEIPT.json",
+      "sha256": "3a5c3f93a5f8f2d060f8dd4c4c07172ec1aeeaa12ad53f55e880d8b934a16a66",
+      "bytes": 1181,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/04_external_validation/core_0716/shared/07_render/RENDER_MANIFEST.json",
+      "sha256": "193ae9f4e79ef570d12cf985e234c9bcb6c0a58a831b1f7c54490793c20b7030",
+      "bytes": 10828,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/04_external_validation/scripts/compute_external_statistics_0716.py",
+      "sha256": "cfcaab834ee08ffdd1a842126d48b83226f6127bb2f0b366b201c74c762e9c6e",
+      "bytes": 35942,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/04_external_validation/scripts/render_fig13_fig14_0716.py",
+      "sha256": "108920c598070d835cce43766209cc897305155c05ead96a3b1aecf302075a64",
+      "bytes": 33535,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/04_external_validation/scripts/run_external_core_0716.py",
+      "sha256": "fb7e1789cef4029637219f96453eec8169cfd999ef9f783b79a7b827c9891644",
+      "bytes": 32445,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/04_external_validation/scripts/run_external_v2_0717.py",
+      "sha256": "fc82cd03248c0642c71bf412d98931503dfda1339f047154aee8d5876d44eef0",
+      "bytes": 18297,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/04_external_validation/scripts/validate_external_artifacts_0716.py",
+      "sha256": "8f766c36b4b65a3dcd271e024abb5a8e23942b75b3e914a376a5b2c54f90d3f8",
+      "bytes": 11702,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/05_source_data_by_figure/corrected_canonical_0626_adapter_v1/formal_source_v1/MANIFEST.json",
+      "sha256": "c494a7d50839060182ff47b760620bfb904433e2d4877fa3b7378340e8d1785b",
+      "bytes": 7593,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/06_rendered_figures/corrected_canonical_0626_exact_v2/00_group_contract/input_manifest.json",
+      "sha256": "21d3f131f1928e56a3236a60a8acf1e3913aa2e97bcea1dcbb764c5f69412d62",
+      "bytes": 2509,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/06_rendered_figures/render_codebook_v2_fig02_fig03_fig06_fig07.py",
+      "sha256": "f589c985d23ba5fe5be79dd66ef233e9f415aadee4c6489ee3b9bb92a0bad389",
+      "bytes": 12273,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/06_rendered_figures/render_codebook_v2_fig08_fig10_0626.py",
+      "sha256": "f99e24925bb9f81926bea2987c4d309a0e87992cf122d5267cc430ae9f8c22ca",
+      "bytes": 10995,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/06_rendered_figures/render_corrected_canonical_fig02_fig03_fig06_fig07.py",
+      "sha256": "5400a643b5ea52c5a699000e3ca920ab54638d1eb4e3d013bb5a82b17b37c5e9",
+      "bytes": 26170,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/06_rendered_figures/render_corrected_canonical_fig08_fig12_0626_exact_v2.py",
+      "sha256": "929c54ccdf42fb3246d13adce882d8f6dbda23583467692ad2fbbc4aca6ba5e0",
+      "bytes": 44410,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/06_rendered_figures/render_fig11_fig12_marginal_0716.py",
+      "sha256": "b3dd49eeb430069bc5d07e989b9b16ca02a09e315f305be7a2dd70ae4c3d0672",
+      "bytes": 11171,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/06_figures_and_statistics/06_rendered_figures/run_codebook_v2_fig11_fig12.py",
+      "sha256": "df9f3b19c58289c39c52a5d93a04f307439be15388c860251c5b2911e54c0e70",
+      "bytes": 3665,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Codebook_v2_Huber1/External_Adaptation/mimic_common53/Fig13/Source_Data/Fig13D_paired_incremental_risk_metrics.csv",
+      "sha256": "6e96c12d45039ac3b6fd86e2f39011ded5451ffd108e9bef7fb24e7c3bc13ddc",
+      "bytes": 25436
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Codebook_v2_Huber1/FIG02_FIG03_FIG06_FIG07_V2_MANIFEST.json",
+      "sha256": "975cb25d52f24901902bd32bdd5a2f7bebc84ccfd6ce82ef3594b84322a370e8",
+      "bytes": 485,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Codebook_v2_Huber1/Fig13/Source_Data/Fig13D_paired_incremental_risk_metrics.csv",
+      "sha256": "9f73ffce43746ee9ed15f45744156d9dfae347e296bf2f1aa57c9d8ddfb1f977",
+      "bytes": 25576
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/EXTERNAL_VALIDATION_MANIFEST.json",
+      "sha256": "9036fa18f6f3fc08c401528daea4863658d38efbd773985fe08e52c898c974a4",
+      "bytes": 11570,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Fig11/FIG11_FIG12_MANIFEST.json",
+      "sha256": "f7d05f0e823dfd29d48636a2cbe41ad4e8d17b250f46dbafcae6f17910688988",
+      "bytes": 2993,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Fig12/FIG11_FIG12_MANIFEST.json",
+      "sha256": "f7d05f0e823dfd29d48636a2cbe41ad4e8d17b250f46dbafcae6f17910688988",
+      "bytes": 2993,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/09_density_age_correlation/MANIFEST.json",
+      "sha256": "4847fd0c387991dce56886a27aa6bcd08a110b85c46b2dd1fc5861976f749d6b",
+      "bytes": 3847,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/09_density_age_correlation/run_density_age_correlation.py",
+      "sha256": "38aa86db78d1a3c41e9f3048c2b4d919d5b42e0279fce97c98d4d79ef274b036",
+      "bytes": 26894,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/10_icd_corrected_sensitivity/DECISION_SUMMARY.json",
+      "sha256": "978878a8805b19d8b990fa1b7a4711e8175b7d094e5846ee0db2c24521f3b775",
+      "bytes": 1732,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/10_icd_corrected_sensitivity/run_icd_mapping_sensitivity.py",
+      "sha256": "ab03ff6691805412fb028017a0071b11e56bdbaaaa21e2513ab9381fe27bc7d6",
+      "bytes": 15180,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/11_imputation_sensitivity/run_iterative_imputation_5fold.py",
+      "sha256": "a4ed7b66cbed6efad90b2f75415b4b500464c8bc991961da39f9ea6882105c13",
+      "bytes": 33907,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/12_e47_disease_burden_adjustment/run_e47_disease_burden_adjustment.py",
+      "sha256": "065649ce5b9ca994c5a200a6832d565c2b3f8c875f556b20e47d73b24989759b",
+      "bytes": 47897,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/13_final_model_clinical_utility/00_input_cache/INPUT_CACHE_MANIFEST.json",
+      "sha256": "5912c170c11e84e45aa666b1f41d9489c30ded2897c4325c79f832e0f536da99",
+      "bytes": 9264,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/13_final_model_clinical_utility/02_fast_bootstrap_input/MANIFEST.json",
+      "sha256": "541b3cc1b028b59ce8e163128be96d2535a03791aafaef26042074ddcc829db5",
+      "bytes": 19217,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/14_multiple_testing_closure/MANIFEST.json",
+      "sha256": "2a6ce083c4763ce835d218dc64018bf217b927c458f9b8b07e08ed3a9f46bd8c",
+      "bytes": 3106,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/14_multiple_testing_closure/RESULT_SUMMARY.json",
+      "sha256": "b8082865370a89ec07e82be278339b18327de9d10013d75a8109b8d14cbbedb9",
+      "bytes": 3916,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/14_multiple_testing_closure/run_multiple_testing_closure.py",
+      "sha256": "13dbbce231d6c92d0627de0a6f1cec971d55bab5e458776aa16a5fd1db87a6c3",
+      "bytes": 42069,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/MANIFEST.json",
+      "sha256": "5fe9a48889a02cef8eca9790676ea6ebe1035efe1e6290d2ae2318d636204e97",
+      "bytes": 18194,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/NULL_REFERENCE_RECEIPT.json",
+      "sha256": "8f59335fe845fc5698ac73d7ed727b3dcfe79d221cecb777dda20b1522dd0799",
+      "bytes": 9740,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/SURVIVAL_RUN_RECEIPT.json",
+      "sha256": "d42e0947c2d2127896a02d78bf9506ba68ab4e6e834a7c67fba3d2bb29aecfb5",
+      "bytes": 13941,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/Source_Data/reviewer_key_numbers.json",
+      "sha256": "7deff2778a943bffbe9398b7cb2fe0ccb25e801177826520a577562abfdff938",
+      "bytes": 3869,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/finalize_r3_2_bundle.py",
+      "sha256": "6dceffa483ae4a723706c9000f31c8ec61d4b3a17dd237a2aa0c171de1a58929",
+      "bytes": 20202,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/run_null_reference.py",
+      "sha256": "239b456eaa987b85d4cc4c3a551a73d8592349ae35acfc54c504564ccd384254",
+      "bytes": 13167,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/15_r3_2_final_model_survival_validation/run_survival_recalculation.py",
+      "sha256": "9478da34b4c8ae2e73ffc023a439b957cb791d8dbd47e0b728d749c07a7a9494",
+      "bytes": 24762,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/16_r3_2_competing_risk_bootstrap_1000/MANIFEST.json",
+      "sha256": "134dd636d9314c84860a1cb24f933f67d8d9e3024832f1d307a2f88ee1c6292c",
+      "bytes": 8978,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/16_r3_2_competing_risk_bootstrap_1000/run_competing_risk_bootstrap_1000.py",
+      "sha256": "6ad0fc0a02947cde4cfed48e47a59316c9e7575869e206ec62fbbfa45e072c4e",
+      "bytes": 13674,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/19_r3_9_fold_age_distribution/MANIFEST.json",
+      "sha256": "baab0544581cb86e29805a957a1a2130b1df11ae716c58948334318740403908",
+      "bytes": 11946,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/19_r3_9_fold_age_distribution/Source_Data/age_distribution_summary.json",
+      "sha256": "490b46f07e3dc731b43b3d0248be295c57aa3c3798f14b5f158476094ad5eb0a",
+      "bytes": 1572,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/20_r3_11_temporal_history_coverage/MANIFEST.json",
+      "sha256": "10fd42e3858401a4807d3af0449b85c0d6bc43f60d5a09b7f8f47fdc2f79dd56",
+      "bytes": 26246,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/20_r3_11_temporal_history_coverage/Source_Data/temporal_history_coverage_summary.json",
+      "sha256": "227af72eb77bf11ac17c748b707eac3e7a3f2b598019a8def5aab94a4fdf8e42",
+      "bytes": 3835,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/21_r3_12_bias_correction_sensitivity/Source_Data/r3_12_bias_correction_summary.json",
+      "sha256": "855b558432568506de811818a31f71d8444fc6c9db83dffe4fa4afa652edf96c",
+      "bytes": 1650,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Fig_0716/Reviewer_Statistics/21_r3_12_bias_correction_sensitivity/manifest.json",
+      "sha256": "74625c063a7b06324f69f198b780ba85e309aa98b9ed888c6473e640a6db2f2f",
+      "bytes": 8595,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/01_MAIN_FIGURES/M11_Organ_Aligned_Specificity/CURRENT_v1/MANIFEST.json",
+      "sha256": "6b9e1c84b7eecb7200d9ad20b8c672fcbf9b10532e7e4c0f5173805a1600c33c",
+      "bytes": 6325,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/01_MAIN_FIGURES/M11_Organ_Aligned_Specificity/CURRENT_v1/scripts/build_fig11_organ_specificity.py",
+      "sha256": "bb3eff99582c4da06164a8690faaf1ec14cdfc7a887f1263f752e93b0dc96b5d",
+      "bytes": 30473,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/01_MAIN_FIGURES/M11_Organ_Aligned_Specificity/CURRENT_v1/source_data/figure_claim_summary.json",
+      "sha256": "f4dc33828c991c8e1ea4abed16b2db4683798e5fc0f5ba609514e9677e023b31",
+      "bytes": 1081,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/99_ARCHIVE_PREVIOUS_MAIN_FIGURES_20260727/M11_Shared_Specific_Decomposition/CANDIDATE_v1/MANIFEST.json",
+      "sha256": "1c4696b1ea6e7f51b81481eb6e299e5c285036627f1320996b1ac7face0d1a93",
+      "bytes": 5035,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/99_ARCHIVE_PREVIOUS_MAIN_FIGURES_20260727/M11_Shared_Specific_Decomposition/CANDIDATE_v1/source_data/component_reconstruction_audit.json",
+      "sha256": "dfede8e0186e6fbf814856a6cb051bbe833fecc3d8a6e5e5ad8a8b0445e36f65",
+      "bytes": 378,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/99_ARCHIVE_PREVIOUS_MAIN_FIGURES_20260727/M11_Shared_Specific_Decomposition/CANDIDATE_v2_DIRECT_EVIDENCE/MANIFEST.json",
+      "sha256": "5c437e7c35d3aa8f4d348e40099bd78774e61ebf045dbef67157c7566d3a709b",
+      "bytes": 9048,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/99_ARCHIVE_PREVIOUS_MAIN_FIGURES_20260727/M11_Shared_Specific_Decomposition/CANDIDATE_v2_DIRECT_EVIDENCE/source_data/analysis_contract.json",
+      "sha256": "36285c36a2dd632304ae25d8688c52b8fe8b2fcbe0f6a79a9621cb24b2edc5df",
+      "bytes": 1840,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/99_ARCHIVE_PREVIOUS_MAIN_FIGURES_20260727/M11_Shared_Specific_Decomposition/CANDIDATE_v3_SPECIFICITY_EVIDENCE_ATLAS/MANIFEST.json",
+      "sha256": "5cd683c0b02222fb43c4d53cfbb0af2a29fe8c2e354297ebe02cee68df8a6612",
+      "bytes": 11811,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/99_ARCHIVE_PREVIOUS_MAIN_FIGURES_20260727/M11_Shared_Specific_Decomposition/CANDIDATE_v3_SPECIFICITY_EVIDENCE_ATLAS/source_data/analysis_contract.json",
+      "sha256": "ac640f0235179deaff38a8c17134c172a6388dcd75d6c561cbf20a78bc061282",
+      "bytes": 2142,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/99_ARCHIVE_PREVIOUS_MAIN_FIGURES_20260727/M11_Shared_Specific_Decomposition/CANDIDATE_v3_SPECIFICITY_EVIDENCE_ATLAS/source_data/first_event_ranking_summary.json",
+      "sha256": "0637a7e953b4070219ae62caf423f01eb34d40a4f81e43d5061e051694c408d3",
+      "bytes": 1463,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/99_ARCHIVE_PREVIOUS_MAIN_FIGURES_20260727/M11_Shared_Specific_Decomposition/CANDIDATE_v3_SPECIFICITY_EVIDENCE_ATLAS/source_data/offset_mapping_permutation_summary.json",
+      "sha256": "43f960cc5a698b99c67abe27709193e7d2bc4ead2d1e60fcff8e40b02c523c0c",
+      "bytes": 391,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/99_ARCHIVE_PREVIOUS_MAIN_FIGURES_20260727/M11_Shared_Specific_Decomposition/scripts/build_m11_direct_specificity_candidate.py",
+      "sha256": "b0fdc8e07d81cdeadc90bb16041017cfa50a82261bc4e3d33644685ed74e4e4d",
+      "bytes": 41129,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/99_ARCHIVE_PREVIOUS_MAIN_FIGURES_20260727/M11_Shared_Specific_Decomposition/scripts/build_m11_shared_specific_candidate.py",
+      "sha256": "f879da48b1f1319b6f074882e5b21362b9060c93637fe0f091c61de72890c400",
+      "bytes": 39032,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0725/99_ARCHIVE_PREVIOUS_MAIN_FIGURES_20260727/M11_Shared_Specific_Decomposition/scripts/build_m11_specificity_evidence_atlas.py",
+      "sha256": "c1b79a4701c894ae7b9bcb5197f253fe57714977d2b8cf72f6228535dc828a4c",
+      "bytes": 51346,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0728/01_MAIN_FIGURES/Fig11_Organ_Aligned_Specificity/MANIFEST.json",
+      "sha256": "6b9e1c84b7eecb7200d9ad20b8c672fcbf9b10532e7e4c0f5173805a1600c33c",
+      "bytes": 6325,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0728/01_MAIN_FIGURES/Fig11_Organ_Aligned_Specificity/scripts/build_fig11_organ_specificity.py",
+      "sha256": "bb3eff99582c4da06164a8690faaf1ec14cdfc7a887f1263f752e93b0dc96b5d",
+      "bytes": 30473,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0710/Final_Figure_0728/01_MAIN_FIGURES/Fig11_Organ_Aligned_Specificity/source_data/figure_claim_summary.json",
+      "sha256": "f4dc33828c991c8e1ea4abed16b2db4683798e5fc0f5ba609514e9677e023b31",
+      "bytes": 1081,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0730/0-Others/Fig12_MIMIC_IV_External_Transportability/redraw_figure6_external_transportability.py",
+      "sha256": "f349082787315f5cf43034bd040c921943591b831ec6f0f9e6faa7c22a83b3e1",
+      "bytes": 18029,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0730/0-Others/Fig7_Shared_Component_SEM/scripts/build_figure6_shared_component_residual_atlas.py",
+      "sha256": "0cf4ce65dc81ec6c27e57cbd9eccf0e71f926c415e0e12f6b911c815f9d6ffe6",
+      "bytes": 27103
+    },
+    {
+      "path": "Revision-0730/0-Others/Fig7_Shared_Component_SEM/scripts/explore_sem_estimators.py",
+      "sha256": "904bfcc0e84653c6ab73e8e80180cf6ff875fdf4b1207f7d8d04b1e99b948ea9",
+      "bytes": 3899
+    },
+    {
+      "path": "Revision-0730/0-Others/Fig7_Shared_Component_SEM/scripts/export_figure6_components.py",
+      "sha256": "573cec0908819e79837bad5b6acc4fb97c5538dd63cef6783a46cecfb4d5ea59",
+      "bytes": 10546
+    },
+    {
+      "path": "Revision-0730/0-Others/Fig7_Shared_Component_SEM/scripts/export_from_png.py",
+      "sha256": "f3ebc5f8833f8ec033e85b07f596a996450acc1f3d8e3cfa56b21a4a8c52949b",
+      "bytes": 7757
+    },
+    {
+      "path": "Revision-0730/0-Others/Fig7_Shared_Component_SEM/scripts/validate_shared_component_sem.py",
+      "sha256": "541f00738c9dbfe394c63d29e0cd3e36e621076c7021c892d845d75910fc7aad",
+      "bytes": 23593
+    },
+    {
+      "path": "Revision-0730/4-Data/MIMIC_12m_delta_c.csv",
+      "sha256": "6360012b5a7e63214269a0b5af74f335d8c182b0425683e72cfdc07b0c3349a0",
+      "bytes": 8682
+    },
+    {
+      "path": "Revision-0730/work/p0_core_sensitivity_20260809/outputs/complete_case_provenance.json",
+      "sha256": "512e535d7b945bd9f525259eb64098d377e0d775aa0ee4d71c89b016caa39bf4",
+      "bytes": 1161,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0730/work/p0_core_sensitivity_20260809/outputs/provenance.json",
+      "sha256": "06ed9fd1f48fa22ad37d6f32496a4a226db5dda296522a16d3e91e3b7efd520e",
+      "bytes": 6426,
+      "kind": "configuration"
+    },
+    {
+      "path": "Revision-0730/work/p0_core_sensitivity_20260809/run_baseline_only_reference_sensitivity.py",
+      "sha256": "c19117205267e7108e25762ebd05215fe8944e097703956d03dc6005ffee93ba",
+      "bytes": 29887,
+      "kind": "source"
+    },
+    {
+      "path": "Revision-0730/work/p0_core_sensitivity_20260809/run_complete_case_detailed_cox.py",
+      "sha256": "a6f75e4fe3f857fe0c57f64a335934ac3da3446c07374a2a357ebfd6a53e7933",
+      "bytes": 5210,
+      "kind": "source"
+    },
+    {
+      "path": "Revisions-1030/work/r1_1_information_matched_20261031/run_information_matched.py",
+      "sha256": "d581f6c79bdf09816c55df60732a214fa95b8eb9b32c97527414fe44d6ffe9cb",
+      "bytes": 40114,
+      "kind": "source"
+    },
+    {
+      "path": "Revisions-1030/work/r1_2_5_reproducibility_20261031/harmonize_statistics.py",
+      "sha256": "7778f4ba3dd9270a94c8c2afb60bb3f463f35a1960f50867b0a61ea46f378c95",
+      "bytes": 9000,
+      "kind": "source"
+    },
+    {
+      "path": "Revisions-1030/work/r1_3_external_20261031/run_external_paired.py",
+      "sha256": "ebb3b1c3bce0908ad75db8474c31c7cb1eaa5a9ba3d36f30b457a6175a7f272e",
+      "bytes": 17831,
+      "kind": "source"
+    },
+    {
+      "path": "Revisions-1030/work/r1_4_reference_20261031/evaluate_reference.py",
+      "sha256": "4e28d6490f77d51af8d455133eec56be13d76d90927baaa86d364b9a4d334bb6",
+      "bytes": 27185,
+      "kind": "source"
+    },
+    {
+      "path": "Revisions-1030/work/r1_4_reference_20261031/train_baseline_reference.py",
+      "sha256": "c3c0c68670f3a95c57c59152ab195c5b68223cb2c01bb9b02c72f39cee6a9557",
+      "bytes": 21358,
+      "kind": "source"
+    }
+  ],
+  "delivery_files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "4b12eebe5c81a7c267f9d800a6d08503fc1609f1ffa3506f9053362ad704980b",
+      "bytes": 163
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "d74a986bdbbee416f6833170b15d424ded27221e5aa1e7f1ae36cd68c5d372c5",
+      "bytes": 123
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "058c527a6405e02f38a25022ced01afbc9ffc70b57be1eb09da19a989e007bcd",
+      "bytes": 1862
+    },
+    {
+      "path": "Dataloader.py",
+      "sha256": "004a5ef779fc7877945c49bd4d514a27ac5a2751700f75275cca9df779fcba0c",
+      "bytes": 12498
+    },
+    {
+      "path": "EHR-AGE_architecture.png",
+      "sha256": "58f0544d021ab613d9360582648d0e003d6f7b598fd633b55895589b0d92aba4",
+      "bytes": 600365
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "393e35525d29292cdf68378c54db93a725c826700bf040339e0602449b0a8a55",
+      "bytes": 1077
+    },
+    {
+      "path": "README.md",
+      "sha256": "56fddf985b93922eed9fe8ce8473d9e397e8488d84d64dafe96f4dd0218d722f",
+      "bytes": 84340
+    },
+    {
+      "path": "_child.py",
+      "sha256": "5368e940b6c689cd8df68d9857068857c34502ea0fd1a954f4558562d5a620f0",
+      "bytes": 1044
+    },
+    {
+      "path": "_runtime.py",
+      "sha256": "e9571b6f6e9a021f7b266ef3388896eaf04425cbc11988f9e2b05a3dd6eba44f",
+      "bytes": 15385
+    },
+    {
+      "path": "configs/input-map.example.json",
+      "sha256": "36b9f0710da857daa41e3c85ef420daafc62883691bd5f4726a9f6f5fae21d12",
+      "bytes": 288
+    },
+    {
+      "path": "configs/ukb_source_paths.example.json",
+      "sha256": "9b30e494d3438b240e5f493b7e9385b2fe3e05ad44f1fd34fe3f47fea4fb57fc",
+      "bytes": 1046
+    },
+    {
+      "path": "environments/covariance.json",
+      "sha256": "a8b9fb471289d1ceb90332e2a5be7997b258a963ecaba344ed3c7e140035d6d2",
+      "bytes": 1575
+    },
+    {
+      "path": "environments/cox.json",
+      "sha256": "572b619406d30aec895dea55693d2266504b6603c1004318a83d6d11b71361b1",
+      "bytes": 438
+    },
+    {
+      "path": "environments/embedding.json",
+      "sha256": "0105dd608bdba64a45b93b3226b38c97ef85e3e8b6caa88fa06386bce21609f6",
+      "bytes": 563
+    },
+    {
+      "path": "environments/neural.json",
+      "sha256": "4dbb84a1261d9797984dfa7c6836c8a62497fb549f43f574d17c3c58df0b0ec5",
+      "bytes": 463
+    },
+    {
+      "path": "environments/requirements-covariance.lock.txt",
+      "sha256": "49f28bb57805af26b434ea1927101f6b14db6efe05b3886a1d909f51375bc50a",
+      "bytes": 669
+    },
+    {
+      "path": "environments/requirements-covariance.txt",
+      "sha256": "48be752eb1dae10a4ceefb111032b7154f0d46e30d1438c7d1a6b83c61cb2825",
+      "bytes": 332
+    },
+    {
+      "path": "environments/requirements-cox.txt",
+      "sha256": "228453ce93f30c8d0f38fc66c778fbca619e579f5097d36aef86d77e449f747c",
+      "bytes": 239
+    },
+    {
+      "path": "environments/requirements-embedding-table generation only.txt",
+      "sha256": "3ae5194b031fe911e1ca1da3a7d19fdd9458049ddcf3c7909a14faa97304aaff",
+      "bytes": 181
+    },
+    {
+      "path": "environments/requirements-figures.txt",
+      "sha256": "635072e9dbf0f5b03cc6e2dd23109bc94725e75aecccdbc6a6136fe7ff315135",
+      "bytes": 212
+    },
+    {
+      "path": "environments/requirements-neural.txt",
+      "sha256": "563aeb9e09a4d38806eac19d8088fb9105dda71287af11f86f701a1d410342af",
+      "bytes": 251
+    },
+    {
+      "path": "environments/requirements-statistics.txt",
+      "sha256": "5c5fe204db8a791e00e1474f213279c74f1fda09e8d1d87a433b8c8b2e8ca813",
+      "bytes": 245
+    },
+    {
+      "path": "environments/statistics.json",
+      "sha256": "50bf6b6febd062e1d55d93506f9f29bd74feb3abdb1783f2b7e171c915d8703c",
+      "bytes": 459
+    },
+    {
+      "path": "figures/render_figure7.py",
+      "sha256": "3bcb7982ec2fb2616663d66a282e1b8f84a32df7e1c9cbd4927b0d7e60746c93",
+      "bytes": 8913
+    },
+    {
+      "path": "main.py",
+      "sha256": "52ae9fa9fa2ae68dd3c6e83fe4f862f187ae6062c4b06ff7d1a5ddac33e60576",
+      "bytes": 9665
+    },
+    {
+      "path": "model.py",
+      "sha256": "0613ab96e4be2eb09274c77c350600d0e2f51bc40065d9e7d45dd0ce7a88c214",
+      "bytes": 29713
+    },
+    {
+      "path": "preprocessing/prepare_icd_long.py",
+      "sha256": "de4890f0839e626624d069475cc62d646b5259eebe4629339982b307130ba6f1",
+      "bytes": 14638
+    },
+    {
+      "path": "preprocessing/test_prepare_icd_long.py",
+      "sha256": "ef6acb7adbcd4e0606797e665665fe6ab270dcab5a031ad81e44d380883b1d0e",
+      "bytes": 9501
+    },
+    {
+      "path": "reference/figure7/MIMIC_12m_cause_specific_hr.csv",
+      "sha256": "19d4e67779d5d89ca20a4587d8dede9039970d6d8e304c570b9203101173a62e",
+      "bytes": 5512
+    },
+    {
+      "path": "reference/figure7/MIMIC_12m_delta_c.csv",
+      "sha256": "46fc75519bcd95f871ecb67a7dbc8effc8095cce20783b0c8245c7c882c295d6",
+      "bytes": 10392
+    },
+    {
+      "path": "reference/figure7/MIMIC_12m_risk_calibration.csv",
+      "sha256": "95cf2d57c0a287ff676f713123255288ef4334c689d716f1e6bba434737c4d75",
+      "bytes": 1958
+    },
+    {
+      "path": "reference/figure7/MIMIC_age_transportability.csv",
+      "sha256": "ae7411d42f121d7eee7d54b2cfcc79cf68ea7feb77e92a3b2ab5aadfde55c5d4",
+      "bytes": 22520
+    },
+    {
+      "path": "reference/figure7/MIMIC_age_transportability_macro.csv",
+      "sha256": "ebbeca7625dcc470d89e86b3144c7e274f24b26be8634ee457d2f3d021d1552a",
+      "bytes": 381
+    },
+    {
+      "path": "reference/figure7/NHANES_age_transportability_stages.csv",
+      "sha256": "750ec955104ced476962fc54191136ce7466d72b1704e2f80ff13313cf1695c6",
+      "bytes": 2355
+    },
+    {
+      "path": "reference/figure7/NHANES_survey_weighted_questionnaire_or.csv",
+      "sha256": "e86c513e378c6964a1918615e9e1930bc1a73b977b4fa0ec6d3a62a8413f3d24",
+      "bytes": 9551
+    },
+    {
+      "path": "reference/pooled_age_metrics.csv",
+      "sha256": "9e0788144d18fbbc158bc431b9ad2802cd10b6901b0d0a7be4584f440a805979",
+      "bytes": 5126
+    },
+    {
+      "path": "reference/r1_1_macro_incremental_metrics.csv",
+      "sha256": "43172c90897b6e965c9a81cf996c111ba485f19dc72986d4345bbe1019f0bc1d",
+      "bytes": 972
+    },
+    {
+      "path": "reference/r1_2_evidence.json",
+      "sha256": "84a630c08cdf97d14c3c0d120b4153f5ead320bf6ac1c98e07318df9940079ae",
+      "bytes": 4861
+    },
+    {
+      "path": "reference/r1_3_macro_paired_bootstrap_ci.csv",
+      "sha256": "59a67ea7b77ec803c35d5d38057d6b5d851ea02b5fff7d0558ef7a8bedd6197f",
+      "bytes": 1478
+    },
+    {
+      "path": "reference/r1_4_paired_bootstrap_ci.csv",
+      "sha256": "21e35978cf49b6a6bdb4e81e771f371da22992f65f2c7ffd1f0d9adf37d1edf4",
+      "bytes": 12717
+    },
+    {
+      "path": "reference/r1_4_reference_effect_paired_ci.csv",
+      "sha256": "f5bad73c1a2b0a6b0743b090bd51c9fe5b7107a06ae3463e7f04616463fb43a7",
+      "bytes": 2013
+    },
+    {
+      "path": "reference/sem/osag_correlation_matrix.csv",
+      "sha256": "305fe9e18506daeb3787cf249bc0f83794e0a16f6e19df09b9849baf1b4eeae4",
+      "bytes": 963
+    },
+    {
+      "path": "reference/sem/sem_16group_fit_indices.csv",
+      "sha256": "3a60ec7f9eee4cb172a030fc8d9674f630ac9e9c3331a3d2334f0fb3d849e65d",
+      "bytes": 4243
+    },
+    {
+      "path": "reference/sem/sem_16group_residual_covariance.csv",
+      "sha256": "4d476f176c64e3fd3a613716eb605d4c42d4400f683aaeda7aaa1b0909011c71",
+      "bytes": 96182
+    },
+    {
+      "path": "reference/sem/sem_16group_standardized_parameters.csv",
+      "sha256": "99d069572dcda9cb106e62d011a3a660371c5c2212d2c01736572155ba9277d4",
+      "bytes": 17672
+    },
+    {
+      "path": "reference/training_reference_hr_stable_inference.csv",
+      "sha256": "22bfd4a414f4443f2d24bc80c3419ddee0c43f5c12c92c69527e3dab2b777be7",
+      "bytes": 3683
+    },
+    {
+      "path": "run.py",
+      "sha256": "6aa667da739b5fa51233a41ddd8063ea9d374552c9a972cb538772eec00b5483",
+      "bytes": 4101
+    },
+    {
+      "path": "tools/manage_release.py",
+      "sha256": "815bf10ffe071337f634881d13c47356a5078b94d5d43c0ccfb409c55e827ad1",
+      "bytes": 5009
+    },
+    {
+      "path": "train.py",
+      "sha256": "d87e1304a0c6339b6d6beec6a199c60c24f821b337d4e06a5cc645ceff97d5d3",
+      "bytes": 16551
+    },
+    {
+      "path": "verify.py",
+      "sha256": "973432419a0cbeaa22555b5a3be4c9f51855e09f0ce8e078a6f2f8f03ff4e432",
+      "bytes": 19753
+    }
+  ],
+  "required_private_inputs": [
+    "access-controlled UKB/MIMIC/NHANES inputs",
+    "fold-contained caches/labels",
+    "semantic embeddings",
+    "frozen predictions/checkpoints when replaying reported results"
+  ],
+  "private_data_or_weights_included": false,
+  "limited_verification": "Retained scientific source identity and earlier bounded checks are preserved. The covariance environment passed fresh dependency/import, synthetic I/O and frozen-aggregate checks without fitting. The explicit-Array ICD entry passed 12 synthetic tests and a full read-only comparison of 502163 participants / 7071243 existing rows, including diagnosis descriptions and dates. No formal input rebuild or new scientific fitting was performed; full-study reconstruction was not rerun.",
+  "fresh_rebuild": "Upstream ICD pairing is supplied for explicitly indexed or order-verified packed CSV exports; downstream preprocessing/training uses the specified prepared exports. UKB-RAP download/extraction, independent reconstruction of the full 78-slot phenotype export, and a fresh clean-environment end-to-end rebuild were not performed. Original-cohort provenance/hash gates remain active.",
+  "frozen_replay": "historical hashes refer to the reported frozen artifact set; a new raw-data rebuild has its own provenance identity",
+  "license_status": "AUTHOR_SELECTED_AND_APPLIED",
+  "public_release_directory": ".",
+  "verification_boundaries": {
+    "raw_export_extraction_included": false,
+    "full_end_to_end_rebuild_repeated": false,
+    "new_scientific_experiments_run": false,
+    "fresh_install_tested_profiles": [
+      "covariance"
+    ],
+    "fresh_install_not_tested_profiles": [
+      "statistics",
+      "cox",
+      "neural",
+      "embedding"
+    ],
+    "covariance_runtime_dependencies_complete": true,
+    "covariance_study_data_optimizer_convergence_retested": false,
+    "upstream_instance0_derivation_confirmed": true,
+    "upstream_raw_array_pairing_record_included": true,
+    "upstream_icd_array_entry_included": true,
+    "full_existing_icd_long_read_only_verified": true,
+    "full_existing_icd_long_rebuilt": false,
+    "raw_export_extraction_boundary": "UKB-RAP download/extraction and independent original phenotype-export generation remain outside the included entry; indexed-CSV ICD pairing is now included."
+  },
+  "checks_20261101": {
+    "command_help_entrypoints_passed": 24,
+    "analysis_only_covariance_entries_not_executed": 3,
+    "source_private_file_formats_excluded": true,
+    "csv_identifier_columns_excluded": true,
+    "source_secret_pattern_scan": "no matching credentials/private keys found",
+    "source_code_byte_identity": true,
+    "raw_data_or_model_training_performed": false,
+    "license_and_delivery_manifest": "PASS: MIT text present; README/manifest consistent; delivery hashes checked; scientific source manifest unchanged",
+    "pre_existing_scientific_source_hashes_unchanged": true
+  },
+  "license": "MIT",
+  "license_file": "LICENSE",
+  "covariance_reference_files": [
+    {
+      "path": "reference/sem/osag_correlation_matrix.csv",
+      "source": "Revision-0730/0-Others/Fig7_Shared_Component_SEM/source_data/osag_correlation_matrix.csv",
+      "sha256": "305fe9e18506daeb3787cf249bc0f83794e0a16f6e19df09b9849baf1b4eeae4"
+    },
+    {
+      "path": "reference/sem/sem_16group_fit_indices.csv",
+      "source": "Revision-0730/0-Others/Fig7_Shared_Component_SEM/source_data/sem_16group_fit_indices.csv",
+      "sha256": "3a60ec7f9eee4cb172a030fc8d9674f630ac9e9c3331a3d2334f0fb3d849e65d"
+    },
+    {
+      "path": "reference/sem/sem_16group_standardized_parameters.csv",
+      "source": "Revision-0730/0-Others/Fig7_Shared_Component_SEM/source_data/sem_16group_standardized_parameters.csv",
+      "sha256": "99d069572dcda9cb106e62d011a3a660371c5c2212d2c01736572155ba9277d4"
+    },
+    {
+      "path": "reference/sem/sem_16group_residual_covariance.csv",
+      "source": "Revision-0730/0-Others/Fig7_Shared_Component_SEM/source_data/sem_16group_residual_covariance.csv",
+      "sha256": "4d476f176c64e3fd3a613716eb605d4c42d4400f683aaeda7aaa1b0909011c71"
+    }
+  ],
+  "covariance_verification_20261101": {
+    "status": "PASS",
+    "fresh_isolated_install": true,
+    "python": "3.11.11",
+    "platform": "Windows AMD64",
+    "direct_dependencies": 11,
+    "installed_distributions": 29,
+    "source_imports": 5,
+    "synthetic_rows": 24,
+    "full_cohort_residual_pairs_checked": 21,
+    "residual_max_abs_difference": 0.0,
+    "srmr_abs_difference": 0.0,
+    "baseline_free_health_zero_residual_boundary_preserved": true,
+    "cohort_sem_refits": 0,
+    "synthetic_model_fits": 0,
+    "cohort_fit_convergence_retested": false
+  },
+  "package_id": "4f6632a5e29299e470d70487101c6089492db8940ce7ce6d5241a9d9dd297f7c",
+  "figure7_aggregate_update_20261101": {
+    "entry": "figures/render_figure7.py",
+    "aggregate_input_tables": 7,
+    "macro_intervals_from_formal_joint_bootstrap": 4,
+    "source_data_organ_intervals_synchronized": 28,
+    "point_estimates_changed": false,
+    "layout_alignment": "PASS",
+    "vector_pdf_text_unchanged": true,
+    "pixels_outside_updated_macro_interval_region_unchanged": true,
+    "fits_or_participant_resampling_run": false,
+    "environment": "Observed CPython 3.12.4 / Windows AMD64; requirements-figures.txt; no fresh installation test"
+  },
+  "upstream_instance0_derivations": {
+    "confirmation_basis": "Author confirmation in this session, 2026-11-01; source header names checked without reading participant rows.",
+    "independent_raw_export_rebuild": false,
+    "instance": 0,
+    "hand_grip_average": {
+      "output": "Hand grip strength (average) | Instance 0",
+      "inputs": [
+        "Hand grip strength (left) | Instance 0",
+        "Hand grip strength (right) | Instance 0"
+      ],
+      "formula": "(left + right) / 2"
+    },
+    "fev1_fvc_ratio": {
+      "output": "FEV1-FVC ratio | Instance 0",
+      "inputs": [
+        "Forced expiratory volume in 1-second (FEV1) | Instance 0 | Array 0",
+        "Forced vital capacity (FVC) | Instance 0 | Array 0"
+      ],
+      "formula": "FEV1 Array 0 / FVC Array 0"
+    },
+    "waist_hip_ratio": {
+      "output": "Waist-hip circumference ratio | Instance 0",
+      "inputs": [
+        "Waist circumference | Instance 0",
+        "Hip circumference | Instance 0"
+      ],
+      "formula": "waist / hip"
+    },
+    "missing_value_rule": "If either component is missing, the derived value is missing; no component imputation or observed-only hand mean.",
+    "additional_invalid_or_zero_denominator_cleaning_verified": false,
+    "icd_array_date_pairing_record_confirmed": true
+  },
+  "upstream_icd_pairing": {
+    "entry": "preprocessing/prepare_icd_long.py",
+    "tests": "preprocessing/test_prepare_icd_long.py",
+    "pairing_key": [
+      "Participant ID",
+      "original Array index"
+    ],
+    "code_formats": [
+      "explicit indexed columns",
+      "packed list with explicit verified-original-order declaration"
+    ],
+    "output_columns": [
+      "Participant ID",
+      "ICD",
+      "Disease_Description_Feature",
+      "record_time",
+      "source_array_index"
+    ],
+    "missing_date_handling": "Keep the diagnosis at the same original Array index with blank record_time; never compact dates before pairing.",
+    "unmatched_date_handling": "Reject a nonempty date without a code at the same Array index.",
+    "empty_participant_handling": "One empty clinical placeholder row with a blank source_array_index.",
+    "dependencies": "Python standard library only",
+    "checked_runtime": "CPython 3.12.4 / Windows AMD64",
+    "verification_20261101": {
+      "status": "PASS",
+      "synthetic_tests_passed": 12,
+      "mode": "read_only_verify",
+      "source": {
+        "date_participants": 502163,
+        "date_array_columns": 259,
+        "participants": 502163,
+        "rows": 7071243,
+        "coded_rows": 7015908,
+        "empty_code_rows": 55335,
+        "undated_coded_rows": 0,
+        "shared_date_cells_checked": 99428274
+      },
+      "existing": {
+        "rows": 7071243,
+        "coded_rows": 7015908,
+        "empty_code_rows": 55335,
+        "undated_coded_rows": 0,
+        "participants": 502163,
+        "missing_participants": 0,
+        "unexpected_participants": 0,
+        "mismatched_participants": 0
+      },
+      "compared_fields": [
+        "Participant ID",
+        "ICD",
+        "Disease_Description_Feature",
+        "record_time"
+      ],
+      "comparison": "Per-participant SHA256 of sorted row multisets with date normalization; duplicate multiplicity retained.",
+      "input_sha256": {
+        "codes_csv": "d89ae2920eb46efc0f1f942ba67afe972135a56a3329101cacbd94c73e0d10bc",
+        "dates_csv": "3a8f3ee2033789b0d1e29b025ab9245bbe5d0aee8f8ae4555009ae8956505474",
+        "existing_long": "70ae7d04db587783927380cffda826a0960a27e3919f0d2094c0b8aa11f462a6"
+      },
+      "original_long_matches_frozen_fingerprint": true,
+      "participant_data_written": false,
+      "formal_study_input_rebuilt": false,
+      "scientific_fits_run": 0
+    }
+  },
+  "publication": {
+    "repository": "https://github.com/Mickey5920/Multi-Organ-Age-Prediction",
+    "state_at_preparation": "not_published",
+    "preparation_date": "2026-11-01",
+    "availability": "Confirm distribution through the repository remote refs and Releases; the source manifest records preparation evidence rather than live publication state."
+  },
+  "version_control": {
+    "baseline_commit": "e5613bd9a59d78dd81148f913255605b2623acdd",
+    "baseline_tag": "before-round2",
+    "release_tag": "r2-20261101",
+    "branch": "round2-reproducibility",
+    "legacy_root_files": [
+      "Dataloader.py",
+      "main.py",
+      "model.py",
+      "train.py",
+      "EHR-AGE_architecture.png"
+    ],
+    "git_commit_identity": "Resolve the release tag in Git. The commit SHA is not embedded in its own tree.",
+    "tag_policy": "Keep published version tags fixed; later changes receive a new commit and version tag.",
+    "line_endings": "No Git line-ending conversion; .gitattributes preserves the exact retained source bytes."
+  }
+}

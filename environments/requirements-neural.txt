@@ -1,0 +1,10 @@
+# Observed direct versions; use Python 3.9.25. Not a clean-install-tested transitive lock.
+numpy==2.0.1
+pandas==2.3.3
+scipy==1.13.1
+pyarrow==21.0.0
+lifelines==0.30.0
+scikit-survival==0.23.1
+scikit-learn==1.5.2
+matplotlib==3.9.4
+torch==2.5.1

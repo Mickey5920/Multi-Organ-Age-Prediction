@@ -1,0 +1,78 @@
+{
+  "schema_version": "revision0710.reviewer_statistics.age_final_receipt.v1",
+  "status": "FORMAL_AGE_B1000_CREATE_ONCE_VERIFIED",
+  "n_resamples": 1000,
+  "seed": 7100710,
+  "contract": {
+    "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/analysis_contract.json",
+    "sha256": "3f6d69b7900494d7c944d9bc3395a507b5034110e66ba1f9a5931e8dfde270cf",
+    "bytes": 3723
+  },
+  "input_manifest": {
+    "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/00_input_lock/INPUT_MANIFEST.json",
+    "sha256": "9ce668bf7d9dacb38ce4f4685c91234dc0eaf8e2f023c6753cfcf88c2b346e51",
+    "bytes": 44262
+  },
+  "statistical_engine_at_age_execution": {
+    "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/paired_uncertainty.py",
+    "sha256": "ba84a64710a3799a553b690b43b5a6dbbb9a5f98cb32fbf524210380de46985b"
+  },
+  "final_statistical_engine": {
+    "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/paired_uncertainty.py",
+    "sha256": "0cd9309279fb678c09026491206da806ac0b6481632af0f2b7377a32963347ba",
+    "bytes": 43626
+  },
+  "final_execution_entrypoint": {
+    "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/run_paired_uncertainty.py",
+    "sha256": "d5b2dc8e8be037e6b9aa899641160a20e82fb761b9faaafc3a5802f772d0438b",
+    "bytes": 59873
+  },
+  "environment": {
+    "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "pyarrow": "14.0.2"
+  },
+  "outputs": [
+    {
+      "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/01_age/strict_age_participant_sufficient_statistics.parquet",
+      "sha256": "ff3de8cf3c9faa778ebad10c8106dda178a944c010f4c8b9ee8e67cd2f66cb37",
+      "bytes": 17882231,
+      "rows": 102129
+    },
+    {
+      "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/01_age/age_point_estimates.csv",
+      "sha256": "ae7ef173604030b625e7f2dcd181d32e8d3d961b064b895b1d45b056f1cdd116",
+      "bytes": 2057
+    },
+    {
+      "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/01_age/age_bootstrap_replicates.parquet",
+      "sha256": "c9eef443c31bd5203e7060e011ddb7829724f50833a0f2cae93c3e95a55c9d80",
+      "bytes": 582890,
+      "rows": 18000
+    },
+    {
+      "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/01_age/age_paired_summary.csv",
+      "sha256": "81a55c1d9f1644e077f2d957bd4cbfb8134fb28e835f85c6dfedb001bbcff295",
+      "bytes": 4478
+    },
+    {
+      "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/01_age/AGE_POINT_PARITY.json",
+      "sha256": "8c4757d723c508890433d77b55c3135c9c6e7a0dd4a55443cda1f0e5b20fa9c3",
+      "bytes": 7359
+    },
+    {
+      "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/01_age/AGE_RUN_MANIFEST.json",
+      "sha256": "8715b43dc534fa353c5556a6f5b43acc7cd613bb653a5134ff9a2b70181d6c28",
+      "bytes": 2038
+    },
+    {
+      "relative_path": "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/06_paired_uncertainty_and_fdr/01_age/AGE_EXECUTION_AUDIT.json",
+      "sha256": "2b2d7502dd9504c3fe77806e08820f7484832e86abdcfe1eca51d651b8f12c6a",
+      "bytes": 1260
+    }
+  ],
+  "point_parity": "PASS_AT_ABSOLUTE_TOLERANCE_1E_10",
+  "immutability": "formal outputs were first writes and cannot be overwritten by the formal entrypoint"
+}

@@ -1,0 +1,610 @@
+{
+  "schema_version": "revision0710.ehr_age.codebook_v2.fold0_metrics.v1",
+  "status": "NEEDS_OPTIMIZATION",
+  "completed_utc": "2026-07-16T20:20:42+00:00",
+  "fold_role": "open Fold0 development; repeated inspection allowed",
+  "selected_epoch": null,
+  "diagnostic_epoch": 60,
+  "promotion_targets_provisional_until_v2_baselines": {
+    "strict_mae_max_exclusive": 3.681014,
+    "strict_pearson_min_exclusive": 0.797574,
+    "strict_r2_min_exclusive": 0.631047,
+    "full_risk_macro_delta_c_min_exclusive": 0.022939
+  },
+  "primary_same_epoch": {
+    "strict_mae": 3.7051189283223533,
+    "strict_pearson": 0.7981346332293943,
+    "strict_r2": 0.6326219886341353,
+    "full_risk_macro_delta_c": 0.043013122807016115,
+    "positive_organs": 7,
+    "all_four_pass": false
+  },
+  "strict_age_raw": {
+    "participant_n": 20362,
+    "row_n": 142534,
+    "mae": 3.7051189283223533,
+    "pearson": 0.7981346332293943,
+    "r2": 0.6326219886341353,
+    "organs": {
+      "cardiovascular": {
+        "participant_n": 20362,
+        "row_n": 20362,
+        "mae": 3.7047729954927027,
+        "pearson": 0.7982441497846162,
+        "r2": 0.6325938590403684
+      },
+      "hepatic": {
+        "participant_n": 20362,
+        "row_n": 20362,
+        "mae": 3.705323017810911,
+        "pearson": 0.7980453480270155,
+        "r2": 0.6328177817509177
+      },
+      "immune": {
+        "participant_n": 20362,
+        "row_n": 20362,
+        "mae": 3.7060433331459492,
+        "pearson": 0.7979416263146105,
+        "r2": 0.6323774691263255
+      },
+      "metabolic": {
+        "participant_n": 20362,
+        "row_n": 20362,
+        "mae": 3.70500267653788,
+        "pearson": 0.7982149477908121,
+        "r2": 0.63259142824009
+      },
+      "musculoskeletal": {
+        "participant_n": 20362,
+        "row_n": 20362,
+        "mae": 3.7047651697617243,
+        "pearson": 0.7982291671841123,
+        "r2": 0.6327485476426122
+      },
+      "pulmonary": {
+        "participant_n": 20362,
+        "row_n": 20362,
+        "mae": 3.7049370181079277,
+        "pearson": 0.7982107729653217,
+        "r2": 0.6326881350367939
+      },
+      "renal": {
+        "participant_n": 20362,
+        "row_n": 20362,
+        "mae": 3.7049882873993774,
+        "pearson": 0.7980698307456373,
+        "r2": 0.6325366996018389
+      }
+    }
+  },
+  "strict_age_fold1_corrected_diagnostic": {
+    "participant_n": 20362,
+    "row_n": 142534,
+    "mae": 3.211419098255251,
+    "pearson": 0.8890467688797267,
+    "r2": 0.7334740534201143,
+    "organs": {
+      "cardiovascular": {
+        "participant_n": 20362,
+        "row_n": 20362,
+        "mae": 3.2148595231813166,
+        "pearson": 0.8888647523986402,
+        "r2": 0.7329967808725533
+      },
+      "hepatic": {
+        "participant_n": 20362,
+        "row_n": 20362,
+        "mae": 3.207317808318671,
+        "pearson": 0.8893083462556881,
+        "r2": 0.734117863230479
+      },
+      "immune": {
+        "participant_n": 20362,
+        "row_n": 20362,
+        "mae": 3.210744167203646,
+        "pearson": 0.8890130447063521,
+        "r2": 0.7333600187516548
+      },
+      "metabolic": {
+        "participant_n": 20362,
+        "row_n": 20362,
+        "mae": 3.2138993843669192,
+        "pearson": 0.8889199616379185,
+        "r2": 0.7331396482197019
+      },
+      "musculoskeletal": {
+        "participant_n": 20362,
+        "row_n": 20362,
+        "mae": 3.2096189004291897,
+        "pearson": 0.8891941583848634,
+        "r2": 0.7338939100650943
+      },
+      "pulmonary": {
+        "participant_n": 20362,
+        "row_n": 20362,
+        "mae": 3.211914815705872,
+        "pearson": 0.8890505447282914,
+        "r2": 0.7335067173430319
+      },
+      "renal": {
+        "participant_n": 20362,
+        "row_n": 20362,
+        "mae": 3.2115790885811384,
+        "pearson": 0.8889767046126551,
+        "r2": 0.7333034354582848
+      }
+    }
+  },
+  "full_risk": {
+    "definition": "Fold1 calibration-fit strict-reference age correction and Cox nuisance; open Fold0 Harrell C-index on each organ's complete at_risk=1 population",
+    "fit_population": "Fold1 calibration",
+    "score_population": "open Fold0 organ-specific all at_risk=1",
+    "strict_healthy_filter_applied_to_risk_score_population": false,
+    "macro_delta_c": 0.043013122807016115,
+    "positive_organs": 7,
+    "organs_beating_baseline": 7,
+    "evaluable_organs": 7,
+    "organs": {
+      "cardiovascular": {
+        "fold": 0,
+        "organ_system": "cardiovascular",
+        "n_validation": 38551,
+        "n_test": 77380,
+        "validation_events": 4713,
+        "test_events": 9813,
+        "c_base": 0.6650189344562514,
+        "c_plus": 0.689764813043723,
+        "delta_c": 0.02474587858747157
+      },
+      "hepatic": {
+        "fold": 0,
+        "organ_system": "hepatic",
+        "n_validation": 43868,
+        "n_test": 87956,
+        "validation_events": 308,
+        "test_events": 540,
+        "c_base": 0.5976416751336392,
+        "c_plus": 0.6471357050007498,
+        "delta_c": 0.0494940298671106
+      },
+      "immune": {
+        "fold": 0,
+        "organ_system": "immune",
+        "n_validation": 43511,
+        "n_test": 87274,
+        "validation_events": 561,
+        "test_events": 1120,
+        "c_base": 0.6389473929511029,
+        "c_plus": 0.6900460131969621,
+        "delta_c": 0.051098620245859205
+      },
+      "metabolic": {
+        "fold": 0,
+        "organ_system": "metabolic",
+        "n_validation": 40876,
+        "n_test": 81932,
+        "validation_events": 3638,
+        "test_events": 7390,
+        "c_base": 0.6271865520646093,
+        "c_plus": 0.6673176887951051,
+        "delta_c": 0.04013113673049584
+      },
+      "musculoskeletal": {
+        "fold": 0,
+        "organ_system": "musculoskeletal",
+        "n_validation": 38159,
+        "n_test": 76549,
+        "validation_events": 4326,
+        "test_events": 8713,
+        "c_base": 0.5958021160007998,
+        "c_plus": 0.6141457864206615,
+        "delta_c": 0.018343670419861735
+      },
+      "pulmonary": {
+        "fold": 0,
+        "organ_system": "pulmonary",
+        "n_validation": 42288,
+        "n_test": 84814,
+        "validation_events": 1837,
+        "test_events": 3991,
+        "c_base": 0.5932407033614546,
+        "c_plus": 0.6520512975627374,
+        "delta_c": 0.05881059420128276
+      },
+      "renal": {
+        "fold": 0,
+        "organ_system": "renal",
+        "n_validation": 43544,
+        "n_test": 87369,
+        "validation_events": 712,
+        "test_events": 1416,
+        "c_base": 0.6751628527309419,
+        "c_plus": 0.733630782327973,
+        "delta_c": 0.058467929597031065
+      }
+    }
+  },
+  "pareto_epochs": [
+    45,
+    49,
+    55
+  ],
+  "risk_evaluated_epochs": [
+    45,
+    49,
+    55,
+    60
+  ],
+  "risk_history": [
+    {
+      "epoch": 45,
+      "strict_mae": 3.7026605171842615,
+      "strict_pearson": 0.7980620404501929,
+      "strict_r2": 0.6330376097161486,
+      "age_gate_count": 2,
+      "seconds": 38.37410010000167,
+      "full_risk_macro_delta_c": 0.0418792367465327,
+      "positive_organs": 7,
+      "organs_beating_v1_baseline": 7,
+      "all_four_pass": false,
+      "organ_risk": {
+        "cardiovascular": {
+          "fold": 0,
+          "organ_system": "cardiovascular",
+          "n_validation": 38551,
+          "n_test": 77380,
+          "validation_events": 4713,
+          "test_events": 9813,
+          "c_base": 0.6650189344562514,
+          "c_plus": 0.6891330265957071,
+          "delta_c": 0.0241140921394557
+        },
+        "hepatic": {
+          "fold": 0,
+          "organ_system": "hepatic",
+          "n_validation": 43868,
+          "n_test": 87956,
+          "validation_events": 308,
+          "test_events": 540,
+          "c_base": 0.5976416751336392,
+          "c_plus": 0.645194096333816,
+          "delta_c": 0.047552421200176775
+        },
+        "immune": {
+          "fold": 0,
+          "organ_system": "immune",
+          "n_validation": 43511,
+          "n_test": 87274,
+          "validation_events": 561,
+          "test_events": 1120,
+          "c_base": 0.6389473929511029,
+          "c_plus": 0.6889004307789681,
+          "delta_c": 0.0499530378278652
+        },
+        "metabolic": {
+          "fold": 0,
+          "organ_system": "metabolic",
+          "n_validation": 40876,
+          "n_test": 81932,
+          "validation_events": 3638,
+          "test_events": 7390,
+          "c_base": 0.6271865520646093,
+          "c_plus": 0.6666155216394046,
+          "delta_c": 0.03942896957479536
+        },
+        "musculoskeletal": {
+          "fold": 0,
+          "organ_system": "musculoskeletal",
+          "n_validation": 38159,
+          "n_test": 76549,
+          "validation_events": 4326,
+          "test_events": 8713,
+          "c_base": 0.5958021160007998,
+          "c_plus": 0.6133708852887391,
+          "delta_c": 0.017568769287939268
+        },
+        "pulmonary": {
+          "fold": 0,
+          "organ_system": "pulmonary",
+          "n_validation": 42288,
+          "n_test": 84814,
+          "validation_events": 1837,
+          "test_events": 3991,
+          "c_base": 0.5932407033614546,
+          "c_plus": 0.6504644445161109,
+          "delta_c": 0.05722374115465623
+        },
+        "renal": {
+          "fold": 0,
+          "organ_system": "renal",
+          "n_validation": 43544,
+          "n_test": 87369,
+          "validation_events": 712,
+          "test_events": 1416,
+          "c_base": 0.6751628527309419,
+          "c_plus": 0.7324764787717822,
+          "delta_c": 0.05731362604084034
+        }
+      }
+    },
+    {
+      "epoch": 49,
+      "strict_mae": 3.704775391568143,
+      "strict_pearson": 0.7981731672439737,
+      "strict_r2": 0.6320424501412173,
+      "age_gate_count": 2,
+      "seconds": 38.393074200008414,
+      "full_risk_macro_delta_c": 0.04285791823596289,
+      "positive_organs": 7,
+      "organs_beating_v1_baseline": 7,
+      "all_four_pass": false,
+      "organ_risk": {
+        "cardiovascular": {
+          "fold": 0,
+          "organ_system": "cardiovascular",
+          "n_validation": 38551,
+          "n_test": 77380,
+          "validation_events": 4713,
+          "test_events": 9813,
+          "c_base": 0.6650189344562514,
+          "c_plus": 0.6893796756856845,
+          "delta_c": 0.024360741229433103
+        },
+        "hepatic": {
+          "fold": 0,
+          "organ_system": "hepatic",
+          "n_validation": 43868,
+          "n_test": 87956,
+          "validation_events": 308,
+          "test_events": 540,
+          "c_base": 0.5976416751336392,
+          "c_plus": 0.6480567877234381,
+          "delta_c": 0.050415112589798916
+        },
+        "immune": {
+          "fold": 0,
+          "organ_system": "immune",
+          "n_validation": 43511,
+          "n_test": 87274,
+          "validation_events": 561,
+          "test_events": 1120,
+          "c_base": 0.6389473929511029,
+          "c_plus": 0.68997344605447,
+          "delta_c": 0.05102605310336705
+        },
+        "metabolic": {
+          "fold": 0,
+          "organ_system": "metabolic",
+          "n_validation": 40876,
+          "n_test": 81932,
+          "validation_events": 3638,
+          "test_events": 7390,
+          "c_base": 0.6271865520646093,
+          "c_plus": 0.6669960977048676,
+          "delta_c": 0.03980954564025829
+        },
+        "musculoskeletal": {
+          "fold": 0,
+          "organ_system": "musculoskeletal",
+          "n_validation": 38159,
+          "n_test": 76549,
+          "validation_events": 4326,
+          "test_events": 8713,
+          "c_base": 0.5958021160007998,
+          "c_plus": 0.6138679602052743,
+          "delta_c": 0.018065844204474546
+        },
+        "pulmonary": {
+          "fold": 0,
+          "organ_system": "pulmonary",
+          "n_validation": 42288,
+          "n_test": 84814,
+          "validation_events": 1837,
+          "test_events": 3991,
+          "c_base": 0.5932407033614546,
+          "c_plus": 0.6516113956590012,
+          "delta_c": 0.058370692297546545
+        },
+        "renal": {
+          "fold": 0,
+          "organ_system": "renal",
+          "n_validation": 43544,
+          "n_test": 87369,
+          "validation_events": 712,
+          "test_events": 1416,
+          "c_base": 0.6751628527309419,
+          "c_plus": 0.7331202913178037,
+          "delta_c": 0.057957438586861754
+        }
+      }
+    },
+    {
+      "epoch": 55,
+      "strict_mae": 3.7039210064878487,
+      "strict_pearson": 0.7981661760871378,
+      "strict_r2": 0.6331040282463767,
+      "age_gate_count": 2,
+      "seconds": 38.29311759999837,
+      "full_risk_macro_delta_c": 0.042942416636969946,
+      "positive_organs": 7,
+      "organs_beating_v1_baseline": 7,
+      "all_four_pass": false,
+      "organ_risk": {
+        "cardiovascular": {
+          "fold": 0,
+          "organ_system": "cardiovascular",
+          "n_validation": 38551,
+          "n_test": 77380,
+          "validation_events": 4713,
+          "test_events": 9813,
+          "c_base": 0.6650189344562514,
+          "c_plus": 0.6896687079368422,
+          "delta_c": 0.02464977348059083
+        },
+        "hepatic": {
+          "fold": 0,
+          "organ_system": "hepatic",
+          "n_validation": 43868,
+          "n_test": 87956,
+          "validation_events": 308,
+          "test_events": 540,
+          "c_base": 0.5976416751336392,
+          "c_plus": 0.6466176613924097,
+          "delta_c": 0.04897598625877053
+        },
+        "immune": {
+          "fold": 0,
+          "organ_system": "immune",
+          "n_validation": 43511,
+          "n_test": 87274,
+          "validation_events": 561,
+          "test_events": 1120,
+          "c_base": 0.6389473929511029,
+          "c_plus": 0.6900326728364431,
+          "delta_c": 0.051085279885340174
+        },
+        "metabolic": {
+          "fold": 0,
+          "organ_system": "metabolic",
+          "n_validation": 40876,
+          "n_test": 81932,
+          "validation_events": 3638,
+          "test_events": 7390,
+          "c_base": 0.6271865520646093,
+          "c_plus": 0.66722329768849,
+          "delta_c": 0.04003674562388071
+        },
+        "musculoskeletal": {
+          "fold": 0,
+          "organ_system": "musculoskeletal",
+          "n_validation": 38159,
+          "n_test": 76549,
+          "validation_events": 4326,
+          "test_events": 8713,
+          "c_base": 0.5958021160007998,
+          "c_plus": 0.6141231907452257,
+          "delta_c": 0.018321074744425903
+        },
+        "pulmonary": {
+          "fold": 0,
+          "organ_system": "pulmonary",
+          "n_validation": 42288,
+          "n_test": 84814,
+          "validation_events": 1837,
+          "test_events": 3991,
+          "c_base": 0.5932407033614546,
+          "c_plus": 0.6522224886228049,
+          "delta_c": 0.05898178526135023
+        },
+        "renal": {
+          "fold": 0,
+          "organ_system": "renal",
+          "n_validation": 43544,
+          "n_test": 87369,
+          "validation_events": 712,
+          "test_events": 1416,
+          "c_base": 0.6751628527309419,
+          "c_plus": 0.7337091239353731,
+          "delta_c": 0.05854627120443123
+        }
+      }
+    },
+    {
+      "epoch": 60,
+      "strict_mae": 3.7051189283223533,
+      "strict_pearson": 0.7981346332293943,
+      "strict_r2": 0.6326219886341353,
+      "age_gate_count": 2,
+      "seconds": 38.33270929999708,
+      "full_risk_macro_delta_c": 0.043013122807016115,
+      "positive_organs": 7,
+      "organs_beating_v1_baseline": 7,
+      "all_four_pass": false,
+      "organ_risk": {
+        "cardiovascular": {
+          "fold": 0,
+          "organ_system": "cardiovascular",
+          "n_validation": 38551,
+          "n_test": 77380,
+          "validation_events": 4713,
+          "test_events": 9813,
+          "c_base": 0.6650189344562514,
+          "c_plus": 0.689764813043723,
+          "delta_c": 0.02474587858747157
+        },
+        "hepatic": {
+          "fold": 0,
+          "organ_system": "hepatic",
+          "n_validation": 43868,
+          "n_test": 87956,
+          "validation_events": 308,
+          "test_events": 540,
+          "c_base": 0.5976416751336392,
+          "c_plus": 0.6471357050007498,
+          "delta_c": 0.0494940298671106
+        },
+        "immune": {
+          "fold": 0,
+          "organ_system": "immune",
+          "n_validation": 43511,
+          "n_test": 87274,
+          "validation_events": 561,
+          "test_events": 1120,
+          "c_base": 0.6389473929511029,
+          "c_plus": 0.6900460131969621,
+          "delta_c": 0.051098620245859205
+        },
+        "metabolic": {
+          "fold": 0,
+          "organ_system": "metabolic",
+          "n_validation": 40876,
+          "n_test": 81932,
+          "validation_events": 3638,
+          "test_events": 7390,
+          "c_base": 0.6271865520646093,
+          "c_plus": 0.6673176887951051,
+          "delta_c": 0.04013113673049584
+        },
+        "musculoskeletal": {
+          "fold": 0,
+          "organ_system": "musculoskeletal",
+          "n_validation": 38159,
+          "n_test": 76549,
+          "validation_events": 4326,
+          "test_events": 8713,
+          "c_base": 0.5958021160007998,
+          "c_plus": 0.6141457864206615,
+          "delta_c": 0.018343670419861735
+        },
+        "pulmonary": {
+          "fold": 0,
+          "organ_system": "pulmonary",
+          "n_validation": 42288,
+          "n_test": 84814,
+          "validation_events": 1837,
+          "test_events": 3991,
+          "c_base": 0.5932407033614546,
+          "c_plus": 0.6520512975627374,
+          "delta_c": 0.05881059420128276
+        },
+        "renal": {
+          "fold": 0,
+          "organ_system": "renal",
+          "n_validation": 43544,
+          "n_test": 87369,
+          "validation_events": 712,
+          "test_events": 1416,
+          "c_base": 0.6751628527309419,
+          "c_plus": 0.733630782327973,
+          "delta_c": 0.058467929597031065
+        }
+      }
+    }
+  ],
+  "checkpoint": {
+    "path": "E:\\MPU\\Code\\Age-Prediction-0620\\Revision-0710\\03_ehr_age\\06_codebook_v2\\01_runs\\current_architecture_fold0\\checkpoint.pt",
+    "sha256": "bf565e3ce31f236ad0ece0397a1702c6b26fee3e724e6c1bac9c91178f508f64"
+  },
+  "elapsed_seconds": 2351.7077313000045,
+  "peak_cuda_allocated_mb": 6629.154296875
+}

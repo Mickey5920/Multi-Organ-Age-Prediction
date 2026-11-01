@@ -1,0 +1,106 @@
+{
+  "schema_version": "revision0710_baseline_metric_envelope_v1",
+  "source_registry_sha256": "70b5b3d111e0cafcf3373cb30a9e161bded498454a2a33485e9b49cc19332291",
+  "scope": "Tier A plus Tier B; metric-wise best of eight explicit five-fold evaluations",
+  "methods": [
+    "retain",
+    "behrt_style",
+    "medbert_style",
+    "ehrformer_style",
+    "retain_organquery",
+    "behrt_style_organquery",
+    "medbert_style_organquery",
+    "ehrformer_style_organquery"
+  ],
+  "metric_envelope": {
+    "strict_mae": {
+      "direction": "lower",
+      "baseline_value": 3.720129337160603,
+      "source_method": "retain",
+      "source_tier": "tier_a",
+      "required_margin": 0.01,
+      "absolute_gate": 4.35,
+      "ehr_age_threshold_exclusive": 3.710129337160603,
+      "ehr_age_threshold_exclusive_decimal": "3.710129337160603"
+    },
+    "strict_pearson": {
+      "direction": "higher",
+      "baseline_value": 0.7941554245408285,
+      "source_method": "retain",
+      "source_tier": "tier_a",
+      "required_margin": 0.001,
+      "absolute_gate": null,
+      "ehr_age_threshold_exclusive": 0.7951554245408285,
+      "ehr_age_threshold_exclusive_decimal": "0.7951554245408285"
+    },
+    "strict_r2": {
+      "direction": "higher",
+      "baseline_value": 0.6251940714932764,
+      "source_method": "retain",
+      "source_tier": "tier_a",
+      "required_margin": 0.002,
+      "absolute_gate": null,
+      "ehr_age_threshold_exclusive": 0.6271940714932764,
+      "ehr_age_threshold_exclusive_decimal": "0.6271940714932764"
+    },
+    "full_risk_macro_delta_c": {
+      "direction": "higher",
+      "baseline_value": 0.011954426818589926,
+      "source_method": "retain_organquery",
+      "source_tier": "tier_b",
+      "required_margin": 0.01,
+      "absolute_gate": 0.07,
+      "ehr_age_threshold_exclusive": 0.07,
+      "ehr_age_threshold_exclusive_decimal": "0.07"
+    }
+  },
+  "organ_delta_c_envelope": [
+    {
+      "organ_system": "cardiovascular",
+      "baseline_mean_delta_c": 0.009759988307111533,
+      "source_method": "retain_organquery",
+      "source_tier": "tier_b"
+    },
+    {
+      "organ_system": "hepatic",
+      "baseline_mean_delta_c": 0.011858727225772903,
+      "source_method": "ehrformer_style",
+      "source_tier": "tier_a"
+    },
+    {
+      "organ_system": "immune",
+      "baseline_mean_delta_c": 0.01658023956296184,
+      "source_method": "behrt_style",
+      "source_tier": "tier_a"
+    },
+    {
+      "organ_system": "metabolic",
+      "baseline_mean_delta_c": 0.010699986807922612,
+      "source_method": "retain_organquery",
+      "source_tier": "tier_b"
+    },
+    {
+      "organ_system": "musculoskeletal",
+      "baseline_mean_delta_c": 0.003214681063007685,
+      "source_method": "ehrformer_style",
+      "source_tier": "tier_a"
+    },
+    {
+      "organ_system": "pulmonary",
+      "baseline_mean_delta_c": 0.017368829279470765,
+      "source_method": "retain_organquery",
+      "source_tier": "tier_b"
+    },
+    {
+      "organ_system": "renal",
+      "baseline_mean_delta_c": 0.01851390826379824,
+      "source_method": "retain_organquery",
+      "source_tier": "tier_b"
+    }
+  ],
+  "ehr_age_requirements": {
+    "strict_comparison": "exclusive",
+    "positive_organs_required": 7,
+    "organs_beating_metricwise_baseline_required": 5
+  }
+}

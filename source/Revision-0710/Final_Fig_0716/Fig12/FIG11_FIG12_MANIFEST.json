@@ -1,0 +1,70 @@
+{
+  "schema_version": "revision0710.fig11_fig12.single_gap_marginal.0626_style.v1",
+  "status": "COMPLETE",
+  "created_utc": "2026-07-15T17:27:18.571149+00:00",
+  "calculation": "one standardized source-organ gap plus seven Fig8 clinical covariates; no other gaps",
+  "interpretation": "adjusted marginal association; not causal, mechanistic, or SEM",
+  "style_source": "Revision-0626/18_final_ehr_age_downstream_gp_medication_20260707/source_scripts_snapshot/render_legacy_style_figures.py",
+  "inputs": {
+    "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/05_fig11_fig12_marginal_and_review_closure/02_single_gap_associations/Fig12/marginal_association_coefficients.csv": "04b1d8dbf4b28b019f150fa50a195c7c19c42457e77940202175d8b350281cf2",
+    "Revision-0710/06_figures_and_statistics/03_reviewer_statistics/05_fig11_fig12_marginal_and_review_closure/02_single_gap_associations/Fig11/AllGroups_Marginal_Association_Matrix.csv": "4a53011f1f7bcf2006232aa3f9b437ec27ed7ce2bd6a24f83e73fd0e460953e0",
+    "Revision-0626/18_final_ehr_age_downstream_gp_medication_20260707/source_scripts_snapshot/render_legacy_style_figures.py": "0d30249fe7d2e67c63a06424cfc4bc300c9f3680d414fab96940acedbd48a93c"
+  },
+  "rows": 672,
+  "matrix_shape": [
+    42,
+    16
+  ],
+  "coefficient_range": [
+    0.7494066463206875,
+    0.9999401916093248
+  ],
+  "outputs": [
+    {
+      "relative_path": "Fig11/Fig-11-Marginal-Association-Heatmap.png",
+      "bytes": 1394527,
+      "sha256": "6d3d0d68e59191b7b057bab74b51c492d42fb509eff94fc09bf331a7c667c564"
+    },
+    {
+      "relative_path": "Fig11/Fig-11-Marginal-Association-Heatmap.pdf",
+      "bytes": 59774,
+      "sha256": "693425843d99ef4fc04333e378d63a667b271f444649ad4821daf8b5f2059dc6"
+    },
+    {
+      "relative_path": "Fig11/Fig-11-Marginal-Association-Heatmap.svg",
+      "bytes": 530413,
+      "sha256": "74dbbe328206ceb8c1a4742bbe005542278e5de725602c9b1c803afc7b9bb13f"
+    },
+    {
+      "relative_path": "Fig12/Fig-12-Marginal-Association-Network.png",
+      "bytes": 1007501,
+      "sha256": "9161143959af4fc0f7e2a8c1ae978315528993d17234400fd4698dd01d13714a"
+    },
+    {
+      "relative_path": "Fig12/Fig-12-Marginal-Association-Network.pdf",
+      "bytes": 53854,
+      "sha256": "e25193dfa0a1192d8fe4061074fa25ab99d5ff04a55af650aff5e10d50eb7e63"
+    },
+    {
+      "relative_path": "Fig12/Fig-12-Marginal-Association-Network.svg",
+      "bytes": 102944,
+      "sha256": "9547e99f68c79cf90d50ab680573d2e3c7f182c8773d9b8e4e86000e98b42b4b"
+    }
+  ],
+  "image_qa": [
+    {
+      "relative_path": "Fig11/Fig-11-Marginal-Association-Heatmap.png",
+      "width": 4560,
+      "height": 4410,
+      "channel_std_mean": 79.0805228432457,
+      "nonblank": true
+    },
+    {
+      "relative_path": "Fig12/Fig-12-Marginal-Association-Network.png",
+      "width": 4152,
+      "height": 3941,
+      "channel_std_mean": 57.79882416504239,
+      "nonblank": true
+    }
+  ]
+}
