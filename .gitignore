@@ -1,12 +1,8 @@
 __pycache__/
 *.py[cod]
-*.pt
 *.npz
+*.pt
+*.pth
 *.parquet
-*.pkl
-/.storage-run.lock
-/storage-launch.json
-/checks/
-/outputs/
-/cache/
-/tmp/
+outputs/
+data/

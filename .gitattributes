@@ -1,3 +1,0 @@
-# Preserve the byte-identical study snapshot and its SHA256 manifests on all OSes.
-# This disables line-ending conversion; ordinary text diffs still work.
-* -text

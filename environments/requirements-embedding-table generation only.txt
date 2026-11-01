@@ -1,6 +1,0 @@
-# Observed direct versions; use Python 3.10.19. Not a clean-install-tested transitive lock.
-torch==2.5.1
-open-clip-torch==3.3.0
-torchvision==0.20.1
-numpy==2.2.6
-pandas==2.3.3

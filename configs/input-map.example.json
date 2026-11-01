@@ -1,6 +1,0 @@
-{
-  "Revision-0710/01_data_rebuild/00_config/source_paths.json": "/data/private/ukb_source_paths.json",
-  "F:/Data/mimic-iv-3.1": "/data/private/mimic-iv-3.1",
-  "F:/Data/NHANES/NHANES": "/data/nhanes",
-  "E:/MPU/Project/Dataset-0911/Association": "/data/private/ukb/Association"
-}

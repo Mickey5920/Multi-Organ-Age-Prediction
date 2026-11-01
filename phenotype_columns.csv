@@ -1,0 +1,79 @@
+slot,name,unit
+0,Hand grip strength (average) | Instance 0,kg
+1,Waist circumference | Instance 0,cm
+2,Hip circumference | Instance 0,cm
+3,Standing height | Instance 0,cm
+4,"Pulse rate, automated reading | Instance 0 | Array 0",beats/min
+5,Forced vital capacity (FVC) | Instance 0 | Array 0,L
+6,Forced expiratory volume in 1-second (FEV1) | Instance 0 | Array 0,L
+7,Peak expiratory flow (PEF) | Instance 0 | Array 0,L/min
+8,"Diastolic blood pressure, automated reading | Instance 0 | Array 0",mmHg
+9,"Systolic blood pressure, automated reading | Instance 0 | Array 0",mmHg
+10,Body mass index (BMI) | Instance 0,kg/m2
+11,Weight | Instance 0(participant - p21002_i0),kg
+12,White blood cell (leukocyte) count | Instance 0,10^9/L
+13,Red blood cell (erythrocyte) count | Instance 0,10^12/L
+14,Haemoglobin concentration | Instance 0,g/dL
+15,Haematocrit percentage | Instance 0,%
+16,Mean corpuscular volume | Instance 0,fL
+17,Mean corpuscular haemoglobin | Instance 0,pg
+18,Mean corpuscular haemoglobin concentration | Instance 0,g/dL
+19,Red blood cell (erythrocyte) distribution width | Instance 0,%
+20,Platelet count | Instance 0,10^9/L
+21,Platelet crit | Instance 0,%
+22,Mean platelet (thrombocyte) volume | Instance 0,fL
+23,Platelet distribution width | Instance 0,%
+24,Lymphocyte count | Instance 0,10^9/L
+25,Monocyte count | Instance 0,10^9/L
+26,Neutrophill count | Instance 0,10^9/L
+27,Eosinophill count | Instance 0,10^9/L
+28,Basophill count | Instance 0,10^9/L
+29,Nucleated red blood cell count | Instance 0,10^9/L
+30,Lymphocyte percentage | Instance 0,%
+31,Monocyte percentage | Instance 0,%
+32,Neutrophill percentage | Instance 0,%
+33,Eosinophill percentage | Instance 0,%
+34,Basophill percentage | Instance 0,%
+35,Nucleated red blood cell percentage | Instance 0,%
+36,Reticulocyte percentage | Instance 0,%
+37,Reticulocyte count | Instance 0,10^12/L
+38,Mean reticulocyte volume | Instance 0,fL
+39,Mean sphered cell volume | Instance 0,fL
+40,Immature reticulocyte fraction | Instance 0,%
+41,High light scatter reticulocyte percentage | Instance 0,%
+42,High light scatter reticulocyte count | Instance 0,10^9/L
+43,Creatinine (enzymatic) in urine | Instance 0,umol/L
+44,Potassium in urine | Instance 0,mmol/L
+45,Sodium in urine | Instance 0,mmol/L
+46,Albumin | Instance 0(participant - p30600_i0),g/L
+47,Alkaline phosphatase | Instance 0,U/L
+48,Alanine aminotransferase | Instance 0,U/L
+49,Apolipoprotein A | Instance 0,g/L
+50,Apolipoprotein B | Instance 0,g/L
+51,Aspartate aminotransferase | Instance 0,U/L
+52,Direct bilirubin | Instance 0,umol/L
+53,Urea | Instance 0,mmol/L
+54,Calcium | Instance 0,mmol/L
+55,Cholesterol | Instance 0,mmol/L
+56,Creatinine | Instance 0,umol/L
+57,C-reactive protein | Instance 0,mg/L
+58,Cystatin C | Instance 0,mg/L
+59,Gamma glutamyltransferase | Instance 0,U/L
+60,Glucose | Instance 0,mmol/L
+61,Glycated haemoglobin (HbA1c) | Instance 0,mmol/mol
+62,HDL cholesterol | Instance 0,mmol/L
+63,IGF-1 | Instance 0,nmol/L
+64,LDL direct | Instance 0,mmol/L
+65,Lipoprotein A | Instance 0,nmol/L
+66,Phosphate | Instance 0,mmol/L
+67,SHBG | Instance 0,nmol/L
+68,Total bilirubin | Instance 0,umol/L
+69,Testosterone | Instance 0,nmol/L
+70,Total protein | Instance 0,g/L
+71,Triglycerides | Instance 0,mmol/L
+72,Urate | Instance 0,umol/L
+73,Vitamin D | Instance 0,nmol/L
+74,FEV1-FVC ratio | Instance 0,ratio
+75,Waist-hip circumference ratio | Instance 0,ratio
+76,Heel bone mineral density (BMD) | Instance 0,g/cm2
+77,Ankle spacing width | Instance 0,cm
