@@ -82,3 +82,7 @@ python main.py --data data.npz --embeddings clip_embeddings.npz --outer-fold 0 -
 Repeat with outer folds 0-4 for the five participant-disjoint rotations. Participant-level cohort data, embedding tables and trained checkpoints are not redistributed. Model outputs are age-referenced, outcome-informed representations; correspondence with biological aging requires independent validation.
 
 Research code and documentation are available under the [MIT License](LICENSE).
+
+## Model comparisons, external validation and statistical analyses
+
+The [`analysis`](analysis/README.md) directory provides comparator architectures and training, MIMIC-IV/NHANES preprocessing and evaluation functions, clinical Cox references, paired bootstrap comparisons, and shared-factor SEM. Its README describes the inputs, dependencies and usage.
