@@ -119,3 +119,69 @@ The input has one participant per row and seven finite numeric columns named by 
 The reusable numerical definitions were checked against the existing analysis source. Packaging checks use synthetic arrays and tables; they do not rerun the study. Access to study data remains subject to the data providers' conditions. Supply authorized data and any required trained checkpoints locally. All example paths above are relative placeholders; local input data, trained weights and generated outputs are not part of this code directory.
 
 The repository's MIT license applies to these additions. Citations and upstream implementation notes are retained in the model code.
+
+## 6. Follow-up functional and biochemical associations
+
+`functional_validation.py` evaluates three follow-up measurements for each of the seven organs (21 measurements), each against the full OSAG and the organ-relative component. It uses saved five-fold participant predictions, adjusts the corresponding baseline measurement, and reports all 42 associations with 95% confidence intervals, Benjamini–Hochberg q values and Holm-adjusted P values. All results, including null and opposite-direction estimates, remain in the output. Related endpoints are not independent replications.
+
+Install the smaller environment for this analysis, or use the matching packages in your existing analysis environment:
+
+```bash
+python -m pip install -r analysis/requirements-functional.txt
+python -m analysis.functional_validation --self-test
+```
+
+The numerical analysis used Python 3.12.4. The dependency file records the versions used for these routines. Only NumPy, pandas, SciPy, statsmodels, PyArrow and threadpoolctl are needed; this analysis does not import PyTorch or train neural models.
+
+### Inputs
+
+Supply eight local files. CSV identifiers are strings named `Participant ID`; Parquet identifiers are strings named `participant_id`. IDs must be unique in participant tables. Dates must be parseable calendar dates. Missing measurements are blank/NaN; they are not replaced with zero. Organ names, in model order, are `cardiovascular`, `hepatic`, `immune`, `metabolic`, `musculoskeletal`, `pulmonary`, and `renal`.
+
+| Flag | File and required contents |
+|---|---|
+| `--phenotypes` | UK Biobank wide CSV containing the measurement columns listed below, one participant per row. Extra columns are allowed. |
+| `--assessment-dates` | CSV with `Participant ID` and `Date of attending assessment centre \| Instance 0`, `Instance 1`, and `Instance 2`. These are visit dates, not assay-processing dates. |
+| `--walking-pace` | CSV with `Participant ID` and `Usual walking pace \| Instance 0` and `Instance 2`. Values are `Slow pace`, `Steady average pace`, `Brisk pace`, `None of the above`, `Prefer not to answer`, or missing. |
+| `--predictions` | Parquet with one row per participant and organ: `participant_id`, `organ_system`, `actual_age`, `sex`, `outer_fold`, `raw_age_gap`, `corrected_age_gap`, `model_risk_score`. Sex is 0=female/1=male; folds are 0–4. Each person must have all seven organs, with predictions from that person's evaluation fold, not an ensemble that trained on that person. |
+| `--covariates` | Participant Parquet: `participant_id`, `fold_id`, `chronological_age`, `sex_male`, `smoking_current`, `smoking_missing`, `phenotype_missing_fraction`, `log1p_preindex_icd_count`, `log1p_preindex_gp_count`, `has_preindex_icd`, `has_preindex_gp`. Binary fields use 0/1. Missing smoking requires `smoking_missing=1`. The five record-density variables use baseline/pre-index records only. |
+| `--baseline-labels` | Participant Parquet with `participant_id`, `index_date`, and `prevalent_{organ}_count` plus `has_prevalent_{organ}` for each of the seven organs. Counts must be nonnegative and agree with the corresponding indicators. Baseline burden is derived from these columns. |
+| `--cohort` | Participant Parquet with `participant_id` and `index_date`; index dates must match assessment Instance 0. |
+| `--folds` | Participant Parquet with `participant_id` and `fold_id` (0–4), agreeing with the covariate table and prediction `outer_fold`. All participant Parquet tables must describe the same cohort. |
+
+For the phenotype CSV, use UK Biobank descriptive headers with the exact pattern `Measure | Instance i`, and, where applicable, `| Array a`:
+
+- Instances 0 and 1: `Albumin`, `Alanine aminotransferase`, `Gamma glutamyltransferase`, `C-reactive protein`, `White blood cell (leukocyte) count`, `Neutrophill count`, `Lymphocyte count`, `Glycated haemoglobin (HbA1c)`, `Triglycerides`, `HDL cholesterol`, `Cystatin C`, `Creatinine`, and `Urea`. The spelling `Neutrophill` follows the source field. The baseline serum albumin header is exactly `Albumin | Instance 0(participant - p30600_i0)`; follow-up is `Albumin | Instance 1`. The similarly named metabolomics field must not be substituted.
+- Instances 0 and 2, Arrays 0 and 1: `Systolic blood pressure, automated reading`, `Diastolic blood pressure, automated reading`, and `Pulse rate, automated reading`.
+- Instances 0 and 2, Arrays 0–2: `Forced expiratory volume in 1-second (FEV1)` and `Forced vital capacity (FVC)`.
+- Instances 0 and 2: `Hand grip strength (left)`, `Hand grip strength (right)`, `Heel bone mineral density (BMD) (left)`, and `Heel bone mineral density (BMD) (right)`.
+- Instance 0: `Standing height`.
+
+Units are mmHg for pressure, beats/min for pulse, kg for grip, cm for height, L for raw spirometry, g/cm² for heel BMD, g/L for albumin, U/L for ALT/GGT, mg/L for CRP/cystatin C, 10⁹ cells/L for leukocytes, mmol/mol for HbA1c, mmol/L for triglycerides/HDL/urea, and µmol/L for serum creatinine. No unit conversion is inferred from values. Spirometry effects are reported in mL, and FEV1/FVC differences in percentage points.
+
+### Measurement and analysis rules
+
+The script uses paired Instance 0/1 biochemical measurements and Instance 0/2 physical or walking measurements. It requires two paired blood-pressure readings, both hands for grip, and both heels for ultrasound BMD at each visit. Positive finite laboratory values are retained without winsorization. ALT, GGT, CRP, leukocytes, neutrophil-to-lymphocyte ratio, triglycerides, cystatin C, creatinine and urea are analysed on natural-log scales at both visits; reported effects are `100*(exp(beta)-1)` percent differences in conditional geometric means. Grip retains valid zeros. Slow pace is compared with average/brisk pace using logistic regression, with baseline pace categories included.
+
+For heel BMD, bilateral means at both visits must be strictly within (0.18, 1.06) g/cm² for males and (0.12, 1.025) for females, following the numerical bounds in [Kim, PLoS ONE (2018)](https://doi.org/10.1371/journal.pone.0200785). This is an ultrasound measure and a numerical screen, not DXA or full instrument-quality certification.
+
+The reported spirometry analysis uses numerical repeatability because acceptability field 3061 was unavailable. Explicitly pass `--numeric-repeatability-only`. At both visits it selects positive finite paired FEV1/FVC values with FEV1 ≤ FVC, requires at least two usable blows, and requires the largest two FEV1 and FVC values each to differ by ≤0.15 L (≤0.10 L if maximum selected FVC ≤1 L). Each outcome uses the maximum selected value; the ratio uses the two maxima. These checks do not certify manoeuvre acceptability. See [UK Biobank field 20152](https://biobank.ndph.ox.ac.uk/ukb/field.cgi?id=20152).
+
+The model offset is `8*tanh(model_risk_score/2)` in years. The relative component is the target offset minus the mean of the other six offsets. The shared base gap is the mean of `raw_age_gap - offset` across organs. `--offset-cap-years` and `--risk-temperature` must match the model producing the predictions; the defaults reproduce the reported model. Full OSAG uses `corrected_age_gap` directly. Exposure standardization uses the analytic sample's population standard deviation (`ddof=0`). Relative-component models additionally adjust the shared base gap and mean offset.
+
+All models adjust baseline measurement, age, sex, follow-up interval, baseline burden, record density and fold indicators. Pulmonary models also adjust baseline height and current smoking with its missingness indicator. Continuous outcomes use HC3 standard errors; slow walking uses HC0 sandwich standard errors. Confidence intervals are pointwise and condition on the saved neural predictions and correction. Five within-fold fits describe sign consistency; all 42 pooled tests form the multiplicity family. These follow-up associations are not aging-rate estimates or independent validation of seven biological aging clocks.
+
+### Run
+
+```bash
+python -m analysis.functional_validation \
+  --phenotypes data/phenotypes_all_visits.csv \
+  --assessment-dates data/assessment_dates.csv \
+  --walking-pace data/walking_pace.csv \
+  --predictions data/evaluation_predictions.parquet \
+  --covariates data/baseline_covariates.parquet \
+  --baseline-labels data/baseline_organ_labels.parquet \
+  --cohort data/cohort.parquet --folds data/folds.parquet \
+  --numeric-repeatability-only --output outputs/functional_associations
+```
+
+Append `--validate-only` to check schema, dates, participant alignment and fold identity without fitting or writing output. Normal execution requires a new or empty output directory and writes aggregate association tables, fold summaries, coefficients, sample flow, exposure scaling and measurement definitions. It does not export participant rows. Use all 42 pooled estimates when reproducing the reported multiple-testing adjustments. Supply authorized data locally under the data providers' access conditions.
